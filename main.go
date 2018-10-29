@@ -15,7 +15,7 @@ import (
 
 	//iconv "github.com/djimenez/iconv-go"
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/yogawa/cfgmml/model"
+	"github.com/yogawa/4g-cfgmml/model"
 	"golang.org/x/net/html/charset"
 )
 

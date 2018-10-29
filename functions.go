@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/yogawa/cfgmml/model"
+	"github.com/yogawa/4g-cfgmml/model"
 )
 
 func insertAlmcurcfg(baseName string, data []model.Almcurcfg) {
