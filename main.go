@@ -10,8 +10,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"os"
-	"path/filepath"
-	"strings"
+	//"path/filepath"
+	//"strings"
 
 	//iconv "github.com/djimenez/iconv-go"
 	_ "github.com/go-sql-driver/mysql"
@@ -61,12 +61,9 @@ func main() {
 
 	defer db.Close()
 
-	//inputFile := "D:\\CFGDATA.XML"
 	xmlFile, err := os.Open(inputFile)
 	checkErr(err)
 	defer xmlFile.Close()
-
-	baseName := strings.TrimRight(filepath.Base(inputFile), ".XML")
 
 	byteValue, _ := ioutil.ReadAll(xmlFile)
 
@@ -76,6 +73,16 @@ func main() {
 	decoder.CharsetReader = charset.NewReaderLabel
 	err = decoder.Decode(&cfgmml)
 	checkErr(err)
+
+	//baseName := strings.TrimRight(filepath.Base(inputFile), ".XML")
+	baseName := "N/A"
+
+	for i := 0; i < len(cfgmml.SPECSYNCDATA.CLASSES); i++ {
+		if len(cfgmml.SPECSYNCDATA.CLASSES[i].NES) > 0 {
+			baseName = cfgmml.SPECSYNCDATA.CLASSES[i].NES[0].ATTRIBUTES.NENAME
+			break
+		}
+	}
 
 	for i := 0; i < len(cfgmml.SPECSYNCDATA.CLASSES); i++ {
 		if len(cfgmml.SPECSYNCDATA.CLASSES[i].ALMCURCFGS) > 0 {
