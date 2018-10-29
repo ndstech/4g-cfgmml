@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<spec:BACKUPCFG xmlns:spec="http://www.huawei.com/specs/huawei_wl_bulkcm_xml_baseline_syn_1.0.0"
+xmlns="http://www.huawei.com/specs/bsc6000_nrm_forSyn_collapse_1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.huawei.com/specs/huawei_wl_bulkcm_xml_baseline_syn_1.0.0
+CfgSynData_collapse_spec.xsd">
+	<spec:fileHeader fileFormatVersion="1.2.0" nenrmversion="3900BTSDATAV100R013C10SPC160" neversion="BTS3900 V100R013C10SPC160" syntype="synall" synlabel="00000041281510082103" producttype="117" NodeBSpec="5000" eNodeBSpec="13000" NodeSpec="5000" TotalSpec="13000" FID="1539829842LX9GWO4TXDEP00"/>
+	<spec:compatibleNrmVersionList>
+		<spec:compatibleNrmVersion>3900BTSDATAV100R013C10SPC160</spec:compatibleNrmVersion>
+	</spec:compatibleNrmVersionList>
+<spec:syndata FunctionType="NODE" Id="NODENAME=Node" productversion="BTS3900 V100R013C10SPC160" nermversion="3900HERTBBUV500R008C10SPC160" objId="-1">
+	<spec:compatibleNrmVersionList>
+		<spec:compatibleNrmVersion>3900HERTBBUV500R008C10SPC160</spec:compatibleNrmVersion>
+	</spec:compatibleNrmVersionList>
+	<class>
+		<APPLICATION>
+			<attributes>
+				<AID>2</AID>
+				<AT>2</AT><!--NodeB-->
+				<AN>default</AN>
+				<SWVERSION>BTS3900_5900 V100R013C10SPC160</SWVERSION>
+				<HOTPATCHVERSION></HOTPATCHVERSION>
+				<AV>V200R020C10SPC160</AV>
+				<APPHOTPATCHVERSION></APPHOTPATCHVERSION>
+				<APPMNTMODE>0</APPMNTMODE><!--NORMAL-->
+				<APPST>2000-01-01T00:00:00</APPST>
+				<APPET>2037-12-31T23:59:59</APPET>
+				<APPMMSETREMARK></APPMMSETREMARK>
+				<EXTAPPTYPE></EXTAPPTYPE>
+			</attributes>
+		</APPLICATION>
+		<APPLICATION>
+			<attributes>
+				<AID>1</AID>
+				<AT>3</AT><!--eNodeB-->
+				<AN>eNodeB</AN>
+				<SWVERSION>BTS3900_5900 V100R013C10SPC160</SWVERSION>
+				<HOTPATCHVERSION></HOTPATCHVERSION>
+				<AV>V100R013C10SPC160</AV>
+				<APPHOTPATCHVERSION></APPHOTPATCHVERSION>
+				<APPMNTMODE>0</APPMNTMODE><!--NORMAL-->
+				<APPST>2000-01-01T00:00:00</APPST>
+				<APPET>2037-12-31T23:59:59</APPET>
+				<APPMMSETREMARK></APPMMSETREMARK>
+				<EXTAPPTYPE></EXTAPPTYPE>
+			</attributes>
+		</APPLICATION>
+	</class>
+	<class>
+		<ALMCURCFG>
+			<attributes>
+				<AID>65167</AID>
+				<ALVL>1</ALVL><!--Critical Alarm-->
+				<ASS>0</ASS><!--Power System-->
+				<SHLDFLG>4294967295</SHLDFLG><!--Default Shield Flag-->
+				<ANM>RACK RECT DOOR OPEN</ANM>
+			</attributes>
+		</ALMCURCFG>
+		<ALMCURCFG>
+			<attributes>
+				<AID>65143</AID>
+				<ALVL>1</ALVL><!--Critical Alarm-->
+				<ASS>0</ASS><!--Power System-->
+				<SHLDFLG>4294967295</SHLDFLG><!--Default Shield Flag-->
+				<ANM>BATT STOLEN</ANM>
+			</attributes>
+		</ALMCURCFG>
+		<ALMCURCFG>
+			<attributes>
+				<AID>65141</AID>
+				<ALVL>2</ALVL><!--Major Alarm-->
+				<ASS>0</ASS><!--Power System-->
+				<SHLDFLG>4294967295</SHLDFLG><!--Default Shield Flag-->
+				<ANM>DOOR OPEN</ANM>
+			</attributes>
+		</ALMCURCFG>
+		<ALMCURCFG>
+			<attributes>
+				<AID>65139</AID>
+				<ALVL>1</ALVL><!--Critical Alarm-->
+				<ASS>0</ASS><!--Power System-->
+				<SHLDFLG>4294967295</SHLDFLG><!--Default Shield Flag-->
+				<ANM>HIGH TEMP</ANM>
+			</attributes>
+		</ALMCURCFG>
+		<ALMCURCFG>
+			<attributes>
+				<AID>65133</AID>
+				<ALVL>1</ALVL><!--Critical Alarm-->
+				<ASS>0</ASS><!--Power System-->
+				<SHLDFLG>4294967295</SHLDFLG><!--Default Shield Flag-->
+				<ANM>LOW BATT</ANM>
+			</attributes>
+		</ALMCURCFG>
+		<ALMCURCFG>
+			<attributes>
+				<AID>65131</AID>
+				<ALVL>1</ALVL><!--Critical Alarm-->
+				<ASS>0</ASS><!--Power System-->
+				<SHLDFLG>4294967295</SHLDFLG><!--Default Shield Flag-->
+				<ANM>LOAD FUSE FAIL</ANM>
+			</attributes>
+		</ALMCURCFG>
+		<ALMCURCFG>
+			<attributes>
+				<AID>65129</AID>
+				<ALVL>1</ALVL><!--Critical Alarm-->
+				<ASS>0</ASS><!--Power System-->
+				<SHLDFLG>4294967295</SHLDFLG><!--Default Shield Flag-->
+				<ANM>BATT FUSE FAIL</ANM>
+			</attributes>
+		</ALMCURCFG>
+		<ALMCURCFG>
+			<attributes>
+				<AID>65127</AID>
+				<ALVL>1</ALVL><!--Critical Alarm-->
+				<ASS>0</ASS><!--Power System-->
+				<SHLDFLG>4294967295</SHLDFLG><!--Default Shield Flag-->
+				<ANM>MODULE RECT FAIL</ANM>
+			</attributes>
+		</ALMCURCFG>
+		<ALMCURCFG>
+			<attributes>
+				<AID>65125</AID>
+				<ALVL>1</ALVL><!--Critical Alarm-->
+				<ASS>0</ASS><!--Power System-->
+				<SHLDFLG>4294967295</SHLDFLG><!--Default Shield Flag-->
+				<ANM>MAINS FAIL</ANM>
+			</attributes>
+		</ALMCURCFG>
+	</class>
+	<class>
+		<MANRESALMRPT>
+			<attributes>
+				<SWITCH>0</SWITCH><!--Off-->
+			</attributes>
+		</MANRESALMRPT>
+	</class>
+	<class>
+		<NE>
+			<attributes>
+				<LOCATION></LOCATION>
+				<SWVERSION>BTS3900_5900 V100R013C10SPC160</SWVERSION>
+				<USERLABEL></USERLABEL>
+				<NERMVERSION>3900BTSDATAV100R013C10SPC160</NERMVERSION>
+				<INTERFACEID>BTS3900 V100R013C10SPC160</INTERFACEID>
+				<PRODUCTVERSION>BTS3900 V100R013C10SPC160</PRODUCTVERSION>
+				<LMTVERSION>BTS3900 V100R013C10SPC160</LMTVERSION>
+				<DID>AUTODID_20170921_caaaa646-9e3e-11e7-8000-fa163e551</DID>
+				<SITENAME>MBTS-KND651MD1_ROWOSARIMANGKANGTBG</SITENAME>
+				<NENAME>C_KND651MM1_ROWOSARIMANGKANGTBG</NENAME>
+				<HOTPATCHVERSION></HOTPATCHVERSION>
+				<CLOUDBBID>0</CLOUDBBID>
+			</attributes>
+		</NE>
+	</class>
+	<class>
+		<NODE>
+			<attributes>
+				<PRODUCTTYPE>117</PRODUCTTYPE><!--DBS3900-->
+				<USERLABEL></USERLABEL>
+				<NERMVERSION>3900HERTBBUV500R008C10SPC160</NERMVERSION>
+				<NODEID>1</NODEID>
+				<NODENAME>Node</NODENAME>
+				<WM>0</WM><!--ConCurrent-->
+				<SWVERSION>BTS3900_5900 V100R013C10SPC160</SWVERSION>
+				<HOTPATCHVERSION></HOTPATCHVERSION>
+				<PRODUCTVERSION>BTS3900 V100R013C10SPC160</PRODUCTVERSION>
+				<INTERFACEID>BTS3900 V100R013C10SPC160</INTERFACEID>
+				<LMTVERSION>BTS3900 V100R013C10SPC160</LMTVERSION>
+				<APPVERSION>V500R008C10SPC160</APPVERSION>
+				<APPHOTPATCHVERSION></APPHOTPATCHVERSION>
+				<LTEMODE>0</LTEMODE><!--LTE-->
+			</attributes>
+		</NODE>
+	</class>
+	<class>
+		<Cell>
+			<attributes>
+				<LocalCellId>33</LocalCellId>
+				<CellName>KND651MR1_ROWOSARIMANGKANGTBGMR3</CellName>
+				<CsgInd>0</CsgInd><!--False-->
+				<UlCyclicPrefix>0</UlCyclicPrefix><!--Normal-->
+				<DlCyclicPrefix>0</DlCyclicPrefix><!--Normal-->
+				<FreqBand>1</FreqBand>
+				<UlEarfcnCfgInd>0</UlEarfcnCfgInd><!--Not configure-->
+				<DlEarfcn>251</DlEarfcn>
+				<UlBandWidth>3</UlBandWidth><!--10M-->
+				<DlBandWidth>3</DlBandWidth><!--10M-->
+				<CellId>33</CellId>
+				<PhyCellId>383</PhyCellId>
+				<AdditionalSpectrumEmission>1</AdditionalSpectrumEmission>
+				<CellActiveState>0</CellActiveState><!--Deactivated-->
+				<CellAdminState>0</CellAdminState><!--Unblock-->
+				<FddTddInd>0</FddTddInd><!--FDD-->
+				<CellSpecificOffset>15</CellSpecificOffset><!--0dB-->
+				<QoffsetFreq>15</QoffsetFreq><!--0dB-->
+				<RootSequenceIdx>594</RootSequenceIdx>
+				<HighSpeedFlag>0</HighSpeedFlag><!--Low speed cell flag-->
+				<PreambleFmt>0</PreambleFmt>
+				<CellRadius>8000</CellRadius>
+				<CustomizedBandWidthCfgInd>0</CustomizedBandWidthCfgInd><!--Not configure-->
+				<EmergencyAreaIdCfgInd>0</EmergencyAreaIdCfgInd><!--Not configure-->
+				<UePowerMaxCfgInd>0</UePowerMaxCfgInd><!--Not configure-->
+				<MultiRruCellFlag>0</MultiRruCellFlag><!--False-->
+				<CPRICompression>0</CPRICompression><!--No Compression-->
+				<AirCellFlag>0</AirCellFlag><!--False-->
+				<CrsPortNum>2</CrsPortNum><!--2 ports-->
+				<TxRxMode>2</TxRxMode><!--2T2R-->
+				<UserLabel></UserLabel>
+				<WorkMode>0</WorkMode><!--Uplink and downlink-->
+				<EuCellStandbyMode>0</EuCellStandbyMode><!--Active-->
+				<NbCellFlag>0</NbCellFlag><!--FALSE-->
+				<SfnMasterCellLabel></SfnMasterCellLabel>
+				<CellSlaveBand>
+					<element>
+					</element>
+				</CellSlaveBand>
+				<CnOpSharingGroupId>255</CnOpSharingGroupId>
+				<IntraFreqRanSharingInd>1</IntraFreqRanSharingInd><!--True-->
+				<IntraFreqAnrInd>1</IntraFreqAnrInd><!--ALLOWED-->
+				<CellScaleInd>0</CellScaleInd><!--MACRO-->
+				<FreqPriorityForAnr>0</FreqPriorityForAnr>
+				<CellRadiusStartLocation>0</CellRadiusStartLocation>
+				<SpecifiedCellFlag>0</SpecifiedCellFlag><!--Common Cell-->
+				<MultiCellShareMode>0</MultiCellShareMode><!--NORMAL-->
+				<objId>0</objId>
+			</attributes>
+		</Cell>
+		<Cell>
+			<attributes>
+				<LocalCellId>31</LocalCellId>
+				<CellName>KND651ML1_ROWOSARIMANGKANGTBGML3</CellName>
+				<CsgInd>0</CsgInd><!--False-->
+				<UlCyclicPrefix>0</UlCyclicPrefix><!--Normal-->
+				<DlCyclicPrefix>0</DlCyclicPrefix><!--Normal-->
+				<FreqBand>3</FreqBand>
+				<UlEarfcnCfgInd>0</UlEarfcnCfgInd><!--Not configure-->
+				<DlEarfcn>1850</DlEarfcn>
+				<UlBandWidth>5</UlBandWidth><!--20M-->
+				<DlBandWidth>5</DlBandWidth><!--20M-->
+				<CellId>31</CellId>
+				<PhyCellId>110</PhyCellId>
+				<AdditionalSpectrumEmission>1</AdditionalSpectrumEmission>
+				<CellActiveState>1</CellActiveState><!--Active-->
+				<CellAdminState>0</CellAdminState><!--Unblock-->
+				<FddTddInd>0</FddTddInd><!--FDD-->
+				<CellSpecificOffset>15</CellSpecificOffset><!--0dB-->
+				<QoffsetFreq>15</QoffsetFreq><!--0dB-->
+				<RootSequenceIdx>42</RootSequenceIdx>
+				<HighSpeedFlag>0</HighSpeedFlag><!--Low speed cell flag-->
+				<PreambleFmt>0</PreambleFmt>
+				<CellRadius>8000</CellRadius>
+				<CustomizedBandWidthCfgInd>0</CustomizedBandWidthCfgInd><!--Not configure-->
+				<EmergencyAreaIdCfgInd>0</EmergencyAreaIdCfgInd><!--Not configure-->
+				<UePowerMaxCfgInd>0</UePowerMaxCfgInd><!--Not configure-->
+				<MultiRruCellFlag>0</MultiRruCellFlag><!--False-->
+				<CPRICompression>0</CPRICompression><!--No Compression-->
+				<AirCellFlag>0</AirCellFlag><!--False-->
+				<CrsPortNum>2</CrsPortNum><!--2 ports-->
+				<TxRxMode>2</TxRxMode><!--2T2R-->
+				<UserLabel></UserLabel>
+				<WorkMode>0</WorkMode><!--Uplink and downlink-->
+				<EuCellStandbyMode>0</EuCellStandbyMode><!--Active-->
+				<NbCellFlag>0</NbCellFlag><!--FALSE-->
+				<SfnMasterCellLabel></SfnMasterCellLabel>
+				<CellSlaveBand>
+					<element>
+					</element>
+				</CellSlaveBand>
+				<CnOpSharingGroupId>255</CnOpSharingGroupId>
+				<IntraFreqRanSharingInd>1</IntraFreqRanSharingInd><!--True-->
+				<IntraFreqAnrInd>1</IntraFreqAnrInd><!--ALLOWED-->
+				<CellScaleInd>0</CellScaleInd><!--MACRO-->
+				<FreqPriorityForAnr>0</FreqPriorityForAnr>
+				<CellRadiusStartLocation>0</CellRadiusStartLocation>
+				<SpecifiedCellFlag>0</SpecifiedCellFlag><!--Common Cell-->
+				<MultiCellShareMode>0</MultiCellShareMode><!--NORMAL-->
+				<objId>0</objId>
+			</attributes>
+		</Cell>
+		<Cell>
+			<attributes>
+				<LocalCellId>23</LocalCellId>
+				<CellName>KND651MR1_ROWOSARIMANGKANGTBGMR2</CellName>
+				<CsgInd>0</CsgInd><!--False-->
+				<UlCyclicPrefix>0</UlCyclicPrefix><!--Normal-->
+				<DlCyclicPrefix>0</DlCyclicPrefix><!--Normal-->
+				<FreqBand>1</FreqBand>
+				<UlEarfcnCfgInd>0</UlEarfcnCfgInd><!--Not configure-->
+				<DlEarfcn>251</DlEarfcn>
+				<UlBandWidth>3</UlBandWidth><!--10M-->
+				<DlBandWidth>3</DlBandWidth><!--10M-->
+				<CellId>23</CellId>
+				<PhyCellId>382</PhyCellId>
+				<AdditionalSpectrumEmission>1</AdditionalSpectrumEmission>
+				<CellActiveState>0</CellActiveState><!--Deactivated-->
+				<CellAdminState>0</CellAdminState><!--Unblock-->
+				<FddTddInd>0</FddTddInd><!--FDD-->
+				<CellSpecificOffset>15</CellSpecificOffset><!--0dB-->
+				<QoffsetFreq>15</QoffsetFreq><!--0dB-->
+				<RootSequenceIdx>564</RootSequenceIdx>
+				<HighSpeedFlag>0</HighSpeedFlag><!--Low speed cell flag-->
+				<PreambleFmt>0</PreambleFmt>
+				<CellRadius>8000</CellRadius>
+				<CustomizedBandWidthCfgInd>0</CustomizedBandWidthCfgInd><!--Not configure-->
+				<EmergencyAreaIdCfgInd>0</EmergencyAreaIdCfgInd><!--Not configure-->
+				<UePowerMaxCfgInd>0</UePowerMaxCfgInd><!--Not configure-->
+				<MultiRruCellFlag>0</MultiRruCellFlag><!--False-->
+				<CPRICompression>0</CPRICompression><!--No Compression-->
+				<AirCellFlag>0</AirCellFlag><!--False-->
+				<CrsPortNum>2</CrsPortNum><!--2 ports-->
+				<TxRxMode>2</TxRxMode><!--2T2R-->
+				<UserLabel></UserLabel>
+				<WorkMode>0</WorkMode><!--Uplink and downlink-->
+				<EuCellStandbyMode>0</EuCellStandbyMode><!--Active-->
+				<NbCellFlag>0</NbCellFlag><!--FALSE-->
+				<SfnMasterCellLabel></SfnMasterCellLabel>
+				<CellSlaveBand>
+					<element>
+					</element>
+				</CellSlaveBand>
+				<CnOpSharingGroupId>255</CnOpSharingGroupId>
+				<IntraFreqRanSharingInd>1</IntraFreqRanSharingInd><!--True-->
+				<IntraFreqAnrInd>1</IntraFreqAnrInd><!--ALLOWED-->
+				<CellScaleInd>0</CellScaleInd><!--MACRO-->
+				<FreqPriorityForAnr>0</FreqPriorityForAnr>
+				<CellRadiusStartLocation>0</CellRadiusStartLocation>
+				<SpecifiedCellFlag>0</SpecifiedCellFlag><!--Common Cell-->
+				<MultiCellShareMode>0</MultiCellShareMode><!--NORMAL-->
+				<objId>0</objId>
+			</attributes>
+		</Cell>
+		<Cell>
+			<attributes>
+				<LocalCellId>21</LocalCellId>
+				<CellName>KND651ML1_ROWOSARIMANGKANGTBGML2</CellName>
+				<CsgInd>0</CsgInd><!--False-->
+				<UlCyclicPrefix>0</UlCyclicPrefix><!--Normal-->
+				<DlCyclicPrefix>0</DlCyclicPrefix><!--Normal-->
+				<FreqBand>3</FreqBand>
+				<UlEarfcnCfgInd>0</UlEarfcnCfgInd><!--Not configure-->
+				<DlEarfcn>1850</DlEarfcn>
+				<UlBandWidth>5</UlBandWidth><!--20M-->
+				<DlBandWidth>5</DlBandWidth><!--20M-->
+				<CellId>21</CellId>
+				<PhyCellId>109</PhyCellId>
+				<AdditionalSpectrumEmission>1</AdditionalSpectrumEmission>
+				<CellActiveState>1</CellActiveState><!--Active-->
+				<CellAdminState>0</CellAdminState><!--Unblock-->
+				<FddTddInd>0</FddTddInd><!--FDD-->
+				<CellSpecificOffset>15</CellSpecificOffset><!--0dB-->
+				<QoffsetFreq>15</QoffsetFreq><!--0dB-->
+				<RootSequenceIdx>726</RootSequenceIdx>
+				<HighSpeedFlag>0</HighSpeedFlag><!--Low speed cell flag-->
+				<PreambleFmt>0</PreambleFmt>
+				<CellRadius>8000</CellRadius>
+				<CustomizedBandWidthCfgInd>0</CustomizedBandWidthCfgInd><!--Not configure-->
+				<EmergencyAreaIdCfgInd>0</EmergencyAreaIdCfgInd><!--Not configure-->
+				<UePowerMaxCfgInd>0</UePowerMaxCfgInd><!--Not configure-->
+				<MultiRruCellFlag>0</MultiRruCellFlag><!--False-->
+				<CPRICompression>0</CPRICompression><!--No Compression-->
+				<AirCellFlag>0</AirCellFlag><!--False-->
+				<CrsPortNum>2</CrsPortNum><!--2 ports-->
+				<TxRxMode>2</TxRxMode><!--2T2R-->
+				<UserLabel></UserLabel>
+				<WorkMode>0</WorkMode><!--Uplink and downlink-->
+				<EuCellStandbyMode>0</EuCellStandbyMode><!--Active-->
+				<NbCellFlag>0</NbCellFlag><!--FALSE-->
+				<SfnMasterCellLabel></SfnMasterCellLabel>
+				<CellSlaveBand>
+					<element>
+					</element>
+				</CellSlaveBand>
+				<CnOpSharingGroupId>255</CnOpSharingGroupId>
+				<IntraFreqRanSharingInd>1</IntraFreqRanSharingInd><!--True-->
+				<IntraFreqAnrInd>1</IntraFreqAnrInd><!--ALLOWED-->
+				<CellScaleInd>0</CellScaleInd><!--MACRO-->
+				<FreqPriorityForAnr>0</FreqPriorityForAnr>
+				<CellRadiusStartLocation>0</CellRadiusStartLocation>
+				<SpecifiedCellFlag>0</SpecifiedCellFlag><!--Common Cell-->
+				<MultiCellShareMode>0</MultiCellShareMode><!--NORMAL-->
+				<objId>0</objId>
+			</attributes>
+		</Cell>
+		<Cell>
+			<attributes>
+				<LocalCellId>13</LocalCellId>
+				<CellName>KND651MR1_ROWOSARIMANGKANGTBGMR1</CellName>
+				<CsgInd>0</CsgInd><!--False-->
+				<UlCyclicPrefix>0</UlCyclicPrefix><!--Normal-->
+				<DlCyclicPrefix>0</DlCyclicPrefix><!--Normal-->
+				<FreqBand>1</FreqBand>
+				<UlEarfcnCfgInd>0</UlEarfcnCfgInd><!--Not configure-->
+				<DlEarfcn>251</DlEarfcn>
+				<UlBandWidth>3</UlBandWidth><!--10M-->
+				<DlBandWidth>3</DlBandWidth><!--10M-->
+				<CellId>13</CellId>
+				<PhyCellId>381</PhyCellId>
+				<AdditionalSpectrumEmission>1</AdditionalSpectrumEmission>
+				<CellActiveState>0</CellActiveState><!--Deactivated-->
+				<CellAdminState>0</CellAdminState><!--Unblock-->
+				<FddTddInd>0</FddTddInd><!--FDD-->
+				<CellSpecificOffset>15</CellSpecificOffset><!--0dB-->
+				<QoffsetFreq>15</QoffsetFreq><!--0dB-->
+				<RootSequenceIdx>582</RootSequenceIdx>
+				<HighSpeedFlag>0</HighSpeedFlag><!--Low speed cell flag-->
+				<PreambleFmt>0</PreambleFmt>
+				<CellRadius>8000</CellRadius>
+				<CustomizedBandWidthCfgInd>0</CustomizedBandWidthCfgInd><!--Not configure-->
+				<EmergencyAreaIdCfgInd>0</EmergencyAreaIdCfgInd><!--Not configure-->
+				<UePowerMaxCfgInd>0</UePowerMaxCfgInd><!--Not configure-->
+				<MultiRruCellFlag>0</MultiRruCellFlag><!--False-->
+				<CPRICompression>0</CPRICompression><!--No Compression-->
+				<AirCellFlag>0</AirCellFlag><!--False-->
+				<CrsPortNum>2</CrsPortNum><!--2 ports-->
+				<TxRxMode>2</TxRxMode><!--2T2R-->
+				<UserLabel></UserLabel>
+				<WorkMode>0</WorkMode><!--Uplink and downlink-->
+				<EuCellStandbyMode>0</EuCellStandbyMode><!--Active-->
+				<NbCellFlag>0</NbCellFlag><!--FALSE-->
+				<SfnMasterCellLabel></SfnMasterCellLabel>
+				<CellSlaveBand>
+					<element>
+					</element>
+				</CellSlaveBand>
+				<CnOpSharingGroupId>255</CnOpSharingGroupId>
+				<IntraFreqRanSharingInd>1</IntraFreqRanSharingInd><!--True-->
+				<IntraFreqAnrInd>1</IntraFreqAnrInd><!--ALLOWED-->
+				<CellScaleInd>0</CellScaleInd><!--MACRO-->
+				<FreqPriorityForAnr>0</FreqPriorityForAnr>
+				<CellRadiusStartLocation>0</CellRadiusStartLocation>
+				<SpecifiedCellFlag>0</SpecifiedCellFlag><!--Common Cell-->
+				<MultiCellShareMode>0</MultiCellShareMode><!--NORMAL-->
+				<objId>0</objId>
+			</attributes>
+		</Cell>
+		<Cell>
+			<attributes>
+				<LocalCellId>11</LocalCellId>
+				<CellName>KND651ML1_ROWOSARIMANGKANGTBGML1</CellName>
+				<CsgInd>0</CsgInd><!--False-->
+				<UlCyclicPrefix>0</UlCyclicPrefix><!--Normal-->
+				<DlCyclicPrefix>0</DlCyclicPrefix><!--Normal-->
+				<FreqBand>3</FreqBand>
+				<UlEarfcnCfgInd>0</UlEarfcnCfgInd><!--Not configure-->
+				<DlEarfcn>1850</DlEarfcn>
+				<UlBandWidth>5</UlBandWidth><!--20M-->
+				<DlBandWidth>5</DlBandWidth><!--20M-->
+				<CellId>11</CellId>
+				<PhyCellId>108</PhyCellId>
+				<AdditionalSpectrumEmission>1</AdditionalSpectrumEmission>
+				<CellActiveState>1</CellActiveState><!--Active-->
+				<CellAdminState>0</CellAdminState><!--Unblock-->
+				<FddTddInd>0</FddTddInd><!--FDD-->
+				<CellSpecificOffset>15</CellSpecificOffset><!--0dB-->
+				<QoffsetFreq>15</QoffsetFreq><!--0dB-->
+				<RootSequenceIdx>684</RootSequenceIdx>
+				<HighSpeedFlag>0</HighSpeedFlag><!--Low speed cell flag-->
+				<PreambleFmt>0</PreambleFmt>
+				<CellRadius>8000</CellRadius>
+				<CustomizedBandWidthCfgInd>0</CustomizedBandWidthCfgInd><!--Not configure-->
+				<EmergencyAreaIdCfgInd>0</EmergencyAreaIdCfgInd><!--Not configure-->
+				<UePowerMaxCfgInd>0</UePowerMaxCfgInd><!--Not configure-->
+				<MultiRruCellFlag>0</MultiRruCellFlag><!--False-->
+				<CPRICompression>0</CPRICompression><!--No Compression-->
+				<AirCellFlag>0</AirCellFlag><!--False-->
+				<CrsPortNum>2</CrsPortNum><!--2 ports-->
+				<TxRxMode>2</TxRxMode><!--2T2R-->
+				<UserLabel></UserLabel>
+				<WorkMode>0</WorkMode><!--Uplink and downlink-->
+				<EuCellStandbyMode>0</EuCellStandbyMode><!--Active-->
+				<NbCellFlag>0</NbCellFlag><!--FALSE-->
+				<SfnMasterCellLabel></SfnMasterCellLabel>
+				<CellSlaveBand>
+					<element>
+					</element>
+				</CellSlaveBand>
+				<CnOpSharingGroupId>255</CnOpSharingGroupId>
+				<IntraFreqRanSharingInd>1</IntraFreqRanSharingInd><!--True-->
+				<IntraFreqAnrInd>1</IntraFreqAnrInd><!--ALLOWED-->
+				<CellScaleInd>0</CellScaleInd><!--MACRO-->
+				<FreqPriorityForAnr>0</FreqPriorityForAnr>
+				<CellRadiusStartLocation>0</CellRadiusStartLocation>
+				<SpecifiedCellFlag>0</SpecifiedCellFlag><!--Common Cell-->
+				<MultiCellShareMode>0</MultiCellShareMode><!--NORMAL-->
+				<objId>0</objId>
+			</attributes>
+		</Cell>
+	</class>
+</spec:syndata>
+	<spec:fileFooter label="00000041281510082103" ExportResult="Success" dateTime="2018-10-18T02:30:56">
+		<spec:moclistincluded></spec:moclistincluded>
+	</spec:fileFooter>
+</spec:BACKUPCFG>
+<!--CRC=0x2E837AF3E6BF5767452B5D1009234FD9015682A17B9F4FD1A03D75C46C0C4AAD-->

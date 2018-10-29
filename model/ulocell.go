@@ -1,0 +1,73 @@
+package model
+
+import "encoding/xml"
+
+type Ulocell struct {
+	XMLName xml.Name `xml:"ULOCELL"`
+	ATTRIBUTES UlocellAttributes `xml:"attributes"`
+}
+
+type UlocellAttributes struct {
+	XMLName xml.Name `xml:"attributes"`
+	ULOCELLID string `xml:"ULOCELLID"`
+	VIRTUALCPC string `xml:"VIRTUALCPC"`
+	RADIUS string `xml:"RADIUS"`
+	BOOST string `xml:"BOOST"`
+	HORAD string `xml:"HORAD"`
+	TIMELIMIT string `xml:"TIMELIMIT"`
+	ULCOVEXPANSION string `xml:"ULCOVEXPANSION"`
+	ULBASEBANDEQMID string `xml:"ULBASEBANDEQMID"`
+	PRECISECHEST2MS string `xml:"PRECISECHEST2MS"`
+	DLBASEBANDEQMID string `xml:"DLBASEBANDEQMID"`
+	INTERNODEBULCOMP string `xml:"INTERNODEBULCOMP"`
+	ULFREQIND string `xml:"ULFREQIND"`
+	SPEEDBASEDDEMODSW string `xml:"SPEEDBASEDDEMODSW"`
+	OBJID string `xml:"OBJID"`
+	NBIS string `xml:"NBIS"`
+	FREQUENCYBANDWIDTH string `xml:"FREQUENCYBANDWIDTH"`
+	HSDPA4C string `xml:"HSDPA4C"`
+	DL64QAM string `xml:"DL64QAM"`
+	BBUNITREF string `xml:"BBUNITREF"`
+	MULTIRRUSTATICDESSW string `xml:"MULTIRRUSTATICDESSW"`
+	AIR string `xml:"AIR"`
+	TTW string `xml:"TTW"`
+	LOCELLPRI string `xml:"LOCELLPRI"`
+	LOCELLTYPE string `xml:"LOCELLTYPE"`
+	TURBOIC string `xml:"TURBOIC"`
+	ERACHHSDPCCH string `xml:"ERACHHSDPCCH"`
+	USERLABEL string `xml:"USERLABEL"`
+	ULFREQ string `xml:"ULFREQ"`
+	DLFREQ string `xml:"DLFREQ"`
+	MAXPWR string `xml:"MAXPWR"`
+	DEFPWRLVL string `xml:"DEFPWRLVL"`
+	DLRESMODE string `xml:"DLRESMODE"`
+	DI string `xml:"DI"`
+	HISPM string `xml:"HISPM"`
+	RMTCM string `xml:"RMTCM"`
+	UL16QAM string `xml:"UL16QAM"`
+	FDEMODE string `xml:"FDEMODE"`
+	ULL2PLUS string `xml:"ULL2PLUS"`
+	ICMODE string `xml:"ICMODE"`
+	ERACH string `xml:"ERACH"`
+	RSV string `xml:"RSV"`
+	GUPOWERSHARE string `xml:"GUPOWERSHARE"`
+	HSPAUSERNUMEXT string `xml:"HSPAUSERNUMEXT"`
+	IRCSW string `xml:"IRCSW"`
+	TURBOICPHASE2 string `xml:"TURBOICPHASE2"`
+	MFHSDPASW string `xml:"MFHSDPASW"`
+	ULCOMPSW string `xml:"ULCOMPSW"`
+	VAM string `xml:"VAM"`
+	CELLSCALEIND string `xml:"CELLSCALEIND"`
+	INTERNODEBHSDPCCHCOMP string `xml:"INTERNODEBHSDPCCHCOMP"`
+	ULSUPERNARROWBANDFILTER string `xml:"ULSUPERNARROWBANDFILTER"`
+	DLADAPTIVEBPFILTER string `xml:"DLADAPTIVEBPFILTER"`
+	GSMQLBASEDROTDYNACTRL string `xml:"GSMQLBASEDROTDYNACTRL"`
+	INTEL2TVAM string `xml:"INTEL2TVAM"`
+	DLASYMFILTER string `xml:"DLASYMFILTER"`
+	DLASYMFILTERNFCELLID string `xml:"DLASYMFILTERNFCELLID"`
+	DLASYMLEFTBANDWIDTH string `xml:"DLASYMLEFTBANDWIDTH"`
+	DLASYMRIGHTBANDWIDTH string `xml:"DLASYMRIGHTBANDWIDTH"`
+	NBISADAPTIVEFORBIDSW string `xml:"NBISADAPTIVEFORBIDSW"`
+	PRECDWSRSW string `xml:"PRECDWSRSW"`
+}
+
