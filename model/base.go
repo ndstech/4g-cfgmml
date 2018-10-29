@@ -42,7 +42,7 @@ type Class struct {
 	CAGROUPSCELLCFGS          []Cagroupscellcfg          `xml:"CAGROUPSCELLCFG"`
 	CAMGTCFGS                 []Camgtcfg                 `xml:"CAMGTCFG"`
 	CASCADEPORTS              []Cascadeport              `xml:"CASCADEPORT"`
-	CELLS                     []Cell                     `xml:"CELL"`
+	CELLS                     []Cell                     `xml:"Cell"`
 	CELLACBARS                []Cellacbar                `xml:"CELLACBAR"`
 	CELLACCESSES              []Cellaccess               `xml:"CELLACCESS"`
 	CELLALGOSWITCHES          []Cellalgoswitch           `xml:"CELLALGOSWITCH"`
