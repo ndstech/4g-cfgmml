@@ -9,10 +9,11 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
+	"log"
 	"os"
 	//"path/filepath"
 	//"strings"
-
+	"time"
 	//iconv "github.com/djimenez/iconv-go"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/yogawa/4g-cfgmml/model"
@@ -27,9 +28,13 @@ var (
 	stmt             *sql.Stmt
 	res              sql.Result
 	inputFile        string
+	start            time.Time
+	elapsed          time.Duration
 )
 
 func init() {
+
+	start = time.Now()
 
 	conf, _ := os.Open("config.json")
 	defer conf.Close()
@@ -85,6 +90,7 @@ func main() {
 	}
 
 	for i := 0; i < len(cfgmml.SPECSYNCDATA.CLASSES); i++ {
+
 		if len(cfgmml.SPECSYNCDATA.CLASSES[i].ALMCURCFGS) > 0 {
 			insertAlmcurcfg(baseName, cfgmml.SPECSYNCDATA.CLASSES[i].ALMCURCFGS)
 		}
@@ -1779,12 +1785,14 @@ func main() {
 
 	}
 
+	elapsed = time.Since(start)
+	fmt.Println("\nProcessing time :", elapsed.Seconds(), "second")
+
 }
 
 func checkErr(err error) {
 	if err != nil {
-		//log.Fatal(err)
-		fmt.Println(err)
+		log.Fatal(err)
 		//panic(err)
 	}
 }
