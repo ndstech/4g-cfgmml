@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellulunifiedolc struct {
-	XMLName xml.Name `xml:"CELLULUNIFIEDOLC"`
+	XMLName xml.Name `xml:"CellULUnifiedOLC"`
 	ATTRIBUTES CellulunifiedolcAttributes `xml:"attributes"`
 }
 

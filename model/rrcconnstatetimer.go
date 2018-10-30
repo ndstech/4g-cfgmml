@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Rrcconnstatetimer struct {
-	XMLName xml.Name `xml:"RRCCONNSTATETIMER"`
+	XMLName xml.Name `xml:"RrcConnStateTimer"`
 	ATTRIBUTES RrcconnstatetimerAttributes `xml:"attributes"`
 }
 

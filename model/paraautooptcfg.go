@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Paraautooptcfg struct {
-	XMLName xml.Name `xml:"PARAAUTOOPTCFG"`
+	XMLName xml.Name `xml:"ParaAutoOptCfg"`
 	ATTRIBUTES ParaautooptcfgAttributes `xml:"attributes"`
 }
 

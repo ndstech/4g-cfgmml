@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Anrmeasureparam struct {
-	XMLName xml.Name `xml:"ANRMEASUREPARAM"`
+	XMLName xml.Name `xml:"ANRMeasureParam"`
 	ATTRIBUTES AnrmeasureparamAttributes `xml:"attributes"`
 }
 

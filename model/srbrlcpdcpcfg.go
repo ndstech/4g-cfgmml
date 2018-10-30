@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Srbrlcpdcpcfg struct {
-	XMLName xml.Name `xml:"SRBRLCPDCPCFG"`
+	XMLName xml.Name `xml:"SrbRlcPdcpCfg"`
 	ATTRIBUTES SrbrlcpdcpcfgAttributes `xml:"attributes"`
 }
 

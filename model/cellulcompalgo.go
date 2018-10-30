@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellulcompalgo struct {
-	XMLName xml.Name `xml:"CELLULCOMPALGO"`
+	XMLName xml.Name `xml:"CellUlCompAlgo"`
 	ATTRIBUTES CellulcompalgoAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Eutranintrafreqncell struct {
-	XMLName xml.Name `xml:"EUTRANINTRAFREQNCELL"`
+	XMLName xml.Name `xml:"EutranIntraFreqNCell"`
 	ATTRIBUTES EutranintrafreqncellAttributes `xml:"attributes"`
 }
 

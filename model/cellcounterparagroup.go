@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellcounterparagroup struct {
-	XMLName xml.Name `xml:"CELLCOUNTERPARAGROUP"`
+	XMLName xml.Name `xml:"CellCounterParaGroup"`
 	ATTRIBUTES CellcounterparagroupAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Ulcsalgopara struct {
-	XMLName xml.Name `xml:"ULCSALGOPARA"`
+	XMLName xml.Name `xml:"UlCsAlgoPara"`
 	ATTRIBUTES UlcsalgoparaAttributes `xml:"attributes"`
 }
 

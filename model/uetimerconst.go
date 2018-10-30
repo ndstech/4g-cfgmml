@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Uetimerconst struct {
-	XMLName xml.Name `xml:"UETIMERCONST"`
+	XMLName xml.Name `xml:"UeTimerConst"`
 	ATTRIBUTES UetimerconstAttributes `xml:"attributes"`
 }
 

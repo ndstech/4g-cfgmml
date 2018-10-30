@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellsimap struct {
-	XMLName xml.Name `xml:"CELLSIMAP"`
+	XMLName xml.Name `xml:"CellSiMap"`
 	ATTRIBUTES CellsimapAttributes `xml:"attributes"`
 }
 

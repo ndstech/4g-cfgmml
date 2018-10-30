@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Uecooperationpara struct {
-	XMLName xml.Name `xml:"UECOOPERATIONPARA"`
+	XMLName xml.Name `xml:"UeCooperationPara"`
 	ATTRIBUTES UecooperationparaAttributes `xml:"attributes"`
 }
 

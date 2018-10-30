@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebsharingmode struct {
-	XMLName xml.Name `xml:"ENODEBSHARINGMODE"`
+	XMLName xml.Name `xml:"ENodeBSharingMode"`
 	ATTRIBUTES EnodebsharingmodeAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type S1reesttimer struct {
-	XMLName xml.Name `xml:"S1REESTTIMER"`
+	XMLName xml.Name `xml:"S1ReestTimer"`
 	ATTRIBUTES S1reesttimerAttributes `xml:"attributes"`
 }
 

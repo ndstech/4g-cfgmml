@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Serviceidentifypara struct {
-	XMLName xml.Name `xml:"SERVICEIDENTIFYPARA"`
+	XMLName xml.Name `xml:"ServiceIdentifyPara"`
 	ATTRIBUTES ServiceidentifyparaAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Iratncellclassmgt struct {
-	XMLName xml.Name `xml:"IRATNCELLCLASSMGT"`
+	XMLName xml.Name `xml:"IRATNCellClassMgt"`
 	ATTRIBUTES IratncellclassmgtAttributes `xml:"attributes"`
 }
 

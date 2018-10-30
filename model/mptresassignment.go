@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Mptresassignment struct {
-	XMLName xml.Name `xml:"MPTRESASSIGNMENT"`
+	XMLName xml.Name `xml:"MptResAssignment"`
 	ATTRIBUTES MptresassignmentAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Homeascomm struct {
-	XMLName xml.Name `xml:"HOMEASCOMM"`
+	XMLName xml.Name `xml:"HoMeasComm"`
 	ATTRIBUTES HomeascommAttributes `xml:"attributes"`
 }
 

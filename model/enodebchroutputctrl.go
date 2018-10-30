@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebchroutputctrl struct {
-	XMLName xml.Name `xml:"ENODEBCHROUTPUTCTRL"`
+	XMLName xml.Name `xml:"eNodeBChrOutputCtrl"`
 	ATTRIBUTES EnodebchroutputctrlAttributes `xml:"attributes"`
 }
 

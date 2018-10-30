@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebconnstatetimer struct {
-	XMLName xml.Name `xml:"ENODEBCONNSTATETIMER"`
+	XMLName xml.Name `xml:"ENodeBConnStateTimer"`
 	ATTRIBUTES EnodebconnstatetimerAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Geranncell struct {
-	XMLName xml.Name `xml:"GERANNCELL"`
+	XMLName xml.Name `xml:"GeranNcell"`
 	ATTRIBUTES GeranncellAttributes `xml:"attributes"`
 }
 

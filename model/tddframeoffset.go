@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Tddframeoffset struct {
-	XMLName xml.Name `xml:"TDDFRAMEOFFSET"`
+	XMLName xml.Name `xml:"TddFrameOffset"`
 	ATTRIBUTES TddframeoffsetAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Tcpackctrlalgo struct {
-	XMLName xml.Name `xml:"TCPACKCTRLALGO"`
+	XMLName xml.Name `xml:"TcpAckCtrlAlgo"`
 	ATTRIBUTES TcpackctrlalgoAttributes `xml:"attributes"`
 }
 

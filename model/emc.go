@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Emc struct {
-	XMLName xml.Name `xml:"EMC"`
+	XMLName xml.Name `xml:"Emc"`
 	ATTRIBUTES EmcAttributes `xml:"attributes"`
 }
 

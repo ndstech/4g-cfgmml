@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Simuload struct {
-	XMLName xml.Name `xml:"SIMULOAD"`
+	XMLName xml.Name `xml:"SimuLoad"`
 	ATTRIBUTES SimuloadAttributes `xml:"attributes"`
 }
 

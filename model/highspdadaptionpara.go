@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Highspdadaptionpara struct {
-	XMLName xml.Name `xml:"HIGHSPDADAPTIONPARA"`
+	XMLName xml.Name `xml:"HighSpdAdaptionPara"`
 	ATTRIBUTES HighspdadaptionparaAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Upptsinterfcfg struct {
-	XMLName xml.Name `xml:"UPPTSINTERFCFG"`
+	XMLName xml.Name `xml:"UpPTSInterfCfg"`
 	ATTRIBUTES UpptsinterfcfgAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellcqiadaptivecfg struct {
-	XMLName xml.Name `xml:"CELLCQIADAPTIVECFG"`
+	XMLName xml.Name `xml:"CellCqiAdaptiveCfg"`
 	ATTRIBUTES CellcqiadaptivecfgAttributes `xml:"attributes"`
 }
 

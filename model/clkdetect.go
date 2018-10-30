@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Clkdetect struct {
-	XMLName xml.Name `xml:"CLKDETECT"`
+	XMLName xml.Name `xml:"ClkDetect"`
 	ATTRIBUTES ClkdetectAttributes `xml:"attributes"`
 }
 

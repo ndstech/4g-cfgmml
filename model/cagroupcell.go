@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cagroupcell struct {
-	XMLName xml.Name `xml:"CAGROUPCELL"`
+	XMLName xml.Name `xml:"CaGroupCell"`
 	ATTRIBUTES CagroupcellAttributes `xml:"attributes"`
 }
 

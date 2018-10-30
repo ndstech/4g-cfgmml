@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Lioptfeature struct {
-	XMLName xml.Name `xml:"LIOPTFEATURE"`
+	XMLName xml.Name `xml:"LIOptFeature"`
 	ATTRIBUTES LioptfeatureAttributes `xml:"attributes"`
 }
 

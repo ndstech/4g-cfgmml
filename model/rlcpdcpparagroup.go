@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Rlcpdcpparagroup struct {
-	XMLName xml.Name `xml:"RLCPDCPPARAGROUP"`
+	XMLName xml.Name `xml:"RlcPdcpParaGroup"`
 	ATTRIBUTES RlcpdcpparagroupAttributes `xml:"attributes"`
 }
 

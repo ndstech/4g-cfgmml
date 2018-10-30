@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Ncellclassmgt struct {
-	XMLName xml.Name `xml:"NCELLCLASSMGT"`
+	XMLName xml.Name `xml:"NCellClassMgt"`
 	ATTRIBUTES NcellclassmgtAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellttibundlingalgo struct {
-	XMLName xml.Name `xml:"CELLTTIBUNDLINGALGO"`
+	XMLName xml.Name `xml:"CellTtiBundlingAlgo"`
 	ATTRIBUTES CellttibundlingalgoAttributes `xml:"attributes"`
 }
 

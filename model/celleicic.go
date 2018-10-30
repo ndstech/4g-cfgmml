@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Celleicic struct {
-	XMLName xml.Name `xml:"CELLEICIC"`
+	XMLName xml.Name `xml:"CellEicic"`
 	ATTRIBUTES CelleicicAttributes `xml:"attributes"`
 }
 

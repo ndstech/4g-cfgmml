@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type S1interface struct {
-	XMLName xml.Name `xml:"S1INTERFACE"`
+	XMLName xml.Name `xml:"S1Interface"`
 	ATTRIBUTES S1interfaceAttributes `xml:"attributes"`
 }
 

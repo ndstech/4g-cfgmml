@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Mbmspara struct {
-	XMLName xml.Name `xml:"MBMSPARA"`
+	XMLName xml.Name `xml:"MBMSPara"`
 	ATTRIBUTES MbmsparaAttributes `xml:"attributes"`
 }
 

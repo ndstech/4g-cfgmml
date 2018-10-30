@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Typdrbbsr struct {
-	XMLName xml.Name `xml:"TYPDRBBSR"`
+	XMLName xml.Name `xml:"TypDrbBsr"`
 	ATTRIBUTES TypdrbbsrAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Euulcoschcfg struct {
-	XMLName xml.Name `xml:"EUULCOSCHCFG"`
+	XMLName xml.Name `xml:"EuUlCoSchCfg"`
 	ATTRIBUTES EuulcoschcfgAttributes `xml:"attributes"`
 }
 

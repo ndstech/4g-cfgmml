@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Bcchcfg struct {
-	XMLName xml.Name `xml:"BCCHCFG"`
+	XMLName xml.Name `xml:"BcchCfg"`
 	ATTRIBUTES BcchcfgAttributes `xml:"attributes"`
 }
 

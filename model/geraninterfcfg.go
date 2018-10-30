@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Geraninterfcfg struct {
-	XMLName xml.Name `xml:"GERANINTERFCFG"`
+	XMLName xml.Name `xml:"GeranInterfCfg"`
 	ATTRIBUTES GeraninterfcfgAttributes `xml:"attributes"`
 }
 

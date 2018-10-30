@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellbf struct {
-	XMLName xml.Name `xml:"CELLBF"`
+	XMLName xml.Name `xml:"CellBf"`
 	ATTRIBUTES CellbfAttributes `xml:"attributes"`
 }
 

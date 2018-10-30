@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Lioptatomrule struct {
-	XMLName xml.Name `xml:"LIOPTATOMRULE"`
+	XMLName xml.Name `xml:"LIOptAtomRule"`
 	ATTRIBUTES LioptatomruleAttributes `xml:"attributes"`
 }
 

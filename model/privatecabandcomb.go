@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Privatecabandcomb struct {
-	XMLName xml.Name `xml:"PRIVATECABANDCOMB"`
+	XMLName xml.Name `xml:"PrivateCaBandComb"`
 	ATTRIBUTES PrivatecabandcombAttributes `xml:"attributes"`
 }
 

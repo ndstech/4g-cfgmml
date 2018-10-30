@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebintegritycap struct {
-	XMLName xml.Name `xml:"ENODEBINTEGRITYCAP"`
+	XMLName xml.Name `xml:"ENodeBIntegrityCap"`
 	ATTRIBUTES EnodebintegritycapAttributes `xml:"attributes"`
 }
 

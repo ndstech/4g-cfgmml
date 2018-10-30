@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellmbmscfg struct {
-	XMLName xml.Name `xml:"CELLMBMSCFG"`
+	XMLName xml.Name `xml:"CellMBMSCfg"`
 	ATTRIBUTES CellmbmscfgAttributes `xml:"attributes"`
 }
 

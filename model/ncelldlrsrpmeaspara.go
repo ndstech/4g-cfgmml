@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Ncelldlrsrpmeaspara struct {
-	XMLName xml.Name `xml:"NCELLDLRSRPMEASPARA"`
+	XMLName xml.Name `xml:"NCellDlRsrpMeasPara"`
 	ATTRIBUTES NcelldlrsrpmeasparaAttributes `xml:"attributes"`
 }
 

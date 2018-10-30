@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebresmodealgo struct {
-	XMLName xml.Name `xml:"ENODEBRESMODEALGO"`
+	XMLName xml.Name `xml:"eNodeBResModeAlgo"`
 	ATTRIBUTES EnodebresmodealgoAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Scappparacfg struct {
-	XMLName xml.Name `xml:"SCAPPPARACFG"`
+	XMLName xml.Name `xml:"ScAppParaCfg"`
 	ATTRIBUTES ScappparacfgAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Userqcipriority struct {
-	XMLName xml.Name `xml:"USERQCIPRIORITY"`
+	XMLName xml.Name `xml:"UserQciPriority"`
 	ATTRIBUTES UserqcipriorityAttributes `xml:"attributes"`
 }
 

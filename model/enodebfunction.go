@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebfunction struct {
-	XMLName xml.Name `xml:"ENODEBFUNCTION"`
+	XMLName xml.Name `xml:"eNodeBFunction"`
 	ATTRIBUTES EnodebfunctionAttributes `xml:"attributes"`
 }
 

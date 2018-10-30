@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enbrsvdpara struct {
-	XMLName xml.Name `xml:"ENBRSVDPARA"`
+	XMLName xml.Name `xml:"eNBRsvdPara"`
 	ATTRIBUTES EnbrsvdparaAttributes `xml:"attributes"`
 }
 

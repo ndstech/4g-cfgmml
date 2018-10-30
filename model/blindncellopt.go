@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Blindncellopt struct {
-	XMLName xml.Name `xml:"BLINDNCELLOPT"`
+	XMLName xml.Name `xml:"BlindNcellOpt"`
 	ATTRIBUTES BlindncelloptAttributes `xml:"attributes"`
 }
 

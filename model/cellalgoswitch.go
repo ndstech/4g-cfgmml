@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellalgoswitch struct {
-	XMLName xml.Name `xml:"CELLALGOSWITCH"`
+	XMLName xml.Name `xml:"CellAlgoSwitch"`
 	ATTRIBUTES CellalgoswitchAttributes `xml:"attributes"`
 }
 

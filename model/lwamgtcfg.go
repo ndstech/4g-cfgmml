@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Lwamgtcfg struct {
-	XMLName xml.Name `xml:"LWAMGTCFG"`
+	XMLName xml.Name `xml:"LwaMgtCfg"`
 	ATTRIBUTES LwamgtcfgAttributes `xml:"attributes"`
 }
 

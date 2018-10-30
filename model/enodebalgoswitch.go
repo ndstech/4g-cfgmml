@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebalgoswitch struct {
-	XMLName xml.Name `xml:"ENODEBALGOSWITCH"`
+	XMLName xml.Name `xml:"ENodeBAlgoSwitch"`
 	ATTRIBUTES EnodebalgoswitchAttributes `xml:"attributes"`
 }
 

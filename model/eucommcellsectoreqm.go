@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Eucommcellsectoreqm struct {
-	XMLName xml.Name `xml:"EUCOMMCELLSECTOREQM"`
+	XMLName xml.Name `xml:"eUCommCellSectorEqm"`
 	ATTRIBUTES EucommcellsectoreqmAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cnoperatorhocfg struct {
-	XMLName xml.Name `xml:"CNOPERATORHOCFG"`
+	XMLName xml.Name `xml:"CnOperatorHoCfg"`
 	ATTRIBUTES CnoperatorhocfgAttributes `xml:"attributes"`
 }
 

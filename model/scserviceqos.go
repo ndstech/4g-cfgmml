@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Scserviceqos struct {
-	XMLName xml.Name `xml:"SCSERVICEQOS"`
+	XMLName xml.Name `xml:"ScServiceQos"`
 	ATTRIBUTES ScserviceqosAttributes `xml:"attributes"`
 }
 

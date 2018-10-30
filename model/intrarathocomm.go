@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Intrarathocomm struct {
-	XMLName xml.Name `xml:"INTRARATHOCOMM"`
+	XMLName xml.Name `xml:"IntraRatHoComm"`
 	ATTRIBUTES IntrarathocommAttributes `xml:"attributes"`
 }
 

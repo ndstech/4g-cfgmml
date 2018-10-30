@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Tpealgo struct {
-	XMLName xml.Name `xml:"TPEALGO"`
+	XMLName xml.Name `xml:"TpeAlgo"`
 	ATTRIBUTES TpealgoAttributes `xml:"attributes"`
 }
 

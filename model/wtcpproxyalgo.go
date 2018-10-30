@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Wtcpproxyalgo struct {
-	XMLName xml.Name `xml:"WTCPPROXYALGO"`
+	XMLName xml.Name `xml:"WtcpProxyAlgo"`
 	ATTRIBUTES WtcpproxyalgoAttributes `xml:"attributes"`
 }
 

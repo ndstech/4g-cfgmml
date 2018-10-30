@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebframeoffset struct {
-	XMLName xml.Name `xml:"ENODEBFRAMEOFFSET"`
+	XMLName xml.Name `xml:"ENodeBFrameOffset"`
 	ATTRIBUTES EnodebframeoffsetAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Celldss struct {
-	XMLName xml.Name `xml:"CELLDSS"`
+	XMLName xml.Name `xml:"CellDss"`
 	ATTRIBUTES CelldssAttributes `xml:"attributes"`
 }
 

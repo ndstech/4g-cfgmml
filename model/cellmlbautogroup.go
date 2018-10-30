@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellmlbautogroup struct {
-	XMLName xml.Name `xml:"CELLMLBAUTOGROUP"`
+	XMLName xml.Name `xml:"CellMlbAutoGroup"`
 	ATTRIBUTES CellmlbautogroupAttributes `xml:"attributes"`
 }
 

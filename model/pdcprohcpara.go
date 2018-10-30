@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Pdcprohcpara struct {
-	XMLName xml.Name `xml:"PDCPROHCPARA"`
+	XMLName xml.Name `xml:"PdcpRohcPara"`
 	ATTRIBUTES PdcprohcparaAttributes `xml:"attributes"`
 }
 

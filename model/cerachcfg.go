@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cerachcfg struct {
-	XMLName xml.Name `xml:"CERACHCFG"`
+	XMLName xml.Name `xml:"CeRachCfg"`
 	ATTRIBUTES CerachcfgAttributes `xml:"attributes"`
 }
 

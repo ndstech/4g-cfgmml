@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellservicediffcfg struct {
-	XMLName xml.Name `xml:"CELLSERVICEDIFFCFG"`
+	XMLName xml.Name `xml:"CellServiceDiffCfg"`
 	ATTRIBUTES CellservicediffcfgAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Qoehocommoncfg struct {
-	XMLName xml.Name `xml:"QOEHOCOMMONCFG"`
+	XMLName xml.Name `xml:"QoEHoCommonCfg"`
 	ATTRIBUTES QoehocommoncfgAttributes `xml:"attributes"`
 }
 

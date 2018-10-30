@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Mmefeaturecfg struct {
-	XMLName xml.Name `xml:"MMEFEATURECFG"`
+	XMLName xml.Name `xml:"MmeFeatureCfg"`
 	ATTRIBUTES MmefeaturecfgAttributes `xml:"attributes"`
 }
 

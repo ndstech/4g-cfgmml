@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellqcipara struct {
-	XMLName xml.Name `xml:"CELLQCIPARA"`
+	XMLName xml.Name `xml:"CellQciPara"`
 	ATTRIBUTES CellqciparaAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cnoperatorqcipara struct {
-	XMLName xml.Name `xml:"CNOPERATORQCIPARA"`
+	XMLName xml.Name `xml:"CnOperatorQciPara"`
 	ATTRIBUTES CnoperatorqciparaAttributes `xml:"attributes"`
 }
 

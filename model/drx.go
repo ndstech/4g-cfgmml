@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Drx struct {
-	XMLName xml.Name `xml:"DRX"`
+	XMLName xml.Name `xml:"Drx"`
 	ATTRIBUTES DrxAttributes `xml:"attributes"`
 }
 

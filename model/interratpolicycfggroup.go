@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Interratpolicycfggroup struct {
-	XMLName xml.Name `xml:"INTERRATPOLICYCFGGROUP"`
+	XMLName xml.Name `xml:"InterRatPolicyCfgGroup"`
 	ATTRIBUTES InterratpolicycfggroupAttributes `xml:"attributes"`
 }
 

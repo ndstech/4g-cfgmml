@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Interratcellshutdown struct {
-	XMLName xml.Name `xml:"INTERRATCELLSHUTDOWN"`
+	XMLName xml.Name `xml:"InterRatCellShutdown"`
 	ATTRIBUTES InterratcellshutdownAttributes `xml:"attributes"`
 }
 

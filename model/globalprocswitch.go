@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Globalprocswitch struct {
-	XMLName xml.Name `xml:"GLOBALPROCSWITCH"`
+	XMLName xml.Name `xml:"GlobalProcSwitch"`
 	ATTRIBUTES GlobalprocswitchAttributes `xml:"attributes"`
 }
 

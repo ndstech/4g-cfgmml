@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Eucellalmcfg struct {
-	XMLName xml.Name `xml:"EUCELLALMCFG"`
+	XMLName xml.Name `xml:"EuCellAlmCfg"`
 	ATTRIBUTES EucellalmcfgAttributes `xml:"attributes"`
 }
 

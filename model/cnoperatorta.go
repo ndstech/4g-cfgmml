@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cnoperatorta struct {
-	XMLName xml.Name `xml:"CNOPERATORTA"`
+	XMLName xml.Name `xml:"CnOperatorTa"`
 	ATTRIBUTES CnoperatortaAttributes `xml:"attributes"`
 }
 

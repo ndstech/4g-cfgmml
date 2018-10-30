@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Serviceifhocfggroup struct {
-	XMLName xml.Name `xml:"SERVICEIFHOCFGGROUP"`
+	XMLName xml.Name `xml:"ServiceIfHoCfgGroup"`
 	ATTRIBUTES ServiceifhocfggroupAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebsondbcfg struct {
-	XMLName xml.Name `xml:"ENODEBSONDBCFG"`
+	XMLName xml.Name `xml:"eNodeBSonDBCfg"`
 	ATTRIBUTES EnodebsondbcfgAttributes `xml:"attributes"`
 }
 

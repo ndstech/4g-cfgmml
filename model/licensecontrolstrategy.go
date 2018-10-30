@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Licensecontrolstrategy struct {
-	XMLName xml.Name `xml:"LICENSECONTROLSTRATEGY"`
+	XMLName xml.Name `xml:"LicenseControlStrategy"`
 	ATTRIBUTES LicensecontrolstrategyAttributes `xml:"attributes"`
 }
 

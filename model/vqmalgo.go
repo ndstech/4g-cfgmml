@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Vqmalgo struct {
-	XMLName xml.Name `xml:"VQMALGO"`
+	XMLName xml.Name `xml:"VQMAlgo"`
 	ATTRIBUTES VqmalgoAttributes `xml:"attributes"`
 }
 

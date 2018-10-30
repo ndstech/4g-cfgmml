@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Rrujointcalparacfg struct {
-	XMLName xml.Name `xml:"RRUJOINTCALPARACFG"`
+	XMLName xml.Name `xml:"RruJointCalParaCfg"`
 	ATTRIBUTES RrujointcalparacfgAttributes `xml:"attributes"`
 }
 

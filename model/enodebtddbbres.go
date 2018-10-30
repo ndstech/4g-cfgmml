@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebtddbbres struct {
-	XMLName xml.Name `xml:"ENODEBTDDBBRES"`
+	XMLName xml.Name `xml:"eNodeBTddBbRes"`
 	ATTRIBUTES EnodebtddbbresAttributes `xml:"attributes"`
 }
 

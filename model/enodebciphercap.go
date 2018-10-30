@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebciphercap struct {
-	XMLName xml.Name `xml:"ENODEBCIPHERCAP"`
+	XMLName xml.Name `xml:"ENodeBCipherCap"`
 	ATTRIBUTES EnodebciphercapAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Iopscfg struct {
-	XMLName xml.Name `xml:"IOPSCFG"`
+	XMLName xml.Name `xml:"IopsCfg"`
 	ATTRIBUTES IopscfgAttributes `xml:"attributes"`
 }
 

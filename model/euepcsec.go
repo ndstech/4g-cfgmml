@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Euepcsec struct {
-	XMLName xml.Name `xml:"EUEPCSEC"`
+	XMLName xml.Name `xml:"EUEPCSec"`
 	ATTRIBUTES EuepcsecAttributes `xml:"attributes"`
 }
 

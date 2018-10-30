@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Phichcfg struct {
-	XMLName xml.Name `xml:"PHICHCFG"`
+	XMLName xml.Name `xml:"PHICHCfg"`
 	ATTRIBUTES PhichcfgAttributes `xml:"attributes"`
 }
 

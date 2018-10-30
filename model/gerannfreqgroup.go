@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Gerannfreqgroup struct {
-	XMLName xml.Name `xml:"GERANNFREQGROUP"`
+	XMLName xml.Name `xml:"GeranNfreqGroup"`
 	ATTRIBUTES GerannfreqgroupAttributes `xml:"attributes"`
 }
 

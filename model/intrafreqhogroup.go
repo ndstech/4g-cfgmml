@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Intrafreqhogroup struct {
-	XMLName xml.Name `xml:"INTRAFREQHOGROUP"`
+	XMLName xml.Name `xml:"IntraFreqHoGroup"`
 	ATTRIBUTES IntrafreqhogroupAttributes `xml:"attributes"`
 }
 

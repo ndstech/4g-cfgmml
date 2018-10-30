@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Asparagroup struct {
-	XMLName xml.Name `xml:"ASPARAGROUP"`
+	XMLName xml.Name `xml:"AsParaGroup"`
 	ATTRIBUTES AsparagroupAttributes `xml:"attributes"`
 }
 

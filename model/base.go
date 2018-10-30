@@ -25,192 +25,192 @@ type Class struct {
 	ALMCURCFGS                []Almcurcfg                `xml:"ALMCURCFG"`
 	ALMPORTS                  []Almport                  `xml:"ALMPORT"`
 	ANRS                      []Anr                      `xml:"ANR"`
-	ANRMEASUREPARAMS          []Anrmeasureparam          `xml:"ANRMEASUREPARAM"`
+	ANRMEASUREPARAMS          []Anrmeasureparam          `xml:"ANRMeasureParam"`
 	ANTENNAPORTS              []Antennaport              `xml:"ANTENNAPORT"`
 	APPCERTS                  []Appcert                  `xml:"APPCERT"`
 	APPLICATIONS              []Application              `xml:"APPLICATION"`
-	ASPARAGROUPS              []Asparagroup              `xml:"ASPARAGROUP"`
+	ASPARAGROUPS              []Asparagroup              `xml:"AsParaGroup"`
 	BASEBANDEQMS              []Basebandeqm              `xml:"BASEBANDEQM"`
 	BBPS                      []Bbp                      `xml:"BBP"`
 	BBUFANS                   []Bbufan                   `xml:"BBUFAN"`
-	BCCHCFGS                  []Bcchcfg                  `xml:"BCCHCFG"`
-	BLINDNCELLOPTS            []Blindncellopt            `xml:"BLINDNCELLOPT"`
+	BCCHCFGS                  []Bcchcfg                  `xml:"BcchCfg"`
+	BLINDNCELLOPTS            []Blindncellopt            `xml:"BlindNcellOpt"`
 	BRDRESASSIGNMENTS         []Brdresassignment         `xml:"BRDRESASSIGNMENT"`
 	CABINETS                  []Cabinet                  `xml:"CABINET"`
-	CAGROUPS                  []Cagroup                  `xml:"CAGROUP"`
-	CAGROUPCELLS              []Cagroupcell              `xml:"CAGROUPCELL"`
-	CAGROUPSCELLCFGS          []Cagroupscellcfg          `xml:"CAGROUPSCELLCFG"`
-	CAMGTCFGS                 []Camgtcfg                 `xml:"CAMGTCFG"`
+	CAGROUPS                  []Cagroup                  `xml:"CaGroup"`
+	CAGROUPCELLS              []Cagroupcell              `xml:"CaGroupCell"`
+	CAGROUPSCELLCFGS          []Cagroupscellcfg          `xml:"CaGroupSCellCfg"`
+	CAMGTCFGS                 []Camgtcfg                 `xml:"CaMgtCfg"`
 	CASCADEPORTS              []Cascadeport              `xml:"CASCADEPORT"`
 	CELLS                     []Cell                     `xml:"Cell"`
-	CELLACBARS                []Cellacbar                `xml:"CELLACBAR"`
-	CELLACCESSES              []Cellaccess               `xml:"CELLACCESS"`
-	CELLALGOSWITCHES          []Cellalgoswitch           `xml:"CELLALGOSWITCH"`
-	CELLBACKOFFS              []Cellbackoff              `xml:"CELLBACKOFF"`
-	CELLBFS                   []Cellbf                   `xml:"CELLBF"`
-	CELLBFMIMOPARACFGS        []Cellbfmimoparacfg        `xml:"CELLBFMIMOPARACFG"`
-	CELLCECFGS                []Cellcecfg                `xml:"CELLCECFG"`
-	CELLCESCHCFGS             []Cellceschcfg             `xml:"CELLCESCHCFG"`
-	CELLCHPWRCFGS             []Cellchpwrcfg             `xml:"CELLCHPWRCFG"`
-	CELLCOUNTERPARAGROUPS     []Cellcounterparagroup     `xml:"CELLCOUNTERPARAGROUP"`
-	CELLCQIADAPTIVECFGS       []Cellcqiadaptivecfg       `xml:"CELLCQIADAPTIVECFG"`
-	CELLCQIADJALGOS           []Cellcqiadjalgo           `xml:"CELLCQIADJALGO"`
-	CELLCSIRSPARACFGS         []Cellcsirsparacfg         `xml:"CELLCSIRSPARACFG"`
-	CELLCSPCPARAS             []Cellcspcpara             `xml:"CELLCSPCPARA"`
-	CELLDACQCFGS              []Celldacqcfg              `xml:"CELLDACQCFG"`
-	CELLDLCOMPALGOS           []Celldlcompalgo           `xml:"CELLDLCOMPALGO"`
-	CELLDLICICS               []Celldlicic               `xml:"CELLDLICIC"`
-	CELLDLPCPDCCHES           []Celldlpcpdcch            `xml:"CELLDLPCPDCCH"`
-	CELLDLPCPDSCHES           []Celldlpcpdsch            `xml:"CELLDLPCPDSCH"`
-	CELLDLPCPDSCHPAS          []Celldlpcpdschpa          `xml:"CELLDLPCPDSCHPA"`
-	CELLDLPCPHICHES           []Celldlpcphich            `xml:"CELLDLPCPHICH"`
-	CELLDLSCHALGOS            []Celldlschalgo            `xml:"CELLDLSCHALGO"`
-	CELLDRXPARAS              []Celldrxpara              `xml:"CELLDRXPARA"`
-	CELLDRXSPECIALPARAS       []Celldrxspecialpara       `xml:"CELLDRXSPECIALPARA"`
-	CELLDSSES                 []Celldss                  `xml:"CELLDSS"`
-	CELLDYNACBARALGOPARAS     []Celldynacbaralgopara     `xml:"CELLDYNACBARALGOPARA"`
-	CELLEABALGOPARAS          []Celleabalgopara          `xml:"CELLEABALGOPARA"`
-	CELLEICICS                []Celleicic                `xml:"CELLEICIC"`
-	CELLEMTCALGOS             []Cellemtcalgo             `xml:"CELLEMTCALGO"`
-	CELLHOPARACFGS            []Cellhoparacfg            `xml:"CELLHOPARACFG"`
-	CELLIDPRDUPTS             []Cellidprdupt             `xml:"CELLIDPRDUPT"`
-	CELLIICSPARAS             []Celliicspara             `xml:"CELLIICSPARA"`
-	CELLLOWPOWERS             []Celllowpower             `xml:"CELLLOWPOWER"`
-	CELLLTEFLEXBWS            []Celllteflexbw            `xml:"CELLLTEFLEXBW"`
-	CELLLTEFLEXBWITFCFGS      []Celllteflexbwitfcfg      `xml:"CELLLTEFLEXBWITFCFG"`
-	CELLMBFCSES               []Cellmbfcs                `xml:"CELLMBFCS"`
-	CELLMBMSCFGS              []Cellmbmscfg              `xml:"CELLMBMSCFG"`
-	CELLMCPARAS               []Cellmcpara               `xml:"CELLMCPARA"`
-	CELLMIMOPARACFGS          []Cellmimoparacfg          `xml:"CELLMIMOPARACFG"`
-	CELLMLBS                  []Cellmlb                  `xml:"CELLMLB"`
-	CELLMLBAUTOGROUPS         []Cellmlbautogroup         `xml:"CELLMLBAUTOGROUP"`
-	CELLMLBHOS                []Cellmlbho                `xml:"CELLMLBHO"`
-	CELLMLBUESELS             []Cellmlbuesel             `xml:"CELLMLBUESEL"`
-	CELLMMALGOS               []Cellmmalgo               `xml:"CELLMMALGO"`
-	CELLMROS                  []Cellmro                  `xml:"CELLMRO"`
+	CELLACBARS                []Cellacbar                `xml:"CellAcBar"`
+	CELLACCESSES              []Cellaccess               `xml:"CellAccess"`
+	CELLALGOSWITCHES          []Cellalgoswitch           `xml:"CellAlgoSwitch"`
+	CELLBACKOFFS              []Cellbackoff              `xml:"CellBackOff"`
+	CELLBFS                   []Cellbf                   `xml:"CellBf"`
+	CELLBFMIMOPARACFGS        []Cellbfmimoparacfg        `xml:"CellBfMimoParaCfg"`
+	CELLCECFGS                []Cellcecfg                `xml:"CellCeCfg"`
+	CELLCESCHCFGS             []Cellceschcfg             `xml:"CellCeSchCfg"`
+	CELLCHPWRCFGS             []Cellchpwrcfg             `xml:"CellChPwrCfg"`
+	CELLCOUNTERPARAGROUPS     []Cellcounterparagroup     `xml:"CellCounterParaGroup"`
+	CELLCQIADAPTIVECFGS       []Cellcqiadaptivecfg       `xml:"CellCqiAdaptiveCfg"`
+	CELLCQIADJALGOS           []Cellcqiadjalgo           `xml:"CellCqiAdjAlgo"`
+	CELLCSIRSPARACFGS         []Cellcsirsparacfg         `xml:"CellCsiRsParaCfg"`
+	CELLCSPCPARAS             []Cellcspcpara             `xml:"CellCspcPara"`
+	CELLDACQCFGS              []Celldacqcfg              `xml:"CellDacqCfg"`
+	CELLDLCOMPALGOS           []Celldlcompalgo           `xml:"CellDlCompAlgo"`
+	CELLDLICICS               []Celldlicic               `xml:"CellDlIcic"`
+	CELLDLPCPDCCHES           []Celldlpcpdcch            `xml:"CellDlpcPdcch"`
+	CELLDLPCPDSCHES           []Celldlpcpdsch            `xml:"CellDlpcPdsch"`
+	CELLDLPCPDSCHPAS          []Celldlpcpdschpa          `xml:"CellDlpcPdschPa"`
+	CELLDLPCPHICHES           []Celldlpcphich            `xml:"CellDlpcPhich"`
+	CELLDLSCHALGOS            []Celldlschalgo            `xml:"CellDlschAlgo"`
+	CELLDRXPARAS              []Celldrxpara              `xml:"CellDrxPara"`
+	CELLDRXSPECIALPARAS       []Celldrxspecialpara       `xml:"CellDrxSpecialPara"`
+	CELLDSSES                 []Celldss                  `xml:"CellDss"`
+	CELLDYNACBARALGOPARAS     []Celldynacbaralgopara     `xml:"CellDynAcBarAlgoPara"`
+	CELLEABALGOPARAS          []Celleabalgopara          `xml:"CellEABAlgoPara"`
+	CELLEICICS                []Celleicic                `xml:"CellEicic"`
+	CELLEMTCALGOS             []Cellemtcalgo             `xml:"CellEmtcAlgo"`
+	CELLHOPARACFGS            []Cellhoparacfg            `xml:"CellHoParaCfg"`
+	CELLIDPRDUPTS             []Cellidprdupt             `xml:"CellIdPrdUpt"`
+	CELLIICSPARAS             []Celliicspara             `xml:"CellIIcsPara"`
+	CELLLOWPOWERS             []Celllowpower             `xml:"CellLowPower"`
+	CELLLTEFLEXBWS            []Celllteflexbw            `xml:"CellLteFlexBw"`
+	CELLLTEFLEXBWITFCFGS      []Celllteflexbwitfcfg      `xml:"CellLteFlexBwItfCfg"`
+	CELLMBFCSES               []Cellmbfcs                `xml:"CellMbfcs"`
+	CELLMBMSCFGS              []Cellmbmscfg              `xml:"CellMBMSCfg"`
+	CELLMCPARAS               []Cellmcpara               `xml:"CellMcPara"`
+	CELLMIMOPARACFGS          []Cellmimoparacfg          `xml:"CellMimoParaCfg"`
+	CELLMLBS                  []Cellmlb                  `xml:"CellMLB"`
+	CELLMLBAUTOGROUPS         []Cellmlbautogroup         `xml:"CellMlbAutoGroup"`
+	CELLMLBHOS                []Cellmlbho                `xml:"CellMlbHo"`
+	CELLMLBUESELS             []Cellmlbuesel             `xml:"CellMlbUeSel"`
+	CELLMMALGOS               []Cellmmalgo               `xml:"CellMMAlgo"`
+	CELLMROS                  []Cellmro                  `xml:"CellMro"`
 	CELLNOACCESSALMPARAS      []Cellnoaccessalmpara      `xml:"CELLNOACCESSALMPARA"`
-	CELLOPS                   []Cellop                   `xml:"CELLOP"`
-	CELLPCALGOS               []Cellpcalgo               `xml:"CELLPCALGO"`
-	CELLPDCCHALGOS            []Cellpdcchalgo            `xml:"CELLPDCCHALGO"`
-	CELLPDCCHCECFGS           []Cellpdcchcecfg           `xml:"CELLPDCCHCECFG"`
-	CELLPRBVALMLBS            []Cellprbvalmlb            `xml:"CELLPRBVALMLB"`
-	CELLPUCCHALGOS            []Cellpucchalgo            `xml:"CELLPUCCHALGO"`
-	CELLQCIPARAS              []Cellqcipara              `xml:"CELLQCIPARA"`
-	CELLRACHALGOS             []Cellrachalgo             `xml:"CELLRACHALGO"`
-	CELLRACHCECFGS            []Cellrachcecfg            `xml:"CELLRACHCECFG"`
-	CELLRACTHDS               []Cellracthd               `xml:"CELLRACTHD"`
-	CELLRESELS                []Cellresel                `xml:"CELLRESEL"`
-	CELLRESELGERANS           []Cellreselgeran           `xml:"CELLRESELGERAN"`
-	CELLRESELUTRANS           []Cellreselutran           `xml:"CELLRESELUTRAN"`
-	CELLRFSHUTDOWNS           []Cellrfshutdown           `xml:"CELLRFSHUTDOWN"`
-	CELLRICALGOS              []Cellricalgo              `xml:"CELLRICALGO"`
-	CELLSELS                  []Cellsel                  `xml:"CELLSEL"`
-	CELLSERVICEDIFFCFGS       []Cellservicediffcfg       `xml:"CELLSERVICEDIFFCFG"`
-	CELLSHUTDOWNS             []Cellshutdown             `xml:"CELLSHUTDOWN"`
-	CELLSIMAPS                []Cellsimap                `xml:"CELLSIMAP"`
-	CELLSRLTES                []Cellsrlte                `xml:"CELLSRLTE"`
-	CELLSRSADAPTIVECFGS       []Cellsrsadaptivecfg       `xml:"CELLSRSADAPTIVECFG"`
+	CELLOPS                   []Cellop                   `xml:"CellOp"`
+	CELLPCALGOS               []Cellpcalgo               `xml:"CellPcAlgo"`
+	CELLPDCCHALGOS            []Cellpdcchalgo            `xml:"CellPdcchAlgo"`
+	CELLPDCCHCECFGS           []Cellpdcchcecfg           `xml:"CellPdcchCECfg"`
+	CELLPRBVALMLBS            []Cellprbvalmlb            `xml:"CellPrbValMlb"`
+	CELLPUCCHALGOS            []Cellpucchalgo            `xml:"CellPucchAlgo"`
+	CELLQCIPARAS              []Cellqcipara              `xml:"CellQciPara"`
+	CELLRACHALGOS             []Cellrachalgo             `xml:"CellRachAlgo"`
+	CELLRACHCECFGS            []Cellrachcecfg            `xml:"CellRachCECfg"`
+	CELLRACTHDS               []Cellracthd               `xml:"CellRacThd"`
+	CELLRESELS                []Cellresel                `xml:"CellResel"`
+	CELLRESELGERANS           []Cellreselgeran           `xml:"CellReselGeran"`
+	CELLRESELUTRANS           []Cellreselutran           `xml:"CellReselUtran"`
+	CELLRFSHUTDOWNS           []Cellrfshutdown           `xml:"CellRfShutdown"`
+	CELLRICALGOS              []Cellricalgo              `xml:"CellRicAlgo"`
+	CELLSELS                  []Cellsel                  `xml:"CellSel"`
+	CELLSERVICEDIFFCFGS       []Cellservicediffcfg       `xml:"CellServiceDiffCfg"`
+	CELLSHUTDOWNS             []Cellshutdown             `xml:"CellShutdown"`
+	CELLSIMAPS                []Cellsimap                `xml:"CellSiMap"`
+	CELLSRLTES                []Cellsrlte                `xml:"CellSrlte"`
+	CELLSRSADAPTIVECFGS       []Cellsrsadaptivecfg       `xml:"CellSrsAdaptiveCfg"`
 	CELLSTANDARDQCIS          []Cellstandardqci          `xml:"CELLSTANDARDQCI"`
-	CELLTTIBUNDLINGALGOS      []Cellttibundlingalgo      `xml:"CELLTTIBUNDLINGALGO"`
-	CELLUCIONPUSCHPARAS       []Cellucionpuschpara       `xml:"CELLUCIONPUSCHPARA"`
-	CELLUEMEASCONTROLCFGS     []Celluemeascontrolcfg     `xml:"CELLUEMEASCONTROLCFG"`
-	CELLULCOMPALGOS           []Cellulcompalgo           `xml:"CELLULCOMPALGO"`
-	CELLULICALGOS             []Cellulicalgo             `xml:"CELLULICALGO"`
-	CELLULICICS               []Cellulicic               `xml:"CELLULICIC"`
-	CELLULICICMCPARAS         []Cellulicicmcpara         `xml:"CELLULICICMCPARA"`
-	CELLULMIMOPARACFGS        []Cellulmimoparacfg        `xml:"CELLULMIMOPARACFG"`
-	CELLULPCCOMMS             []Cellulpccomm             `xml:"CELLULPCCOMM"`
-	CELLULPCDEDICS            []Cellulpcdedic            `xml:"CELLULPCDEDIC"`
-	CELLULSCHALGOS            []Cellulschalgo            `xml:"CELLULSCHALGO"`
-	CELLULUNIFIEDOLCS         []Cellulunifiedolc         `xml:"CELLULUNIFIEDOLC"`
-	CELLUSPARACFGS            []Cellusparacfg            `xml:"CELLUSPARACFG"`
-	CELLVMSES                 []Cellvms                  `xml:"CELLVMS"`
-	CELLWTTXPARACFGS          []Cellwttxparacfg          `xml:"CELLWTTXPARACFG"`
-	CEPUCCHCFGS               []Cepucchcfg               `xml:"CEPUCCHCFG"`
-	CERACHCFGS                []Cerachcfg                `xml:"CERACHCFG"`
+	CELLTTIBUNDLINGALGOS      []Cellttibundlingalgo      `xml:"CellTtiBundlingAlgo"`
+	CELLUCIONPUSCHPARAS       []Cellucionpuschpara       `xml:"CellUciOnPuschPara"`
+	CELLUEMEASCONTROLCFGS     []Celluemeascontrolcfg     `xml:"CellUeMeasControlCfg"`
+	CELLULCOMPALGOS           []Cellulcompalgo           `xml:"CellUlCompAlgo"`
+	CELLULICALGOS             []Cellulicalgo             `xml:"CellUlIcAlgo"`
+	CELLULICICS               []Cellulicic               `xml:"CellUlIcic"`
+	CELLULICICMCPARAS         []Cellulicicmcpara         `xml:"CellULIcicMcPara"`
+	CELLULMIMOPARACFGS        []Cellulmimoparacfg        `xml:"CellUlMimoParaCfg"`
+	CELLULPCCOMMS             []Cellulpccomm             `xml:"CellUlpcComm"`
+	CELLULPCDEDICS            []Cellulpcdedic            `xml:"CellUlpcDedic"`
+	CELLULSCHALGOS            []Cellulschalgo            `xml:"CellUlschAlgo"`
+	CELLULUNIFIEDOLCS         []Cellulunifiedolc         `xml:"CellULUnifiedOLC"`
+	CELLUSPARACFGS            []Cellusparacfg            `xml:"CellUSParaCfg"`
+	CELLVMSES                 []Cellvms                  `xml:"CellVMS"`
+	CELLWTTXPARACFGS          []Cellwttxparacfg          `xml:"CellWttxParaCfg"`
+	CEPUCCHCFGS               []Cepucchcfg               `xml:"CePucchCfg"`
+	CERACHCFGS                []Cerachcfg                `xml:"CeRachCfg"`
 	CERTCFGS                  []Certcfg                  `xml:"CERTCFG"`
 	CERTCHKTSKS               []Certchktsk               `xml:"CERTCHKTSK"`
 	CERTDEPLOIES              []Certdeploy               `xml:"CERTDEPLOY"`
 	CERTMKS                   []Certmk                   `xml:"CERTMK"`
 	CERTREQS                  []Certreq                  `xml:"CERTREQ"`
 	CHKS                      []Chk                      `xml:"CHK"`
-	CLKDETECTS                []Clkdetect                `xml:"CLKDETECT"`
-	CLZEROBUFFERZONES         []Clzerobufferzone         `xml:"CLZEROBUFFERZONE"`
-	CNOPERATORS               []Cnoperator               `xml:"CNOPERATOR"`
-	CNOPERATORHOCFGS          []Cnoperatorhocfg          `xml:"CNOPERATORHOCFG"`
-	CNOPERATORQCIPARAS        []Cnoperatorqcipara        `xml:"CNOPERATORQCIPARA"`
+	CLKDETECTS                []Clkdetect                `xml:"ClkDetect"`
+	CLZEROBUFFERZONES         []Clzerobufferzone         `xml:"CLZeroBufferzone"`
+	CNOPERATORS               []Cnoperator               `xml:"CnOperator"`
+	CNOPERATORHOCFGS          []Cnoperatorhocfg          `xml:"CnOperatorHoCfg"`
+	CNOPERATORQCIPARAS        []Cnoperatorqcipara        `xml:"CnOperatorQciPara"`
 	CNOPERATORSTANDARDQCIS    []Cnoperatorstandardqci    `xml:"CNOPERATORSTANDARDQCI"`
-	CNOPERATORTAS             []Cnoperatorta             `xml:"CNOPERATORTA"`
-	COUNTERCHECKPARAS         []Countercheckpara         `xml:"COUNTERCHECKPARA"`
+	CNOPERATORTAS             []Cnoperatorta             `xml:"CnOperatorTa"`
+	COUNTERCHECKPARAS         []Countercheckpara         `xml:"CounterCheckPara"`
 	CPBEARERS                 []Cpbearer                 `xml:"CPBEARER"`
 	CPRIPORTS                 []Cpriport                 `xml:"CPRIPORT"`
 	CPSWITCHES                []Cpswitch                 `xml:"CPSWITCH"`
-	CQIADAPTIVECFGS           []Cqiadaptivecfg           `xml:"CQIADAPTIVECFG"`
+	CQIADAPTIVECFGS           []Cqiadaptivecfg           `xml:"CqiAdaptiveCfg"`
 	CRLPOLICIES               []Crlpolicy                `xml:"CRLPOLICY"`
-	CSFALLBACKBLINDHOCFGS     []Csfallbackblindhocfg     `xml:"CSFALLBACKBLINDHOCFG"`
-	CSFALLBACKHOS             []Csfallbackho             `xml:"CSFALLBACKHO"`
-	CSFALLBACKPOLICYCFGS      []Csfallbackpolicycfg      `xml:"CSFALLBACKPOLICYCFG"`
-	CSPCALGOPARAS             []Cspcalgopara             `xml:"CSPCALGOPARA"`
+	CSFALLBACKBLINDHOCFGS     []Csfallbackblindhocfg     `xml:"CSFallBackBlindHoCfg"`
+	CSFALLBACKHOS             []Csfallbackho             `xml:"CSFallBackHo"`
+	CSFALLBACKPOLICYCFGS      []Csfallbackpolicycfg      `xml:"CSFallBackPolicyCfg"`
+	CSPCALGOPARAS             []Cspcalgopara             `xml:"CspcAlgoPara"`
 	DEVIPS                    []Devip                    `xml:"DEVIP"`
 	DHCPRELAYSWITCHES         []Dhcprelayswitch          `xml:"DHCPRELAYSWITCH"`
 	DHCPSVRIPS                []Dhcpsvrip                `xml:"DHCPSVRIP"`
 	DHCPSWS                   []Dhcpsw                   `xml:"DHCPSW"`
 	DIFPRIS                   []Difpri                   `xml:"DIFPRI"`
-	DISTBASEDHOS              []Distbasedho              `xml:"DISTBASEDHO"`
+	DISTBASEDHOS              []Distbasedho              `xml:"DistBasedHO"`
 	DLFLOWCTRLPARAS           []Dlflowctrlpara           `xml:"DLFLOWCTRLPARA"`
-	DRXES                     []Drx                      `xml:"DRX"`
-	DRXPARAGROUPS             []Drxparagroup             `xml:"DRXPARAGROUP"`
+	DRXES                     []Drx                      `xml:"Drx"`
+	DRXPARAGROUPS             []Drxparagroup             `xml:"DrxParaGroup"`
 	DSCPMAPS                  []Dscpmap                  `xml:"DSCPMAP"`
 	E1T1S                     []E1t1                     `xml:"E1T1"`
 	E1T1BEARS                 []E1t1bear                 `xml:"E1T1BEAR"`
 	E1T1BERS                  []E1t1ber                  `xml:"E1T1BER"`
-	EMCS                      []Emc                      `xml:"EMC"`
+	EMCS                      []Emc                      `xml:"Emc"`
 	EMUS                      []Emu                      `xml:"EMU"`
-	ENBCELLOPRSVDPARAS        []Enbcelloprsvdpara        `xml:"ENBCELLOPRSVDPARA"`
-	ENBCELLQCIRSVDPARAS       []Enbcellqcirsvdpara       `xml:"ENBCELLQCIRSVDPARA"`
-	ENBCELLRSVDPARAS          []Enbcellrsvdpara          `xml:"ENBCELLRSVDPARA"`
-	ENBCNOPQCIRSVDPARAS       []Enbcnopqcirsvdpara       `xml:"ENBCNOPQCIRSVDPARA"`
-	ENBCNOPRSVDPARAS          []Enbcnoprsvdpara          `xml:"ENBCNOPRSVDPARA"`
-	ENBLICENSEALMTHDS         []Enblicensealmthd         `xml:"ENBLICENSEALMTHD"`
-	ENBQCIRSVDPARAS           []Enbqcirsvdpara           `xml:"ENBQCIRSVDPARA"`
-	ENBRSVDPARAS              []Enbrsvdpara              `xml:"ENBRSVDPARA"`
+	ENBCELLOPRSVDPARAS        []Enbcelloprsvdpara        `xml:"eNBCellOpRsvdPara"`
+	ENBCELLQCIRSVDPARAS       []Enbcellqcirsvdpara       `xml:"eNBCellQciRsvdPara"`
+	ENBCELLRSVDPARAS          []Enbcellrsvdpara          `xml:"eNBCellRsvdPara"`
+	ENBCNOPQCIRSVDPARAS       []Enbcnopqcirsvdpara       `xml:"eNBCnOpQciRsvdPara"`
+	ENBCNOPRSVDPARAS          []Enbcnoprsvdpara          `xml:"eNBCnOpRsvdPara"`
+	ENBLICENSEALMTHDS         []Enblicensealmthd         `xml:"eNBLicenseAlmThd"`
+	ENBQCIRSVDPARAS           []Enbqcirsvdpara           `xml:"eNBQciRsvdPara"`
+	ENBRSVDPARAS              []Enbrsvdpara              `xml:"eNBRsvdPara"`
 	ENERGYCONS                []Energycon                `xml:"ENERGYCON"`
-	ENODEBALGOSWITCHES        []Enodebalgoswitch         `xml:"ENODEBALGOSWITCH"`
-	ENODEBALMCFGS             []Enodebalmcfg             `xml:"ENODEBALMCFG"`
-	ENODEBAUTOPOWEROFFS       []Enodebautopoweroff       `xml:"ENODEBAUTOPOWEROFF"`
-	ENODEBCHROUTPUTCTRLS      []Enodebchroutputctrl      `xml:"ENODEBCHROUTPUTCTRL"`
-	ENODEBCIPHERCAPS          []Enodebciphercap          `xml:"ENODEBCIPHERCAP"`
-	ENODEBCONNSTATETIMERS     []Enodebconnstatetimer     `xml:"ENODEBCONNSTATETIMER"`
-	ENODEBFDDBBRESES          []Enodebfddbbres           `xml:"ENODEBFDDBBRES"`
-	ENODEBFLOWCTRLPARAS       []Enodebflowctrlpara       `xml:"ENODEBFLOWCTRLPARA"`
-	ENODEBFRAMEOFFSETS        []Enodebframeoffset        `xml:"ENODEBFRAMEOFFSET"`
-	ENODEBFUNCTIONS           []Enodebfunction           `xml:"ENODEBFUNCTION"`
-	ENODEBINTEGRITYCAPS       []Enodebintegritycap       `xml:"ENODEBINTEGRITYCAP"`
-	ENODEBMLBS                []Enodebmlb                `xml:"ENODEBMLB"`
-	ENODEBNBPARAS             []Enodebnbpara             `xml:"ENODEBNBPARA"`
-	ENODEBRESMODEALGOS        []Enodebresmodealgo        `xml:"ENODEBRESMODEALGO"`
-	ENODEBSHARINGMODES        []Enodebsharingmode        `xml:"ENODEBSHARINGMODE"`
-	ENODEBSONDBCFGS           []Enodebsondbcfg           `xml:"ENODEBSONDBCFG"`
-	ENODEBTDDBBRESES          []Enodebtddbbres           `xml:"ENODEBTDDBBRES"`
-	ENODEBTGALGCFGS           []Enodebtgalgcfg           `xml:"ENODEBTGALGCFG"`
-	ENODEBUSPARACFGS          []Enodebusparacfg          `xml:"ENODEBUSPARACFG"`
+	ENODEBALGOSWITCHES        []Enodebalgoswitch         `xml:"ENodeBAlgoSwitch"`
+	ENODEBALMCFGS             []Enodebalmcfg             `xml:"eNodeBAlmCfg"`
+	ENODEBAUTOPOWEROFFS       []Enodebautopoweroff       `xml:"eNodeBAutoPowerOff"`
+	ENODEBCHROUTPUTCTRLS      []Enodebchroutputctrl      `xml:"eNodeBChrOutputCtrl"`
+	ENODEBCIPHERCAPS          []Enodebciphercap          `xml:"ENodeBCipherCap"`
+	ENODEBCONNSTATETIMERS     []Enodebconnstatetimer     `xml:"ENodeBConnStateTimer"`
+	ENODEBFDDBBRESES          []Enodebfddbbres           `xml:"eNodeBFddBbRes"`
+	ENODEBFLOWCTRLPARAS       []Enodebflowctrlpara       `xml:"eNodeBFlowCtrlPara"`
+	ENODEBFRAMEOFFSETS        []Enodebframeoffset        `xml:"ENodeBFrameOffset"`
+	ENODEBFUNCTIONS           []Enodebfunction           `xml:"eNodeBFunction"`
+	ENODEBINTEGRITYCAPS       []Enodebintegritycap       `xml:"ENodeBIntegrityCap"`
+	ENODEBMLBS                []Enodebmlb                `xml:"eNodeBMlb"`
+	ENODEBNBPARAS             []Enodebnbpara             `xml:"ENodeBNbPara"`
+	ENODEBRESMODEALGOS        []Enodebresmodealgo        `xml:"eNodeBResModeAlgo"`
+	ENODEBSHARINGMODES        []Enodebsharingmode        `xml:"ENodeBSharingMode"`
+	ENODEBSONDBCFGS           []Enodebsondbcfg           `xml:"eNodeBSonDBCfg"`
+	ENODEBTDDBBRESES          []Enodebtddbbres           `xml:"eNodeBTddBbRes"`
+	ENODEBTGALGCFGS           []Enodebtgalgcfg           `xml:"eNodeBTGAlgCfg"`
+	ENODEBUSPARACFGS          []Enodebusparacfg          `xml:"eNodeBUSParaCfg"`
 	EPGROUPS                  []Epgroup                  `xml:"EPGROUP"`
 	EQUIPMENTS                []Equipment                `xml:"EQUIPMENT"`
 	ETHPORTS                  []Ethport                  `xml:"ETHPORT"`
-	EUCELLALMCFGS             []Eucellalmcfg             `xml:"EUCELLALMCFG"`
-	EUCELLSECTOREQMS          []Eucellsectoreqm          `xml:"EUCELLSECTOREQM"`
-	EUCOMMCELLSECTOREQMS      []Eucommcellsectoreqm      `xml:"EUCOMMCELLSECTOREQM"`
-	EUCOSCHCFGS               []Eucoschcfg               `xml:"EUCOSCHCFG"`
-	EUCOSCHDLCOMPCFGS         []Eucoschdlcompcfg         `xml:"EUCOSCHDLCOMPCFG"`
-	EUCOSCHULICSCFGS          []Eucoschulicscfg          `xml:"EUCOSCHULICSCFG"`
-	EUEPCSECS                 []Euepcsec                 `xml:"EUEPCSEC"`
-	EUTRANEXTERNALCELLS       []Eutranexternalcell       `xml:"EUTRANEXTERNALCELL"`
-	EUTRANINTERFREQNCELLS     []Eutraninterfreqncell     `xml:"EUTRANINTERFREQNCELL"`
-	EUTRANINTERNFREQS         []Eutraninternfreq         `xml:"EUTRANINTERNFREQ"`
-	EUTRANINTRAFREQNCELLS     []Eutranintrafreqncell     `xml:"EUTRANINTRAFREQNCELL"`
-	EUULCOSCHCFGS             []Euulcoschcfg             `xml:"EUULCOSCHCFG"`
+	EUCELLALMCFGS             []Eucellalmcfg             `xml:"EuCellAlmCfg"`
+	EUCELLSECTOREQMS          []Eucellsectoreqm          `xml:"eUCellSectorEqm"`
+	EUCOMMCELLSECTOREQMS      []Eucommcellsectoreqm      `xml:"eUCommCellSectorEqm"`
+	EUCOSCHCFGS               []Eucoschcfg               `xml:"EuCoSchCfg"`
+	EUCOSCHDLCOMPCFGS         []Eucoschdlcompcfg         `xml:"EuCoSchDLCoMPCfg"`
+	EUCOSCHULICSCFGS          []Eucoschulicscfg          `xml:"EuCoSchULICSCfg"`
+	EUEPCSECS                 []Euepcsec                 `xml:"EUEPCSec"`
+	EUTRANEXTERNALCELLS       []Eutranexternalcell       `xml:"EutranExternalCell"`
+	EUTRANINTERFREQNCELLS     []Eutraninterfreqncell     `xml:"EutranInterFreqNCell"`
+	EUTRANINTERNFREQS         []Eutraninternfreq         `xml:"EutranInterNFreq"`
+	EUTRANINTRAFREQNCELLS     []Eutranintrafreqncell     `xml:"EutranIntraFreqNCell"`
+	EUULCOSCHCFGS             []Euulcoschcfg             `xml:"EuUlCoSchCfg"`
 	EXTENDEDQCIS              []Extendedqci              `xml:"EXTENDEDQCI"`
-	FDDRESMODES               []Fddresmode               `xml:"FDDRESMODE"`
+	FDDRESMODES               []Fddresmode               `xml:"FddResMode"`
 	FLTCORRENABLECFGS         []Fltcorrenablecfg         `xml:"FLTCORRENABLECFG"`
 	FMUS                      []Fmu                      `xml:"FMU"`
 	FTPCLTS                   []Ftpclt                   `xml:"FTPCLT"`
@@ -221,12 +221,12 @@ type Class struct {
 	GBTSFUNCTIONS             []Gbtsfunction             `xml:"GBTSFUNCTION"`
 	GBTSGLOBALPARAS           []Gbtsglobalpara           `xml:"GBTSGLOBALPARA"`
 	GBTSPATHES                []Gbtspath                 `xml:"GBTSPATH"`
-	GERANEXTERNALCELLS        []Geranexternalcell        `xml:"GERANEXTERNALCELL"`
-	GERANINTERFCFGS           []Geraninterfcfg           `xml:"GERANINTERFCFG"`
-	GERANNCELLS               []Geranncell               `xml:"GERANNCELL"`
-	GERANNFREQGROUPS          []Gerannfreqgroup          `xml:"GERANNFREQGROUP"`
-	GERANNFREQGROUPARFCNS     []Gerannfreqgrouparfcn     `xml:"GERANNFREQGROUPARFCN"`
-	GLOBALPROCSWITCHES        []Globalprocswitch         `xml:"GLOBALPROCSWITCH"`
+	GERANEXTERNALCELLS        []Geranexternalcell        `xml:"GeranExternalCell"`
+	GERANINTERFCFGS           []Geraninterfcfg           `xml:"GeranInterfCfg"`
+	GERANNCELLS               []Geranncell               `xml:"GeranNcell"`
+	GERANNFREQGROUPS          []Gerannfreqgroup          `xml:"GeranNfreqGroup"`
+	GERANNFREQGROUPARFCNS     []Gerannfreqgrouparfcn     `xml:"GeranNfreqGroupArfcn"`
+	GLOBALPROCSWITCHES        []Globalprocswitch         `xml:"GlobalProcSwitch"`
 	GLOCELLS                  []Glocell                  `xml:"GLOCELL"`
 	GLOCELLALGPARAS           []Glocellalgpara           `xml:"GLOCELLALGPARA"`
 	GLOCELLENERGYMGTPARAS     []Glocellenergymgtpara     `xml:"GLOCELLENERGYMGTPARA"`
@@ -239,63 +239,63 @@ type Class struct {
 	GTRANSPARAGWS             []Gtransparagw             `xml:"GTRANSPARAGW"`
 	GTRXGROUPS                []Gtrxgroup                `xml:"GTRXGROUP"`
 	GTRXGROUPSECTOREQMS       []Gtrxgroupsectoreqm       `xml:"GTRXGROUPSECTOREQM"`
-	HIGHSPDADAPTIONPARAS      []Highspdadaptionpara      `xml:"HIGHSPDADAPTIONPARA"`
-	HOMEASCOMMS               []Homeascomm               `xml:"HOMEASCOMM"`
+	HIGHSPDADAPTIONPARAS      []Highspdadaptionpara      `xml:"HighSpdAdaptionPara"`
+	HOMEASCOMMS               []Homeascomm               `xml:"HoMeasComm"`
 	HTCDPAS                   []Htcdpa                   `xml:"HTCDPA"`
 	IKECFGS                   []Ikecfg                   `xml:"IKECFG"`
 	IMAGRPS                   []Imagrp                   `xml:"IMAGRP"`
 	IMALNKS                   []Imalnk                   `xml:"IMALNK"`
 	INGCHKTSKS                []Ingchktsk                `xml:"INGCHKTSK"`
-	INTERFREQHOGROUPS         []Interfreqhogroup         `xml:"INTERFREQHOGROUP"`
-	INTERRATCELLSHUTDOWNS     []Interratcellshutdown     `xml:"INTERRATCELLSHUTDOWN"`
-	INTERRATHOCDMA1XRTTGROUPS []Interrathocdma1xrttgroup `xml:"INTERRATHOCDMA1XRTTGROUP"`
-	INTERRATHOCDMAHRPDGROUPS  []Interrathocdmahrpdgroup  `xml:"INTERRATHOCDMAHRPDGROUP"`
-	INTERRATHOCOMMS           []Interrathocomm           `xml:"INTERRATHOCOMM"`
-	INTERRATHOCOMMGROUPS      []Interrathocommgroup      `xml:"INTERRATHOCOMMGROUP"`
-	INTERRATHOGERANGROUPS     []Interrathogerangroup     `xml:"INTERRATHOGERANGROUP"`
-	INTERRATHOUTRANGROUPS     []Interrathoutrangroup     `xml:"INTERRATHOUTRANGROUP"`
-	INTERRATPOLICYCFGGROUPS   []Interratpolicycfggroup   `xml:"INTERRATPOLICYCFGGROUP"`
-	INTRAFREQHOGROUPS         []Intrafreqhogroup         `xml:"INTRAFREQHOGROUP"`
-	INTRARATHOCOMMS           []Intrarathocomm           `xml:"INTRARATHOCOMM"`
-	IOPSCFGS                  []Iopscfg                  `xml:"IOPSCFG"`
+	INTERFREQHOGROUPS         []Interfreqhogroup         `xml:"InterFreqHoGroup"`
+	INTERRATCELLSHUTDOWNS     []Interratcellshutdown     `xml:"InterRatCellShutdown"`
+	INTERRATHOCDMA1XRTTGROUPS []Interrathocdma1xrttgroup `xml:"InterRatHoCdma1xRttGroup"`
+	INTERRATHOCDMAHRPDGROUPS  []Interrathocdmahrpdgroup  `xml:"InterRatHoCdmaHrpdGroup"`
+	INTERRATHOCOMMS           []Interrathocomm           `xml:"InterRatHoComm"`
+	INTERRATHOCOMMGROUPS      []Interrathocommgroup      `xml:"InterRatHoCommGroup"`
+	INTERRATHOGERANGROUPS     []Interrathogerangroup     `xml:"InterRatHoGeranGroup"`
+	INTERRATHOUTRANGROUPS     []Interrathoutrangroup     `xml:"InterRatHoUtranGroup"`
+	INTERRATPOLICYCFGGROUPS   []Interratpolicycfggroup   `xml:"InterRatPolicyCfgGroup"`
+	INTRAFREQHOGROUPS         []Intrafreqhogroup         `xml:"IntraFreqHoGroup"`
+	INTRARATHOCOMMS           []Intrarathocomm           `xml:"IntraRatHoComm"`
+	IOPSCFGS                  []Iopscfg                  `xml:"IopsCfg"`
 	IPCLKLNKS                 []Ipclklnk                 `xml:"IPCLKLNK"`
 	IPGUARDS                  []Ipguard                  `xml:"IPGUARD"`
 	IPPATHES                  []Ippath                   `xml:"IPPATH"`
 	IPPMSESSIONS              []Ippmsession              `xml:"IPPMSESSION"`
 	IPRTS                     []Iprt                     `xml:"IPRT"`
-	IRATNCELLCLASSMGTS        []Iratncellclassmgt        `xml:"IRATNCELLCLASSMGT"`
+	IRATNCELLCLASSMGTS        []Iratncellclassmgt        `xml:"IRATNCellClassMgt"`
 	IUBS                      []Iub                      `xml:"IUB"`
 	IUBCPS                    []Iubcp                    `xml:"IUBCP"`
 	LANSWS                    []Lansw                    `xml:"LANSW"`
 	LANSWITCHPORTS            []Lanswitchport            `xml:"LANSWITCHPORT"`
-	LICENSECONTROLSTRATEGIES  []Licensecontrolstrategy   `xml:"LICENSECONTROLSTRATEGY"`
-	LICRATIOS                 []Licratio                 `xml:"LICRATIO"`
+	LICENSECONTROLSTRATEGIES  []Licensecontrolstrategy   `xml:"LicenseControlStrategy"`
+	LICRATIOS                 []Licratio                 `xml:"LicRatio"`
 	LINECLKS                  []Lineclk                  `xml:"LINECLK"`
-	LIOPTATOMRULES            []Lioptatomrule            `xml:"LIOPTATOMRULE"`
-	LIOPTFEATURES             []Lioptfeature             `xml:"LIOPTFEATURE"`
-	LIOPTFUNCTIONS            []Lioptfunction            `xml:"LIOPTFUNCTION"`
-	LIOPTRULES                []Lioptrule                `xml:"LIOPTRULE"`
-	LIOPTRULEMEMBERS          []Lioptrulemember          `xml:"LIOPTRULEMEMBER"`
+	LIOPTATOMRULES            []Lioptatomrule            `xml:"LIOptAtomRule"`
+	LIOPTFEATURES             []Lioptfeature             `xml:"LIOptFeature"`
+	LIOPTFUNCTIONS            []Lioptfunction            `xml:"LIOptFunction"`
+	LIOPTRULES                []Lioptrule                `xml:"LIOptRule"`
+	LIOPTRULEMEMBERS          []Lioptrulemember          `xml:"LIOptRuleMember"`
 	LLDPGLOBALS               []Lldpglobal               `xml:"LLDPGLOBAL"`
 	LOCALETHPORTS             []Localethport             `xml:"LOCALETHPORT"`
 	LOCALIPS                  []Localip                  `xml:"LOCALIP"`
 	LOCALIP6S                 []Localip6                 `xml:"LOCALIP6"`
 	LOCALWAPS                 []Localwap                 `xml:"LOCALWAP"`
 	LOCATIONS                 []Location                 `xml:"LOCATION"`
-	LWAMGTCFGS                []Lwamgtcfg                `xml:"LWAMGTCFG"`
+	LWAMGTCFGS                []Lwamgtcfg                `xml:"LwaMgtCfg"`
 	MAINSALARMBINDS           []Mainsalarmbind           `xml:"MAINSALARMBIND"`
 	MANRESALMRPTS             []Manresalmrpt             `xml:"MANRESALMRPT"`
-	MBMSPARAS                 []Mbmspara                 `xml:"MBMSPARA"`
-	MMEFEATURECFGS            []Mmefeaturecfg            `xml:"MMEFEATURECFG"`
+	MBMSPARAS                 []Mbmspara                 `xml:"MBMSPara"`
+	MMEFEATURECFGS            []Mmefeaturecfg            `xml:"MmeFeatureCfg"`
 	MPTS                      []Mpt                      `xml:"MPT"`
-	MPTRESASSIGNMENTS         []Mptresassignment         `xml:"MPTRESASSIGNMENT"`
+	MPTRESASSIGNMENTS         []Mptresassignment         `xml:"MptResAssignment"`
 	MROS                      []Mro                      `xml:"MRO"`
-	NBCELLDLSCHCEALGOS        []Nbcelldlschcealgo        `xml:"NBCELLDLSCHCEALGO"`
-	NBCELLULSCHCEALGOS        []Nbcellulschcealgo        `xml:"NBCELLULSCHCEALGO"`
-	NCELLCLASSMGTS            []Ncellclassmgt            `xml:"NCELLCLASSMGT"`
-	NCELLDLRSRPMEASPARAS      []Ncelldlrsrpmeaspara      `xml:"NCELLDLRSRPMEASPARA"`
-	NCELLPARACFGS             []Ncellparacfg             `xml:"NCELLPARACFG"`
-	NCELLSRSMEASPARAS         []Ncellsrsmeaspara         `xml:"NCELLSRSMEASPARA"`
+	NBCELLDLSCHCEALGOS        []Nbcelldlschcealgo        `xml:"NbCellDlSchCEAlgo"`
+	NBCELLULSCHCEALGOS        []Nbcellulschcealgo        `xml:"NbCellUlSchCEAlgo"`
+	NCELLCLASSMGTS            []Ncellclassmgt            `xml:"NCellClassMgt"`
+	NCELLDLRSRPMEASPARAS      []Ncelldlrsrpmeaspara      `xml:"NCellDlRsrpMeasPara"`
+	NCELLPARACFGS             []Ncellparacfg             `xml:"NCellParaCfg"`
+	NCELLSRSMEASPARAS         []Ncellsrsmeaspara         `xml:"NCellSrsMeasPara"`
 	NES                       []Ne                       `xml:"NE"`
 	NEMNTS                    []Nemnt                    `xml:"NEMNT"`
 	NODES                     []Node                     `xml:"NODE"`
@@ -318,68 +318,68 @@ type Class struct {
 	OMCHES                    []Omch                     `xml:"OMCH"`
 	OPS                       []Op                       `xml:"OP"`
 	OUTPORTS                  []Outport                  `xml:"OUTPORT"`
-	PARAAUTOOPTCFGS           []Paraautooptcfg           `xml:"PARAAUTOOPTCFG"`
-	PCCFREQCFGS               []Pccfreqcfg               `xml:"PCCFREQCFG"`
-	PCCHCFGS                  []Pcchcfg                  `xml:"PCCHCFG"`
-	PDCPROHCPARAS             []Pdcprohcpara             `xml:"PDCPROHCPARA"`
-	PDSCHCFGS                 []Pdschcfg                 `xml:"PDSCHCFG"`
+	PARAAUTOOPTCFGS           []Paraautooptcfg           `xml:"ParaAutoOptCfg"`
+	PCCFREQCFGS               []Pccfreqcfg               `xml:"PccFreqCfg"`
+	PCCHCFGS                  []Pcchcfg                  `xml:"PCCHCfg"`
+	PDCPROHCPARAS             []Pdcprohcpara             `xml:"PdcpRohcPara"`
+	PDSCHCFGS                 []Pdschcfg                 `xml:"PDSCHCfg"`
 	PEERCLKS                  []Peerclk                  `xml:"PEERCLK"`
 	PEUS                      []Peu                      `xml:"PEU"`
-	PHICHCFGS                 []Phichcfg                 `xml:"PHICHCFG"`
+	PHICHCFGS                 []Phichcfg                 `xml:"PHICHCfg"`
 	PHYPORTS                  []Phyport                  `xml:"PHYPORT"`
 	PLRTHRESHOLDS             []Plrthreshold             `xml:"PLRTHRESHOLD"`
 	PMTUCFGS                  []Pmtucfg                  `xml:"PMTUCFG"`
 	PORTPOLICIES              []Portpolicy               `xml:"PORTPOLICY"`
 	PRI2QUES                  []Pri2que                  `xml:"PRI2QUE"`
-	PRIVATECABANDCOMBS        []Privatecabandcomb        `xml:"PRIVATECABANDCOMB"`
+	PRIVATECABANDCOMBS        []Privatecabandcomb        `xml:"PrivateCaBandComb"`
 	PSUISES                   []Psuis                    `xml:"PSUIS"`
-	PUCCHCFGS                 []Pucchcfg                 `xml:"PUCCHCFG"`
-	PUSCHCFGS                 []Puschcfg                 `xml:"PUSCHCFG"`
+	PUCCHCFGS                 []Pucchcfg                 `xml:"PUCCHCfg"`
+	PUSCHCFGS                 []Puschcfg                 `xml:"PUSCHCfg"`
 	PUSCHPARAMS               []Puschparam               `xml:"PUSCHPARAM"`
 	PWDPOLICIES               []Pwdpolicy                `xml:"PWDPOLICY"`
-	QCIPARAS                  []Qcipara                  `xml:"QCIPARA"`
-	QOEHOCOMMONCFGS           []Qoehocommoncfg           `xml:"QOEHOCOMMONCFG"`
-	RACHCFGS                  []Rachcfg                  `xml:"RACHCFG"`
+	QCIPARAS                  []Qcipara                  `xml:"QciPara"`
+	QOEHOCOMMONCFGS           []Qoehocommoncfg           `xml:"QoEHoCommonCfg"`
+	RACHCFGS                  []Rachcfg                  `xml:"RACHCfg"`
 	RETS                      []Ret                      `xml:"RET"`
 	RETDEVICEDATAS            []Retdevicedata            `xml:"RETDEVICEDATA"`
 	RETPORTS                  []Retport                  `xml:"RETPORT"`
 	RETSUBUNITS               []Retsubunit               `xml:"RETSUBUNIT"`
 	RFUS                      []Rfu                      `xml:"RFU"`
-	RLCPDCPPARAGROUPS         []Rlcpdcpparagroup         `xml:"RLCPDCPPARAGROUP"`
-	RRCCONNSTATETIMERS        []Rrcconnstatetimer        `xml:"RRCCONNSTATETIMER"`
+	RLCPDCPPARAGROUPS         []Rlcpdcpparagroup         `xml:"RlcPdcpParaGroup"`
+	RRCCONNSTATETIMERS        []Rrcconnstatetimer        `xml:"RrcConnStateTimer"`
 	RRUS                      []Rru                      `xml:"RRU"`
 	RRUCHAINS                 []Rruchain                 `xml:"RRUCHAIN"`
-	RRUJOINTCALPARACFGS       []Rrujointcalparacfg       `xml:"RRUJOINTCALPARACFG"`
+	RRUJOINTCALPARACFGS       []Rrujointcalparacfg       `xml:"RruJointCalParaCfg"`
 	RSCGRPS                   []Rscgrp                   `xml:"RSCGRP"`
 	RSCGRPALGS                []Rscgrpalg                `xml:"RSCGRPALG"`
 	RXBRANCHES                []Rxbranch                 `xml:"RXBRANCH"`
 	S1S                       []S1                       `xml:"S1"`
-	S1INTERFACES              []S1interface              `xml:"S1INTERFACE"`
-	S1REESTTIMERS             []S1reesttimer             `xml:"S1REESTTIMER"`
+	S1INTERFACES              []S1interface              `xml:"S1Interface"`
+	S1REESTTIMERS             []S1reesttimer             `xml:"S1ReestTimer"`
 	SAALLNKS                  []Saallnk                  `xml:"SAALLNK"`
-	SCAPPPARACFGS             []Scappparacfg             `xml:"SCAPPPARACFG"`
-	SCCFREQCFGS               []Sccfreqcfg               `xml:"SCCFREQCFG"`
-	SCPOLICIES                []Scpolicy                 `xml:"SCPOLICY"`
-	SCSERVICEQOSES            []Scserviceqos             `xml:"SCSERVICEQOS"`
+	SCAPPPARACFGS             []Scappparacfg             `xml:"ScAppParaCfg"`
+	SCCFREQCFGS               []Sccfreqcfg               `xml:"SccFreqCfg"`
+	SCPOLICIES                []Scpolicy                 `xml:"ScPolicy"`
+	SCSERVICEQOSES            []Scserviceqos             `xml:"ScServiceQos"`
 	SCTPHOSTS                 []Sctphost                 `xml:"SCTPHOST"`
 	SCTPLNKS                  []Sctplnk                  `xml:"SCTPLNK"`
 	SCTPPEERS                 []Sctppeer                 `xml:"SCTPPEER"`
 	SCTPTEMPLATES             []Sctptemplate             `xml:"SCTPTEMPLATE"`
 	SECTORS                   []Sector                   `xml:"SECTOR"`
 	SECTOREQMS                []Sectoreqm                `xml:"SECTOREQM"`
-	SERVICEDIFFSETTINGS       []Servicediffsetting       `xml:"SERVICEDIFFSETTING"`
-	SERVICEIDENTIFYPARAS      []Serviceidentifypara      `xml:"SERVICEIDENTIFYPARA"`
-	SERVICEIFDLEARFCNGRPS     []Serviceifdlearfcngrp     `xml:"SERVICEIFDLEARFCNGRP"`
-	SERVICEIFHOCFGGROUPS      []Serviceifhocfggroup      `xml:"SERVICEIFHOCFGGROUP"`
-	SERVICEIRHOCFGGROUPS      []Serviceirhocfggroup      `xml:"SERVICEIRHOCFGGROUP"`
+	SERVICEDIFFSETTINGS       []Servicediffsetting       `xml:"ServiceDiffSetting"`
+	SERVICEIDENTIFYPARAS      []Serviceidentifypara      `xml:"ServiceIdentifyPara"`
+	SERVICEIFDLEARFCNGRPS     []Serviceifdlearfcngrp     `xml:"ServiceIfDlEarfcnGrp"`
+	SERVICEIFHOCFGGROUPS      []Serviceifhocfggroup      `xml:"ServiceIfHoCfgGroup"`
+	SERVICEIRHOCFGGROUPS      []Serviceirhocfggroup      `xml:"ServiceIrHoCfgGroup"`
 	SFPS                      []Sfp                      `xml:"SFP"`
-	SIMULOADS                 []Simuload                 `xml:"SIMULOAD"`
+	SIMULOADS                 []Simuload                 `xml:"SimuLoad"`
 	SINGLEIPSWITCHES          []Singleipswitch           `xml:"SINGLEIPSWITCH"`
-	SRBCFGS                   []Srbcfg                   `xml:"SRBCFG"`
-	SRBRLCPDCPCFGS            []Srbrlcpdcpcfg            `xml:"SRBRLCPDCPCFG"`
+	SRBCFGS                   []Srbcfg                   `xml:"SrbCfg"`
+	SRBRLCPDCPCFGS            []Srbrlcpdcpcfg            `xml:"SrbRlcPdcpCfg"`
 	SRCIPRTS                  []Srciprt                  `xml:"SRCIPRT"`
 	SRSADAPTIVECFGS           []Srsadaptivecfg           `xml:"SRSADAPTIVECFG"`
-	SRSCFGS                   []Srscfg                   `xml:"SRSCFG"`
+	SRSCFGS                   []Srscfg                   `xml:"SRSCfg"`
 	SSLS                      []Ssl                      `xml:"SSL"`
 	STANDARDQCIS              []Standardqci              `xml:"STANDARDQCI"`
 	SUBRACKS                  []Subrack                  `xml:"SUBRACK"`
@@ -388,34 +388,34 @@ type Class struct {
 	TASMS                     []Tasm                     `xml:"TASM"`
 	TBDSPINFOS                []Tbdspinfo                `xml:"TBDSPINFO"`
 	TBLANGNOS                 []Tblangno                 `xml:"TBLANGNO"`
-	TCPACKCTRLALGOS           []Tcpackctrlalgo           `xml:"TCPACKCTRLALGO"`
+	TCPACKCTRLALGOS           []Tcpackctrlalgo           `xml:"TcpAckCtrlAlgo"`
 	TCPACKLIMITALGS           []Tcpacklimitalg           `xml:"TCPACKLIMITALG"`
-	TCPMSSCTRLS               []Tcpmssctrl               `xml:"TCPMSSCTRL"`
+	TCPMSSCTRLS               []Tcpmssctrl               `xml:"TcpMssCtrl"`
 	TCUS                      []Tcu                      `xml:"TCU"`
-	TDDFRAMEOFFSETS           []Tddframeoffset           `xml:"TDDFRAMEOFFSET"`
-	TDDRESMODESWITCHES        []Tddresmodeswitch         `xml:"TDDRESMODESWITCH"`
-	TIMEALIGNMENTTIMERS       []Timealignmenttimer       `xml:"TIMEALIGNMENTTIMER"`
+	TDDFRAMEOFFSETS           []Tddframeoffset           `xml:"TddFrameOffset"`
+	TDDRESMODESWITCHES        []Tddresmodeswitch         `xml:"TddResModeSwitch"`
+	TIMEALIGNMENTTIMERS       []Timealignmenttimer       `xml:"TimeAlignmentTimer"`
 	TIMESRCS                  []Timesrc                  `xml:"TIMESRC"`
 	TIMETHRDS                 []Timethrd                 `xml:"TIMETHRD"`
 	TLDRALGS                  []Tldralg                  `xml:"TLDRALG"`
 	TLFRSWITCHES              []Tlfrswitch               `xml:"TLFRSWITCH"`
 	TOLCALGS                  []Tolcalg                  `xml:"TOLCALG"`
-	TPEALGOS                  []Tpealgo                  `xml:"TPEALGO"`
+	TPEALGOS                  []Tpealgo                  `xml:"TpeAlgo"`
 	TRPS                      []Trp                      `xml:"TRP"`
 	TRUSTCERTS                []Trustcert                `xml:"TRUSTCERT"`
 	TWAMPRESPONDERS           []Twampresponder           `xml:"TWAMPRESPONDER"`
 	TXBRANCHES                []Txbranch                 `xml:"TXBRANCH"`
-	TYPDRBBSRS                []Typdrbbsr                `xml:"TYPDRBBSR"`
+	TYPDRBBSRS                []Typdrbbsr                `xml:"TypDrbBsr"`
 	TZS                       []Tz                       `xml:"TZ"`
 	UDPPINGS                  []Udpping                  `xml:"UDPPING"`
 	UDTS                      []Udt                      `xml:"UDT"`
 	UDTPARAGRPS               []Udtparagrp               `xml:"UDTPARAGRP"`
-	UECOOPERATIONPARAS        []Uecooperationpara        `xml:"UECOOPERATIONPARA"`
+	UECOOPERATIONPARAS        []Uecooperationpara        `xml:"UeCooperationPara"`
 	UEIUS                     []Ueiu                     `xml:"UEIU"`
-	UESPECDRXPARAGROUPS       []Uespecdrxparagroup       `xml:"UESPECDRXPARAGROUP"`
-	UETIMERCONSTS             []Uetimerconst             `xml:"UETIMERCONST"`
-	ULCSALGOPARAS             []Ulcsalgopara             `xml:"ULCSALGOPARA"`
-	ULINTERFSUPPRESSCFGS      []Ulinterfsuppresscfg      `xml:"ULINTERFSUPPRESSCFG"`
+	UESPECDRXPARAGROUPS       []Uespecdrxparagroup       `xml:"UeSpecDrxParaGroup"`
+	UETIMERCONSTS             []Uetimerconst             `xml:"UeTimerConst"`
+	ULCSALGOPARAS             []Ulcsalgopara             `xml:"UlCsAlgoPara"`
+	ULINTERFSUPPRESSCFGS      []Ulinterfsuppresscfg      `xml:"UlInterfSuppressCfg"`
 	ULOCELLS                  []Ulocell                  `xml:"ULOCELL"`
 	ULOCELLALGPARAS           []Ulocellalgpara           `xml:"ULOCELLALGPARA"`
 	ULOCELLMACEPARAS          []Ulocellmacepara          `xml:"ULOCELLMACEPARA"`
@@ -425,24 +425,24 @@ type Class struct {
 	ULOCELLRSCLMTPARAS        []Ulocellrsclmtpara        `xml:"ULOCELLRSCLMTPARA"`
 	ULOCELLRSVDPARAS          []Ulocellrsvdpara          `xml:"ULOCELLRSVDPARA"`
 	ULOCELLSECTOREQMS         []Ulocellsectoreqm         `xml:"ULOCELLSECTOREQM"`
-	ULZEROBUFFERZONES         []Ulzerobufferzone         `xml:"ULZEROBUFFERZONE"`
-	UPPTSINTERFCFGS           []Upptsinterfcfg           `xml:"UPPTSINTERFCFG"`
+	ULZEROBUFFERZONES         []Ulzerobufferzone         `xml:"ULZeroBufferZone"`
+	UPPTSINTERFCFGS           []Upptsinterfcfg           `xml:"UpPTSInterfCfg"`
 	USBS                      []Usb                      `xml:"USB"`
 	USERPLANEHOSTS            []Userplanehost            `xml:"USERPLANEHOST"`
 	USERPLANEPEERS            []Userplanepeer            `xml:"USERPLANEPEER"`
-	USERPRIORITIES            []Userpriority             `xml:"USERPRIORITY"`
-	USERQCIPRIORITIES         []Userqcipriority          `xml:"USERQCIPRIORITY"`
-	USERVPFMPARAS             []Uservpfmpara             `xml:"USERVPFMPARA"`
-	UTRANEXTERNALCELLS        []Utranexternalcell        `xml:"UTRANEXTERNALCELL"`
-	UTRANNCELLS               []Utranncell               `xml:"UTRANNCELL"`
-	UTRANNFREQS               []Utrannfreq               `xml:"UTRANNFREQ"`
-	UTRANRANSHARES            []Utranranshare            `xml:"UTRANRANSHARE"`
+	USERPRIORITIES            []Userpriority             `xml:"UserPriority"`
+	USERQCIPRIORITIES         []Userqcipriority          `xml:"UserQciPriority"`
+	USERVPFMPARAS             []Uservpfmpara             `xml:"UserVpfmPara"`
+	UTRANEXTERNALCELLS        []Utranexternalcell        `xml:"UtranExternalCell"`
+	UTRANNCELLS               []Utranncell               `xml:"UtranNCell"`
+	UTRANNFREQS               []Utrannfreq               `xml:"UtranNFreq"`
+	UTRANRANSHARES            []Utranranshare            `xml:"UtranRanShare"`
 	VLANCLASSES               []Vlanclass                `xml:"VLANCLASS"`
 	VLANMAPS                  []Vlanmap                  `xml:"VLANMAP"`
-	VQMALGOS                  []Vqmalgo                  `xml:"VQMALGO"`
+	VQMALGOS                  []Vqmalgo                  `xml:"VQMAlgo"`
 	VRFS                      []Vrf                      `xml:"VRF"`
 	WEBLMTS                   []Weblmt                   `xml:"WEBLMT"`
-	WTCPPROXYALGOS            []Wtcpproxyalgo            `xml:"WTCPPROXYALGO"`
+	WTCPPROXYALGOS            []Wtcpproxyalgo            `xml:"WtcpProxyAlgo"`
 	X2S                       []X2                       `xml:"X2"`
-	X2INTERFACES              []X2interface              `xml:"X2INTERFACE"`
+	X2INTERFACES              []X2interface              `xml:"X2Interface"`
 }

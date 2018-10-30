@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebautopoweroff struct {
-	XMLName xml.Name `xml:"ENODEBAUTOPOWEROFF"`
+	XMLName xml.Name `xml:"eNodeBAutoPowerOff"`
 	ATTRIBUTES EnodebautopoweroffAttributes `xml:"attributes"`
 }
 

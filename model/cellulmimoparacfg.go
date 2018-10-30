@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellulmimoparacfg struct {
-	XMLName xml.Name `xml:"CELLULMIMOPARACFG"`
+	XMLName xml.Name `xml:"CellUlMimoParaCfg"`
 	ATTRIBUTES CellulmimoparacfgAttributes `xml:"attributes"`
 }
 

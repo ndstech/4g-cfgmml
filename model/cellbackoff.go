@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellbackoff struct {
-	XMLName xml.Name `xml:"CELLBACKOFF"`
+	XMLName xml.Name `xml:"CellBackOff"`
 	ATTRIBUTES CellbackoffAttributes `xml:"attributes"`
 }
 

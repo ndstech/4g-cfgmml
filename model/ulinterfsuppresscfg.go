@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Ulinterfsuppresscfg struct {
-	XMLName xml.Name `xml:"ULINTERFSUPPRESSCFG"`
+	XMLName xml.Name `xml:"UlInterfSuppressCfg"`
 	ATTRIBUTES UlinterfsuppresscfgAttributes `xml:"attributes"`
 }
 

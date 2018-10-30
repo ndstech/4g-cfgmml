@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Drxparagroup struct {
-	XMLName xml.Name `xml:"DRXPARAGROUP"`
+	XMLName xml.Name `xml:"DrxParaGroup"`
 	ATTRIBUTES DrxparagroupAttributes `xml:"attributes"`
 }
 

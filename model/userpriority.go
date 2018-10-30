@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Userpriority struct {
-	XMLName xml.Name `xml:"USERPRIORITY"`
+	XMLName xml.Name `xml:"UserPriority"`
 	ATTRIBUTES UserpriorityAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Uservpfmpara struct {
-	XMLName xml.Name `xml:"USERVPFMPARA"`
+	XMLName xml.Name `xml:"UserVpfmPara"`
 	ATTRIBUTES UservpfmparaAttributes `xml:"attributes"`
 }
 

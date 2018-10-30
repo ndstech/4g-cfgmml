@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellshutdown struct {
-	XMLName xml.Name `xml:"CELLSHUTDOWN"`
+	XMLName xml.Name `xml:"CellShutdown"`
 	ATTRIBUTES CellshutdownAttributes `xml:"attributes"`
 }
 

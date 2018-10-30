@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Camgtcfg struct {
-	XMLName xml.Name `xml:"CAMGTCFG"`
+	XMLName xml.Name `xml:"CaMgtCfg"`
 	ATTRIBUTES CamgtcfgAttributes `xml:"attributes"`
 }
 

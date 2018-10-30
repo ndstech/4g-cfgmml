@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Servicediffsetting struct {
-	XMLName xml.Name `xml:"SERVICEDIFFSETTING"`
+	XMLName xml.Name `xml:"ServiceDiffSetting"`
 	ATTRIBUTES ServicediffsettingAttributes `xml:"attributes"`
 }
 

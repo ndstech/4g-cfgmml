@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebflowctrlpara struct {
-	XMLName xml.Name `xml:"ENODEBFLOWCTRLPARA"`
+	XMLName xml.Name `xml:"eNodeBFlowCtrlPara"`
 	ATTRIBUTES EnodebflowctrlparaAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enblicensealmthd struct {
-	XMLName xml.Name `xml:"ENBLICENSEALMTHD"`
+	XMLName xml.Name `xml:"eNBLicenseAlmThd"`
 	ATTRIBUTES EnblicensealmthdAttributes `xml:"attributes"`
 }
 

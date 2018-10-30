@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Celldrxspecialpara struct {
-	XMLName xml.Name `xml:"CELLDRXSPECIALPARA"`
+	XMLName xml.Name `xml:"CellDrxSpecialPara"`
 	ATTRIBUTES CelldrxspecialparaAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Timealignmenttimer struct {
-	XMLName xml.Name `xml:"TIMEALIGNMENTTIMER"`
+	XMLName xml.Name `xml:"TimeAlignmentTimer"`
 	ATTRIBUTES TimealignmenttimerAttributes `xml:"attributes"`
 }
 

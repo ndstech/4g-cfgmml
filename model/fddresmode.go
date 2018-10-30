@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Fddresmode struct {
-	XMLName xml.Name `xml:"FDDRESMODE"`
+	XMLName xml.Name `xml:"FddResMode"`
 	ATTRIBUTES FddresmodeAttributes `xml:"attributes"`
 }
 

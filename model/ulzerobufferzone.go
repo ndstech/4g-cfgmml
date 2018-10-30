@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Ulzerobufferzone struct {
-	XMLName xml.Name `xml:"ULZEROBUFFERZONE"`
+	XMLName xml.Name `xml:"ULZeroBufferZone"`
 	ATTRIBUTES UlzerobufferzoneAttributes `xml:"attributes"`
 }
 

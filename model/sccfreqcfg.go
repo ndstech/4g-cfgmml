@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Sccfreqcfg struct {
-	XMLName xml.Name `xml:"SCCFREQCFG"`
+	XMLName xml.Name `xml:"SccFreqCfg"`
 	ATTRIBUTES SccfreqcfgAttributes `xml:"attributes"`
 }
 

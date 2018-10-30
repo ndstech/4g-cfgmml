@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebtgalgcfg struct {
-	XMLName xml.Name `xml:"ENODEBTGALGCFG"`
+	XMLName xml.Name `xml:"eNodeBTGAlgCfg"`
 	ATTRIBUTES EnodebtgalgcfgAttributes `xml:"attributes"`
 }
 

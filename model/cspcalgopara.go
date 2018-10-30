@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cspcalgopara struct {
-	XMLName xml.Name `xml:"CSPCALGOPARA"`
+	XMLName xml.Name `xml:"CspcAlgoPara"`
 	ATTRIBUTES CspcalgoparaAttributes `xml:"attributes"`
 }
 

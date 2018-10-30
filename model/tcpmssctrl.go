@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Tcpmssctrl struct {
-	XMLName xml.Name `xml:"TCPMSSCTRL"`
+	XMLName xml.Name `xml:"TcpMssCtrl"`
 	ATTRIBUTES TcpmssctrlAttributes `xml:"attributes"`
 }
 

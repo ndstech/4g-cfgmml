@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellaccess struct {
-	XMLName xml.Name `xml:"CELLACCESS"`
+	XMLName xml.Name `xml:"CellAccess"`
 	ATTRIBUTES CellaccessAttributes `xml:"attributes"`
 }
 

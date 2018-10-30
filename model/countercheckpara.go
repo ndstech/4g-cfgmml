@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Countercheckpara struct {
-	XMLName xml.Name `xml:"COUNTERCHECKPARA"`
+	XMLName xml.Name `xml:"CounterCheckPara"`
 	ATTRIBUTES CountercheckparaAttributes `xml:"attributes"`
 }
 

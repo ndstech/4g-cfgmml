@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Scpolicy struct {
-	XMLName xml.Name `xml:"SCPOLICY"`
+	XMLName xml.Name `xml:"ScPolicy"`
 	ATTRIBUTES ScpolicyAttributes `xml:"attributes"`
 }
 

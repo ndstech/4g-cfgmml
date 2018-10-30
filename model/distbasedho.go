@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Distbasedho struct {
-	XMLName xml.Name `xml:"DISTBASEDHO"`
+	XMLName xml.Name `xml:"DistBasedHO"`
 	ATTRIBUTES DistbasedhoAttributes `xml:"attributes"`
 }
 

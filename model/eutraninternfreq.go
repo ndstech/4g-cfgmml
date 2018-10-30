@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Eutraninternfreq struct {
-	XMLName xml.Name `xml:"EUTRANINTERNFREQ"`
+	XMLName xml.Name `xml:"EutranInterNFreq"`
 	ATTRIBUTES EutraninternfreqAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Nbcelldlschcealgo struct {
-	XMLName xml.Name `xml:"NBCELLDLSCHCEALGO"`
+	XMLName xml.Name `xml:"NbCellDlSchCEAlgo"`
 	ATTRIBUTES NbcelldlschcealgoAttributes `xml:"attributes"`
 }
 

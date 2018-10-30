@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellwttxparacfg struct {
-	XMLName xml.Name `xml:"CELLWTTXPARACFG"`
+	XMLName xml.Name `xml:"CellWttxParaCfg"`
 	ATTRIBUTES CellwttxparacfgAttributes `xml:"attributes"`
 }
 

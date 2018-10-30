@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Celllteflexbwitfcfg struct {
-	XMLName xml.Name `xml:"CELLLTEFLEXBWITFCFG"`
+	XMLName xml.Name `xml:"CellLteFlexBwItfCfg"`
 	ATTRIBUTES CelllteflexbwitfcfgAttributes `xml:"attributes"`
 }
 

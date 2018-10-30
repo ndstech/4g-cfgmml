@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Licratio struct {
-	XMLName xml.Name `xml:"LICRATIO"`
+	XMLName xml.Name `xml:"LicRatio"`
 	ATTRIBUTES LicratioAttributes `xml:"attributes"`
 }
 

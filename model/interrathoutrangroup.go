@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Interrathoutrangroup struct {
-	XMLName xml.Name `xml:"INTERRATHOUTRANGROUP"`
+	XMLName xml.Name `xml:"InterRatHoUtranGroup"`
 	ATTRIBUTES InterrathoutrangroupAttributes `xml:"attributes"`
 }
 

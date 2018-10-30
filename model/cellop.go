@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellop struct {
-	XMLName xml.Name `xml:"CELLOP"`
+	XMLName xml.Name `xml:"CellOp"`
 	ATTRIBUTES CellopAttributes `xml:"attributes"`
 }
 

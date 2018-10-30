@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellcspcpara struct {
-	XMLName xml.Name `xml:"CELLCSPCPARA"`
+	XMLName xml.Name `xml:"CellCspcPara"`
 	ATTRIBUTES CellcspcparaAttributes `xml:"attributes"`
 }
 

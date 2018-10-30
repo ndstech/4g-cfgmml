@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellucionpuschpara struct {
-	XMLName xml.Name `xml:"CELLUCIONPUSCHPARA"`
+	XMLName xml.Name `xml:"CellUciOnPuschPara"`
 	ATTRIBUTES CellucionpuschparaAttributes `xml:"attributes"`
 }
 

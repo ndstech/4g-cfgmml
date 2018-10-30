@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Eutranexternalcell struct {
-	XMLName xml.Name `xml:"EUTRANEXTERNALCELL"`
+	XMLName xml.Name `xml:"EutranExternalCell"`
 	ATTRIBUTES EutranexternalcellAttributes `xml:"attributes"`
 }
 

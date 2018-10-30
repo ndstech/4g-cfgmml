@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Pdschcfg struct {
-	XMLName xml.Name `xml:"PDSCHCFG"`
+	XMLName xml.Name `xml:"PDSCHCfg"`
 	ATTRIBUTES PdschcfgAttributes `xml:"attributes"`
 }
 

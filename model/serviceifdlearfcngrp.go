@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Serviceifdlearfcngrp struct {
-	XMLName xml.Name `xml:"SERVICEIFDLEARFCNGRP"`
+	XMLName xml.Name `xml:"ServiceIfDlEarfcnGrp"`
 	ATTRIBUTES ServiceifdlearfcngrpAttributes `xml:"attributes"`
 }
 

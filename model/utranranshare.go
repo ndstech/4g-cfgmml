@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Utranranshare struct {
-	XMLName xml.Name `xml:"UTRANRANSHARE"`
+	XMLName xml.Name `xml:"UtranRanShare"`
 	ATTRIBUTES UtranranshareAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Csfallbackpolicycfg struct {
-	XMLName xml.Name `xml:"CSFALLBACKPOLICYCFG"`
+	XMLName xml.Name `xml:"CSFallBackPolicyCfg"`
 	ATTRIBUTES CsfallbackpolicycfgAttributes `xml:"attributes"`
 }
 

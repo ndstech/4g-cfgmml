@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Geranexternalcell struct {
-	XMLName xml.Name `xml:"GERANEXTERNALCELL"`
+	XMLName xml.Name `xml:"GeranExternalCell"`
 	ATTRIBUTES GeranexternalcellAttributes `xml:"attributes"`
 }
 

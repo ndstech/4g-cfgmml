@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Pccfreqcfg struct {
-	XMLName xml.Name `xml:"PCCFREQCFG"`
+	XMLName xml.Name `xml:"PccFreqCfg"`
 	ATTRIBUTES PccfreqcfgAttributes `xml:"attributes"`
 }
 

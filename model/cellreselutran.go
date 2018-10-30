@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Cellreselutran struct {
-	XMLName xml.Name `xml:"CELLRESELUTRAN"`
+	XMLName xml.Name `xml:"CellReselUtran"`
 	ATTRIBUTES CellreselutranAttributes `xml:"attributes"`
 }
 

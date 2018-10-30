@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Ncellparacfg struct {
-	XMLName xml.Name `xml:"NCELLPARACFG"`
+	XMLName xml.Name `xml:"NCellParaCfg"`
 	ATTRIBUTES NcellparacfgAttributes `xml:"attributes"`
 }
 

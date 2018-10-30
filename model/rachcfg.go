@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Rachcfg struct {
-	XMLName xml.Name `xml:"RACHCFG"`
+	XMLName xml.Name `xml:"RACHCfg"`
 	ATTRIBUTES RachcfgAttributes `xml:"attributes"`
 }
 

@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Enodebusparacfg struct {
-	XMLName xml.Name `xml:"ENODEBUSPARACFG"`
+	XMLName xml.Name `xml:"eNodeBUSParaCfg"`
 	ATTRIBUTES EnodebusparacfgAttributes `xml:"attributes"`
 }
 

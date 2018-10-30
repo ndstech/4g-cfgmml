@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Qcipara struct {
-	XMLName xml.Name `xml:"QCIPARA"`
+	XMLName xml.Name `xml:"QciPara"`
 	ATTRIBUTES QciparaAttributes `xml:"attributes"`
 }
 

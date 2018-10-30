@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Tddresmodeswitch struct {
-	XMLName xml.Name `xml:"TDDRESMODESWITCH"`
+	XMLName xml.Name `xml:"TddResModeSwitch"`
 	ATTRIBUTES TddresmodeswitchAttributes `xml:"attributes"`
 }
 

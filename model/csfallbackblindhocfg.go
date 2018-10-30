@@ -3,7 +3,7 @@ package model
 import "encoding/xml"
 
 type Csfallbackblindhocfg struct {
-	XMLName xml.Name `xml:"CSFALLBACKBLINDHOCFG"`
+	XMLName xml.Name `xml:"CSFallBackBlindHoCfg"`
 	ATTRIBUTES CsfallbackblindhocfgAttributes `xml:"attributes"`
 }
 
