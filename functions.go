@@ -5,21 +5,22 @@ import (
 	"github.com/yogawa/4g-cfgmml/model"
 )
 
-func insertAlmcurcfg(baseName string, data []model.Almcurcfg) {
+func insertAlmcurcfg(eNodeBId string, baseName string, data []model.Almcurcfg) {
 	fmt.Println("Processing Almcurcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `almcurcfg` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `almcurcfg` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.AID,
 			data[j].ATTRIBUTES.ALVL,
 			data[j].ATTRIBUTES.ASS,
 			data[j].ATTRIBUTES.SHLDFLG,
-			data[j].ATTRIBUTES.ANM,
+			data[j].ATTRIBUTES.ANM,	
+
 		)
 		checkErr(err)
 		fmt.Println("Almcurcfg data has been saved")
@@ -27,16 +28,17 @@ func insertAlmcurcfg(baseName string, data []model.Almcurcfg) {
 	tx.Commit()
 }
 
-func insertAlmport(baseName string, data []model.Almport) {
+
+func insertAlmport(eNodeBId string, baseName string, data []model.Almport) {
 	fmt.Println("Processing Almport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `almport` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `almport` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -52,7 +54,8 @@ func insertAlmport(baseName string, data []model.Almport) {
 			data[j].ATTRIBUTES.SMUL,
 			data[j].ATTRIBUTES.SMLL,
 			data[j].ATTRIBUTES.SOUL,
-			data[j].ATTRIBUTES.SOLL,
+			data[j].ATTRIBUTES.SOLL,	
+
 		)
 		checkErr(err)
 		fmt.Println("Almport data has been saved")
@@ -60,16 +63,17 @@ func insertAlmport(baseName string, data []model.Almport) {
 	tx.Commit()
 }
 
-func insertAnr(baseName string, data []model.Anr) {
+
+func insertAnr(eNodeBId string, baseName string, data []model.Anr) {
 	fmt.Println("Processing Anr data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `anr` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `anr` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.DelCellThd,
 			data[j].ATTRIBUTES.NcellHoStatNum,
 			data[j].ATTRIBUTES.StatisticPeriod,
@@ -117,7 +121,8 @@ func insertAnr(baseName string, data []model.Anr) {
 			data[j].ATTRIBUTES.StaNumForIRatNRTDel,
 			data[j].ATTRIBUTES.PeriodForNCellRanking,
 			data[j].ATTRIBUTES.StatPeriodCoeff,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Anr data has been saved")
@@ -125,23 +130,25 @@ func insertAnr(baseName string, data []model.Anr) {
 	tx.Commit()
 }
 
-func insertAnrmeasureparam(baseName string, data []model.Anrmeasureparam) {
+
+func insertAnrmeasureparam(eNodeBId string, baseName string, data []model.Anrmeasureparam) {
 	fmt.Println("Processing Anrmeasureparam data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `anrmeasureparam` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `anrmeasureparam` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.A3TimeToTrigForANR,
 			data[j].ATTRIBUTES.A3HystForANR,
 			data[j].ATTRIBUTES.A3OffsetForANR,
 			data[j].ATTRIBUTES.A4TimeToTrigForANR,
 			data[j].ATTRIBUTES.A4HystForANR,
 			data[j].ATTRIBUTES.A4ThdRsrpForANR,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Anrmeasureparam data has been saved")
@@ -149,16 +156,17 @@ func insertAnrmeasureparam(baseName string, data []model.Anrmeasureparam) {
 	tx.Commit()
 }
 
-func insertAntennaport(baseName string, data []model.Antennaport) {
+
+func insertAntennaport(eNodeBId string, baseName string, data []model.Antennaport) {
 	fmt.Println("Processing Antennaport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `antennaport` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `antennaport` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -172,7 +180,8 @@ func insertAntennaport(baseName string, data []model.Antennaport) {
 			data[j].ATTRIBUTES.UCTHD,
 			data[j].ATTRIBUTES.OOTHD,
 			data[j].ATTRIBUTES.OCTHD,
-			data[j].ATTRIBUTES.ULTRADELAYSW,
+			data[j].ATTRIBUTES.ULTRADELAYSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Antennaport data has been saved")
@@ -180,18 +189,20 @@ func insertAntennaport(baseName string, data []model.Antennaport) {
 	tx.Commit()
 }
 
-func insertAppcert(baseName string, data []model.Appcert) {
+
+func insertAppcert(eNodeBId string, baseName string, data []model.Appcert) {
 	fmt.Println("Processing Appcert data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `appcert` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `appcert` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.APPTYPE,
-			data[j].ATTRIBUTES.APPCERT,
+			data[j].ATTRIBUTES.APPCERT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Appcert data has been saved")
@@ -199,16 +210,17 @@ func insertAppcert(baseName string, data []model.Appcert) {
 	tx.Commit()
 }
 
-func insertApplication(baseName string, data []model.Application) {
+
+func insertApplication(eNodeBId string, baseName string, data []model.Application) {
 	fmt.Println("Processing Application data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `application` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `application` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.AID,
 			data[j].ATTRIBUTES.AT,
 			data[j].ATTRIBUTES.AN,
@@ -220,7 +232,8 @@ func insertApplication(baseName string, data []model.Application) {
 			data[j].ATTRIBUTES.APPST,
 			data[j].ATTRIBUTES.APPET,
 			data[j].ATTRIBUTES.APPMMSETREMARK,
-			data[j].ATTRIBUTES.EXTAPPTYPE,
+			data[j].ATTRIBUTES.EXTAPPTYPE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Application data has been saved")
@@ -228,22 +241,24 @@ func insertApplication(baseName string, data []model.Application) {
 	tx.Commit()
 }
 
-func insertAsparagroup(baseName string, data []model.Asparagroup) {
+
+func insertAsparagroup(eNodeBId string, baseName string, data []model.Asparagroup) {
 	fmt.Println("Processing Asparagroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `asparagroup` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `asparagroup` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.AsParaGroupID,
 			data[j].ATTRIBUTES.AsPreallocDuration,
 			data[j].ATTRIBUTES.AsPreallocMinPeriod,
 			data[j].ATTRIBUTES.AsPreallocSize,
 			data[j].ATTRIBUTES.AsSchPriFactor,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Asparagroup data has been saved")
@@ -251,20 +266,22 @@ func insertAsparagroup(baseName string, data []model.Asparagroup) {
 	tx.Commit()
 }
 
-func insertBasebandeqm(baseName string, data []model.Basebandeqm) {
+
+func insertBasebandeqm(eNodeBId string, baseName string, data []model.Basebandeqm) {
 	fmt.Println("Processing Basebandeqm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `basebandeqm` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `basebandeqm` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.BASEBANDEQMID,
 			data[j].ATTRIBUTES.BASEBANDEQMTYPE,
 			data[j].ATTRIBUTES.UMTSDEMMODE,
-			data[j].ATTRIBUTES.BASEBANDEQMBOARD,
+			data[j].ATTRIBUTES.BASEBANDEQMBOARD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Basebandeqm data has been saved")
@@ -272,16 +289,17 @@ func insertBasebandeqm(baseName string, data []model.Basebandeqm) {
 	tx.Commit()
 }
 
-func insertBbp(baseName string, data []model.Bbp) {
+
+func insertBbp(eNodeBId string, baseName string, data []model.Bbp) {
 	fmt.Println("Processing Bbp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `bbp` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `bbp` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -297,7 +315,8 @@ func insertBbp(baseName string, data []model.Bbp) {
 			data[j].ATTRIBUTES.SRT,
 			data[j].ATTRIBUTES.CPRIEXMODE,
 			data[j].ATTRIBUTES.WM,
-			data[j].ATTRIBUTES.CPRIITFTYPE,
+			data[j].ATTRIBUTES.CPRIITFTYPE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Bbp data has been saved")
@@ -305,19 +324,21 @@ func insertBbp(baseName string, data []model.Bbp) {
 	tx.Commit()
 }
 
-func insertBbufan(baseName string, data []model.Bbufan) {
+
+func insertBbufan(eNodeBId string, baseName string, data []model.Bbufan) {
 	fmt.Println("Processing Bbufan data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `bbufan` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `bbufan` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
-			data[j].ATTRIBUTES.SN,
+			data[j].ATTRIBUTES.SN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Bbufan data has been saved")
@@ -325,19 +346,21 @@ func insertBbufan(baseName string, data []model.Bbufan) {
 	tx.Commit()
 }
 
-func insertBcchcfg(baseName string, data []model.Bcchcfg) {
+
+func insertBcchcfg(eNodeBId string, baseName string, data []model.Bcchcfg) {
 	fmt.Println("Processing Bcchcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `bcchcfg` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `bcchcfg` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ModifyPeriodCoeff,
-			data[j].ATTRIBUTES.ModifyPeriodCoeffForNb,
+			data[j].ATTRIBUTES.ModifyPeriodCoeffForNb,	
+
 		)
 		checkErr(err)
 		fmt.Println("Bcchcfg data has been saved")
@@ -345,23 +368,25 @@ func insertBcchcfg(baseName string, data []model.Bcchcfg) {
 	tx.Commit()
 }
 
-func insertBlindncellopt(baseName string, data []model.Blindncellopt) {
+
+func insertBlindncellopt(eNodeBId string, baseName string, data []model.Blindncellopt) {
 	fmt.Println("Processing Blindncellopt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `blindncellopt` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `blindncellopt` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.StatisticPeriod,
 			data[j].ATTRIBUTES.SampleNumThd,
 			data[j].ATTRIBUTES.HoSuccRateThd,
 			data[j].ATTRIBUTES.CsfbHoAttempRatioThd,
 			data[j].ATTRIBUTES.BlindHoSuccRateThd,
 			data[j].ATTRIBUTES.OptMode,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Blindncellopt data has been saved")
@@ -369,20 +394,22 @@ func insertBlindncellopt(baseName string, data []model.Blindncellopt) {
 	tx.Commit()
 }
 
-func insertBrdresassignment(baseName string, data []model.Brdresassignment) {
+
+func insertBrdresassignment(eNodeBId string, baseName string, data []model.Brdresassignment) {
 	fmt.Println("Processing Brdresassignment data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `brdresassignment` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `brdresassignment` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
-			data[j].ATTRIBUTES.BRDASSIGNMENT,
+			data[j].ATTRIBUTES.BRDASSIGNMENT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Brdresassignment data has been saved")
@@ -390,20 +417,22 @@ func insertBrdresassignment(baseName string, data []model.Brdresassignment) {
 	tx.Commit()
 }
 
-func insertCabinet(baseName string, data []model.Cabinet) {
+
+func insertCabinet(eNodeBId string, baseName string, data []model.Cabinet) {
 	fmt.Println("Processing Cabinet data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cabinet` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cabinet` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.TYPE,
 			data[j].ATTRIBUTES.DESC,
-			data[j].ATTRIBUTES.LOCATIONNAME,
+			data[j].ATTRIBUTES.LOCATIONNAME,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cabinet data has been saved")
@@ -411,19 +440,21 @@ func insertCabinet(baseName string, data []model.Cabinet) {
 	tx.Commit()
 }
 
-func insertCagroup(baseName string, data []model.Cagroup) {
+
+func insertCagroup(eNodeBId string, baseName string, data []model.Cagroup) {
 	fmt.Println("Processing Cagroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cagroup` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cagroup` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CaGroupId,
 			data[j].ATTRIBUTES.CaGroupTypeInd,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cagroup data has been saved")
@@ -431,22 +462,24 @@ func insertCagroup(baseName string, data []model.Cagroup) {
 	tx.Commit()
 }
 
-func insertCagroupcell(baseName string, data []model.Cagroupcell) {
+
+func insertCagroupcell(eNodeBId string, baseName string, data []model.Cagroupcell) {
 	fmt.Println("Processing Cagroupcell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cagroupcell` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cagroupcell` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CaGroupId,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ENodeBId,
 			data[j].ATTRIBUTES.PreferredPCellPriority,
 			data[j].ATTRIBUTES.PCellA4RsrpThd,
-			data[j].ATTRIBUTES.PCellA4RsrqThd,
+			data[j].ATTRIBUTES.PCellA4RsrqThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cagroupcell data has been saved")
@@ -454,24 +487,26 @@ func insertCagroupcell(baseName string, data []model.Cagroupcell) {
 	tx.Commit()
 }
 
-func insertCagroupscellcfg(baseName string, data []model.Cagroupscellcfg) {
+
+func insertCagroupscellcfg(eNodeBId string, baseName string, data []model.Cagroupscellcfg) {
 	fmt.Println("Processing Cagroupscellcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cagroupscellcfg` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cagroupscellcfg` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
-			data[j].ATTRIBUTES.SCelleNodeBId,
+			data[j].ATTRIBUTES.SCellENODEB_ID,
 			data[j].ATTRIBUTES.SCellLocalCellId,
 			data[j].ATTRIBUTES.SCellBlindCfgFlag,
 			data[j].ATTRIBUTES.SCellPriority,
 			data[j].ATTRIBUTES.SCellA4Offset,
 			data[j].ATTRIBUTES.SCellA2Offset,
-			data[j].ATTRIBUTES.SpidGrpId,
+			data[j].ATTRIBUTES.SpidGrpId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cagroupscellcfg data has been saved")
@@ -479,16 +514,17 @@ func insertCagroupscellcfg(baseName string, data []model.Cagroupscellcfg) {
 	tx.Commit()
 }
 
-func insertCamgtcfg(baseName string, data []model.Camgtcfg) {
+
+func insertCamgtcfg(eNodeBId string, baseName string, data []model.Camgtcfg) {
 	fmt.Println("Processing Camgtcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `camgtcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `camgtcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CarrAggrA2ThdRsrp,
 			data[j].ATTRIBUTES.CarrAggrA4ThdRsrp,
@@ -538,7 +574,8 @@ func insertCamgtcfg(baseName string, data []model.Camgtcfg) {
 			data[j].ATTRIBUTES.CaMimoPriorityStrategySw,
 			data[j].ATTRIBUTES.EnhancedSccSelA1ThldRsrp,
 			data[j].ATTRIBUTES.FastScellSelAftScellRmvSw,
-			data[j].ATTRIBUTES.RsrpOffset,
+			data[j].ATTRIBUTES.RsrpOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Camgtcfg data has been saved")
@@ -546,23 +583,25 @@ func insertCamgtcfg(baseName string, data []model.Camgtcfg) {
 	tx.Commit()
 }
 
-func insertCascadeport(baseName string, data []model.Cascadeport) {
+
+func insertCascadeport(eNodeBId string, baseName string, data []model.Cascadeport) {
 	fmt.Println("Processing Cascadeport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cascadeport` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cascadeport` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.PN,
 			data[j].ATTRIBUTES.PT,
 			data[j].ATTRIBUTES.SW,
-			data[j].ATTRIBUTES.PM,
+			data[j].ATTRIBUTES.PM,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cascadeport data has been saved")
@@ -570,16 +609,17 @@ func insertCascadeport(baseName string, data []model.Cascadeport) {
 	tx.Commit()
 }
 
-func insertCell(baseName string, data []model.Cell) {
+
+func insertCell(eNodeBId string, baseName string, data []model.Cell) {
 	fmt.Println("Processing Cell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CellName,
 			data[j].ATTRIBUTES.CsgInd,
@@ -630,7 +670,8 @@ func insertCell(baseName string, data []model.Cell) {
 			data[j].ATTRIBUTES.CrsPortMap,
 			data[j].ATTRIBUTES.CsiRsPeriod,
 			data[j].ATTRIBUTES.UlEarfcn,
-			data[j].ATTRIBUTES.UePowerMax,
+			data[j].ATTRIBUTES.UePowerMax,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cell data has been saved")
@@ -638,16 +679,17 @@ func insertCell(baseName string, data []model.Cell) {
 	tx.Commit()
 }
 
-func insertCellacbar(baseName string, data []model.Cellacbar) {
+
+func insertCellacbar(eNodeBId string, baseName string, data []model.Cellacbar) {
 	fmt.Println("Processing Cellacbar data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellacbar` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellacbar` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.AcBarringInfoCfgInd,
 			data[j].ATTRIBUTES.VoLTEPreferCfgInd,
@@ -670,7 +712,8 @@ func insertCellacbar(baseName string, data []model.Cellacbar) {
 			data[j].ATTRIBUTES.AC15BarForSig,
 			data[j].ATTRIBUTES.AcBarForMVoiceCfgInd,
 			data[j].ATTRIBUTES.AcBarForMVideoCfgInd,
-			data[j].ATTRIBUTES.AcBarForCsfbCfgInd,
+			data[j].ATTRIBUTES.AcBarForCsfbCfgInd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellacbar data has been saved")
@@ -678,16 +721,17 @@ func insertCellacbar(baseName string, data []model.Cellacbar) {
 	tx.Commit()
 }
 
-func insertCellaccess(baseName string, data []model.Cellaccess) {
+
+func insertCellaccess(eNodeBId string, baseName string, data []model.Cellaccess) {
 	fmt.Println("Processing Cellaccess data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellaccess` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellaccess` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CellBarred,
 			data[j].ATTRIBUTES.IntraFreqResel,
@@ -695,7 +739,8 @@ func insertCellaccess(baseName string, data []model.Cellaccess) {
 			data[j].ATTRIBUTES.RoundPeriod,
 			data[j].ATTRIBUTES.RoundActionTime,
 			data[j].ATTRIBUTES.ReptSyncAvoidInd,
-			data[j].ATTRIBUTES.ReptSyncAvoidTime,
+			data[j].ATTRIBUTES.ReptSyncAvoidTime,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellaccess data has been saved")
@@ -703,16 +748,17 @@ func insertCellaccess(baseName string, data []model.Cellaccess) {
 	tx.Commit()
 }
 
-func insertCellalgoswitch(baseName string, data []model.Cellalgoswitch) {
+
+func insertCellalgoswitch(eNodeBId string, baseName string, data []model.Cellalgoswitch) {
 	fmt.Println("Processing Cellalgoswitch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellalgoswitch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellalgoswitch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.VolteRedirectSwitch,
 			data[j].ATTRIBUTES.RachAlgoSwitch,
@@ -848,7 +894,8 @@ func insertCellalgoswitch(baseName string, data []model.Cellalgoswitch) {
 			data[j].ATTRIBUTES.MPMUDetectSwitch,
 			data[j].ATTRIBUTES.VmsSwitch,
 			data[j].ATTRIBUTES.SmallBandOptSwitch,
-			data[j].ATTRIBUTES.IdleModeEdrxSwitch,
+			data[j].ATTRIBUTES.IdleModeEdrxSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellalgoswitch data has been saved")
@@ -856,16 +903,17 @@ func insertCellalgoswitch(baseName string, data []model.Cellalgoswitch) {
 	tx.Commit()
 }
 
-func insertCellbackoff(baseName string, data []model.Cellbackoff) {
+
+func insertCellbackoff(eNodeBId string, baseName string, data []model.Cellbackoff) {
 	fmt.Println("Processing Cellbackoff data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellbackoff` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellbackoff` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.InterFreqBackoffPrbThd,
 			data[j].ATTRIBUTES.InterFreqBackoffUeNumThd,
@@ -885,7 +933,8 @@ func insertCellbackoff(baseName string, data []model.Cellbackoff) {
 			data[j].ATTRIBUTES.HoInRejectPrbThd,
 			data[j].ATTRIBUTES.HoInRejectUeNumThd,
 			data[j].ATTRIBUTES.RejectedHoInCause,
-			data[j].ATTRIBUTES.BackoffCAUserHOSw,
+			data[j].ATTRIBUTES.BackoffCAUserHOSw,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellbackoff data has been saved")
@@ -893,16 +942,17 @@ func insertCellbackoff(baseName string, data []model.Cellbackoff) {
 	tx.Commit()
 }
 
-func insertCellbf(baseName string, data []model.Cellbf) {
+
+func insertCellbf(eNodeBId string, baseName string, data []model.Cellbf) {
 	fmt.Println("Processing Cellbf data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellbf` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellbf` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.MaxBfRankPara,
 			data[j].ATTRIBUTES.DualLayerBFAlgType,
@@ -914,7 +964,8 @@ func insertCellbf(baseName string, data []model.Cellbf) {
 			data[j].ATTRIBUTES.QualUEPortAvoidMode,
 			data[j].ATTRIBUTES.WaitPairingLayerThd,
 			data[j].ATTRIBUTES.MassiveMIMOMubfPairRule,
-			data[j].ATTRIBUTES.MultiLayerThdSwitchToTM7,
+			data[j].ATTRIBUTES.MultiLayerThdSwitchToTM7,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellbf data has been saved")
@@ -922,16 +973,17 @@ func insertCellbf(baseName string, data []model.Cellbf) {
 	tx.Commit()
 }
 
-func insertCellbfmimoparacfg(baseName string, data []model.Cellbfmimoparacfg) {
+
+func insertCellbfmimoparacfg(eNodeBId string, baseName string, data []model.Cellbfmimoparacfg) {
 	fmt.Println("Processing Cellbfmimoparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellbfmimoparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellbfmimoparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.BfMimoAdaptiveSwitch,
 			data[j].ATTRIBUTES.BfMimoAdapWithoutTm2,
@@ -960,7 +1012,8 @@ func insertCellbfmimoparacfg(baseName string, data []model.Cellbfmimoparacfg) {
 			data[j].ATTRIBUTES.CaSccDelThldOffset,
 			data[j].ATTRIBUTES.BfMimoAlgoOptSwitch,
 			data[j].ATTRIBUTES.InitialBfMimoType,
-			data[j].ATTRIBUTES.MultiLayerPairIsoThd,
+			data[j].ATTRIBUTES.MultiLayerPairIsoThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellbfmimoparacfg data has been saved")
@@ -968,21 +1021,23 @@ func insertCellbfmimoparacfg(baseName string, data []model.Cellbfmimoparacfg) {
 	tx.Commit()
 }
 
-func insertCellcecfg(baseName string, data []model.Cellcecfg) {
+
+func insertCellcecfg(eNodeBId string, baseName string, data []model.Cellcecfg) {
 	fmt.Println("Processing Cellcecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcecfg` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcecfg` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CoverageLevel,
 			data[j].ATTRIBUTES.RachRsrpFstThd,
 			data[j].ATTRIBUTES.RachRsrpSndThd,
-			data[j].ATTRIBUTES.RachRsrpTrdThd,
+			data[j].ATTRIBUTES.RachRsrpTrdThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellcecfg data has been saved")
@@ -990,16 +1045,17 @@ func insertCellcecfg(baseName string, data []model.Cellcecfg) {
 	tx.Commit()
 }
 
-func insertCellceschcfg(baseName string, data []model.Cellceschcfg) {
+
+func insertCellceschcfg(eNodeBId string, baseName string, data []model.Cellceschcfg) {
 	fmt.Println("Processing Cellceschcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellceschcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellceschcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CoverageLevel,
 			data[j].ATTRIBUTES.SIB1RepNum,
@@ -1011,7 +1067,8 @@ func insertCellceschcfg(baseName string, data []model.Cellceschcfg) {
 			data[j].ATTRIBUTES.MpdcchMaxNumRepModeA,
 			data[j].ATTRIBUTES.MpdcchMaxNumRepModeB,
 			data[j].ATTRIBUTES.SiTransEcr,
-			data[j].ATTRIBUTES.PagingGroupNum,
+			data[j].ATTRIBUTES.PagingGroupNum,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellceschcfg data has been saved")
@@ -1019,16 +1076,17 @@ func insertCellceschcfg(baseName string, data []model.Cellceschcfg) {
 	tx.Commit()
 }
 
-func insertCellchpwrcfg(baseName string, data []model.Cellchpwrcfg) {
+
+func insertCellchpwrcfg(eNodeBId string, baseName string, data []model.Cellchpwrcfg) {
 	fmt.Println("Processing Cellchpwrcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellchpwrcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellchpwrcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.PcfichPwr,
 			data[j].ATTRIBUTES.PbchPwr,
@@ -1039,7 +1097,8 @@ func insertCellchpwrcfg(baseName string, data []model.Cellchpwrcfg) {
 			data[j].ATTRIBUTES.PrsPwr,
 			data[j].ATTRIBUTES.AntOutputPwr,
 			data[j].ATTRIBUTES.PmchPwrOffset,
-			data[j].ATTRIBUTES.HoRarPwrEnhancedSwitch,
+			data[j].ATTRIBUTES.HoRarPwrEnhancedSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellchpwrcfg data has been saved")
@@ -1047,16 +1106,17 @@ func insertCellchpwrcfg(baseName string, data []model.Cellchpwrcfg) {
 	tx.Commit()
 }
 
-func insertCellcounterparagroup(baseName string, data []model.Cellcounterparagroup) {
+
+func insertCellcounterparagroup(eNodeBId string, baseName string, data []model.Cellcounterparagroup) {
 	fmt.Println("Processing Cellcounterparagroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcounterparagroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcounterparagroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CellUserNumPdfThd,
 			data[j].ATTRIBUTES.UlIblerOptSwitch,
@@ -1088,7 +1148,8 @@ func insertCellcounterparagroup(baseName string, data []model.Cellcounterparagro
 			data[j].ATTRIBUTES.DlUserXpUnsatiThd,
 			data[j].ATTRIBUTES.DlTrafficVolumeThd,
 			data[j].ATTRIBUTES.DlPktDelayMeasPolicy,
-			data[j].ATTRIBUTES.QCI1ContinuousPktLossThld,
+			data[j].ATTRIBUTES.QCI1ContinuousPktLossThld,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellcounterparagroup data has been saved")
@@ -1096,22 +1157,24 @@ func insertCellcounterparagroup(baseName string, data []model.Cellcounterparagro
 	tx.Commit()
 }
 
-func insertCellcqiadaptivecfg(baseName string, data []model.Cellcqiadaptivecfg) {
+
+func insertCellcqiadaptivecfg(eNodeBId string, baseName string, data []model.Cellcqiadaptivecfg) {
 	fmt.Println("Processing Cellcqiadaptivecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcqiadaptivecfg` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcqiadaptivecfg` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CqiPeriodAdaptive,
 			data[j].ATTRIBUTES.SimulAckNackAndCqiSwitch,
 			data[j].ATTRIBUTES.HoAperiodicCqiCfgSwitch,
 			data[j].ATTRIBUTES.MinCqiPeriod,
-			data[j].ATTRIBUTES.SccCqiRptEnhancedSwitch,
+			data[j].ATTRIBUTES.SccCqiRptEnhancedSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellcqiadaptivecfg data has been saved")
@@ -1119,16 +1182,17 @@ func insertCellcqiadaptivecfg(baseName string, data []model.Cellcqiadaptivecfg) 
 	tx.Commit()
 }
 
-func insertCellcqiadjalgo(baseName string, data []model.Cellcqiadjalgo) {
+
+func insertCellcqiadjalgo(eNodeBId string, baseName string, data []model.Cellcqiadjalgo) {
 	fmt.Println("Processing Cellcqiadjalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcqiadjalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcqiadjalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.InitDlIblerTarget,
 			data[j].ATTRIBUTES.InitDeltaCqi,
@@ -1139,7 +1203,8 @@ func insertCellcqiadjalgo(baseName string, data []model.Cellcqiadjalgo) {
 			data[j].ATTRIBUTES.CqiOptSwitch,
 			data[j].ATTRIBUTES.InitDlIblerTargetforQCI2,
 			data[j].ATTRIBUTES.InitDlIblerTargetforVoLTE,
-			data[j].ATTRIBUTES.CellDeltaCqiSampSelThd,
+			data[j].ATTRIBUTES.CellDeltaCqiSampSelThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellcqiadjalgo data has been saved")
@@ -1147,16 +1212,17 @@ func insertCellcqiadjalgo(baseName string, data []model.Cellcqiadjalgo) {
 	tx.Commit()
 }
 
-func insertCellcsirsparacfg(baseName string, data []model.Cellcsirsparacfg) {
+
+func insertCellcsirsparacfg(eNodeBId string, baseName string, data []model.Cellcsirsparacfg) {
 	fmt.Println("Processing Cellcsirsparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcsirsparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcsirsparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CsiRsSwitch,
 			data[j].ATTRIBUTES.CsiRsPeriod,
@@ -1166,7 +1232,8 @@ func insertCellcsirsparacfg(baseName string, data []model.Cellcsirsparacfg) {
 			data[j].ATTRIBUTES.CsiRsUnconfigUserRatioTh,
 			data[j].ATTRIBUTES.CsiRsSetJudgeHysTimer,
 			data[j].ATTRIBUTES.CsiRsSetJudgeTimer,
-			data[j].ATTRIBUTES.CsiRsPortNum,
+			data[j].ATTRIBUTES.CsiRsPortNum,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellcsirsparacfg data has been saved")
@@ -1174,16 +1241,17 @@ func insertCellcsirsparacfg(baseName string, data []model.Cellcsirsparacfg) {
 	tx.Commit()
 }
 
-func insertCellcspcpara(baseName string, data []model.Cellcspcpara) {
+
+func insertCellcspcpara(eNodeBId string, baseName string, data []model.Cellcspcpara) {
 	fmt.Println("Processing Cellcspcpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcspcpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellcspcpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ECspcPCAdjUeNumTh,
 			data[j].ATTRIBUTES.CellCspcSwitch,
@@ -1197,7 +1265,8 @@ func insertCellcspcpara(baseName string, data []model.Cellcspcpara) {
 			data[j].ATTRIBUTES.CelleCspcSwitch,
 			data[j].ATTRIBUTES.ECspcPCAdjRange,
 			data[j].ATTRIBUTES.IntraEnbCspcSw,
-			data[j].ATTRIBUTES.ElasticCarrierSwitch,
+			data[j].ATTRIBUTES.ElasticCarrierSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellcspcpara data has been saved")
@@ -1205,16 +1274,17 @@ func insertCellcspcpara(baseName string, data []model.Cellcspcpara) {
 	tx.Commit()
 }
 
-func insertCelldacqcfg(baseName string, data []model.Celldacqcfg) {
+
+func insertCelldacqcfg(eNodeBId string, baseName string, data []model.Celldacqcfg) {
 	fmt.Println("Processing Celldacqcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldacqcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldacqcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DlAmbrLimitFirstRank,
 			data[j].ATTRIBUTES.DlAmbrLimitSecRank,
@@ -1231,7 +1301,8 @@ func insertCelldacqcfg(baseName string, data []model.Celldacqcfg) {
 			data[j].ATTRIBUTES.DlAmbrLimitThirdRank,
 			data[j].ATTRIBUTES.DlPrbUsageThirdRank,
 			data[j].ATTRIBUTES.UlAmbrLimitThirdRank,
-			data[j].ATTRIBUTES.UlPrbUsageThirdRank,
+			data[j].ATTRIBUTES.UlPrbUsageThirdRank,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldacqcfg data has been saved")
@@ -1239,16 +1310,17 @@ func insertCelldacqcfg(baseName string, data []model.Celldacqcfg) {
 	tx.Commit()
 }
 
-func insertCelldlcompalgo(baseName string, data []model.Celldlcompalgo) {
+
+func insertCelldlcompalgo(eNodeBId string, baseName string, data []model.Celldlcompalgo) {
 	fmt.Println("Processing Celldlcompalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlcompalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlcompalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DlCompA3Offset,
 			data[j].ATTRIBUTES.DpsCoCellUserRatioThd,
@@ -1258,7 +1330,8 @@ func insertCelldlcompalgo(baseName string, data []model.Celldlcompalgo) {
 			data[j].ATTRIBUTES.HomnetDpsCoCellRsrpThd,
 			data[j].ATTRIBUTES.JtCoCellDlPrbThd,
 			data[j].ATTRIBUTES.JtCoCellRsrpThd,
-			data[j].ATTRIBUTES.JtServingCellDlPrbThd,
+			data[j].ATTRIBUTES.JtServingCellDlPrbThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldlcompalgo data has been saved")
@@ -1266,22 +1339,24 @@ func insertCelldlcompalgo(baseName string, data []model.Celldlcompalgo) {
 	tx.Commit()
 }
 
-func insertCelldlicic(baseName string, data []model.Celldlicic) {
+
+func insertCelldlicic(eNodeBId string, baseName string, data []model.Celldlicic) {
 	fmt.Println("Processing Celldlicic data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlicic` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlicic` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.BandMode,
 			data[j].ATTRIBUTES.DlIcicUserAttrGfactorThd,
 			data[j].ATTRIBUTES.DlIcicNoiseUserRsrpThd,
 			data[j].ATTRIBUTES.AIcIcPlusA3Offset,
-			data[j].ATTRIBUTES.AIcicPlusPCAdjRange,
+			data[j].ATTRIBUTES.AIcicPlusPCAdjRange,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldlicic data has been saved")
@@ -1289,18 +1364,20 @@ func insertCelldlicic(baseName string, data []model.Celldlicic) {
 	tx.Commit()
 }
 
-func insertCelldlpcpdcch(baseName string, data []model.Celldlpcpdcch) {
+
+func insertCelldlpcpdcch(eNodeBId string, baseName string, data []model.Celldlpcpdcch) {
 	fmt.Println("Processing Celldlpcpdcch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlpcpdcch` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlpcpdcch` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
-			data[j].ATTRIBUTES.DediDciPwrOffset,
+			data[j].ATTRIBUTES.DediDciPwrOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldlpcpdcch data has been saved")
@@ -1308,16 +1385,17 @@ func insertCelldlpcpdcch(baseName string, data []model.Celldlpcpdcch) {
 	tx.Commit()
 }
 
-func insertCelldlpcpdsch(baseName string, data []model.Celldlpcpdsch) {
+
+func insertCelldlpcpdsch(eNodeBId string, baseName string, data []model.Celldlpcpdsch) {
 	fmt.Println("Processing Celldlpcpdsch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlpcpdsch` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlpcpdsch` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CcuPa,
 			data[j].ATTRIBUTES.CeuPa,
@@ -1326,7 +1404,8 @@ func insertCelldlpcpdsch(baseName string, data []model.Celldlpcpdsch) {
 			data[j].ATTRIBUTES.ExceedNCellEdgLoadThdRatio,
 			data[j].ATTRIBUTES.BFUserPwrBoostPrd,
 			data[j].ATTRIBUTES.BFUserAdptPwrA3Offset,
-			data[j].ATTRIBUTES.BFUserAdptPwrA6Offset,
+			data[j].ATTRIBUTES.BFUserAdptPwrA6Offset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldlpcpdsch data has been saved")
@@ -1334,20 +1413,22 @@ func insertCelldlpcpdsch(baseName string, data []model.Celldlpcpdsch) {
 	tx.Commit()
 }
 
-func insertCelldlpcpdschpa(baseName string, data []model.Celldlpcpdschpa) {
+
+func insertCelldlpcpdschpa(eNodeBId string, baseName string, data []model.Celldlpcpdschpa) {
 	fmt.Println("Processing Celldlpcpdschpa data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlpcpdschpa` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlpcpdschpa` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.PdschPaAdjSwitch,
 			data[j].ATTRIBUTES.PaPcOff,
-			data[j].ATTRIBUTES.NomPdschRsEpreOffset,
+			data[j].ATTRIBUTES.NomPdschRsEpreOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldlpcpdschpa data has been saved")
@@ -1355,18 +1436,20 @@ func insertCelldlpcpdschpa(baseName string, data []model.Celldlpcpdschpa) {
 	tx.Commit()
 }
 
-func insertCelldlpcphich(baseName string, data []model.Celldlpcphich) {
+
+func insertCelldlpcphich(eNodeBId string, baseName string, data []model.Celldlpcphich) {
 	fmt.Println("Processing Celldlpcphich data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlpcphich` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlpcphich` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
-			data[j].ATTRIBUTES.PwrOffset,
+			data[j].ATTRIBUTES.PwrOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldlpcphich data has been saved")
@@ -1374,16 +1457,17 @@ func insertCelldlpcphich(baseName string, data []model.Celldlpcphich) {
 	tx.Commit()
 }
 
-func insertCelldlschalgo(baseName string, data []model.Celldlschalgo) {
+
+func insertCelldlschalgo(eNodeBId string, baseName string, data []model.Celldlschalgo) {
 	fmt.Println("Processing Celldlschalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlschalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldlschalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DlschStrategy,
 			data[j].ATTRIBUTES.FreeUserDlRbUsedRatio,
@@ -1487,7 +1571,8 @@ func insertCelldlschalgo(baseName string, data []model.Celldlschalgo) {
 			data[j].ATTRIBUTES.LowIblerTargetTbsIdxThld,
 			data[j].ATTRIBUTES.DlCandPairUeCntThld,
 			data[j].ATTRIBUTES.PdschMaxCodeRate,
-			data[j].ATTRIBUTES.IndependentBeamPmiThld,
+			data[j].ATTRIBUTES.IndependentBeamPmiThld,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldlschalgo data has been saved")
@@ -1495,16 +1580,17 @@ func insertCelldlschalgo(baseName string, data []model.Celldlschalgo) {
 	tx.Commit()
 }
 
-func insertCelldrxpara(baseName string, data []model.Celldrxpara) {
+
+func insertCelldrxpara(eNodeBId string, baseName string, data []model.Celldrxpara) {
 	fmt.Println("Processing Celldrxpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldrxpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldrxpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.FddEnterDrxThd,
 			data[j].ATTRIBUTES.FddExitDrxThd,
@@ -1551,7 +1637,8 @@ func insertCelldrxpara(baseName string, data []model.Celldrxpara) {
 			data[j].ATTRIBUTES.DrxOdPreSchSwitch,
 			data[j].ATTRIBUTES.DrxUeSrsOptSwitch,
 			data[j].ATTRIBUTES.SinrThldForVolteDrxCtrl,
-			data[j].ATTRIBUTES.VoltePlrThldForExitingDrx,
+			data[j].ATTRIBUTES.VoltePlrThldForExitingDrx,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldrxpara data has been saved")
@@ -1559,16 +1646,17 @@ func insertCelldrxpara(baseName string, data []model.Celldrxpara) {
 	tx.Commit()
 }
 
-func insertCelldrxspecialpara(baseName string, data []model.Celldrxspecialpara) {
+
+func insertCelldrxspecialpara(eNodeBId string, baseName string, data []model.Celldrxspecialpara) {
 	fmt.Println("Processing Celldrxspecialpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldrxspecialpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldrxspecialpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CellDrxSpecialParaValid,
 			data[j].ATTRIBUTES.LongDrxCycleSpecial,
@@ -1579,7 +1667,8 @@ func insertCelldrxspecialpara(baseName string, data []model.Celldrxspecialpara) 
 			data[j].ATTRIBUTES.LongDrxCycleForInterRatAnr,
 			data[j].ATTRIBUTES.FddAnrDrxInactivityTimer,
 			data[j].ATTRIBUTES.TddAnrDrxInactivityTimer,
-			data[j].ATTRIBUTES.BfSpecificDrxParaSwitch,
+			data[j].ATTRIBUTES.BfSpecificDrxParaSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldrxspecialpara data has been saved")
@@ -1587,16 +1676,17 @@ func insertCelldrxspecialpara(baseName string, data []model.Celldrxspecialpara) 
 	tx.Commit()
 }
 
-func insertCelldss(baseName string, data []model.Celldss) {
+
+func insertCelldss(eNodeBId string, baseName string, data []model.Celldss) {
 	fmt.Println("Processing Celldss data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldss` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldss` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.HighFreqShareRbNum,
 			data[j].ATTRIBUTES.LowFreqShareRbNum,
@@ -1611,7 +1701,8 @@ func insertCelldss(baseName string, data []model.Celldss) {
 			data[j].ATTRIBUTES.SpecShrPfmOptSwitch,
 			data[j].ATTRIBUTES.SinrThdWithoutGsmInterf,
 			data[j].ATTRIBUTES.GsmInterfINThd,
-			data[j].ATTRIBUTES.NearPtUserRsrpThd,
+			data[j].ATTRIBUTES.NearPtUserRsrpThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldss data has been saved")
@@ -1619,16 +1710,17 @@ func insertCelldss(baseName string, data []model.Celldss) {
 	tx.Commit()
 }
 
-func insertCelldynacbaralgopara(baseName string, data []model.Celldynacbaralgopara) {
+
+func insertCelldynacbaralgopara(eNodeBId string, baseName string, data []model.Celldynacbaralgopara) {
 	fmt.Println("Processing Celldynacbaralgopara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldynacbaralgopara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celldynacbaralgopara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DynAcBarStatPeriod,
 			data[j].ATTRIBUTES.DynAcBarTriggerThd,
@@ -1642,7 +1734,8 @@ func insertCelldynacbaralgopara(baseName string, data []model.Celldynacbaralgopa
 			data[j].ATTRIBUTES.MoFactorAdjStep,
 			data[j].ATTRIBUTES.MoFactorRetreatStep,
 			data[j].ATTRIBUTES.SsacFactorAdjStep,
-			data[j].ATTRIBUTES.SsacFactorRetreatStep,
+			data[j].ATTRIBUTES.SsacFactorRetreatStep,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celldynacbaralgopara data has been saved")
@@ -1650,16 +1743,17 @@ func insertCelldynacbaralgopara(baseName string, data []model.Celldynacbaralgopa
 	tx.Commit()
 }
 
-func insertCelleabalgopara(baseName string, data []model.Celleabalgopara) {
+
+func insertCelleabalgopara(eNodeBId string, baseName string, data []model.Celleabalgopara) {
 	fmt.Println("Processing Celleabalgopara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celleabalgopara` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celleabalgopara` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.EABTriggerThd,
 			data[j].ATTRIBUTES.EABStatPeriod,
@@ -1667,7 +1761,8 @@ func insertCelleabalgopara(baseName string, data []model.Celleabalgopara) {
 			data[j].ATTRIBUTES.EABCancelThd,
 			data[j].ATTRIBUTES.EABCancelCondSatiPeriod,
 			data[j].ATTRIBUTES.ABForExceptionData,
-			data[j].ATTRIBUTES.ABForSpecialAC,
+			data[j].ATTRIBUTES.ABForSpecialAC,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celleabalgopara data has been saved")
@@ -1675,16 +1770,17 @@ func insertCelleabalgopara(baseName string, data []model.Celleabalgopara) {
 	tx.Commit()
 }
 
-func insertCelleicic(baseName string, data []model.Celleicic) {
+
+func insertCelleicic(eNodeBId string, baseName string, data []model.Celleicic) {
 	fmt.Println("Processing Celleicic data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celleicic` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celleicic` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.AbsPattern,
 			data[j].ATTRIBUTES.EicicMeasureEnable,
@@ -1703,7 +1799,8 @@ func insertCelleicic(baseName string, data []model.Celleicic) {
 			data[j].ATTRIBUTES.HighCoorCCEThd,
 			data[j].ATTRIBUTES.HighCoorDTXThd,
 			data[j].ATTRIBUTES.HighSpeedEnhancedOptSwitch,
-			data[j].ATTRIBUTES.HSHandinUserThd,
+			data[j].ATTRIBUTES.HSHandinUserThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celleicic data has been saved")
@@ -1711,16 +1808,17 @@ func insertCelleicic(baseName string, data []model.Celleicic) {
 	tx.Commit()
 }
 
-func insertCellemtcalgo(baseName string, data []model.Cellemtcalgo) {
+
+func insertCellemtcalgo(eNodeBId string, baseName string, data []model.Cellemtcalgo) {
 	fmt.Println("Processing Cellemtcalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellemtcalgo` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellemtcalgo` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.EmtcUlRbTargetRatio,
 			data[j].ATTRIBUTES.EmtcAperCqiTrigPrd,
@@ -1728,7 +1826,8 @@ func insertCellemtcalgo(baseName string, data []model.Cellemtcalgo) {
 			data[j].ATTRIBUTES.EmtcAlgoSwitch,
 			data[j].ATTRIBUTES.DlLteRsvNbCount,
 			data[j].ATTRIBUTES.UlLteRsvNbCount,
-			data[j].ATTRIBUTES.EmtcVolteSupportSwitch,
+			data[j].ATTRIBUTES.EmtcVolteSupportSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellemtcalgo data has been saved")
@@ -1736,16 +1835,17 @@ func insertCellemtcalgo(baseName string, data []model.Cellemtcalgo) {
 	tx.Commit()
 }
 
-func insertCellhoparacfg(baseName string, data []model.Cellhoparacfg) {
+
+func insertCellhoparacfg(eNodeBId string, baseName string, data []model.Cellhoparacfg) {
 	fmt.Println("Processing Cellhoparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellhoparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellhoparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.BlindHoA1A2ThdRsrp,
 			data[j].ATTRIBUTES.BlindHoA1A2ThdRsrq,
@@ -1777,7 +1877,8 @@ func insertCellhoparacfg(baseName string, data []model.Cellhoparacfg) {
 			data[j].ATTRIBUTES.SrvccMrDelayTimer,
 			data[j].ATTRIBUTES.VolteQualIfHoQci1PlrThld,
 			data[j].ATTRIBUTES.VolteQualRecoveryQci1PlrThld,
-			data[j].ATTRIBUTES.InterRatUuHoFailRetryTimes,
+			data[j].ATTRIBUTES.InterRatUuHoFailRetryTimes,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellhoparacfg data has been saved")
@@ -1785,20 +1886,22 @@ func insertCellhoparacfg(baseName string, data []model.Cellhoparacfg) {
 	tx.Commit()
 }
 
-func insertCellidprdupt(baseName string, data []model.Cellidprdupt) {
+
+func insertCellidprdupt(eNodeBId string, baseName string, data []model.Cellidprdupt) {
 	fmt.Println("Processing Cellidprdupt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellidprdupt` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellidprdupt` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PrdUptSwitch,
 			data[j].ATTRIBUTES.ActionTime,
 			data[j].ATTRIBUTES.Period,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellidprdupt data has been saved")
@@ -1806,19 +1909,21 @@ func insertCellidprdupt(baseName string, data []model.Cellidprdupt) {
 	tx.Commit()
 }
 
-func insertCelliicspara(baseName string, data []model.Celliicspara) {
+
+func insertCelliicspara(eNodeBId string, baseName string, data []model.Celliicspara) {
 	fmt.Println("Processing Celliicspara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celliicspara` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celliicspara` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.IicsUserAttrA3Offset,
-			data[j].ATTRIBUTES.IicsUserAttrThd,
+			data[j].ATTRIBUTES.IicsUserAttrThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celliicspara data has been saved")
@@ -1826,16 +1931,17 @@ func insertCelliicspara(baseName string, data []model.Celliicspara) {
 	tx.Commit()
 }
 
-func insertCelllowpower(baseName string, data []model.Celllowpower) {
+
+func insertCelllowpower(eNodeBId string, baseName string, data []model.Celllowpower) {
 	fmt.Println("Processing Celllowpower data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celllowpower` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celllowpower` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.LowPwrSwitch,
 			data[j].ATTRIBUTES.CellUsedPwrReduceTimeLen,
@@ -1844,7 +1950,8 @@ func insertCelllowpower(baseName string, data []model.Celllowpower) {
 			data[j].ATTRIBUTES.CellUsedPwrRatio,
 			data[j].ATTRIBUTES.RsPwrAdjOffset,
 			data[j].ATTRIBUTES.EnterTimeLen,
-			data[j].ATTRIBUTES.BakPwrSavPolicy,
+			data[j].ATTRIBUTES.BakPwrSavPolicy,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celllowpower data has been saved")
@@ -1852,22 +1959,24 @@ func insertCelllowpower(baseName string, data []model.Celllowpower) {
 	tx.Commit()
 }
 
-func insertCelllteflexbw(baseName string, data []model.Celllteflexbw) {
+
+func insertCelllteflexbw(eNodeBId string, baseName string, data []model.Celllteflexbw) {
 	fmt.Println("Processing Celllteflexbw data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celllteflexbw` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celllteflexbw` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.LteFlexBwSwitch,
 			data[j].ATTRIBUTES.DlCustStartPrbIndex,
 			data[j].ATTRIBUTES.DlCustEndPrbIndex,
 			data[j].ATTRIBUTES.UlCustStartPrbIndex,
-			data[j].ATTRIBUTES.UlCustEndPrbIndex,
+			data[j].ATTRIBUTES.UlCustEndPrbIndex,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celllteflexbw data has been saved")
@@ -1875,19 +1984,21 @@ func insertCelllteflexbw(baseName string, data []model.Celllteflexbw) {
 	tx.Commit()
 }
 
-func insertCelllteflexbwitfcfg(baseName string, data []model.Celllteflexbwitfcfg) {
+
+func insertCelllteflexbwitfcfg(eNodeBId string, baseName string, data []model.Celllteflexbwitfcfg) {
 	fmt.Println("Processing Celllteflexbwitfcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celllteflexbwitfcfg` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celllteflexbwitfcfg` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.HighItfGsmArfcn,
-			data[j].ATTRIBUTES.GsmCarrierFreq,
+			data[j].ATTRIBUTES.GsmCarrierFreq,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celllteflexbwitfcfg data has been saved")
@@ -1895,16 +2006,17 @@ func insertCelllteflexbwitfcfg(baseName string, data []model.Celllteflexbwitfcfg
 	tx.Commit()
 }
 
-func insertCellmbfcs(baseName string, data []model.Cellmbfcs) {
+
+func insertCellmbfcs(eNodeBId string, baseName string, data []model.Cellmbfcs) {
 	fmt.Println("Processing Cellmbfcs data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmbfcs` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmbfcs` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CellSyntheticalRateHoHyst,
 			data[j].ATTRIBUTES.CellTrafficLoadThd,
@@ -1913,7 +2025,8 @@ func insertCellmbfcs(baseName string, data []model.Cellmbfcs) {
 			data[j].ATTRIBUTES.InterFreqMeasServiceThd,
 			data[j].ATTRIBUTES.MeasInfoUpdInterval,
 			data[j].ATTRIBUTES.UeSpectralEffHoHyst,
-			data[j].ATTRIBUTES.LoadDiffRatioThld,
+			data[j].ATTRIBUTES.LoadDiffRatioThld,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmbfcs data has been saved")
@@ -1921,22 +2034,24 @@ func insertCellmbfcs(baseName string, data []model.Cellmbfcs) {
 	tx.Commit()
 }
 
-func insertCellmbmscfg(baseName string, data []model.Cellmbmscfg) {
+
+func insertCellmbmscfg(eNodeBId string, baseName string, data []model.Cellmbmscfg) {
 	fmt.Println("Processing Cellmbmscfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmbmscfg` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmbmscfg` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.MBSFNSyncAreaId,
 			data[j].ATTRIBUTES.MBMSSwitch,
 			data[j].ATTRIBUTES.ServiceAreaIdList,
 			data[j].ATTRIBUTES.MBMSServiceSwitch,
-			data[j].ATTRIBUTES.NCellMbmsCfgSwitch,
+			data[j].ATTRIBUTES.NCellMbmsCfgSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmbmscfg data has been saved")
@@ -1944,16 +2059,17 @@ func insertCellmbmscfg(baseName string, data []model.Cellmbmscfg) {
 	tx.Commit()
 }
 
-func insertCellmcpara(baseName string, data []model.Cellmcpara) {
+
+func insertCellmcpara(eNodeBId string, baseName string, data []model.Cellmcpara) {
 	fmt.Println("Processing Cellmcpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmcpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmcpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.A3Offset,
 			data[j].ATTRIBUTES.Hysteresis,
@@ -1973,7 +2089,8 @@ func insertCellmcpara(baseName string, data []model.Cellmcpara) {
 			data[j].ATTRIBUTES.A3MCAdaptiveSwitch,
 			data[j].ATTRIBUTES.AoaDetectThd,
 			data[j].ATTRIBUTES.EcidReportAmount,
-			data[j].ATTRIBUTES.EcidReportInterval,
+			data[j].ATTRIBUTES.EcidReportInterval,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmcpara data has been saved")
@@ -1981,20 +2098,22 @@ func insertCellmcpara(baseName string, data []model.Cellmcpara) {
 	tx.Commit()
 }
 
-func insertCellmimoparacfg(baseName string, data []model.Cellmimoparacfg) {
+
+func insertCellmimoparacfg(eNodeBId string, baseName string, data []model.Cellmimoparacfg) {
 	fmt.Println("Processing Cellmimoparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmimoparacfg` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmimoparacfg` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.MimoAdaptiveSwitch,
 			data[j].ATTRIBUTES.FixedMimoMode,
-			data[j].ATTRIBUTES.InitialMimoType,
+			data[j].ATTRIBUTES.InitialMimoType,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmimoparacfg data has been saved")
@@ -2002,16 +2121,17 @@ func insertCellmimoparacfg(baseName string, data []model.Cellmimoparacfg) {
 	tx.Commit()
 }
 
-func insertCellmlb(baseName string, data []model.Cellmlb) {
+
+func insertCellmlb(eNodeBId string, baseName string, data []model.Cellmlb) {
 	fmt.Println("Processing Cellmlb data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmlb` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmlb` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.InterFreqMlbThd,
 			data[j].ATTRIBUTES.InterRatMlbThd,
@@ -2080,7 +2200,8 @@ func insertCellmlb(baseName string, data []model.Cellmlb) {
 			data[j].ATTRIBUTES.UlExperienceEvalPrd,
 			data[j].ATTRIBUTES.UlExperienceMaxUeNum,
 			data[j].ATTRIBUTES.UlExperienceOffloadThd,
-			data[j].ATTRIBUTES.UlExperienceOffset,
+			data[j].ATTRIBUTES.UlExperienceOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmlb data has been saved")
@@ -2088,16 +2209,17 @@ func insertCellmlb(baseName string, data []model.Cellmlb) {
 	tx.Commit()
 }
 
-func insertCellmlbautogroup(baseName string, data []model.Cellmlbautogroup) {
+
+func insertCellmlbautogroup(eNodeBId string, baseName string, data []model.Cellmlbautogroup) {
 	fmt.Println("Processing Cellmlbautogroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmlbautogroup` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmlbautogroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.OverlapIndAddThd,
 			data[j].ATTRIBUTES.OverlapIndDelThd,
@@ -2107,7 +2229,8 @@ func insertCellmlbautogroup(baseName string, data []model.Cellmlbautogroup) {
 			data[j].ATTRIBUTES.OverlapIndAutoSampleNum,
 			data[j].ATTRIBUTES.OptMode,
 			data[j].ATTRIBUTES.MicroOverlapIndAddThd,
-			data[j].ATTRIBUTES.MicroOverlapIndDelThd,
+			data[j].ATTRIBUTES.MicroOverlapIndDelThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmlbautogroup data has been saved")
@@ -2115,16 +2238,17 @@ func insertCellmlbautogroup(baseName string, data []model.Cellmlbautogroup) {
 	tx.Commit()
 }
 
-func insertCellmlbho(baseName string, data []model.Cellmlbho) {
+
+func insertCellmlbho(eNodeBId string, baseName string, data []model.Cellmlbho) {
 	fmt.Println("Processing Cellmlbho data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmlbho` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmlbho` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.IdleUeSelFreqStrategy,
 			data[j].ATTRIBUTES.MlbHoInProtectMode,
@@ -2134,7 +2258,8 @@ func insertCellmlbho(baseName string, data []model.Cellmlbho) {
 			data[j].ATTRIBUTES.InterFreqMlbHoInA2ThdRsrp,
 			data[j].ATTRIBUTES.InterFreqMlbHoInA2ThdRsrq,
 			data[j].ATTRIBUTES.InterRatMlbStrategy,
-			data[j].ATTRIBUTES.MlbMatchOtherFeatureMode,
+			data[j].ATTRIBUTES.MlbMatchOtherFeatureMode,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmlbho data has been saved")
@@ -2142,23 +2267,25 @@ func insertCellmlbho(baseName string, data []model.Cellmlbho) {
 	tx.Commit()
 }
 
-func insertCellmlbuesel(baseName string, data []model.Cellmlbuesel) {
+
+func insertCellmlbuesel(eNodeBId string, baseName string, data []model.Cellmlbuesel) {
 	fmt.Println("Processing Cellmlbuesel data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmlbuesel` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmlbuesel` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.UeSelectPrbPrio,
 			data[j].ATTRIBUTES.UeSelectQciPrio,
 			data[j].ATTRIBUTES.UeSelectArpPrio,
 			data[j].ATTRIBUTES.UeSelectDlMcsPrio,
 			data[j].ATTRIBUTES.InterFreqMlbUeArpThd,
-			data[j].ATTRIBUTES.InterFreqMlbUeDlMcsThd,
+			data[j].ATTRIBUTES.InterFreqMlbUeDlMcsThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmlbuesel data has been saved")
@@ -2166,19 +2293,21 @@ func insertCellmlbuesel(baseName string, data []model.Cellmlbuesel) {
 	tx.Commit()
 }
 
-func insertCellmmalgo(baseName string, data []model.Cellmmalgo) {
+
+func insertCellmmalgo(eNodeBId string, baseName string, data []model.Cellmmalgo) {
 	fmt.Println("Processing Cellmmalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmmalgo` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmmalgo` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.BeamGainLimitSwitch,
-			data[j].ATTRIBUTES.MMAlgoOptSwitch,
+			data[j].ATTRIBUTES.MMAlgoOptSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmmalgo data has been saved")
@@ -2186,16 +2315,17 @@ func insertCellmmalgo(baseName string, data []model.Cellmmalgo) {
 	tx.Commit()
 }
 
-func insertCellmro(baseName string, data []model.Cellmro) {
+
+func insertCellmro(eNodeBId string, baseName string, data []model.Cellmro) {
 	fmt.Println("Processing Cellmro data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmro` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellmro` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CioAdjLimitCfgInd,
 			data[j].ATTRIBUTES.CioAdjUpperLimit,
@@ -2204,7 +2334,8 @@ func insertCellmro(baseName string, data []model.Cellmro) {
 			data[j].ATTRIBUTES.InterFreqA2RsrpLowLimit,
 			data[j].ATTRIBUTES.A3InterFreqA2RsrpUpLimit,
 			data[j].ATTRIBUTES.A3InterFreqA2RsrpLowLimit,
-			data[j].ATTRIBUTES.InterFreqMroAdjParaSel,
+			data[j].ATTRIBUTES.InterFreqMroAdjParaSel,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellmro data has been saved")
@@ -2212,20 +2343,22 @@ func insertCellmro(baseName string, data []model.Cellmro) {
 	tx.Commit()
 }
 
-func insertCellnoaccessalmpara(baseName string, data []model.Cellnoaccessalmpara) {
+
+func insertCellnoaccessalmpara(eNodeBId string, baseName string, data []model.Cellnoaccessalmpara) {
 	fmt.Println("Processing Cellnoaccessalmpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellnoaccessalmpara` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellnoaccessalmpara` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.NoAccessStartDetectTime,
 			data[j].ATTRIBUTES.NoAccessStopDetectTime,
-			data[j].ATTRIBUTES.NoAccessDetectTimer,
+			data[j].ATTRIBUTES.NoAccessDetectTimer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellnoaccessalmpara data has been saved")
@@ -2233,16 +2366,17 @@ func insertCellnoaccessalmpara(baseName string, data []model.Cellnoaccessalmpara
 	tx.Commit()
 }
 
-func insertCellop(baseName string, data []model.Cellop) {
+
+func insertCellop(eNodeBId string, baseName string, data []model.Cellop) {
 	fmt.Println("Processing Cellop data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellop` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellop` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.TrackingAreaId,
 			data[j].ATTRIBUTES.CellReservedForOp,
@@ -2257,7 +2391,8 @@ func insertCellop(baseName string, data []model.Cellop) {
 			data[j].ATTRIBUTES.OperatorPlmnRoundPeriod,
 			data[j].ATTRIBUTES.OpResourceGroupIndex,
 			data[j].ATTRIBUTES.OpNonGbrResourceRatio,
-			data[j].ATTRIBUTES.RatFreqPriorityGroupId,
+			data[j].ATTRIBUTES.RatFreqPriorityGroupId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellop data has been saved")
@@ -2265,16 +2400,17 @@ func insertCellop(baseName string, data []model.Cellop) {
 	tx.Commit()
 }
 
-func insertCellpcalgo(baseName string, data []model.Cellpcalgo) {
+
+func insertCellpcalgo(eNodeBId string, baseName string, data []model.Cellpcalgo) {
 	fmt.Println("Processing Cellpcalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellpcalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellpcalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.SrsPcStrategy,
 			data[j].ATTRIBUTES.PucchCloseLoopPcType,
@@ -2297,7 +2433,8 @@ func insertCellpcalgo(baseName string, data []model.Cellpcalgo) {
 			data[j].ATTRIBUTES.VoLteSinrHighThdOffset,
 			data[j].ATTRIBUTES.VoltePUSCHPowerOffset,
 			data[j].ATTRIBUTES.PuschRsrpHighThdOffsetVoIP,
-			data[j].ATTRIBUTES.DMSrsPcSinrOffset,
+			data[j].ATTRIBUTES.DMSrsPcSinrOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellpcalgo data has been saved")
@@ -2305,16 +2442,17 @@ func insertCellpcalgo(baseName string, data []model.Cellpcalgo) {
 	tx.Commit()
 }
 
-func insertCellpdcchalgo(baseName string, data []model.Cellpdcchalgo) {
+
+func insertCellpdcchalgo(eNodeBId string, baseName string, data []model.Cellpdcchalgo) {
 	fmt.Println("Processing Cellpdcchalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellpdcchalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellpdcchalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ComSigCongregLv,
 			data[j].ATTRIBUTES.CceRatioAdjSwitch,
@@ -2362,7 +2500,8 @@ func insertCellpdcchalgo(baseName string, data []model.Cellpdcchalgo) {
 			data[j].ATTRIBUTES.NackDtxRatioThd,
 			data[j].ATTRIBUTES.SplitBeamPdcchSdmaSw,
 			data[j].ATTRIBUTES.PdcchPwrCtrlUserNumThd,
-			data[j].ATTRIBUTES.PdcchBfGainOffset,
+			data[j].ATTRIBUTES.PdcchBfGainOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellpdcchalgo data has been saved")
@@ -2370,21 +2509,23 @@ func insertCellpdcchalgo(baseName string, data []model.Cellpdcchalgo) {
 	tx.Commit()
 }
 
-func insertCellpdcchcecfg(baseName string, data []model.Cellpdcchcecfg) {
+
+func insertCellpdcchcecfg(eNodeBId string, baseName string, data []model.Cellpdcchcecfg) {
 	fmt.Println("Processing Cellpdcchcecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellpdcchcecfg` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellpdcchcecfg` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CoverageLevel,
 			data[j].ATTRIBUTES.PdcchMaxRepetitionCnt,
 			data[j].ATTRIBUTES.PdcchPeriodFactor,
-			data[j].ATTRIBUTES.PdcchTransRptCntFactor,
+			data[j].ATTRIBUTES.PdcchTransRptCntFactor,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellpdcchcecfg data has been saved")
@@ -2392,21 +2533,23 @@ func insertCellpdcchcecfg(baseName string, data []model.Cellpdcchcecfg) {
 	tx.Commit()
 }
 
-func insertCellprbvalmlb(baseName string, data []model.Cellprbvalmlb) {
+
+func insertCellprbvalmlb(eNodeBId string, baseName string, data []model.Cellprbvalmlb) {
 	fmt.Println("Processing Cellprbvalmlb data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellprbvalmlb` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellprbvalmlb` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.PrbValMlbTrigThd,
 			data[j].ATTRIBUTES.PrbValMlbAdmitThd,
 			data[j].ATTRIBUTES.MlbUeSelectPrbValThd,
-			data[j].ATTRIBUTES.PrbValFilterFactor,
+			data[j].ATTRIBUTES.PrbValFilterFactor,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellprbvalmlb data has been saved")
@@ -2414,20 +2557,22 @@ func insertCellprbvalmlb(baseName string, data []model.Cellprbvalmlb) {
 	tx.Commit()
 }
 
-func insertCellpucchalgo(baseName string, data []model.Cellpucchalgo) {
+
+func insertCellpucchalgo(eNodeBId string, baseName string, data []model.Cellpucchalgo) {
 	fmt.Println("Processing Cellpucchalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellpucchalgo` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellpucchalgo` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.SriLowLoadThd,
 			data[j].ATTRIBUTES.SriReCfgInd,
-			data[j].ATTRIBUTES.SriAlgoSwitch,
+			data[j].ATTRIBUTES.SriAlgoSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellpucchalgo data has been saved")
@@ -2435,16 +2580,17 @@ func insertCellpucchalgo(baseName string, data []model.Cellpucchalgo) {
 	tx.Commit()
 }
 
-func insertCellqcipara(baseName string, data []model.Cellqcipara) {
+
+func insertCellqcipara(eNodeBId string, baseName string, data []model.Cellqcipara) {
 	fmt.Println("Processing Cellqcipara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellqcipara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellqcipara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.InterFreqHoGroupId,
@@ -2471,7 +2617,8 @@ func insertCellqcipara(baseName string, data []model.Cellqcipara) {
 			data[j].ATTRIBUTES.ServiceFlag,
 			data[j].ATTRIBUTES.DlAmbrLimitFactor,
 			data[j].ATTRIBUTES.QciAmbrLimitFlag,
-			data[j].ATTRIBUTES.UlAmbrLimitFactor,
+			data[j].ATTRIBUTES.UlAmbrLimitFactor,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellqcipara data has been saved")
@@ -2479,22 +2626,24 @@ func insertCellqcipara(baseName string, data []model.Cellqcipara) {
 	tx.Commit()
 }
 
-func insertCellrachalgo(baseName string, data []model.Cellrachalgo) {
+
+func insertCellrachalgo(eNodeBId string, baseName string, data []model.Cellrachalgo) {
 	fmt.Println("Processing Cellrachalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellrachalgo` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellrachalgo` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.PrachFalseAlarmDetRadThd,
 			data[j].ATTRIBUTES.RachThdBoostRatio,
 			data[j].ATTRIBUTES.PrachInterfPeriod,
 			data[j].ATTRIBUTES.PrachInterfThreshold,
-			data[j].ATTRIBUTES.PrachInterfHysteresis,
+			data[j].ATTRIBUTES.PrachInterfHysteresis,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellrachalgo data has been saved")
@@ -2502,16 +2651,17 @@ func insertCellrachalgo(baseName string, data []model.Cellrachalgo) {
 	tx.Commit()
 }
 
-func insertCellrachcecfg(baseName string, data []model.Cellrachcecfg) {
+
+func insertCellrachcecfg(eNodeBId string, baseName string, data []model.Cellrachcecfg) {
 	fmt.Println("Processing Cellrachcecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellrachcecfg` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellrachcecfg` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CoverageLevel,
 			data[j].ATTRIBUTES.ContentionResolutionTimer,
@@ -2520,7 +2670,8 @@ func insertCellrachcecfg(baseName string, data []model.Cellrachcecfg) {
 			data[j].ATTRIBUTES.PrachRepetitionCount,
 			data[j].ATTRIBUTES.MaxNumPreambleAttempt,
 			data[j].ATTRIBUTES.PrachDetectionThld,
-			data[j].ATTRIBUTES.PrachStartTime,
+			data[j].ATTRIBUTES.PrachStartTime,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellrachcecfg data has been saved")
@@ -2528,16 +2679,17 @@ func insertCellrachcecfg(baseName string, data []model.Cellrachcecfg) {
 	tx.Commit()
 }
 
-func insertCellracthd(baseName string, data []model.Cellracthd) {
+
+func insertCellracthd(eNodeBId string, baseName string, data []model.Cellracthd) {
 	fmt.Println("Processing Cellracthd data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellracthd` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellracthd` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.GoldServiceArpThd,
 			data[j].ATTRIBUTES.SilverServiceArpThd,
@@ -2576,7 +2728,8 @@ func insertCellracthd(baseName string, data []model.Cellracthd) {
 			data[j].ATTRIBUTES.UlRbThdforVolteLoadAmrc,
 			data[j].ATTRIBUTES.CongBearRelPeriod,
 			data[j].ATTRIBUTES.PreemptableBearerNum,
-			data[j].ATTRIBUTES.Qci65HoThd,
+			data[j].ATTRIBUTES.Qci65HoThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellracthd data has been saved")
@@ -2584,16 +2737,17 @@ func insertCellracthd(baseName string, data []model.Cellracthd) {
 	tx.Commit()
 }
 
-func insertCellresel(baseName string, data []model.Cellresel) {
+
+func insertCellresel(eNodeBId string, baseName string, data []model.Cellresel) {
 	fmt.Println("Processing Cellresel data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellresel` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellresel` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.Qhyst,
 			data[j].ATTRIBUTES.SpeedDepReselCfgInd,
@@ -2619,7 +2773,8 @@ func insertCellresel(baseName string, data []model.Cellresel) {
 			data[j].ATTRIBUTES.QQualMin,
 			data[j].ATTRIBUTES.TReselForNb,
 			data[j].ATTRIBUTES.TReselInterFreqForNb,
-			data[j].ATTRIBUTES.TReselEutranCE,
+			data[j].ATTRIBUTES.TReselEutranCE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellresel data has been saved")
@@ -2627,19 +2782,21 @@ func insertCellresel(baseName string, data []model.Cellresel) {
 	tx.Commit()
 }
 
-func insertCellreselgeran(baseName string, data []model.Cellreselgeran) {
+
+func insertCellreselgeran(eNodeBId string, baseName string, data []model.Cellreselgeran) {
 	fmt.Println("Processing Cellreselgeran data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellreselgeran` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellreselgeran` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.TReselGeran,
-			data[j].ATTRIBUTES.SpeedStateSfCfgInd,
+			data[j].ATTRIBUTES.SpeedStateSfCfgInd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellreselgeran data has been saved")
@@ -2647,21 +2804,23 @@ func insertCellreselgeran(baseName string, data []model.Cellreselgeran) {
 	tx.Commit()
 }
 
-func insertCellreselutran(baseName string, data []model.Cellreselutran) {
+
+func insertCellreselutran(eNodeBId string, baseName string, data []model.Cellreselutran) {
 	fmt.Println("Processing Cellreselutran data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellreselutran` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellreselutran` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.TReselUtran,
 			data[j].ATTRIBUTES.SpeedStateSfCfgInd,
 			data[j].ATTRIBUTES.TReselUtranSfMedium,
-			data[j].ATTRIBUTES.TReselUtranSfHigh,
+			data[j].ATTRIBUTES.TReselUtranSfHigh,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellreselutran data has been saved")
@@ -2669,16 +2828,17 @@ func insertCellreselutran(baseName string, data []model.Cellreselutran) {
 	tx.Commit()
 }
 
-func insertCellrfshutdown(baseName string, data []model.Cellrfshutdown) {
+
+func insertCellrfshutdown(eNodeBId string, baseName string, data []model.Cellrfshutdown) {
 	fmt.Println("Processing Cellrfshutdown data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellrfshutdown` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellrfshutdown` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.RfShutdownSwitch,
 			data[j].ATTRIBUTES.StartTime,
@@ -2689,7 +2849,8 @@ func insertCellrfshutdown(baseName string, data []model.Cellrfshutdown) {
 			data[j].ATTRIBUTES.DlPrbOffset,
 			data[j].ATTRIBUTES.UlPrbOffset,
 			data[j].ATTRIBUTES.UENumThd,
-			data[j].ATTRIBUTES.RfShutdownJudgingPolicy,
+			data[j].ATTRIBUTES.RfShutdownJudgingPolicy,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellrfshutdown data has been saved")
@@ -2697,16 +2858,17 @@ func insertCellrfshutdown(baseName string, data []model.Cellrfshutdown) {
 	tx.Commit()
 }
 
-func insertCellricalgo(baseName string, data []model.Cellricalgo) {
+
+func insertCellricalgo(eNodeBId string, baseName string, data []model.Cellricalgo) {
 	fmt.Println("Processing Cellricalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellricalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellricalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.RicAlgoSwitch,
 			data[j].ATTRIBUTES.MuteUpPTSSymNum,
@@ -2725,7 +2887,8 @@ func insertCellricalgo(baseName string, data []model.Cellricalgo) {
 			data[j].ATTRIBUTES.DuctInfPwrDiffInThld,
 			data[j].ATTRIBUTES.DuctInfPwrDiffOutThld,
 			data[j].ATTRIBUTES.DuctInfRateThld,
-			data[j].ATTRIBUTES.DuctSubfrmShutoffDepth,
+			data[j].ATTRIBUTES.DuctSubfrmShutoffDepth,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellricalgo data has been saved")
@@ -2733,23 +2896,25 @@ func insertCellricalgo(baseName string, data []model.Cellricalgo) {
 	tx.Commit()
 }
 
-func insertCellsel(baseName string, data []model.Cellsel) {
+
+func insertCellsel(eNodeBId string, baseName string, data []model.Cellsel) {
 	fmt.Println("Processing Cellsel data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellsel` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellsel` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.QRxLevMin,
 			data[j].ATTRIBUTES.QRxLevMinOffset,
 			data[j].ATTRIBUTES.QQualMin,
 			data[j].ATTRIBUTES.QQualMinOffsetCfgInd,
 			data[j].ATTRIBUTES.QRxLevMinCE,
-			data[j].ATTRIBUTES.QQualMinCE,
+			data[j].ATTRIBUTES.QQualMinCE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellsel data has been saved")
@@ -2757,16 +2922,17 @@ func insertCellsel(baseName string, data []model.Cellsel) {
 	tx.Commit()
 }
 
-func insertCellservicediffcfg(baseName string, data []model.Cellservicediffcfg) {
+
+func insertCellservicediffcfg(eNodeBId string, baseName string, data []model.Cellservicediffcfg) {
 	fmt.Println("Processing Cellservicediffcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellservicediffcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellservicediffcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ServiceDiffSwitch,
 			data[j].ATTRIBUTES.CellConStatePrbThd,
@@ -2779,7 +2945,8 @@ func insertCellservicediffcfg(baseName string, data []model.Cellservicediffcfg) 
 			data[j].ATTRIBUTES.QueueServiceWeight3,
 			data[j].ATTRIBUTES.QueueServiceWeight4,
 			data[j].ATTRIBUTES.QueueServiceWeight5,
-			data[j].ATTRIBUTES.QueueServiceWeight6,
+			data[j].ATTRIBUTES.QueueServiceWeight6,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellservicediffcfg data has been saved")
@@ -2787,16 +2954,17 @@ func insertCellservicediffcfg(baseName string, data []model.Cellservicediffcfg) 
 	tx.Commit()
 }
 
-func insertCellshutdown(baseName string, data []model.Cellshutdown) {
+
+func insertCellshutdown(eNodeBId string, baseName string, data []model.Cellshutdown) {
 	fmt.Println("Processing Cellshutdown data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellshutdown` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellshutdown` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CellShutdownSwitch,
 			data[j].ATTRIBUTES.StartTime,
@@ -2806,7 +2974,8 @@ func insertCellshutdown(baseName string, data []model.Cellshutdown) {
 			data[j].ATTRIBUTES.UlPrbThd,
 			data[j].ATTRIBUTES.UlPrbOffset,
 			data[j].ATTRIBUTES.ForceShutdownUENumThd,
-			data[j].ATTRIBUTES.PunishTime,
+			data[j].ATTRIBUTES.PunishTime,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellshutdown data has been saved")
@@ -2814,16 +2983,17 @@ func insertCellshutdown(baseName string, data []model.Cellshutdown) {
 	tx.Commit()
 }
 
-func insertCellsimap(baseName string, data []model.Cellsimap) {
+
+func insertCellsimap(eNodeBId string, baseName string, data []model.Cellsimap) {
 	fmt.Println("Processing Cellsimap data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellsimap` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellsimap` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.SiMapSwitch,
 			data[j].ATTRIBUTES.Sib2Period,
@@ -2854,7 +3024,8 @@ func insertCellsimap(baseName string, data []model.Cellsimap) {
 			data[j].ATTRIBUTES.NbSib4Period,
 			data[j].ATTRIBUTES.NbSib5Period,
 			data[j].ATTRIBUTES.NbSib14Period,
-			data[j].ATTRIBUTES.NbSib16Period,
+			data[j].ATTRIBUTES.NbSib16Period,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellsimap data has been saved")
@@ -2862,21 +3033,23 @@ func insertCellsimap(baseName string, data []model.Cellsimap) {
 	tx.Commit()
 }
 
-func insertCellsrlte(baseName string, data []model.Cellsrlte) {
+
+func insertCellsrlte(eNodeBId string, baseName string, data []model.Cellsrlte) {
 	fmt.Println("Processing Cellsrlte data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellsrlte` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellsrlte` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.SrlteSwitch,
 			data[j].ATTRIBUTES.SrlteDtxThrd,
 			data[j].ATTRIBUTES.SrlteSuspendTime,
-			data[j].ATTRIBUTES.SrlteDiscardAlgoSwitch,
+			data[j].ATTRIBUTES.SrlteDiscardAlgoSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellsrlte data has been saved")
@@ -2884,18 +3057,20 @@ func insertCellsrlte(baseName string, data []model.Cellsrlte) {
 	tx.Commit()
 }
 
-func insertCellsrsadaptivecfg(baseName string, data []model.Cellsrsadaptivecfg) {
+
+func insertCellsrsadaptivecfg(eNodeBId string, baseName string, data []model.Cellsrsadaptivecfg) {
 	fmt.Println("Processing Cellsrsadaptivecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellsrsadaptivecfg` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellsrsadaptivecfg` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
-			data[j].ATTRIBUTES.SrsPeriodAdaptive,
+			data[j].ATTRIBUTES.SrsPeriodAdaptive,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellsrsadaptivecfg data has been saved")
@@ -2903,16 +3078,17 @@ func insertCellsrsadaptivecfg(baseName string, data []model.Cellsrsadaptivecfg) 
 	tx.Commit()
 }
 
-func insertCellstandardqci(baseName string, data []model.Cellstandardqci) {
+
+func insertCellstandardqci(eNodeBId string, baseName string, data []model.Cellstandardqci) {
 	fmt.Println("Processing Cellstandardqci data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellstandardqci` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellstandardqci` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.InterFreqHoGroupId,
@@ -2935,7 +3111,8 @@ func insertCellstandardqci(baseName string, data []model.Cellstandardqci) {
 			data[j].ATTRIBUTES.QciEutranFreqRelationId,
 			data[j].ATTRIBUTES.QciUtranFreqRelationId,
 			data[j].ATTRIBUTES.QciGeranFreqRelationId,
-			data[j].ATTRIBUTES.QciAmbrLimitFlag,
+			data[j].ATTRIBUTES.QciAmbrLimitFlag,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellstandardqci data has been saved")
@@ -2943,23 +3120,25 @@ func insertCellstandardqci(baseName string, data []model.Cellstandardqci) {
 	tx.Commit()
 }
 
-func insertCellttibundlingalgo(baseName string, data []model.Cellttibundlingalgo) {
+
+func insertCellttibundlingalgo(eNodeBId string, baseName string, data []model.Cellttibundlingalgo) {
 	fmt.Println("Processing Cellttibundlingalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellttibundlingalgo` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellttibundlingalgo` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.SinrThdToTrigTtib,
 			data[j].ATTRIBUTES.SinrThdToTrigVideoTtib,
 			data[j].ATTRIBUTES.TtiBundlingAlgoSw,
 			data[j].ATTRIBUTES.R12TtiBHarqMaxTxNum,
 			data[j].ATTRIBUTES.R12TtiBundlingSwitch,
-			data[j].ATTRIBUTES.SinrThdToTrigR12TtiB,
+			data[j].ATTRIBUTES.SinrThdToTrigR12TtiB,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellttibundlingalgo data has been saved")
@@ -2967,22 +3146,24 @@ func insertCellttibundlingalgo(baseName string, data []model.Cellttibundlingalgo
 	tx.Commit()
 }
 
-func insertCellucionpuschpara(baseName string, data []model.Cellucionpuschpara) {
+
+func insertCellucionpuschpara(eNodeBId string, baseName string, data []model.Cellucionpuschpara) {
 	fmt.Println("Processing Cellucionpuschpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellucionpuschpara` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellucionpuschpara` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CellUciOnPuschParaValid,
 			data[j].ATTRIBUTES.DeltaOffsetCqiIndex,
 			data[j].ATTRIBUTES.DeltaOffsetRiIndex,
 			data[j].ATTRIBUTES.DeltaOffsetAckIndex,
-			data[j].ATTRIBUTES.DeltaOffsetAckIndexForTtiB,
+			data[j].ATTRIBUTES.DeltaOffsetAckIndexForTtiB,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellucionpuschpara data has been saved")
@@ -2990,16 +3171,17 @@ func insertCellucionpuschpara(baseName string, data []model.Cellucionpuschpara) 
 	tx.Commit()
 }
 
-func insertCelluemeascontrolcfg(baseName string, data []model.Celluemeascontrolcfg) {
+
+func insertCelluemeascontrolcfg(eNodeBId string, baseName string, data []model.Celluemeascontrolcfg) {
 	fmt.Println("Processing Celluemeascontrolcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `celluemeascontrolcfg` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `celluemeascontrolcfg` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.MaxNonIntraMeasObjNum,
 			data[j].ATTRIBUTES.MaxEutranFddMeasFreqNum,
@@ -3007,7 +3189,8 @@ func insertCelluemeascontrolcfg(baseName string, data []model.Celluemeascontrolc
 			data[j].ATTRIBUTES.MaxUtranFddMeasFreqNum,
 			data[j].ATTRIBUTES.MaxUtranTddMeasFreqNum,
 			data[j].ATTRIBUTES.MaxGeranMeasFreqNum,
-			data[j].ATTRIBUTES.MaxUeTddMeasFreqNum,
+			data[j].ATTRIBUTES.MaxUeTddMeasFreqNum,	
+
 		)
 		checkErr(err)
 		fmt.Println("Celluemeascontrolcfg data has been saved")
@@ -3015,21 +3198,23 @@ func insertCelluemeascontrolcfg(baseName string, data []model.Celluemeascontrolc
 	tx.Commit()
 }
 
-func insertCellulcompalgo(baseName string, data []model.Cellulcompalgo) {
+
+func insertCellulcompalgo(eNodeBId string, baseName string, data []model.Cellulcompalgo) {
 	fmt.Println("Processing Cellulcompalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulcompalgo` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulcompalgo` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.UlCompA3Offset,
 			data[j].ATTRIBUTES.SfnUlCompThd,
 			data[j].ATTRIBUTES.UlCompA3OffsetForRelaxedBH,
-			data[j].ATTRIBUTES.UlCompUlRsrpOffset,
+			data[j].ATTRIBUTES.UlCompUlRsrpOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellulcompalgo data has been saved")
@@ -3037,18 +3222,20 @@ func insertCellulcompalgo(baseName string, data []model.Cellulcompalgo) {
 	tx.Commit()
 }
 
-func insertCellulicalgo(baseName string, data []model.Cellulicalgo) {
+
+func insertCellulicalgo(eNodeBId string, baseName string, data []model.Cellulicalgo) {
 	fmt.Println("Processing Cellulicalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulicalgo` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulicalgo` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
-			data[j].ATTRIBUTES.UlIcA3Offset,
+			data[j].ATTRIBUTES.UlIcA3Offset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellulicalgo data has been saved")
@@ -3056,18 +3243,20 @@ func insertCellulicalgo(baseName string, data []model.Cellulicalgo) {
 	tx.Commit()
 }
 
-func insertCellulicic(baseName string, data []model.Cellulicic) {
+
+func insertCellulicic(eNodeBId string, baseName string, data []model.Cellulicic) {
 	fmt.Println("Processing Cellulicic data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulicic` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulicic` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
-			data[j].ATTRIBUTES.BandMode,
+			data[j].ATTRIBUTES.BandMode,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellulicic data has been saved")
@@ -3075,18 +3264,20 @@ func insertCellulicic(baseName string, data []model.Cellulicic) {
 	tx.Commit()
 }
 
-func insertCellulicicmcpara(baseName string, data []model.Cellulicicmcpara) {
+
+func insertCellulicicmcpara(eNodeBId string, baseName string, data []model.Cellulicicmcpara) {
 	fmt.Println("Processing Cellulicicmcpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulicicmcpara` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulicicmcpara` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
-			data[j].ATTRIBUTES.A3Offset,
+			data[j].ATTRIBUTES.A3Offset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellulicicmcpara data has been saved")
@@ -3094,18 +3285,20 @@ func insertCellulicicmcpara(baseName string, data []model.Cellulicicmcpara) {
 	tx.Commit()
 }
 
-func insertCellulmimoparacfg(baseName string, data []model.Cellulmimoparacfg) {
+
+func insertCellulmimoparacfg(eNodeBId string, baseName string, data []model.Cellulmimoparacfg) {
 	fmt.Println("Processing Cellulmimoparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulmimoparacfg` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulmimoparacfg` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
-			data[j].ATTRIBUTES.UlSuMimoRankPara,
+			data[j].ATTRIBUTES.UlSuMimoRankPara,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellulmimoparacfg data has been saved")
@@ -3113,16 +3306,17 @@ func insertCellulmimoparacfg(baseName string, data []model.Cellulmimoparacfg) {
 	tx.Commit()
 }
 
-func insertCellulpccomm(baseName string, data []model.Cellulpccomm) {
+
+func insertCellulpccomm(eNodeBId string, baseName string, data []model.Cellulpccomm) {
 	fmt.Println("Processing Cellulpccomm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulpccomm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulpccomm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.PassLossCoeff,
 			data[j].ATTRIBUTES.P0NominalPUCCH,
@@ -3135,7 +3329,8 @@ func insertCellulpccomm(baseName string, data []model.Cellulpccomm) {
 			data[j].ATTRIBUTES.DeltaPreambleMsg3,
 			data[j].ATTRIBUTES.DeltaMsg2,
 			data[j].ATTRIBUTES.DeltaFPUCCHFormat1bcs,
-			data[j].ATTRIBUTES.DeltaFPUCCHFormat3,
+			data[j].ATTRIBUTES.DeltaFPUCCHFormat3,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellulpccomm data has been saved")
@@ -3143,22 +3338,24 @@ func insertCellulpccomm(baseName string, data []model.Cellulpccomm) {
 	tx.Commit()
 }
 
-func insertCellulpcdedic(baseName string, data []model.Cellulpcdedic) {
+
+func insertCellulpcdedic(eNodeBId string, baseName string, data []model.Cellulpcdedic) {
 	fmt.Println("Processing Cellulpcdedic data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulpcdedic` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulpcdedic` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DeltaMcsEnabled,
 			data[j].ATTRIBUTES.PSrsOffsetDeltaMcsDisable,
 			data[j].ATTRIBUTES.PSrsOffsetDeltaMcsEnable,
 			data[j].ATTRIBUTES.FilterRsrp,
-			data[j].ATTRIBUTES.PathlossReferenceLink,
+			data[j].ATTRIBUTES.PathlossReferenceLink,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellulpcdedic data has been saved")
@@ -3166,16 +3363,17 @@ func insertCellulpcdedic(baseName string, data []model.Cellulpcdedic) {
 	tx.Commit()
 }
 
-func insertCellulschalgo(baseName string, data []model.Cellulschalgo) {
+
+func insertCellulschalgo(eNodeBId string, baseName string, data []model.Cellulschalgo) {
 	fmt.Println("Processing Cellulschalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulschalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulschalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.UlschStrategy,
 			data[j].ATTRIBUTES.AdaptHarqSwitch,
@@ -3257,7 +3455,8 @@ func insertCellulschalgo(baseName string, data []model.Cellulschalgo) {
 			data[j].ATTRIBUTES.AmrcDecreasingPeriod,
 			data[j].ATTRIBUTES.SinrThdForVoLTERateCtrl,
 			data[j].ATTRIBUTES.RateCtrlCmrProcessStrategy,
-			data[j].ATTRIBUTES.SinrAdjTargetIblerforQCI2,
+			data[j].ATTRIBUTES.SinrAdjTargetIblerforQCI2,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellulschalgo data has been saved")
@@ -3265,23 +3464,25 @@ func insertCellulschalgo(baseName string, data []model.Cellulschalgo) {
 	tx.Commit()
 }
 
-func insertCellulunifiedolc(baseName string, data []model.Cellulunifiedolc) {
+
+func insertCellulunifiedolc(eNodeBId string, baseName string, data []model.Cellulunifiedolc) {
 	fmt.Println("Processing Cellulunifiedolc data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulunifiedolc` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellulunifiedolc` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.RrcRejectRateHighThd,
 			data[j].ATTRIBUTES.RrcRejectRateLowThd,
 			data[j].ATTRIBUTES.RrcReqNumHighThd,
 			data[j].ATTRIBUTES.RrcReqNumLowThd,
 			data[j].ATTRIBUTES.UeNumHighThd,
-			data[j].ATTRIBUTES.UeNumLowThd,
+			data[j].ATTRIBUTES.UeNumLowThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellulunifiedolc data has been saved")
@@ -3289,16 +3490,17 @@ func insertCellulunifiedolc(baseName string, data []model.Cellulunifiedolc) {
 	tx.Commit()
 }
 
-func insertCellusparacfg(baseName string, data []model.Cellusparacfg) {
+
+func insertCellusparacfg(eNodeBId string, baseName string, data []model.Cellusparacfg) {
 	fmt.Println("Processing Cellusparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellusparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellusparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.UsAlgoSwitch,
 			data[j].ATTRIBUTES.UsVoIPPreAllocMinPeriod,
@@ -3359,7 +3561,8 @@ func insertCellusparacfg(baseName string, data []model.Cellusparacfg) {
 			data[j].ATTRIBUTES.UsAlgoExSwitch,
 			data[j].ATTRIBUTES.UsSrsGuaranteeSwitch,
 			data[j].ATTRIBUTES.UeMobilIdentifyStrategy,
-			data[j].ATTRIBUTES.UsSmoothHoCompThldOfs,
+			data[j].ATTRIBUTES.UsSmoothHoCompThldOfs,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellusparacfg data has been saved")
@@ -3367,21 +3570,23 @@ func insertCellusparacfg(baseName string, data []model.Cellusparacfg) {
 	tx.Commit()
 }
 
-func insertCellvms(baseName string, data []model.Cellvms) {
+
+func insertCellvms(eNodeBId string, baseName string, data []model.Cellvms) {
 	fmt.Println("Processing Cellvms data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellvms` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellvms` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.VmsHoUeNumTh,
 			data[j].ATTRIBUTES.VmsPrbDiffTh,
 			data[j].ATTRIBUTES.VmsPrbLoadTh,
-			data[j].ATTRIBUTES.VmsA3Offset,
+			data[j].ATTRIBUTES.VmsA3Offset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellvms data has been saved")
@@ -3389,23 +3594,25 @@ func insertCellvms(baseName string, data []model.Cellvms) {
 	tx.Commit()
 }
 
-func insertCellwttxparacfg(baseName string, data []model.Cellwttxparacfg) {
+
+func insertCellwttxparacfg(eNodeBId string, baseName string, data []model.Cellwttxparacfg) {
 	fmt.Println("Processing Cellwttxparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellwttxparacfg` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cellwttxparacfg` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.MbbUserDlPrbUpLimit,
 			data[j].ATTRIBUTES.MbbUserUlPrbUpLimit,
 			data[j].ATTRIBUTES.PrbUpLimitCtrlMode,
 			data[j].ATTRIBUTES.WbbOrMbbUserDefMode,
 			data[j].ATTRIBUTES.WbbUserDlPrbUpLimit,
-			data[j].ATTRIBUTES.WbbUserUlPrbUpLimit,
+			data[j].ATTRIBUTES.WbbUserUlPrbUpLimit,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cellwttxparacfg data has been saved")
@@ -3413,19 +3620,21 @@ func insertCellwttxparacfg(baseName string, data []model.Cellwttxparacfg) {
 	tx.Commit()
 }
 
-func insertCepucchcfg(baseName string, data []model.Cepucchcfg) {
+
+func insertCepucchcfg(eNodeBId string, baseName string, data []model.Cepucchcfg) {
 	fmt.Println("Processing Cepucchcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cepucchcfg` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cepucchcfg` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CoverageLevel,
-			data[j].ATTRIBUTES.PucchRepNum,
+			data[j].ATTRIBUTES.PucchRepNum,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cepucchcfg data has been saved")
@@ -3433,23 +3642,25 @@ func insertCepucchcfg(baseName string, data []model.Cepucchcfg) {
 	tx.Commit()
 }
 
-func insertCerachcfg(baseName string, data []model.Cerachcfg) {
+
+func insertCerachcfg(eNodeBId string, baseName string, data []model.Cerachcfg) {
 	fmt.Println("Processing Cerachcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cerachcfg` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cerachcfg` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CoverageLevel,
 			data[j].ATTRIBUTES.ContentionResolutionTimer,
 			data[j].ATTRIBUTES.MaxNumPrbAttempt,
 			data[j].ATTRIBUTES.PreambleRatio,
 			data[j].ATTRIBUTES.PreambleRepetitionNum,
-			data[j].ATTRIBUTES.RandomPreambleRatio,
+			data[j].ATTRIBUTES.RandomPreambleRatio,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cerachcfg data has been saved")
@@ -3457,17 +3668,19 @@ func insertCerachcfg(baseName string, data []model.Cerachcfg) {
 	tx.Commit()
 }
 
-func insertCertcfg(baseName string, data []model.Certcfg) {
+
+func insertCertcfg(eNodeBId string, baseName string, data []model.Certcfg) {
 	fmt.Println("Processing Certcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `certcfg` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `certcfg` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.IKECHECKSW,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.IKECHECKSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Certcfg data has been saved")
@@ -3475,20 +3688,22 @@ func insertCertcfg(baseName string, data []model.Certcfg) {
 	tx.Commit()
 }
 
-func insertCertchktsk(baseName string, data []model.Certchktsk) {
+
+func insertCertchktsk(eNodeBId string, baseName string, data []model.Certchktsk) {
 	fmt.Println("Processing Certchktsk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `certchktsk` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `certchktsk` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ISENABLE,
 			data[j].ATTRIBUTES.PERIOD,
 			data[j].ATTRIBUTES.ALMRNG,
-			data[j].ATTRIBUTES.UPDATEMETHOD,
+			data[j].ATTRIBUTES.UPDATEMETHOD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Certchktsk data has been saved")
@@ -3496,20 +3711,22 @@ func insertCertchktsk(baseName string, data []model.Certchktsk) {
 	tx.Commit()
 }
 
-func insertCertdeploy(baseName string, data []model.Certdeploy) {
+
+func insertCertdeploy(eNodeBId string, baseName string, data []model.Certdeploy) {
 	fmt.Println("Processing Certdeploy data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `certdeploy` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `certdeploy` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.DEPLOYTYPE,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
-			data[j].ATTRIBUTES.SN,
+			data[j].ATTRIBUTES.SN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Certdeploy data has been saved")
@@ -3517,18 +3734,20 @@ func insertCertdeploy(baseName string, data []model.Certdeploy) {
 	tx.Commit()
 }
 
-func insertCertmk(baseName string, data []model.Certmk) {
+
+func insertCertmk(eNodeBId string, baseName string, data []model.Certmk) {
 	fmt.Println("Processing Certmk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `certmk` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `certmk` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.APPCERT,
-			data[j].ATTRIBUTES.CASW,
+			data[j].ATTRIBUTES.CASW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Certmk data has been saved")
@@ -3536,16 +3755,17 @@ func insertCertmk(baseName string, data []model.Certmk) {
 	tx.Commit()
 }
 
-func insertCertreq(baseName string, data []model.Certreq) {
+
+func insertCertreq(eNodeBId string, baseName string, data []model.Certreq) {
 	fmt.Println("Processing Certreq data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `certreq` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `certreq` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.COMMNAME,
 			data[j].ATTRIBUTES.USERADDINFO,
 			data[j].ATTRIBUTES.COUNTRY,
@@ -3557,7 +3777,8 @@ func insertCertreq(baseName string, data []model.Certreq) {
 			data[j].ATTRIBUTES.SIGNALG,
 			data[j].ATTRIBUTES.KEYSIZE,
 			data[j].ATTRIBUTES.LOCALNAME,
-			data[j].ATTRIBUTES.LOCALIP,
+			data[j].ATTRIBUTES.LOCALIP,	
+
 		)
 		checkErr(err)
 		fmt.Println("Certreq data has been saved")
@@ -3565,17 +3786,19 @@ func insertCertreq(baseName string, data []model.Certreq) {
 	tx.Commit()
 }
 
-func insertChk(baseName string, data []model.Chk) {
+
+func insertChk(eNodeBId string, baseName string, data []model.Chk) {
 	fmt.Println("Processing Chk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `chk` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `chk` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.ENABLEFLAG,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.ENABLEFLAG,	
+
 		)
 		checkErr(err)
 		fmt.Println("Chk data has been saved")
@@ -3583,22 +3806,24 @@ func insertChk(baseName string, data []model.Chk) {
 	tx.Commit()
 }
 
-func insertClkdetect(baseName string, data []model.Clkdetect) {
+
+func insertClkdetect(eNodeBId string, baseName string, data []model.Clkdetect) {
 	fmt.Println("Processing Clkdetect data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `clkdetect` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `clkdetect` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ClkAsyncDetectSwitch,
 			data[j].ATTRIBUTES.ClkAsyncInterfRptThld,
 			data[j].ATTRIBUTES.ClkAsyncPrbUsageThld,
 			data[j].ATTRIBUTES.ClkAsyncSilDetInfDifThld,
 			data[j].ATTRIBUTES.ClkAsyncSilDetInfThld,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Clkdetect data has been saved")
@@ -3606,16 +3831,17 @@ func insertClkdetect(baseName string, data []model.Clkdetect) {
 	tx.Commit()
 }
 
-func insertClzerobufferzone(baseName string, data []model.Clzerobufferzone) {
+
+func insertClzerobufferzone(eNodeBId string, baseName string, data []model.Clzerobufferzone) {
 	fmt.Println("Processing Clzerobufferzone data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `clzerobufferzone` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `clzerobufferzone` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ClZeroBufzoneDlSharedInd,
 			data[j].ATTRIBUTES.ClZeroBufzoneUlSharedInd,
@@ -3626,7 +3852,8 @@ func insertClzerobufferzone(baseName string, data []model.Clzerobufferzone) {
 			data[j].ATTRIBUTES.ClZeroBufferZoneUlPrbThd,
 			data[j].ATTRIBUTES.ClZeroBufferZoneUlPrbOst,
 			data[j].ATTRIBUTES.UlNearPtUserRsrpThd,
-			data[j].ATTRIBUTES.DlNearPtUserRsrpThd,
+			data[j].ATTRIBUTES.DlNearPtUserRsrpThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Clzerobufferzone data has been saved")
@@ -3634,16 +3861,17 @@ func insertClzerobufferzone(baseName string, data []model.Clzerobufferzone) {
 	tx.Commit()
 }
 
-func insertCnoperator(baseName string, data []model.Cnoperator) {
+
+func insertCnoperator(eNodeBId string, baseName string, data []model.Cnoperator) {
 	fmt.Println("Processing Cnoperator data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperator` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperator` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.CnOperatorName,
 			data[j].ATTRIBUTES.CnOperatorType,
@@ -3651,7 +3879,8 @@ func insertCnoperator(baseName string, data []model.Cnoperator) {
 			data[j].ATTRIBUTES.Mnc,
 			data[j].ATTRIBUTES.ObjId,
 			data[j].ATTRIBUTES.PlmnMode,
-			data[j].ATTRIBUTES.OperatorFunSwitch,
+			data[j].ATTRIBUTES.OperatorFunSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cnoperator data has been saved")
@@ -3659,16 +3888,17 @@ func insertCnoperator(baseName string, data []model.Cnoperator) {
 	tx.Commit()
 }
 
-func insertCnoperatorhocfg(baseName string, data []model.Cnoperatorhocfg) {
+
+func insertCnoperatorhocfg(eNodeBId string, baseName string, data []model.Cnoperatorhocfg) {
 	fmt.Println("Processing Cnoperatorhocfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperatorhocfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperatorhocfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.FirstRatPri,
 			data[j].ATTRIBUTES.SecondRatPri,
@@ -3679,7 +3909,8 @@ func insertCnoperatorhocfg(baseName string, data []model.Cnoperatorhocfg) {
 			data[j].ATTRIBUTES.SrvccWithPsBasedCellCapSw,
 			data[j].ATTRIBUTES.PsInterRatSecondPri,
 			data[j].ATTRIBUTES.PsInterRatHighestPri,
-			data[j].ATTRIBUTES.PsInterRatLowestPri,
+			data[j].ATTRIBUTES.PsInterRatLowestPri,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cnoperatorhocfg data has been saved")
@@ -3687,22 +3918,24 @@ func insertCnoperatorhocfg(baseName string, data []model.Cnoperatorhocfg) {
 	tx.Commit()
 }
 
-func insertCnoperatorqcipara(baseName string, data []model.Cnoperatorqcipara) {
+
+func insertCnoperatorqcipara(eNodeBId string, baseName string, data []model.Cnoperatorqcipara) {
 	fmt.Println("Processing Cnoperatorqcipara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperatorqcipara` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperatorqcipara` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.ServiceIrHoCfgGroupId,
 			data[j].ATTRIBUTES.ServiceIfHoCfgGroupId,
 			data[j].ATTRIBUTES.ServiceHoBearerPolicy,
-			data[j].ATTRIBUTES.LocalQciArp,
+			data[j].ATTRIBUTES.LocalQciArp,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cnoperatorqcipara data has been saved")
@@ -3710,22 +3943,24 @@ func insertCnoperatorqcipara(baseName string, data []model.Cnoperatorqcipara) {
 	tx.Commit()
 }
 
-func insertCnoperatorstandardqci(baseName string, data []model.Cnoperatorstandardqci) {
+
+func insertCnoperatorstandardqci(eNodeBId string, baseName string, data []model.Cnoperatorstandardqci) {
 	fmt.Println("Processing Cnoperatorstandardqci data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperatorstandardqci` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperatorstandardqci` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.ServiceIrHoCfgGroupId,
 			data[j].ATTRIBUTES.ServiceIfHoCfgGroupId,
 			data[j].ATTRIBUTES.ServiceHoBearerPolicy,
-			data[j].ATTRIBUTES.LocalQciArp,
+			data[j].ATTRIBUTES.LocalQciArp,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cnoperatorstandardqci data has been saved")
@@ -3733,21 +3968,23 @@ func insertCnoperatorstandardqci(baseName string, data []model.Cnoperatorstandar
 	tx.Commit()
 }
 
-func insertCnoperatorta(baseName string, data []model.Cnoperatorta) {
+
+func insertCnoperatorta(eNodeBId string, baseName string, data []model.Cnoperatorta) {
 	fmt.Println("Processing Cnoperatorta data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperatorta` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cnoperatorta` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TrackingAreaId,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.Tac,
 			data[j].ATTRIBUTES.ObjId,
-			data[j].ATTRIBUTES.NbIotTaFlag,
+			data[j].ATTRIBUTES.NbIotTaFlag,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cnoperatorta data has been saved")
@@ -3755,20 +3992,22 @@ func insertCnoperatorta(baseName string, data []model.Cnoperatorta) {
 	tx.Commit()
 }
 
-func insertCountercheckpara(baseName string, data []model.Countercheckpara) {
+
+func insertCountercheckpara(eNodeBId string, baseName string, data []model.Countercheckpara) {
 	fmt.Println("Processing Countercheckpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `countercheckpara` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `countercheckpara` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CounterCheckTimer,
 			data[j].ATTRIBUTES.CounterCheckCountNum,
 			data[j].ATTRIBUTES.CounterCheckUserRelSwitch,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Countercheckpara data has been saved")
@@ -3776,22 +4015,24 @@ func insertCountercheckpara(baseName string, data []model.Countercheckpara) {
 	tx.Commit()
 }
 
-func insertCpbearer(baseName string, data []model.Cpbearer) {
+
+func insertCpbearer(eNodeBId string, baseName string, data []model.Cpbearer) {
 	fmt.Println("Processing Cpbearer data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cpbearer` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cpbearer` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CPBEARID,
 			data[j].ATTRIBUTES.FLAG,
 			data[j].ATTRIBUTES.BEARTYPE,
 			data[j].ATTRIBUTES.LINKNO,
 			data[j].ATTRIBUTES.CTRLMODE,
-			data[j].ATTRIBUTES.AUTOCFGFLAG,
+			data[j].ATTRIBUTES.AUTOCFGFLAG,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cpbearer data has been saved")
@@ -3799,23 +4040,25 @@ func insertCpbearer(baseName string, data []model.Cpbearer) {
 	tx.Commit()
 }
 
-func insertCpriport(baseName string, data []model.Cpriport) {
+
+func insertCpriport(eNodeBId string, baseName string, data []model.Cpriport) {
 	fmt.Println("Processing Cpriport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cpriport` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cpriport` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.OPTN,
 			data[j].ATTRIBUTES.ADMINISTRATIVESTATE,
 			data[j].ATTRIBUTES.PT,
-			data[j].ATTRIBUTES.SPN,
+			data[j].ATTRIBUTES.SPN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cpriport data has been saved")
@@ -3823,17 +4066,19 @@ func insertCpriport(baseName string, data []model.Cpriport) {
 	tx.Commit()
 }
 
-func insertCpswitch(baseName string, data []model.Cpswitch) {
+
+func insertCpswitch(eNodeBId string, baseName string, data []model.Cpswitch) {
 	fmt.Println("Processing Cpswitch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cpswitch` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cpswitch` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.ES,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.ES,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cpswitch data has been saved")
@@ -3841,22 +4086,24 @@ func insertCpswitch(baseName string, data []model.Cpswitch) {
 	tx.Commit()
 }
 
-func insertCqiadaptivecfg(baseName string, data []model.Cqiadaptivecfg) {
+
+func insertCqiadaptivecfg(eNodeBId string, baseName string, data []model.Cqiadaptivecfg) {
 	fmt.Println("Processing Cqiadaptivecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cqiadaptivecfg` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cqiadaptivecfg` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CqiPeriodAdaptive,
 			data[j].ATTRIBUTES.SimulAckNackAndCqiSwitch,
 			data[j].ATTRIBUTES.PucchPeriodicCqiOptSwitch,
 			data[j].ATTRIBUTES.HoAperiodicCqiCfgSwitch,
 			data[j].ATTRIBUTES.SimulAckNackAndCqiFmt3Sw,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cqiadaptivecfg data has been saved")
@@ -3864,17 +4111,19 @@ func insertCqiadaptivecfg(baseName string, data []model.Cqiadaptivecfg) {
 	tx.Commit()
 }
 
-func insertCrlpolicy(baseName string, data []model.Crlpolicy) {
+
+func insertCrlpolicy(eNodeBId string, baseName string, data []model.Crlpolicy) {
 	fmt.Println("Processing Crlpolicy data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `crlpolicy` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `crlpolicy` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.CRLPOLICY,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.CRLPOLICY,	
+
 		)
 		checkErr(err)
 		fmt.Println("Crlpolicy data has been saved")
@@ -3882,16 +4131,17 @@ func insertCrlpolicy(baseName string, data []model.Crlpolicy) {
 	tx.Commit()
 }
 
-func insertCsfallbackblindhocfg(baseName string, data []model.Csfallbackblindhocfg) {
+
+func insertCsfallbackblindhocfg(eNodeBId string, baseName string, data []model.Csfallbackblindhocfg) {
 	fmt.Println("Processing Csfallbackblindhocfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `csfallbackblindhocfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `csfallbackblindhocfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.InterRatHighestPri,
 			data[j].ATTRIBUTES.InterRatSecondPri,
@@ -3902,7 +4152,8 @@ func insertCsfallbackblindhocfg(baseName string, data []model.Csfallbackblindhoc
 			data[j].ATTRIBUTES.IdleCsfbHighestPri,
 			data[j].ATTRIBUTES.IdleCsfbSecondPri,
 			data[j].ATTRIBUTES.IdleCsfbLowestPri,
-			data[j].ATTRIBUTES.UtranCsfbBlindRedirRrSw,
+			data[j].ATTRIBUTES.UtranCsfbBlindRedirRrSw,	
+
 		)
 		checkErr(err)
 		fmt.Println("Csfallbackblindhocfg data has been saved")
@@ -3910,16 +4161,17 @@ func insertCsfallbackblindhocfg(baseName string, data []model.Csfallbackblindhoc
 	tx.Commit()
 }
 
-func insertCsfallbackho(baseName string, data []model.Csfallbackho) {
+
+func insertCsfallbackho(eNodeBId string, baseName string, data []model.Csfallbackho) {
 	fmt.Println("Processing Csfallbackho data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `csfallbackho` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `csfallbackho` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CsfbHoUtranTimeToTrig,
 			data[j].ATTRIBUTES.CsfbHoGeranTimeToTrig,
@@ -3930,7 +4182,8 @@ func insertCsfallbackho(baseName string, data []model.Csfallbackho) {
 			data[j].ATTRIBUTES.CsfbHoCdmaB1ThdPs,
 			data[j].ATTRIBUTES.BlindHoA1ThdRsrp,
 			data[j].ATTRIBUTES.CsfbProtectionTimer,
-			data[j].ATTRIBUTES.CsfbProtectTimer,
+			data[j].ATTRIBUTES.CsfbProtectTimer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Csfallbackho data has been saved")
@@ -3938,21 +4191,23 @@ func insertCsfallbackho(baseName string, data []model.Csfallbackho) {
 	tx.Commit()
 }
 
-func insertCsfallbackpolicycfg(baseName string, data []model.Csfallbackpolicycfg) {
+
+func insertCsfallbackpolicycfg(eNodeBId string, baseName string, data []model.Csfallbackpolicycfg) {
 	fmt.Println("Processing Csfallbackpolicycfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `csfallbackpolicycfg` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `csfallbackpolicycfg` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CsfbHoPolicyCfg,
 			data[j].ATTRIBUTES.IdleModeCsfbHoPolicyCfg,
 			data[j].ATTRIBUTES.CsfbUserArpCfgSwitch,
 			data[j].ATTRIBUTES.NormalCsfbUserArp,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Csfallbackpolicycfg data has been saved")
@@ -3960,16 +4215,17 @@ func insertCsfallbackpolicycfg(baseName string, data []model.Csfallbackpolicycfg
 	tx.Commit()
 }
 
-func insertCspcalgopara(baseName string, data []model.Cspcalgopara) {
+
+func insertCspcalgopara(eNodeBId string, baseName string, data []model.Cspcalgopara) {
 	fmt.Println("Processing Cspcalgopara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `cspcalgopara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `cspcalgopara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CspcAlgoSwitch,
 			data[j].ATTRIBUTES.CspcRsrpMeasMode,
 			data[j].ATTRIBUTES.CspcClusterMode,
@@ -3981,7 +4237,8 @@ func insertCspcalgopara(baseName string, data []model.Cspcalgopara) {
 			data[j].ATTRIBUTES.CspcEnableDlPrbRatioThd,
 			data[j].ATTRIBUTES.TddCspcAlgoSwitch,
 			data[j].ATTRIBUTES.CspcCapacityFactor,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Cspcalgopara data has been saved")
@@ -3989,16 +4246,17 @@ func insertCspcalgopara(baseName string, data []model.Cspcalgopara) {
 	tx.Commit()
 }
 
-func insertDevip(baseName string, data []model.Devip) {
+
+func insertDevip(eNodeBId string, baseName string, data []model.Devip) {
 	fmt.Println("Processing Devip data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `devip` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `devip` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -4009,7 +4267,8 @@ func insertDevip(baseName string, data []model.Devip) {
 			data[j].ATTRIBUTES.IP,
 			data[j].ATTRIBUTES.MASK,
 			data[j].ATTRIBUTES.USERLABEL,
-			data[j].ATTRIBUTES.CTRLMODE,
+			data[j].ATTRIBUTES.CTRLMODE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Devip data has been saved")
@@ -4017,17 +4276,19 @@ func insertDevip(baseName string, data []model.Devip) {
 	tx.Commit()
 }
 
-func insertDhcprelayswitch(baseName string, data []model.Dhcprelayswitch) {
+
+func insertDhcprelayswitch(eNodeBId string, baseName string, data []model.Dhcprelayswitch) {
 	fmt.Println("Processing Dhcprelayswitch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `dhcprelayswitch` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `dhcprelayswitch` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.ES,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.ES,	
+
 		)
 		checkErr(err)
 		fmt.Println("Dhcprelayswitch data has been saved")
@@ -4035,18 +4296,20 @@ func insertDhcprelayswitch(baseName string, data []model.Dhcprelayswitch) {
 	tx.Commit()
 }
 
-func insertDhcpsvrip(baseName string, data []model.Dhcpsvrip) {
+
+func insertDhcpsvrip(eNodeBId string, baseName string, data []model.Dhcpsvrip) {
 	fmt.Println("Processing Dhcpsvrip data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `dhcpsvrip` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `dhcpsvrip` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.DHCPSVRIP,
-			data[j].ATTRIBUTES.DHCPRELAYIPSW,
+			data[j].ATTRIBUTES.DHCPRELAYIPSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Dhcpsvrip data has been saved")
@@ -4054,19 +4317,21 @@ func insertDhcpsvrip(baseName string, data []model.Dhcpsvrip) {
 	tx.Commit()
 }
 
-func insertDhcpsw(baseName string, data []model.Dhcpsw) {
+
+func insertDhcpsw(eNodeBId string, baseName string, data []model.Dhcpsw) {
 	fmt.Println("Processing Dhcpsw data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `dhcpsw` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `dhcpsw` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SWITCH,
 			data[j].ATTRIBUTES.VLANSCANSW,
-			data[j].ATTRIBUTES.DELAYSW,
+			data[j].ATTRIBUTES.DELAYSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Dhcpsw data has been saved")
@@ -4074,21 +4339,23 @@ func insertDhcpsw(baseName string, data []model.Dhcpsw) {
 	tx.Commit()
 }
 
-func insertDifpri(baseName string, data []model.Difpri) {
+
+func insertDifpri(eNodeBId string, baseName string, data []model.Difpri) {
 	fmt.Println("Processing Difpri data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `difpri` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `difpri` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PRIRULE,
 			data[j].ATTRIBUTES.SIGPRI,
 			data[j].ATTRIBUTES.OMHIGHPRI,
 			data[j].ATTRIBUTES.OMLOWPRI,
-			data[j].ATTRIBUTES.IPCLKPRI,
+			data[j].ATTRIBUTES.IPCLKPRI,	
+
 		)
 		checkErr(err)
 		fmt.Println("Difpri data has been saved")
@@ -4096,19 +4363,21 @@ func insertDifpri(baseName string, data []model.Difpri) {
 	tx.Commit()
 }
 
-func insertDistbasedho(baseName string, data []model.Distbasedho) {
+
+func insertDistbasedho(eNodeBId string, baseName string, data []model.Distbasedho) {
 	fmt.Println("Processing Distbasedho data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `distbasedho` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `distbasedho` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DistBasedMeasObjType,
-			data[j].ATTRIBUTES.DistBasedHOThd,
+			data[j].ATTRIBUTES.DistBasedHOThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Distbasedho data has been saved")
@@ -4116,16 +4385,17 @@ func insertDistbasedho(baseName string, data []model.Distbasedho) {
 	tx.Commit()
 }
 
-func insertDlflowctrlpara(baseName string, data []model.Dlflowctrlpara) {
+
+func insertDlflowctrlpara(eNodeBId string, baseName string, data []model.Dlflowctrlpara) {
 	fmt.Println("Processing Dlflowctrlpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `dlflowctrlpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `dlflowctrlpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -4142,7 +4412,8 @@ func insertDlflowctrlpara(baseName string, data []model.Dlflowctrlpara) {
 			data[j].ATTRIBUTES.FAIRRATIO,
 			data[j].ATTRIBUTES.DLIUBMINBW,
 			data[j].ATTRIBUTES.DLFLOWCTRLENHSW,
-			data[j].ATTRIBUTES.DLIUBBWMINPRORATIO,
+			data[j].ATTRIBUTES.DLIUBBWMINPRORATIO,	
+
 		)
 		checkErr(err)
 		fmt.Println("Dlflowctrlpara data has been saved")
@@ -4150,16 +4421,17 @@ func insertDlflowctrlpara(baseName string, data []model.Dlflowctrlpara) {
 	tx.Commit()
 }
 
-func insertDrx(baseName string, data []model.Drx) {
+
+func insertDrx(eNodeBId string, baseName string, data []model.Drx) {
 	fmt.Println("Processing Drx data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `drx` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `drx` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.DrxAlgSwitch,
 			data[j].ATTRIBUTES.ShortDrxSwitch,
 			data[j].ATTRIBUTES.LongDrxCycleSpecial,
@@ -4171,7 +4443,8 @@ func insertDrx(baseName string, data []model.Drx) {
 			data[j].ATTRIBUTES.DrxInactivityTimerForAnr,
 			data[j].ATTRIBUTES.TddAnrDrxInactivityTimer,
 			data[j].ATTRIBUTES.ObjId,
-			data[j].ATTRIBUTES.DrxFlexCtrlSwitch,
+			data[j].ATTRIBUTES.DrxFlexCtrlSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Drx data has been saved")
@@ -4179,16 +4452,17 @@ func insertDrx(baseName string, data []model.Drx) {
 	tx.Commit()
 }
 
-func insertDrxparagroup(baseName string, data []model.Drxparagroup) {
+
+func insertDrxparagroup(eNodeBId string, baseName string, data []model.Drxparagroup) {
 	fmt.Println("Processing Drxparagroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `drxparagroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `drxparagroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DrxParaGroupId,
 			data[j].ATTRIBUTES.EnterDrxSwitch,
@@ -4201,7 +4475,8 @@ func insertDrxparagroup(baseName string, data []model.Drxparagroup) {
 			data[j].ATTRIBUTES.DrxShortCycleTimer,
 			data[j].ATTRIBUTES.DrxUlReTxTimer,
 			data[j].ATTRIBUTES.ExtendLongDrxCycleSwitch,
-			data[j].ATTRIBUTES.CatType,
+			data[j].ATTRIBUTES.CatType,	
+
 		)
 		checkErr(err)
 		fmt.Println("Drxparagroup data has been saved")
@@ -4209,19 +4484,21 @@ func insertDrxparagroup(baseName string, data []model.Drxparagroup) {
 	tx.Commit()
 }
 
-func insertDscpmap(baseName string, data []model.Dscpmap) {
+
+func insertDscpmap(eNodeBId string, baseName string, data []model.Dscpmap) {
 	fmt.Println("Processing Dscpmap data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `dscpmap` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `dscpmap` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.VRFIDX,
 			data[j].ATTRIBUTES.DSCP,
-			data[j].ATTRIBUTES.VLANPRIO,
+			data[j].ATTRIBUTES.VLANPRIO,	
+
 		)
 		checkErr(err)
 		fmt.Println("Dscpmap data has been saved")
@@ -4229,16 +4506,17 @@ func insertDscpmap(baseName string, data []model.Dscpmap) {
 	tx.Commit()
 }
 
-func insertE1t1(baseName string, data []model.E1t1) {
+
+func insertE1t1(eNodeBId string, baseName string, data []model.E1t1) {
 	fmt.Println("Processing E1t1 data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `e1t1` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `e1t1` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -4248,7 +4526,8 @@ func insertE1t1(baseName string, data []model.E1t1) {
 			data[j].ATTRIBUTES.LNCODE,
 			data[j].ATTRIBUTES.CLKM,
 			data[j].ATTRIBUTES.SBT,
-			data[j].ATTRIBUTES.PN,
+			data[j].ATTRIBUTES.PN,	
+
 		)
 		checkErr(err)
 		fmt.Println("E1t1 data has been saved")
@@ -4256,20 +4535,22 @@ func insertE1t1(baseName string, data []model.E1t1) {
 	tx.Commit()
 }
 
-func insertE1t1bear(baseName string, data []model.E1t1bear) {
+
+func insertE1t1bear(eNodeBId string, baseName string, data []model.E1t1bear) {
 	fmt.Println("Processing E1t1bear data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `e1t1bear` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `e1t1bear` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
-			data[j].ATTRIBUTES.MODE,
+			data[j].ATTRIBUTES.MODE,	
+
 		)
 		checkErr(err)
 		fmt.Println("E1t1bear data has been saved")
@@ -4277,17 +4558,19 @@ func insertE1t1bear(baseName string, data []model.E1t1bear) {
 	tx.Commit()
 }
 
-func insertE1t1ber(baseName string, data []model.E1t1ber) {
+
+func insertE1t1ber(eNodeBId string, baseName string, data []model.E1t1ber) {
 	fmt.Println("Processing E1t1ber data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `e1t1ber` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `e1t1ber` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.BTL,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.BTL,	
+
 		)
 		checkErr(err)
 		fmt.Println("E1t1ber data has been saved")
@@ -4295,18 +4578,20 @@ func insertE1t1ber(baseName string, data []model.E1t1ber) {
 	tx.Commit()
 }
 
-func insertEmc(baseName string, data []model.Emc) {
+
+func insertEmc(eNodeBId string, baseName string, data []model.Emc) {
 	fmt.Println("Processing Emc data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `emc` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `emc` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
-			data[j].ATTRIBUTES.EmcEnable,
+			data[j].ATTRIBUTES.EmcEnable,	
+
 		)
 		checkErr(err)
 		fmt.Println("Emc data has been saved")
@@ -4314,16 +4599,17 @@ func insertEmc(baseName string, data []model.Emc) {
 	tx.Commit()
 }
 
-func insertEmu(baseName string, data []model.Emu) {
+
+func insertEmu(eNodeBId string, baseName string, data []model.Emu) {
 	fmt.Println("Processing Emu data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `emu` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `emu` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -4336,7 +4622,8 @@ func insertEmu(baseName string, data []model.Emu) {
 			data[j].ATTRIBUTES.HLTHD,
 			data[j].ATTRIBUTES.HUTHD,
 			data[j].ATTRIBUTES.SAAF,
-			data[j].ATTRIBUTES.SBAF,
+			data[j].ATTRIBUTES.SBAF,	
+
 		)
 		checkErr(err)
 		fmt.Println("Emu data has been saved")
@@ -4344,16 +4631,17 @@ func insertEmu(baseName string, data []model.Emu) {
 	tx.Commit()
 }
 
-func insertEnbcelloprsvdpara(baseName string, data []model.Enbcelloprsvdpara) {
+
+func insertEnbcelloprsvdpara(eNodeBId string, baseName string, data []model.Enbcelloprsvdpara) {
 	fmt.Println("Processing Enbcelloprsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcelloprsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcelloprsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.TrackingAreaId,
 			data[j].ATTRIBUTES.RsvdSwPara0,
@@ -4378,7 +4666,8 @@ func insertEnbcelloprsvdpara(baseName string, data []model.Enbcelloprsvdpara) {
 			data[j].ATTRIBUTES.RsvdPara18,
 			data[j].ATTRIBUTES.RsvdPara19,
 			data[j].ATTRIBUTES.RsvdPara20,
-			data[j].ATTRIBUTES.RsvdPara21,
+			data[j].ATTRIBUTES.RsvdPara21,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enbcelloprsvdpara data has been saved")
@@ -4386,16 +4675,17 @@ func insertEnbcelloprsvdpara(baseName string, data []model.Enbcelloprsvdpara) {
 	tx.Commit()
 }
 
-func insertEnbcellqcirsvdpara(baseName string, data []model.Enbcellqcirsvdpara) {
+
+func insertEnbcellqcirsvdpara(eNodeBId string, baseName string, data []model.Enbcellqcirsvdpara) {
 	fmt.Println("Processing Enbcellqcirsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcellqcirsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcellqcirsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.RsvdSwPara0,
@@ -4420,7 +4710,8 @@ func insertEnbcellqcirsvdpara(baseName string, data []model.Enbcellqcirsvdpara) 
 			data[j].ATTRIBUTES.RsvdPara18,
 			data[j].ATTRIBUTES.RsvdPara19,
 			data[j].ATTRIBUTES.RsvdPara20,
-			data[j].ATTRIBUTES.RsvdPara21,
+			data[j].ATTRIBUTES.RsvdPara21,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enbcellqcirsvdpara data has been saved")
@@ -4428,16 +4719,17 @@ func insertEnbcellqcirsvdpara(baseName string, data []model.Enbcellqcirsvdpara) 
 	tx.Commit()
 }
 
-func insertEnbcellrsvdpara(baseName string, data []model.Enbcellrsvdpara) {
+
+func insertEnbcellrsvdpara(eNodeBId string, baseName string, data []model.Enbcellrsvdpara) {
 	fmt.Println("Processing Enbcellrsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcellrsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcellrsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.RsvdSwPara0,
 			data[j].ATTRIBUTES.RsvdSwPara1,
@@ -4554,7 +4846,8 @@ func insertEnbcellrsvdpara(baseName string, data []model.Enbcellrsvdpara) {
 			data[j].ATTRIBUTES.RsvdU8Para29,
 			data[j].ATTRIBUTES.RsvdU8Para30,
 			data[j].ATTRIBUTES.RsvdU8Para31,
-			data[j].ATTRIBUTES.RsvdU8Para32,
+			data[j].ATTRIBUTES.RsvdU8Para32,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enbcellrsvdpara data has been saved")
@@ -4562,16 +4855,17 @@ func insertEnbcellrsvdpara(baseName string, data []model.Enbcellrsvdpara) {
 	tx.Commit()
 }
 
-func insertEnbcnopqcirsvdpara(baseName string, data []model.Enbcnopqcirsvdpara) {
+
+func insertEnbcnopqcirsvdpara(eNodeBId string, baseName string, data []model.Enbcnopqcirsvdpara) {
 	fmt.Println("Processing Enbcnopqcirsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcnopqcirsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcnopqcirsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.RsvdSwPara0,
@@ -4596,7 +4890,8 @@ func insertEnbcnopqcirsvdpara(baseName string, data []model.Enbcnopqcirsvdpara) 
 			data[j].ATTRIBUTES.RsvdPara18,
 			data[j].ATTRIBUTES.RsvdPara19,
 			data[j].ATTRIBUTES.RsvdPara20,
-			data[j].ATTRIBUTES.RsvdPara21,
+			data[j].ATTRIBUTES.RsvdPara21,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enbcnopqcirsvdpara data has been saved")
@@ -4604,16 +4899,17 @@ func insertEnbcnopqcirsvdpara(baseName string, data []model.Enbcnopqcirsvdpara) 
 	tx.Commit()
 }
 
-func insertEnbcnoprsvdpara(baseName string, data []model.Enbcnoprsvdpara) {
+
+func insertEnbcnoprsvdpara(eNodeBId string, baseName string, data []model.Enbcnoprsvdpara) {
 	fmt.Println("Processing Enbcnoprsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcnoprsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbcnoprsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.RsvdSwPara0,
 			data[j].ATTRIBUTES.RsvdSwPara1,
@@ -4637,7 +4933,8 @@ func insertEnbcnoprsvdpara(baseName string, data []model.Enbcnoprsvdpara) {
 			data[j].ATTRIBUTES.RsvdPara18,
 			data[j].ATTRIBUTES.RsvdPara19,
 			data[j].ATTRIBUTES.RsvdPara20,
-			data[j].ATTRIBUTES.RsvdPara21,
+			data[j].ATTRIBUTES.RsvdPara21,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enbcnoprsvdpara data has been saved")
@@ -4645,21 +4942,23 @@ func insertEnbcnoprsvdpara(baseName string, data []model.Enbcnoprsvdpara) {
 	tx.Commit()
 }
 
-func insertEnblicensealmthd(baseName string, data []model.Enblicensealmthd) {
+
+func insertEnblicensealmthd(eNodeBId string, baseName string, data []model.Enblicensealmthd) {
 	fmt.Println("Processing Enblicensealmthd data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enblicensealmthd` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enblicensealmthd` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OPRD,
 			data[j].ATTRIBUTES.OTHD,
 			data[j].ATTRIBUTES.RPRD,
 			data[j].ATTRIBUTES.RTHD,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enblicensealmthd data has been saved")
@@ -4667,16 +4966,17 @@ func insertEnblicensealmthd(baseName string, data []model.Enblicensealmthd) {
 	tx.Commit()
 }
 
-func insertEnbqcirsvdpara(baseName string, data []model.Enbqcirsvdpara) {
+
+func insertEnbqcirsvdpara(eNodeBId string, baseName string, data []model.Enbqcirsvdpara) {
 	fmt.Println("Processing Enbqcirsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbqcirsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbqcirsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.RsvdSwPara0,
 			data[j].ATTRIBUTES.RsvdSwPara1,
@@ -4701,7 +5001,8 @@ func insertEnbqcirsvdpara(baseName string, data []model.Enbqcirsvdpara) {
 			data[j].ATTRIBUTES.RsvdPara19,
 			data[j].ATTRIBUTES.RsvdPara20,
 			data[j].ATTRIBUTES.RsvdPara21,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enbqcirsvdpara data has been saved")
@@ -4709,16 +5010,17 @@ func insertEnbqcirsvdpara(baseName string, data []model.Enbqcirsvdpara) {
 	tx.Commit()
 }
 
-func insertEnbrsvdpara(baseName string, data []model.Enbrsvdpara) {
+
+func insertEnbrsvdpara(eNodeBId string, baseName string, data []model.Enbrsvdpara) {
 	fmt.Println("Processing Enbrsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbrsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enbrsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RsvdSwPara0,
 			data[j].ATTRIBUTES.RsvdSwPara1,
 			data[j].ATTRIBUTES.RsvdSwPara2,
@@ -4764,7 +5066,8 @@ func insertEnbrsvdpara(baseName string, data []model.Enbrsvdpara) {
 			data[j].ATTRIBUTES.RsvdPara51,
 			data[j].ATTRIBUTES.RsvdPara52,
 			data[j].ATTRIBUTES.RsvdPara53,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enbrsvdpara data has been saved")
@@ -4772,17 +5075,19 @@ func insertEnbrsvdpara(baseName string, data []model.Enbrsvdpara) {
 	tx.Commit()
 }
 
-func insertEnergycon(baseName string, data []model.Energycon) {
+
+func insertEnergycon(eNodeBId string, baseName string, data []model.Energycon) {
 	fmt.Println("Processing Energycon data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `energycon` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `energycon` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.MP,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.MP,	
+
 		)
 		checkErr(err)
 		fmt.Println("Energycon data has been saved")
@@ -4790,16 +5095,17 @@ func insertEnergycon(baseName string, data []model.Energycon) {
 	tx.Commit()
 }
 
-func insertEnodebalgoswitch(baseName string, data []model.Enodebalgoswitch) {
+
+func insertEnodebalgoswitch(eNodeBId string, baseName string, data []model.Enodebalgoswitch) {
 	fmt.Println("Processing Enodebalgoswitch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebalgoswitch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebalgoswitch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.HoAlgoSwitch,
 			data[j].ATTRIBUTES.HoModeSwitch,
 			data[j].ATTRIBUTES.DlIcicSwitch,
@@ -4860,7 +5166,8 @@ func insertEnodebalgoswitch(baseName string, data []model.Enodebalgoswitch) {
 			data[j].ATTRIBUTES.IoTClkJumpCellResetSw,
 			data[j].ATTRIBUTES.CaAlgoExtSwitch,
 			data[j].ATTRIBUTES.UlResManageOptSw,
-			data[j].ATTRIBUTES.LTEPreemptNbSwitch,
+			data[j].ATTRIBUTES.LTEPreemptNbSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebalgoswitch data has been saved")
@@ -4868,19 +5175,21 @@ func insertEnodebalgoswitch(baseName string, data []model.Enodebalgoswitch) {
 	tx.Commit()
 }
 
-func insertEnodebalmcfg(baseName string, data []model.Enodebalmcfg) {
+
+func insertEnodebalmcfg(eNodeBId string, baseName string, data []model.Enodebalmcfg) {
 	fmt.Println("Processing Enodebalmcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebalmcfg` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebalmcfg` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TrafficFaultyDetectPeriod,
 			data[j].ATTRIBUTES.SrvIntfAlmCfgSw,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebalmcfg data has been saved")
@@ -4888,20 +5197,22 @@ func insertEnodebalmcfg(baseName string, data []model.Enodebalmcfg) {
 	tx.Commit()
 }
 
-func insertEnodebautopoweroff(baseName string, data []model.Enodebautopoweroff) {
+
+func insertEnodebautopoweroff(eNodeBId string, baseName string, data []model.Enodebautopoweroff) {
 	fmt.Println("Processing Enodebautopoweroff data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebautopoweroff` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebautopoweroff` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.AutoPowerOffSwitch,
 			data[j].ATTRIBUTES.PowerOffTime,
 			data[j].ATTRIBUTES.PowerOnTime,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebautopoweroff data has been saved")
@@ -4909,22 +5220,24 @@ func insertEnodebautopoweroff(baseName string, data []model.Enodebautopoweroff) 
 	tx.Commit()
 }
 
-func insertEnodebchroutputctrl(baseName string, data []model.Enodebchroutputctrl) {
+
+func insertEnodebchroutputctrl(eNodeBId string, baseName string, data []model.Enodebchroutputctrl) {
 	fmt.Println("Processing Enodebchroutputctrl data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebchroutputctrl` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebchroutputctrl` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OutPutMode,
 			data[j].ATTRIBUTES.CallSampleRate,
 			data[j].ATTRIBUTES.MaxStoreCall,
 			data[j].ATTRIBUTES.CHRUpLoadingTimeSwitch,
 			data[j].ATTRIBUTES.SIGOutputMode,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebchroutputctrl data has been saved")
@@ -4932,21 +5245,23 @@ func insertEnodebchroutputctrl(baseName string, data []model.Enodebchroutputctrl
 	tx.Commit()
 }
 
-func insertEnodebciphercap(baseName string, data []model.Enodebciphercap) {
+
+func insertEnodebciphercap(eNodeBId string, baseName string, data []model.Enodebciphercap) {
 	fmt.Println("Processing Enodebciphercap data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebciphercap` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebciphercap` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PrimaryCipherAlgo,
 			data[j].ATTRIBUTES.SecondCipherAlgo,
 			data[j].ATTRIBUTES.ThirdCipherAlgo,
 			data[j].ATTRIBUTES.FourthCipherAlgo,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebciphercap data has been saved")
@@ -4954,16 +5269,17 @@ func insertEnodebciphercap(baseName string, data []model.Enodebciphercap) {
 	tx.Commit()
 }
 
-func insertEnodebconnstatetimer(baseName string, data []model.Enodebconnstatetimer) {
+
+func insertEnodebconnstatetimer(eNodeBId string, baseName string, data []model.Enodebconnstatetimer) {
 	fmt.Println("Processing Enodebconnstatetimer data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebconnstatetimer` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebconnstatetimer` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.S1MessageWaitingTimer,
 			data[j].ATTRIBUTES.X2MessageWaitingTimer,
 			data[j].ATTRIBUTES.UuMessageWaitingTimer,
@@ -4984,7 +5300,8 @@ func insertEnodebconnstatetimer(baseName string, data []model.Enodebconnstatetim
 			data[j].ATTRIBUTES.BearerActivityThd,
 			data[j].ATTRIBUTES.ObjId,
 			data[j].ATTRIBUTES.RrcReestActivityThld,
-			data[j].ATTRIBUTES.EcidWaitingTimer,
+			data[j].ATTRIBUTES.EcidWaitingTimer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebconnstatetimer data has been saved")
@@ -4992,23 +5309,25 @@ func insertEnodebconnstatetimer(baseName string, data []model.Enodebconnstatetim
 	tx.Commit()
 }
 
-func insertEnodebfddbbres(baseName string, data []model.Enodebfddbbres) {
+
+func insertEnodebfddbbres(eNodeBId string, baseName string, data []model.Enodebfddbbres) {
 	fmt.Println("Processing Enodebfddbbres data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebfddbbres` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebfddbbres` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ENodeBFddBbResId,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.Capacity,
 			data[j].ATTRIBUTES.AdmState,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebfddbbres data has been saved")
@@ -5016,23 +5335,25 @@ func insertEnodebfddbbres(baseName string, data []model.Enodebfddbbres) {
 	tx.Commit()
 }
 
-func insertEnodebflowctrlpara(baseName string, data []model.Enodebflowctrlpara) {
+
+func insertEnodebflowctrlpara(eNodeBId string, baseName string, data []model.Enodebflowctrlpara) {
 	fmt.Println("Processing Enodebflowctrlpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebflowctrlpara` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebflowctrlpara` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.AdaptUnsyncTimerLen,
 			data[j].ATTRIBUTES.AdaptUnsyncUserNumThd,
 			data[j].ATTRIBUTES.DynAcBarPolicyMode,
 			data[j].ATTRIBUTES.CpuLoadThd,
 			data[j].ATTRIBUTES.ObjId,
 			data[j].ATTRIBUTES.McpttMsgCntSwitch,
-			data[j].ATTRIBUTES.DynAcBarringTrigAllCellSw,
+			data[j].ATTRIBUTES.DynAcBarringTrigAllCellSw,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebflowctrlpara data has been saved")
@@ -5040,19 +5361,21 @@ func insertEnodebflowctrlpara(baseName string, data []model.Enodebflowctrlpara) 
 	tx.Commit()
 }
 
-func insertEnodebframeoffset(baseName string, data []model.Enodebframeoffset) {
+
+func insertEnodebframeoffset(eNodeBId string, baseName string, data []model.Enodebframeoffset) {
 	fmt.Println("Processing Enodebframeoffset data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebframeoffset` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebframeoffset` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TddFrameOffset,
 			data[j].ATTRIBUTES.FddFrameOffset,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebframeoffset data has been saved")
@@ -5060,16 +5383,17 @@ func insertEnodebframeoffset(baseName string, data []model.Enodebframeoffset) {
 	tx.Commit()
 }
 
-func insertEnodebfunction(baseName string, data []model.Enodebfunction) {
+
+func insertEnodebfunction(eNodeBId string, baseName string, data []model.Enodebfunction) {
 	fmt.Println("Processing Enodebfunction data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebfunction` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebfunction` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ObjId,
 			data[j].ATTRIBUTES.ENodeBFunctionName,
 			data[j].ATTRIBUTES.ApplicationRef,
@@ -5078,7 +5402,8 @@ func insertEnodebfunction(baseName string, data []model.Enodebfunction) {
 			data[j].ATTRIBUTES.NermVersion,
 			data[j].ATTRIBUTES.ProductVersion,
 			data[j].ATTRIBUTES.ProductInterfaceID,
-			data[j].ATTRIBUTES.LmtVersion,
+			data[j].ATTRIBUTES.LmtVersion,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebfunction data has been saved")
@@ -5086,21 +5411,23 @@ func insertEnodebfunction(baseName string, data []model.Enodebfunction) {
 	tx.Commit()
 }
 
-func insertEnodebintegritycap(baseName string, data []model.Enodebintegritycap) {
+
+func insertEnodebintegritycap(eNodeBId string, baseName string, data []model.Enodebintegritycap) {
 	fmt.Println("Processing Enodebintegritycap data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebintegritycap` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebintegritycap` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PrimaryIntegrityAlgo,
 			data[j].ATTRIBUTES.SecondIntegrityAlgo,
 			data[j].ATTRIBUTES.ThirdIntegrityAlgo,
 			data[j].ATTRIBUTES.NullAlgo,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebintegritycap data has been saved")
@@ -5108,22 +5435,24 @@ func insertEnodebintegritycap(baseName string, data []model.Enodebintegritycap) 
 	tx.Commit()
 }
 
-func insertEnodebmlb(baseName string, data []model.Enodebmlb) {
+
+func insertEnodebmlb(eNodeBId string, baseName string, data []model.Enodebmlb) {
 	fmt.Println("Processing Enodebmlb data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebmlb` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebmlb` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.InterFreqIdleMlbMode,
 			data[j].ATTRIBUTES.InterFreqIdleMlbInterval,
 			data[j].ATTRIBUTES.InterFreqIdleMlbStaThd,
 			data[j].ATTRIBUTES.DlCaLbMaxCCNum,
 			data[j].ATTRIBUTES.CaUeMinDataVolRatio,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebmlb data has been saved")
@@ -5131,18 +5460,20 @@ func insertEnodebmlb(baseName string, data []model.Enodebmlb) {
 	tx.Commit()
 }
 
-func insertEnodebnbpara(baseName string, data []model.Enodebnbpara) {
+
+func insertEnodebnbpara(eNodeBId string, baseName string, data []model.Enodebnbpara) {
 	fmt.Println("Processing Enodebnbpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebnbpara` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebnbpara` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.NbRsvMinUserNumRatio,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebnbpara data has been saved")
@@ -5150,16 +5481,17 @@ func insertEnodebnbpara(baseName string, data []model.Enodebnbpara) {
 	tx.Commit()
 }
 
-func insertEnodebresmodealgo(baseName string, data []model.Enodebresmodealgo) {
+
+func insertEnodebresmodealgo(eNodeBId string, baseName string, data []model.Enodebresmodealgo) {
 	fmt.Println("Processing Enodebresmodealgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebresmodealgo` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebresmodealgo` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.BbpResAutoConfigSw,
 			data[j].ATTRIBUTES.TddBbpResDeployAlgo,
 			data[j].ATTRIBUTES.FddBbpResDeployAlgo,
@@ -5167,7 +5499,8 @@ func insertEnodebresmodealgo(baseName string, data []model.Enodebresmodealgo) {
 			data[j].ATTRIBUTES.ENBCellNumCapabilityMode,
 			data[j].ATTRIBUTES.ObjId,
 			data[j].ATTRIBUTES.BbpCpriSharingSwitch,
-			data[j].ATTRIBUTES.EnbCellDstDeploySw,
+			data[j].ATTRIBUTES.EnbCellDstDeploySw,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebresmodealgo data has been saved")
@@ -5175,18 +5508,20 @@ func insertEnodebresmodealgo(baseName string, data []model.Enodebresmodealgo) {
 	tx.Commit()
 }
 
-func insertEnodebsharingmode(baseName string, data []model.Enodebsharingmode) {
+
+func insertEnodebsharingmode(eNodeBId string, baseName string, data []model.Enodebsharingmode) {
 	fmt.Println("Processing Enodebsharingmode data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebsharingmode` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebsharingmode` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ENodeBSharingMode,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebsharingmode data has been saved")
@@ -5194,18 +5529,20 @@ func insertEnodebsharingmode(baseName string, data []model.Enodebsharingmode) {
 	tx.Commit()
 }
 
-func insertEnodebsondbcfg(baseName string, data []model.Enodebsondbcfg) {
+
+func insertEnodebsondbcfg(eNodeBId string, baseName string, data []model.Enodebsondbcfg) {
 	fmt.Println("Processing Enodebsondbcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebsondbcfg` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebsondbcfg` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.StartTime,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebsondbcfg data has been saved")
@@ -5213,23 +5550,25 @@ func insertEnodebsondbcfg(baseName string, data []model.Enodebsondbcfg) {
 	tx.Commit()
 }
 
-func insertEnodebtddbbres(baseName string, data []model.Enodebtddbbres) {
+
+func insertEnodebtddbbres(eNodeBId string, baseName string, data []model.Enodebtddbbres) {
 	fmt.Println("Processing Enodebtddbbres data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebtddbbres` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebtddbbres` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ENodeBTddBbResId,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.Capacity,
 			data[j].ATTRIBUTES.AdmState,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebtddbbres data has been saved")
@@ -5237,19 +5576,21 @@ func insertEnodebtddbbres(baseName string, data []model.Enodebtddbbres) {
 	tx.Commit()
 }
 
-func insertEnodebtgalgcfg(baseName string, data []model.Enodebtgalgcfg) {
+
+func insertEnodebtgalgcfg(eNodeBId string, baseName string, data []model.Enodebtgalgcfg) {
 	fmt.Println("Processing Enodebtgalgcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebtgalgcfg` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebtgalgcfg` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.FilterCoeffTG,
 			data[j].ATTRIBUTES.StatPeriodTG,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebtgalgcfg data has been saved")
@@ -5257,16 +5598,17 @@ func insertEnodebtgalgcfg(baseName string, data []model.Enodebtgalgcfg) {
 	tx.Commit()
 }
 
-func insertEnodebusparacfg(baseName string, data []model.Enodebusparacfg) {
+
+func insertEnodebusparacfg(eNodeBId string, baseName string, data []model.Enodebusparacfg) {
 	fmt.Println("Processing Enodebusparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebusparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `enodebusparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.UsStrategy,
 			data[j].ATTRIBUTES.UsSPIDConfig,
 			data[j].ATTRIBUTES.UsUeInactiveTimer,
@@ -5277,7 +5619,8 @@ func insertEnodebusparacfg(baseName string, data []model.Enodebusparacfg) {
 			data[j].ATTRIBUTES.UsUESTMSIKeepAliveTimer,
 			data[j].ATTRIBUTES.BigPackageIdentify,
 			data[j].ATTRIBUTES.ObjId,
-			data[j].ATTRIBUTES.UlDlUsUserDetectPeriod,
+			data[j].ATTRIBUTES.UlDlUsUserDetectPeriod,	
+
 		)
 		checkErr(err)
 		fmt.Println("Enodebusparacfg data has been saved")
@@ -5285,16 +5628,17 @@ func insertEnodebusparacfg(baseName string, data []model.Enodebusparacfg) {
 	tx.Commit()
 }
 
-func insertEpgroup(baseName string, data []model.Epgroup) {
+
+func insertEpgroup(eNodeBId string, baseName string, data []model.Epgroup) {
 	fmt.Println("Processing Epgroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `epgroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `epgroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.EPGROUPID,
 			data[j].ATTRIBUTES.VRFIDX,
 			data[j].ATTRIBUTES.SCTPHOSTREFS,
@@ -5306,7 +5650,8 @@ func insertEpgroup(baseName string, data []model.Epgroup) {
 			data[j].ATTRIBUTES.TYPEFLAG,
 			data[j].ATTRIBUTES.LNKPFMSW,
 			data[j].ATTRIBUTES.CTRLMODE,
-			data[j].ATTRIBUTES.AUTOCFGFLAG,
+			data[j].ATTRIBUTES.AUTOCFGFLAG,	
+
 		)
 		checkErr(err)
 		fmt.Println("Epgroup data has been saved")
@@ -5314,16 +5659,17 @@ func insertEpgroup(baseName string, data []model.Epgroup) {
 	tx.Commit()
 }
 
-func insertEquipment(baseName string, data []model.Equipment) {
+
+func insertEquipment(eNodeBId string, baseName string, data []model.Equipment) {
 	fmt.Println("Processing Equipment data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `equipment` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `equipment` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.BATIMS,
 			data[j].ATTRIBUTES.PAE,
 			data[j].ATTRIBUTES.MNTMODE,
@@ -5345,7 +5691,8 @@ func insertEquipment(baseName string, data []model.Equipment) {
 			data[j].ATTRIBUTES.NPST,
 			data[j].ATTRIBUTES.SDRCONNSW,
 			data[j].ATTRIBUTES.PWRFAILOMCONNENHSW,
-			data[j].ATTRIBUTES.OMCONNENHSWCTLTIME,
+			data[j].ATTRIBUTES.OMCONNENHSWCTLTIME,	
+
 		)
 		checkErr(err)
 		fmt.Println("Equipment data has been saved")
@@ -5353,16 +5700,17 @@ func insertEquipment(baseName string, data []model.Equipment) {
 	tx.Commit()
 }
 
-func insertEthport(baseName string, data []model.Ethport) {
+
+func insertEthport(eNodeBId string, baseName string, data []model.Ethport) {
 	fmt.Println("Processing Ethport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ethport` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ethport` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -5380,7 +5728,8 @@ func insertEthport(baseName string, data []model.Ethport) {
 			data[j].ATTRIBUTES.RXBCPKTALMCLRTHD,
 			data[j].ATTRIBUTES.FIBERSPEEDMATCH,
 			data[j].ATTRIBUTES.USERLABEL,
-			data[j].ATTRIBUTES.AUTOCFGFLAG,
+			data[j].ATTRIBUTES.AUTOCFGFLAG,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ethport data has been saved")
@@ -5388,18 +5737,20 @@ func insertEthport(baseName string, data []model.Ethport) {
 	tx.Commit()
 }
 
-func insertEucellalmcfg(baseName string, data []model.Eucellalmcfg) {
+
+func insertEucellalmcfg(eNodeBId string, baseName string, data []model.Eucellalmcfg) {
 	fmt.Println("Processing Eucellalmcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucellalmcfg` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucellalmcfg` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
-			data[j].ATTRIBUTES.RxNoisePwrThd,
+			data[j].ATTRIBUTES.RxNoisePwrThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eucellalmcfg data has been saved")
@@ -5407,16 +5758,17 @@ func insertEucellalmcfg(baseName string, data []model.Eucellalmcfg) {
 	tx.Commit()
 }
 
-func insertEucellsectoreqm(baseName string, data []model.Eucellsectoreqm) {
+
+func insertEucellsectoreqm(eNodeBId string, baseName string, data []model.Eucellsectoreqm) {
 	fmt.Println("Processing Eucellsectoreqm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucellsectoreqm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucellsectoreqm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.SectorEqmId,
 			data[j].ATTRIBUTES.ReferenceSignalPwr,
@@ -5429,7 +5781,8 @@ func insertEucellsectoreqm(baseName string, data []model.Eucellsectoreqm) {
 			data[j].ATTRIBUTES.PrbIdList,
 			data[j].ATTRIBUTES.SectorEqmCombineGrpId,
 			data[j].ATTRIBUTES.CellBeamMode,
-			data[j].ATTRIBUTES.BeamId,
+			data[j].ATTRIBUTES.BeamId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eucellsectoreqm data has been saved")
@@ -5437,19 +5790,21 @@ func insertEucellsectoreqm(baseName string, data []model.Eucellsectoreqm) {
 	tx.Commit()
 }
 
-func insertEucommcellsectoreqm(baseName string, data []model.Eucommcellsectoreqm) {
+
+func insertEucommcellsectoreqm(eNodeBId string, baseName string, data []model.Eucommcellsectoreqm) {
 	fmt.Println("Processing Eucommcellsectoreqm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucommcellsectoreqm` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucommcellsectoreqm` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ENodeBId,
-			data[j].ATTRIBUTES.SectorEqmId,
+			data[j].ATTRIBUTES.SectorEqmId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eucommcellsectoreqm data has been saved")
@@ -5457,20 +5812,22 @@ func insertEucommcellsectoreqm(baseName string, data []model.Eucommcellsectoreqm
 	tx.Commit()
 }
 
-func insertEucoschcfg(baseName string, data []model.Eucoschcfg) {
+
+func insertEucoschcfg(eNodeBId string, baseName string, data []model.Eucoschcfg) {
 	fmt.Println("Processing Eucoschcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucoschcfg` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucoschcfg` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PrtNodeBaseBandEqmId,
 			data[j].ATTRIBUTES.SchNodeBaseBandEqmId,
 			data[j].ATTRIBUTES.WorkMode,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eucoschcfg data has been saved")
@@ -5478,21 +5835,23 @@ func insertEucoschcfg(baseName string, data []model.Eucoschcfg) {
 	tx.Commit()
 }
 
-func insertEucoschdlcompcfg(baseName string, data []model.Eucoschdlcompcfg) {
+
+func insertEucoschdlcompcfg(eNodeBId string, baseName string, data []model.Eucoschdlcompcfg) {
 	fmt.Println("Processing Eucoschdlcompcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucoschdlcompcfg` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucoschdlcompcfg` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CordInfoEffDelay,
 			data[j].ATTRIBUTES.InterEnbDlCompSwitch,
 			data[j].ATTRIBUTES.EuCoSchUeSpec,
 			data[j].ATTRIBUTES.CordInfoEffDelayMode,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eucoschdlcompcfg data has been saved")
@@ -5500,18 +5859,20 @@ func insertEucoschdlcompcfg(baseName string, data []model.Eucoschdlcompcfg) {
 	tx.Commit()
 }
 
-func insertEucoschulicscfg(baseName string, data []model.Eucoschulicscfg) {
+
+func insertEucoschulicscfg(eNodeBId string, baseName string, data []model.Eucoschulicscfg) {
 	fmt.Println("Processing Eucoschulicscfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucoschulicscfg` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eucoschulicscfg` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.UlIcsAlgoSwitch,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eucoschulicscfg data has been saved")
@@ -5519,19 +5880,21 @@ func insertEucoschulicscfg(baseName string, data []model.Eucoschulicscfg) {
 	tx.Commit()
 }
 
-func insertEuepcsec(baseName string, data []model.Euepcsec) {
+
+func insertEuepcsec(eNodeBId string, baseName string, data []model.Euepcsec) {
 	fmt.Println("Processing Euepcsec data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `euepcsec` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `euepcsec` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CiphAlgo,
 			data[j].ATTRIBUTES.IntAlgo,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Euepcsec data has been saved")
@@ -5539,16 +5902,17 @@ func insertEuepcsec(baseName string, data []model.Euepcsec) {
 	tx.Commit()
 }
 
-func insertEutranexternalcell(baseName string, data []model.Eutranexternalcell) {
+
+func insertEutranexternalcell(eNodeBId string, baseName string, data []model.Eutranexternalcell) {
 	fmt.Println("Processing Eutranexternalcell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eutranexternalcell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eutranexternalcell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.Mcc,
 			data[j].ATTRIBUTES.Mnc,
 			data[j].ATTRIBUTES.ENodeBId,
@@ -5568,7 +5932,8 @@ func insertEutranexternalcell(baseName string, data []model.Eutranexternalcell) 
 			data[j].ATTRIBUTES.DlFreqOffset,
 			data[j].ATTRIBUTES.NbCellFlag,
 			data[j].ATTRIBUTES.NclUpdateMode,
-			data[j].ATTRIBUTES.SupportEmtcFlag,
+			data[j].ATTRIBUTES.SupportEmtcFlag,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eutranexternalcell data has been saved")
@@ -5576,16 +5941,17 @@ func insertEutranexternalcell(baseName string, data []model.Eutranexternalcell) 
 	tx.Commit()
 }
 
-func insertEutraninterfreqncell(baseName string, data []model.Eutraninterfreqncell) {
+
+func insertEutraninterfreqncell(eNodeBId string, baseName string, data []model.Eutraninterfreqncell) {
 	fmt.Println("Processing Eutraninterfreqncell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eutraninterfreqncell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eutraninterfreqncell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.Mcc,
 			data[j].ATTRIBUTES.Mnc,
@@ -5605,7 +5971,8 @@ func insertEutraninterfreqncell(baseName string, data []model.Eutraninterfreqnce
 			data[j].ATTRIBUTES.NCellClassLabel,
 			data[j].ATTRIBUTES.CtrlMode,
 			data[j].ATTRIBUTES.AggregationProperty,
-			data[j].ATTRIBUTES.OverlapIndicatorExtension,
+			data[j].ATTRIBUTES.OverlapIndicatorExtension,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eutraninterfreqncell data has been saved")
@@ -5613,16 +5980,17 @@ func insertEutraninterfreqncell(baseName string, data []model.Eutraninterfreqnce
 	tx.Commit()
 }
 
-func insertEutraninternfreq(baseName string, data []model.Eutraninternfreq) {
+
+func insertEutraninternfreq(eNodeBId string, baseName string, data []model.Eutraninternfreq) {
 	fmt.Println("Processing Eutraninternfreq data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eutraninternfreq` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eutraninternfreq` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DlEarfcn,
 			data[j].ATTRIBUTES.UlEarfcnCfgInd,
@@ -5681,7 +6049,8 @@ func insertEutraninternfreq(baseName string, data []model.Eutraninternfreq) {
 			data[j].ATTRIBUTES.VoLTEQualityIfHoTargetInd,
 			data[j].ATTRIBUTES.IdleMlbeMtcUEReleaseRatio,
 			data[j].ATTRIBUTES.InterFreqCioAdjLimitCfgInd,
-			data[j].ATTRIBUTES.InterFreq4TInd,
+			data[j].ATTRIBUTES.InterFreq4TInd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eutraninternfreq data has been saved")
@@ -5689,16 +6058,17 @@ func insertEutraninternfreq(baseName string, data []model.Eutraninternfreq) {
 	tx.Commit()
 }
 
-func insertEutranintrafreqncell(baseName string, data []model.Eutranintrafreqncell) {
+
+func insertEutranintrafreqncell(eNodeBId string, baseName string, data []model.Eutranintrafreqncell) {
 	fmt.Println("Processing Eutranintrafreqncell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `eutranintrafreqncell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `eutranintrafreqncell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.Mcc,
 			data[j].ATTRIBUTES.Mnc,
@@ -5717,7 +6087,8 @@ func insertEutranintrafreqncell(baseName string, data []model.Eutranintrafreqnce
 			data[j].ATTRIBUTES.CtrlMode,
 			data[j].ATTRIBUTES.AttachCellSwitch,
 			data[j].ATTRIBUTES.HighSpeedCellIndOffset,
-			data[j].ATTRIBUTES.VectorCellFlag,
+			data[j].ATTRIBUTES.VectorCellFlag,	
+
 		)
 		checkErr(err)
 		fmt.Println("Eutranintrafreqncell data has been saved")
@@ -5725,18 +6096,20 @@ func insertEutranintrafreqncell(baseName string, data []model.Eutranintrafreqnce
 	tx.Commit()
 }
 
-func insertEuulcoschcfg(baseName string, data []model.Euulcoschcfg) {
+
+func insertEuulcoschcfg(eNodeBId string, baseName string, data []model.Euulcoschcfg) {
 	fmt.Println("Processing Euulcoschcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `euulcoschcfg` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `euulcoschcfg` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.UlInterEnbCamcSw,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Euulcoschcfg data has been saved")
@@ -5744,16 +6117,17 @@ func insertEuulcoschcfg(baseName string, data []model.Euulcoschcfg) {
 	tx.Commit()
 }
 
-func insertExtendedqci(baseName string, data []model.Extendedqci) {
+
+func insertExtendedqci(eNodeBId string, baseName string, data []model.Extendedqci) {
 	fmt.Println("Processing Extendedqci data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `extendedqci` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `extendedqci` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ExtendedQci,
 			data[j].ATTRIBUTES.ServiceType,
 			data[j].ATTRIBUTES.UlschPriorityFactor,
@@ -5771,7 +6145,8 @@ func insertExtendedqci(baseName string, data []model.Extendedqci) {
 			data[j].ATTRIBUTES.LtePttDownlinkPriority,
 			data[j].ATTRIBUTES.LtePttUplinkPriority,
 			data[j].ATTRIBUTES.ExtQciCounterIndex,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Extendedqci data has been saved")
@@ -5779,20 +6154,22 @@ func insertExtendedqci(baseName string, data []model.Extendedqci) {
 	tx.Commit()
 }
 
-func insertFddresmode(baseName string, data []model.Fddresmode) {
+
+func insertFddresmode(eNodeBId string, baseName string, data []model.Fddresmode) {
 	fmt.Println("Processing Fddresmode data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `fddresmode` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `fddresmode` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.BbCapabilityMode,
 			data[j].ATTRIBUTES.SfnCapabilityMode,
 			data[j].ATTRIBUTES.BbResExclusiveSwitch,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Fddresmode data has been saved")
@@ -5800,17 +6177,19 @@ func insertFddresmode(baseName string, data []model.Fddresmode) {
 	tx.Commit()
 }
 
-func insertFltcorrenablecfg(baseName string, data []model.Fltcorrenablecfg) {
+
+func insertFltcorrenablecfg(eNodeBId string, baseName string, data []model.Fltcorrenablecfg) {
 	fmt.Println("Processing Fltcorrenablecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `fltcorrenablecfg` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `fltcorrenablecfg` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.ENABLERELA,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.ENABLERELA,	
+
 		)
 		checkErr(err)
 		fmt.Println("Fltcorrenablecfg data has been saved")
@@ -5818,16 +6197,17 @@ func insertFltcorrenablecfg(baseName string, data []model.Fltcorrenablecfg) {
 	tx.Commit()
 }
 
-func insertFmu(baseName string, data []model.Fmu) {
+
+func insertFmu(eNodeBId string, baseName string, data []model.Fmu) {
 	fmt.Println("Processing Fmu data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `fmu` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `fmu` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -5837,7 +6217,8 @@ func insertFmu(baseName string, data []model.Fmu) {
 			data[j].ATTRIBUTES.ADDR,
 			data[j].ATTRIBUTES.SBAF,
 			data[j].ATTRIBUTES.STC,
-			data[j].ATTRIBUTES.TCMODE,
+			data[j].ATTRIBUTES.TCMODE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Fmu data has been saved")
@@ -5845,20 +6226,22 @@ func insertFmu(baseName string, data []model.Fmu) {
 	tx.Commit()
 }
 
-func insertFtpclt(baseName string, data []model.Ftpclt) {
+
+func insertFtpclt(eNodeBId string, baseName string, data []model.Ftpclt) {
 	fmt.Println("Processing Ftpclt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ftpclt` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ftpclt` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ENCRYMODE,
 			data[j].ATTRIBUTES.SPTSTATEFWL,
 			data[j].ATTRIBUTES.SSLCERTAUTH,
-			data[j].ATTRIBUTES.MINDHLEN,
+			data[j].ATTRIBUTES.MINDHLEN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ftpclt data has been saved")
@@ -5866,20 +6249,22 @@ func insertFtpclt(baseName string, data []model.Ftpclt) {
 	tx.Commit()
 }
 
-func insertFtpcltport(baseName string, data []model.Ftpcltport) {
+
+func insertFtpcltport(eNodeBId string, baseName string, data []model.Ftpcltport) {
 	fmt.Println("Processing Ftpcltport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ftpcltport` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ftpcltport` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SERVERIP,
 			data[j].ATTRIBUTES.PORT,
 			data[j].ATTRIBUTES.STARTDATAPORT,
-			data[j].ATTRIBUTES.ENDDATAPORT,
+			data[j].ATTRIBUTES.ENDDATAPORT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ftpcltport data has been saved")
@@ -5887,19 +6272,21 @@ func insertFtpcltport(baseName string, data []model.Ftpcltport) {
 	tx.Commit()
 }
 
-func insertGbtsabiscp(baseName string, data []model.Gbtsabiscp) {
+
+func insertGbtsabiscp(eNodeBId string, baseName string, data []model.Gbtsabiscp) {
 	fmt.Println("Processing Gbtsabiscp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsabiscp` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsabiscp` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ABISCPID,
 			data[j].ATTRIBUTES.CPBEARID,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gbtsabiscp data has been saved")
@@ -5907,23 +6294,25 @@ func insertGbtsabiscp(baseName string, data []model.Gbtsabiscp) {
 	tx.Commit()
 }
 
-func insertGbtsbbres(baseName string, data []model.Gbtsbbres) {
+
+func insertGbtsbbres(eNodeBId string, baseName string, data []model.Gbtsbbres) {
 	fmt.Println("Processing Gbtsbbres data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsbbres` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsbbres` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GBTSBBRESID,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.CAPACITY,
 			data[j].ATTRIBUTES.ADMSTATE,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gbtsbbres data has been saved")
@@ -5931,19 +6320,21 @@ func insertGbtsbbres(baseName string, data []model.Gbtsbbres) {
 	tx.Commit()
 }
 
-func insertGbtsenergymgtpara(baseName string, data []model.Gbtsenergymgtpara) {
+
+func insertGbtsenergymgtpara(eNodeBId string, baseName string, data []model.Gbtsenergymgtpara) {
 	fmt.Println("Processing Gbtsenergymgtpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsenergymgtpara` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsenergymgtpara` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.BAKPWRSAVMETHOD,
-			data[j].ATTRIBUTES.PAADJVOL,
+			data[j].ATTRIBUTES.PAADJVOL,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gbtsenergymgtpara data has been saved")
@@ -5951,16 +6342,17 @@ func insertGbtsenergymgtpara(baseName string, data []model.Gbtsenergymgtpara) {
 	tx.Commit()
 }
 
-func insertGbtsfunction(baseName string, data []model.Gbtsfunction) {
+
+func insertGbtsfunction(eNodeBId string, baseName string, data []model.Gbtsfunction) {
 	fmt.Println("Processing Gbtsfunction data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsfunction` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsfunction` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.GBTSFUNCTIONNAME,
 			data[j].ATTRIBUTES.APPLICATIONREF,
@@ -5968,7 +6360,8 @@ func insertGbtsfunction(baseName string, data []model.Gbtsfunction) {
 			data[j].ATTRIBUTES.NERMVERSION,
 			data[j].ATTRIBUTES.PRODUCTVERSION,
 			data[j].ATTRIBUTES.InterfaceId,
-			data[j].ATTRIBUTES.LmtVersion,
+			data[j].ATTRIBUTES.LmtVersion,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gbtsfunction data has been saved")
@@ -5976,18 +6369,20 @@ func insertGbtsfunction(baseName string, data []model.Gbtsfunction) {
 	tx.Commit()
 }
 
-func insertGbtsglobalpara(baseName string, data []model.Gbtsglobalpara) {
+
+func insertGbtsglobalpara(eNodeBId string, baseName string, data []model.Gbtsglobalpara) {
 	fmt.Println("Processing Gbtsglobalpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsglobalpara` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtsglobalpara` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OBJID,
-			data[j].ATTRIBUTES.MCSTANDARD,
+			data[j].ATTRIBUTES.MCSTANDARD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gbtsglobalpara data has been saved")
@@ -5995,18 +6390,20 @@ func insertGbtsglobalpara(baseName string, data []model.Gbtsglobalpara) {
 	tx.Commit()
 }
 
-func insertGbtspath(baseName string, data []model.Gbtspath) {
+
+func insertGbtspath(eNodeBId string, baseName string, data []model.Gbtspath) {
 	fmt.Println("Processing Gbtspath data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtspath` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gbtspath` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PATHID,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gbtspath data has been saved")
@@ -6014,16 +6411,17 @@ func insertGbtspath(baseName string, data []model.Gbtspath) {
 	tx.Commit()
 }
 
-func insertGeranexternalcell(baseName string, data []model.Geranexternalcell) {
+
+func insertGeranexternalcell(eNodeBId string, baseName string, data []model.Geranexternalcell) {
 	fmt.Println("Processing Geranexternalcell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `geranexternalcell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `geranexternalcell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.Mcc,
 			data[j].ATTRIBUTES.Mnc,
 			data[j].ATTRIBUTES.GeranCellId,
@@ -6041,7 +6439,8 @@ func insertGeranexternalcell(baseName string, data []model.Geranexternalcell) {
 			data[j].ATTRIBUTES.RoamingAreaHoInd,
 			data[j].ATTRIBUTES.AnrFlag,
 			data[j].ATTRIBUTES.CtrlMode,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Geranexternalcell data has been saved")
@@ -6049,19 +6448,21 @@ func insertGeranexternalcell(baseName string, data []model.Geranexternalcell) {
 	tx.Commit()
 }
 
-func insertGeraninterfcfg(baseName string, data []model.Geraninterfcfg) {
+
+func insertGeraninterfcfg(eNodeBId string, baseName string, data []model.Geraninterfcfg) {
 	fmt.Println("Processing Geraninterfcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `geraninterfcfg` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `geraninterfcfg` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DlGeranIntefRbNum,
-			data[j].ATTRIBUTES.DlRbAvailSinrThd,
+			data[j].ATTRIBUTES.DlRbAvailSinrThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Geraninterfcfg data has been saved")
@@ -6069,16 +6470,17 @@ func insertGeraninterfcfg(baseName string, data []model.Geraninterfcfg) {
 	tx.Commit()
 }
 
-func insertGeranncell(baseName string, data []model.Geranncell) {
+
+func insertGeranncell(eNodeBId string, baseName string, data []model.Geranncell) {
 	fmt.Println("Processing Geranncell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `geranncell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `geranncell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.Mcc,
 			data[j].ATTRIBUTES.Mnc,
@@ -6092,7 +6494,8 @@ func insertGeranncell(baseName string, data []model.Geranncell) {
 			data[j].ATTRIBUTES.NeighbourCellName,
 			data[j].ATTRIBUTES.OverlapInd,
 			data[j].ATTRIBUTES.NCellMeasPriority,
-			data[j].ATTRIBUTES.CtrlMode,
+			data[j].ATTRIBUTES.CtrlMode,	
+
 		)
 		checkErr(err)
 		fmt.Println("Geranncell data has been saved")
@@ -6100,16 +6503,17 @@ func insertGeranncell(baseName string, data []model.Geranncell) {
 	tx.Commit()
 }
 
-func insertGerannfreqgroup(baseName string, data []model.Gerannfreqgroup) {
+
+func insertGerannfreqgroup(eNodeBId string, baseName string, data []model.Gerannfreqgroup) {
 	fmt.Println("Processing Gerannfreqgroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gerannfreqgroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gerannfreqgroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.BcchGroupId,
 			data[j].ATTRIBUTES.GeranVersion,
@@ -6128,7 +6532,8 @@ func insertGerannfreqgroup(baseName string, data []model.Gerannfreqgroup) {
 			data[j].ATTRIBUTES.GeranRanSharingInd,
 			data[j].ATTRIBUTES.AnrInd,
 			data[j].ATTRIBUTES.FreqPriorityForAnr,
-			data[j].ATTRIBUTES.PmaxGeran,
+			data[j].ATTRIBUTES.PmaxGeran,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gerannfreqgroup data has been saved")
@@ -6136,19 +6541,21 @@ func insertGerannfreqgroup(baseName string, data []model.Gerannfreqgroup) {
 	tx.Commit()
 }
 
-func insertGerannfreqgrouparfcn(baseName string, data []model.Gerannfreqgrouparfcn) {
+
+func insertGerannfreqgrouparfcn(eNodeBId string, baseName string, data []model.Gerannfreqgrouparfcn) {
 	fmt.Println("Processing Gerannfreqgrouparfcn data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gerannfreqgrouparfcn` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gerannfreqgrouparfcn` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.BcchGroupId,
-			data[j].ATTRIBUTES.GeranArfcn,
+			data[j].ATTRIBUTES.GeranArfcn,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gerannfreqgrouparfcn data has been saved")
@@ -6156,16 +6563,17 @@ func insertGerannfreqgrouparfcn(baseName string, data []model.Gerannfreqgrouparf
 	tx.Commit()
 }
 
-func insertGlobalprocswitch(baseName string, data []model.Globalprocswitch) {
+
+func insertGlobalprocswitch(eNodeBId string, baseName string, data []model.Globalprocswitch) {
 	fmt.Println("Processing Globalprocswitch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `globalprocswitch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `globalprocswitch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.X2SonSetupSwitch,
 			data[j].ATTRIBUTES.X2SonLinkSetupType,
 			data[j].ATTRIBUTES.SriAdaptiveSwitch,
@@ -6252,7 +6660,8 @@ func insertGlobalprocswitch(baseName string, data []model.Globalprocswitch) {
 			data[j].ATTRIBUTES.ProcTypeForNonIdealServData,
 			data[j].ATTRIBUTES.Ex2DeleteTimerForEx2Usage,
 			data[j].ATTRIBUTES.SinglePlmnHostSplitSwitch,
-			data[j].ATTRIBUTES.InitMsgProtectThld,
+			data[j].ATTRIBUTES.InitMsgProtectThld,	
+
 		)
 		checkErr(err)
 		fmt.Println("Globalprocswitch data has been saved")
@@ -6260,23 +6669,25 @@ func insertGlobalprocswitch(baseName string, data []model.Globalprocswitch) {
 	tx.Commit()
 }
 
-func insertGlocell(baseName string, data []model.Glocell) {
+
+func insertGlocell(eNodeBId string, baseName string, data []model.Glocell) {
 	fmt.Println("Processing Glocell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocell` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocell` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GLOCELLID,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.BASEBANDPOLICY,
 			data[j].ATTRIBUTES.BASEBANDEQMID,
 			data[j].ATTRIBUTES.USERLABEL,
 			data[j].ATTRIBUTES.LOCELLTYPE,
-			data[j].ATTRIBUTES.BBEQMPOLICY,
+			data[j].ATTRIBUTES.BBEQMPOLICY,	
+
 		)
 		checkErr(err)
 		fmt.Println("Glocell data has been saved")
@@ -6284,23 +6695,25 @@ func insertGlocell(baseName string, data []model.Glocell) {
 	tx.Commit()
 }
 
-func insertGlocellalgpara(baseName string, data []model.Glocellalgpara) {
+
+func insertGlocellalgpara(eNodeBId string, baseName string, data []model.Glocellalgpara) {
 	fmt.Println("Processing Glocellalgpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellalgpara` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellalgpara` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GLOCELLID,
 			data[j].ATTRIBUTES.GUDEGRATEPWRCTRL,
 			data[j].ATTRIBUTES.GMSKDELAY,
 			data[j].ATTRIBUTES.DIVERT8PSKDELAY,
 			data[j].ATTRIBUTES.DIVERT16QAMDELAY,
 			data[j].ATTRIBUTES.DIVERT32QAMDELAY,
-			data[j].ATTRIBUTES.GMSKDELAYDYNADJSW,
+			data[j].ATTRIBUTES.GMSKDELAYDYNADJSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Glocellalgpara data has been saved")
@@ -6308,18 +6721,20 @@ func insertGlocellalgpara(baseName string, data []model.Glocellalgpara) {
 	tx.Commit()
 }
 
-func insertGlocellenergymgtpara(baseName string, data []model.Glocellenergymgtpara) {
+
+func insertGlocellenergymgtpara(eNodeBId string, baseName string, data []model.Glocellenergymgtpara) {
 	fmt.Println("Processing Glocellenergymgtpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellenergymgtpara` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellenergymgtpara` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GLOCELLID,
-			data[j].ATTRIBUTES.MAINBCCHPWRDTEN,
+			data[j].ATTRIBUTES.MAINBCCHPWRDTEN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Glocellenergymgtpara data has been saved")
@@ -6327,16 +6742,17 @@ func insertGlocellenergymgtpara(baseName string, data []model.Glocellenergymgtpa
 	tx.Commit()
 }
 
-func insertGlocellothpara(baseName string, data []model.Glocellothpara) {
+
+func insertGlocellothpara(eNodeBId string, baseName string, data []model.Glocellothpara) {
 	fmt.Println("Processing Glocellothpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellothpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellothpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GLOCELLID,
 			data[j].ATTRIBUTES.MULTRXBRDSTABMONITUNNSW,
 			data[j].ATTRIBUTES.MULTRXBRDUNSTABMONITUNNSW,
@@ -6348,7 +6764,8 @@ func insertGlocellothpara(baseName string, data []model.Glocellothpara) {
 			data[j].ATTRIBUTES.SPEECHBADFRAMEOPTSW,
 			data[j].ATTRIBUTES.PAGINGOVLDPROCOPTSW,
 			data[j].ATTRIBUTES.RFMODULESTDETECTSW,
-			data[j].ATTRIBUTES.NOTRAFFICSELFHEALSW,
+			data[j].ATTRIBUTES.NOTRAFFICSELFHEALSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Glocellothpara data has been saved")
@@ -6356,16 +6773,17 @@ func insertGlocellothpara(baseName string, data []model.Glocellothpara) {
 	tx.Commit()
 }
 
-func insertGlocellrlalmpara(baseName string, data []model.Glocellrlalmpara) {
+
+func insertGlocellrlalmpara(eNodeBId string, baseName string, data []model.Glocellrlalmpara) {
 	fmt.Println("Processing Glocellrlalmpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellrlalmpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellrlalmpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GLOCELLID,
 			data[j].ATTRIBUTES.ARELWTHD,
 			data[j].ATTRIBUTES.AREDISTHD,
@@ -6378,7 +6796,8 @@ func insertGlocellrlalmpara(baseName string, data []model.Glocellrlalmpara) {
 			data[j].ATTRIBUTES.GUNCHDROPCLRTHRD,
 			data[j].ATTRIBUTES.GUNBADQUALDETCTTHRD,
 			data[j].ATTRIBUTES.GUNBADQUALCLRTHRD,
-			data[j].ATTRIBUTES.RSSIUNBALANCEDTHRD,
+			data[j].ATTRIBUTES.RSSIUNBALANCEDTHRD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Glocellrlalmpara data has been saved")
@@ -6386,23 +6805,25 @@ func insertGlocellrlalmpara(baseName string, data []model.Glocellrlalmpara) {
 	tx.Commit()
 }
 
-func insertGlocellrsvdpara(baseName string, data []model.Glocellrsvdpara) {
+
+func insertGlocellrsvdpara(eNodeBId string, baseName string, data []model.Glocellrsvdpara) {
 	fmt.Println("Processing Glocellrsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellrsvdpara` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `glocellrsvdpara` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GLOCELLID,
 			data[j].ATTRIBUTES.GLOCELLRSVDPARA1,
 			data[j].ATTRIBUTES.GLOCELLRSVDPARA2,
 			data[j].ATTRIBUTES.GLOCELLRSVDPARA3,
 			data[j].ATTRIBUTES.GLOCELLRSVDPARA4,
 			data[j].ATTRIBUTES.GLOCELLRSVDPARA5,
-			data[j].ATTRIBUTES.GLOCELLRSVDPARA6,
+			data[j].ATTRIBUTES.GLOCELLRSVDPARA6,	
+
 		)
 		checkErr(err)
 		fmt.Println("Glocellrsvdpara data has been saved")
@@ -6410,16 +6831,17 @@ func insertGlocellrsvdpara(baseName string, data []model.Glocellrsvdpara) {
 	tx.Commit()
 }
 
-func insertGps(baseName string, data []model.Gps) {
+
+func insertGps(eNodeBId string, baseName string, data []model.Gps) {
 	fmt.Println("Processing Gps data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gps` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gps` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GN,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
@@ -6434,7 +6856,8 @@ func insertGps(baseName string, data []model.Gps) {
 			data[j].ATTRIBUTES.CABLE_LEN,
 			data[j].ATTRIBUTES.MODE,
 			data[j].ATTRIBUTES.PRI,
-			data[j].ATTRIBUTES.POSCHECKSW,
+			data[j].ATTRIBUTES.POSCHECKSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gps data has been saved")
@@ -6442,23 +6865,25 @@ func insertGps(baseName string, data []model.Gps) {
 	tx.Commit()
 }
 
-func insertGtpu(baseName string, data []model.Gtpu) {
+
+func insertGtpu(eNodeBId string, baseName string, data []model.Gtpu) {
 	fmt.Println("Processing Gtpu data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtpu` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtpu` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TIMEOUTTH,
 			data[j].ATTRIBUTES.TIMEOUTCNT,
 			data[j].ATTRIBUTES.DSCP,
 			data[j].ATTRIBUTES.STATICCHK,
 			data[j].ATTRIBUTES.ONLYUPIPCHK,
 			data[j].ATTRIBUTES.ULGTPUSNPADSW,
-			data[j].ATTRIBUTES.DLGTPUSNCHKSW,
+			data[j].ATTRIBUTES.DLGTPUSNCHKSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gtpu data has been saved")
@@ -6466,16 +6891,17 @@ func insertGtpu(baseName string, data []model.Gtpu) {
 	tx.Commit()
 }
 
-func insertGtranspara(baseName string, data []model.Gtranspara) {
+
+func insertGtranspara(eNodeBId string, baseName string, data []model.Gtranspara) {
 	fmt.Println("Processing Gtranspara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtranspara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtranspara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LPSCHSW,
 			data[j].ATTRIBUTES.RATECFGTYPE,
 			data[j].ATTRIBUTES.SBTIME,
@@ -6498,7 +6924,8 @@ func insertGtranspara(baseName string, data []model.Gtranspara) {
 			data[j].ATTRIBUTES.EPCFGMODE,
 			data[j].ATTRIBUTES.PMAUTOSW,
 			data[j].ATTRIBUTES.DIRECTIPSECPRIMATCHSW,
-			data[j].ATTRIBUTES.MODELSELECT,
+			data[j].ATTRIBUTES.MODELSELECT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gtranspara data has been saved")
@@ -6506,16 +6933,17 @@ func insertGtranspara(baseName string, data []model.Gtranspara) {
 	tx.Commit()
 }
 
-func insertGtransparagw(baseName string, data []model.Gtransparagw) {
+
+func insertGtransparagw(eNodeBId string, baseName string, data []model.Gtransparagw) {
 	fmt.Println("Processing Gtransparagw data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtransparagw` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtransparagw` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PRIRULE,
 			data[j].ATTRIBUTES.LPSCHSW,
 			data[j].ATTRIBUTES.RATECFGTYPE,
@@ -6531,7 +6959,8 @@ func insertGtransparagw(baseName string, data []model.Gtransparagw) {
 			data[j].ATTRIBUTES.PORTULOBSW,
 			data[j].ATTRIBUTES.PORTDLOBSW,
 			data[j].ATTRIBUTES.PORTULCACSW,
-			data[j].ATTRIBUTES.PORTDLCACSW,
+			data[j].ATTRIBUTES.PORTDLCACSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gtransparagw data has been saved")
@@ -6539,23 +6968,25 @@ func insertGtransparagw(baseName string, data []model.Gtransparagw) {
 	tx.Commit()
 }
 
-func insertGtrxgroup(baseName string, data []model.Gtrxgroup) {
+
+func insertGtrxgroup(eNodeBId string, baseName string, data []model.Gtrxgroup) {
 	fmt.Println("Processing Gtrxgroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtrxgroup` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtrxgroup` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GTRXGROUPID,
 			data[j].ATTRIBUTES.GLOCELLID,
 			data[j].ATTRIBUTES.SNDMD,
 			data[j].ATTRIBUTES.RCVMD,
 			data[j].ATTRIBUTES.WORKMODE,
 			data[j].ATTRIBUTES.USERLABEL,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gtrxgroup data has been saved")
@@ -6563,19 +6994,21 @@ func insertGtrxgroup(baseName string, data []model.Gtrxgroup) {
 	tx.Commit()
 }
 
-func insertGtrxgroupsectoreqm(baseName string, data []model.Gtrxgroupsectoreqm) {
+
+func insertGtrxgroupsectoreqm(eNodeBId string, baseName string, data []model.Gtrxgroupsectoreqm) {
 	fmt.Println("Processing Gtrxgroupsectoreqm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtrxgroupsectoreqm` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `gtrxgroupsectoreqm` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GTRXGROUPID,
 			data[j].ATTRIBUTES.SECTOREQMID,
-			data[j].ATTRIBUTES.MAXPOWER,
+			data[j].ATTRIBUTES.MAXPOWER,	
+
 		)
 		checkErr(err)
 		fmt.Println("Gtrxgroupsectoreqm data has been saved")
@@ -6583,16 +7016,17 @@ func insertGtrxgroupsectoreqm(baseName string, data []model.Gtrxgroupsectoreqm) 
 	tx.Commit()
 }
 
-func insertHighspdadaptionpara(baseName string, data []model.Highspdadaptionpara) {
+
+func insertHighspdadaptionpara(eNodeBId string, baseName string, data []model.Highspdadaptionpara) {
 	fmt.Println("Processing Highspdadaptionpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `highspdadaptionpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `highspdadaptionpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.UserLowSpeedJudgeNum,
 			data[j].ATTRIBUTES.DopplerFactor,
@@ -6603,7 +7037,8 @@ func insertHighspdadaptionpara(baseName string, data []model.Highspdadaptionpara
 			data[j].ATTRIBUTES.InterfBasedPowerOff,
 			data[j].ATTRIBUTES.InterfBasedRbRatio,
 			data[j].ATTRIBUTES.HighspdVectorUpdatePeriod,
-			data[j].ATTRIBUTES.HighspdVectorUpdateSwitch,
+			data[j].ATTRIBUTES.HighspdVectorUpdateSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Highspdadaptionpara data has been saved")
@@ -6611,16 +7046,17 @@ func insertHighspdadaptionpara(baseName string, data []model.Highspdadaptionpara
 	tx.Commit()
 }
 
-func insertHomeascomm(baseName string, data []model.Homeascomm) {
+
+func insertHomeascomm(eNodeBId string, baseName string, data []model.Homeascomm) {
 	fmt.Println("Processing Homeascomm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `homeascomm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `homeascomm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.GapPatternType,
 			data[j].ATTRIBUTES.EutranFilterCoeffRsrp,
 			data[j].ATTRIBUTES.EutranFilterCoeffRsrq,
@@ -6634,7 +7070,8 @@ func insertHomeascomm(baseName string, data []model.Homeascomm) {
 			data[j].ATTRIBUTES.NonResHoPreFailPunishTimes,
 			data[j].ATTRIBUTES.NonResHoPreFailRetryTimes,
 			data[j].ATTRIBUTES.DedicatedGapPatternType,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Homeascomm data has been saved")
@@ -6642,16 +7079,17 @@ func insertHomeascomm(baseName string, data []model.Homeascomm) {
 	tx.Commit()
 }
 
-func insertHtcdpa(baseName string, data []model.Htcdpa) {
+
+func insertHtcdpa(eNodeBId string, baseName string, data []model.Htcdpa) {
 	fmt.Println("Processing Htcdpa data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `htcdpa` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `htcdpa` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -6661,7 +7099,8 @@ func insertHtcdpa(baseName string, data []model.Htcdpa) {
 			data[j].ATTRIBUTES.DBD,
 			data[j].ATTRIBUTES.NTDI,
 			data[j].ATTRIBUTES.NTDO,
-			data[j].ATTRIBUTES.HTDO,
+			data[j].ATTRIBUTES.HTDO,	
+
 		)
 		checkErr(err)
 		fmt.Println("Htcdpa data has been saved")
@@ -6669,16 +7108,17 @@ func insertHtcdpa(baseName string, data []model.Htcdpa) {
 	tx.Commit()
 }
 
-func insertIkecfg(baseName string, data []model.Ikecfg) {
+
+func insertIkecfg(eNodeBId string, baseName string, data []model.Ikecfg) {
 	fmt.Println("Processing Ikecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ikecfg` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ikecfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IKELNM,
 			data[j].ATTRIBUTES.IKEKLI,
 			data[j].ATTRIBUTES.IKEKLT,
@@ -6688,7 +7128,8 @@ func insertIkecfg(baseName string, data []model.Ikecfg) {
 			data[j].ATTRIBUTES.IPSECSBWAITTIME,
 			data[j].ATTRIBUTES.IPSECSBRANDTIME,
 			data[j].ATTRIBUTES.IPSECSOWAITTIME,
-			data[j].ATTRIBUTES.IPSECSORANDTIME,
+			data[j].ATTRIBUTES.IPSECSORANDTIME,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ikecfg data has been saved")
@@ -6696,16 +7137,17 @@ func insertIkecfg(baseName string, data []model.Ikecfg) {
 	tx.Commit()
 }
 
-func insertImagrp(baseName string, data []model.Imagrp) {
+
+func insertImagrp(eNodeBId string, baseName string, data []model.Imagrp) {
 	fmt.Println("Processing Imagrp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `imagrp` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `imagrp` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -6717,7 +7159,8 @@ func insertImagrp(baseName string, data []model.Imagrp) {
 			data[j].ATTRIBUTES.DELAY,
 			data[j].ATTRIBUTES.SCRAM,
 			data[j].ATTRIBUTES.TS16,
-			data[j].ATTRIBUTES.SBT,
+			data[j].ATTRIBUTES.SBT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Imagrp data has been saved")
@@ -6725,23 +7168,25 @@ func insertImagrp(baseName string, data []model.Imagrp) {
 	tx.Commit()
 }
 
-func insertImalnk(baseName string, data []model.Imalnk) {
+
+func insertImalnk(eNodeBId string, baseName string, data []model.Imalnk) {
 	fmt.Println("Processing Imalnk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `imalnk` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `imalnk` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.IMALNKN,
 			data[j].ATTRIBUTES.IMAGRPN,
 			data[j].ATTRIBUTES.SBT,
-			data[j].ATTRIBUTES.IMAGRPSBT,
+			data[j].ATTRIBUTES.IMAGRPSBT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Imalnk data has been saved")
@@ -6749,19 +7194,21 @@ func insertImalnk(baseName string, data []model.Imalnk) {
 	tx.Commit()
 }
 
-func insertIngchktsk(baseName string, data []model.Ingchktsk) {
+
+func insertIngchktsk(eNodeBId string, baseName string, data []model.Ingchktsk) {
 	fmt.Println("Processing Ingchktsk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ingchktsk` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ingchktsk` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.FLINGCHKSW,
 			data[j].ATTRIBUTES.FLINGCHKTM,
-			data[j].ATTRIBUTES.FLINGCHKITEM,
+			data[j].ATTRIBUTES.FLINGCHKITEM,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ingchktsk data has been saved")
@@ -6769,16 +7216,17 @@ func insertIngchktsk(baseName string, data []model.Ingchktsk) {
 	tx.Commit()
 }
 
-func insertInterfreqhogroup(baseName string, data []model.Interfreqhogroup) {
+
+func insertInterfreqhogroup(eNodeBId string, baseName string, data []model.Interfreqhogroup) {
 	fmt.Println("Processing Interfreqhogroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `interfreqhogroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `interfreqhogroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.InterFreqHoGroupId,
 			data[j].ATTRIBUTES.InterFreqHoA1A2Hyst,
@@ -6813,7 +7261,8 @@ func insertInterfreqhogroup(baseName string, data []model.Interfreqhogroup) {
 			data[j].ATTRIBUTES.UlHeavyTrafficMlbA4ThdRsrp,
 			data[j].ATTRIBUTES.UlHeavyTrafficMlbA4ThdRsrq,
 			data[j].ATTRIBUTES.InterFreqHoA1ThdRsrpCE,
-			data[j].ATTRIBUTES.InterFreqHoA2ThdRsrpCE,
+			data[j].ATTRIBUTES.InterFreqHoA2ThdRsrpCE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Interfreqhogroup data has been saved")
@@ -6821,16 +7270,17 @@ func insertInterfreqhogroup(baseName string, data []model.Interfreqhogroup) {
 	tx.Commit()
 }
 
-func insertInterratcellshutdown(baseName string, data []model.Interratcellshutdown) {
+
+func insertInterratcellshutdown(eNodeBId string, baseName string, data []model.Interratcellshutdown) {
 	fmt.Println("Processing Interratcellshutdown data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `interratcellshutdown` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `interratcellshutdown` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ForceShutdownSwitch,
 			data[j].ATTRIBUTES.StartTime,
@@ -6845,7 +7295,8 @@ func insertInterratcellshutdown(baseName string, data []model.Interratcellshutdo
 			data[j].ATTRIBUTES.UtranCellUlLoadThd,
 			data[j].ATTRIBUTES.UtranCellUlLoadOffset,
 			data[j].ATTRIBUTES.GeranCellLoadThd,
-			data[j].ATTRIBUTES.GeranCellLoadOffset,
+			data[j].ATTRIBUTES.GeranCellLoadOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Interratcellshutdown data has been saved")
@@ -6853,22 +7304,24 @@ func insertInterratcellshutdown(baseName string, data []model.Interratcellshutdo
 	tx.Commit()
 }
 
-func insertInterrathocdma1xrttgroup(baseName string, data []model.Interrathocdma1xrttgroup) {
+
+func insertInterrathocdma1xrttgroup(eNodeBId string, baseName string, data []model.Interrathocdma1xrttgroup) {
 	fmt.Println("Processing Interrathocdma1xrttgroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathocdma1xrttgroup` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathocdma1xrttgroup` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.InterRatHoCdma1xRttGroupId,
 			data[j].ATTRIBUTES.InterRatHoCdmaB1Hyst,
 			data[j].ATTRIBUTES.InterRatHoCdmaB1ThdPs,
 			data[j].ATTRIBUTES.InterRatHoCdmaB1TimeToTrig,
-			data[j].ATTRIBUTES.LdSvBasedHoCdmaB1ThdPs,
+			data[j].ATTRIBUTES.LdSvBasedHoCdmaB1ThdPs,	
+
 		)
 		checkErr(err)
 		fmt.Println("Interrathocdma1xrttgroup data has been saved")
@@ -6876,16 +7329,17 @@ func insertInterrathocdma1xrttgroup(baseName string, data []model.Interrathocdma
 	tx.Commit()
 }
 
-func insertInterrathocdmahrpdgroup(baseName string, data []model.Interrathocdmahrpdgroup) {
+
+func insertInterrathocdmahrpdgroup(eNodeBId string, baseName string, data []model.Interrathocdmahrpdgroup) {
 	fmt.Println("Processing Interrathocdmahrpdgroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathocdmahrpdgroup` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathocdmahrpdgroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.InterRatHoCdmaHrpdGroupId,
 			data[j].ATTRIBUTES.InterRatHoCdmaB1Hyst,
@@ -6895,7 +7349,8 @@ func insertInterrathocdmahrpdgroup(baseName string, data []model.Interrathocdmah
 			data[j].ATTRIBUTES.Cdma2000HrpdB2Thd1Rsrp,
 			data[j].ATTRIBUTES.Cdma2000HrpdB2Thd1Rsrq,
 			data[j].ATTRIBUTES.Cdma2000HrpdNonB2ThdRsrp,
-			data[j].ATTRIBUTES.Cdma2000HrpdNonB2ThdRsrq,
+			data[j].ATTRIBUTES.Cdma2000HrpdNonB2ThdRsrq,	
+
 		)
 		checkErr(err)
 		fmt.Println("Interrathocdmahrpdgroup data has been saved")
@@ -6903,16 +7358,17 @@ func insertInterrathocdmahrpdgroup(baseName string, data []model.Interrathocdmah
 	tx.Commit()
 }
 
-func insertInterrathocomm(baseName string, data []model.Interrathocomm) {
+
+func insertInterrathocomm(eNodeBId string, baseName string, data []model.Interrathocomm) {
 	fmt.Println("Processing Interrathocomm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathocomm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathocomm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.InterRatHoMaxRprtCell,
 			data[j].ATTRIBUTES.InterRatHoRprtAmount,
 			data[j].ATTRIBUTES.InterRatHoGeranRprtInterval,
@@ -6937,7 +7393,8 @@ func insertInterrathocomm(baseName string, data []model.Interrathocomm) {
 			data[j].ATTRIBUTES.UtranCellNumForEmcRedirect,
 			data[j].ATTRIBUTES.CdmaHrpdSectorIdSelMode,
 			data[j].ATTRIBUTES.IRatBlindRedirPlmnCfgSimSw,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Interrathocomm data has been saved")
@@ -6945,16 +7402,17 @@ func insertInterrathocomm(baseName string, data []model.Interrathocomm) {
 	tx.Commit()
 }
 
-func insertInterrathocommgroup(baseName string, data []model.Interrathocommgroup) {
+
+func insertInterrathocommgroup(eNodeBId string, baseName string, data []model.Interrathocommgroup) {
 	fmt.Println("Processing Interrathocommgroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathocommgroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathocommgroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.InterRatHoCommGroupId,
 			data[j].ATTRIBUTES.InterRatHoA1A2Hyst,
@@ -6968,7 +7426,8 @@ func insertInterrathocommgroup(baseName string, data []model.Interrathocommgroup
 			data[j].ATTRIBUTES.UtranB2Thd1Rsrp,
 			data[j].ATTRIBUTES.UtranB2Thd1Rsrq,
 			data[j].ATTRIBUTES.DelIfMeasA2ThdRsrpOffset,
-			data[j].ATTRIBUTES.DelIfMeasA2ThdRsrqOffset,
+			data[j].ATTRIBUTES.DelIfMeasA2ThdRsrqOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Interrathocommgroup data has been saved")
@@ -6976,22 +7435,24 @@ func insertInterrathocommgroup(baseName string, data []model.Interrathocommgroup
 	tx.Commit()
 }
 
-func insertInterrathogerangroup(baseName string, data []model.Interrathogerangroup) {
+
+func insertInterrathogerangroup(eNodeBId string, baseName string, data []model.Interrathogerangroup) {
 	fmt.Println("Processing Interrathogerangroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathogerangroup` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathogerangroup` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.InterRatHoGeranGroupId,
 			data[j].ATTRIBUTES.InterRatHoGeranB1Hyst,
 			data[j].ATTRIBUTES.InterRatHoGeranB1Thd,
 			data[j].ATTRIBUTES.InterRatHoGeranB1TimeToTrig,
-			data[j].ATTRIBUTES.LdSvBasedHoGeranB1Thd,
+			data[j].ATTRIBUTES.LdSvBasedHoGeranB1Thd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Interrathogerangroup data has been saved")
@@ -6999,16 +7460,17 @@ func insertInterrathogerangroup(baseName string, data []model.Interrathogerangro
 	tx.Commit()
 }
 
-func insertInterrathoutrangroup(baseName string, data []model.Interrathoutrangroup) {
+
+func insertInterrathoutrangroup(eNodeBId string, baseName string, data []model.Interrathoutrangroup) {
 	fmt.Println("Processing Interrathoutrangroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathoutrangroup` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `interrathoutrangroup` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.InterRatHoUtranGroupId,
 			data[j].ATTRIBUTES.InterRatHoUtranB1ThdEcn0,
@@ -7017,7 +7479,8 @@ func insertInterrathoutrangroup(baseName string, data []model.Interrathoutrangro
 			data[j].ATTRIBUTES.InterRatHoUtranB1TimeToTrig,
 			data[j].ATTRIBUTES.LdSvBasedHoUtranB1ThdEcn0,
 			data[j].ATTRIBUTES.LdSvBasedHoUtranB1ThdRscp,
-			data[j].ATTRIBUTES.HSInterRatHoUtranB1TimeTrig,
+			data[j].ATTRIBUTES.HSInterRatHoUtranB1TimeTrig,	
+
 		)
 		checkErr(err)
 		fmt.Println("Interrathoutrangroup data has been saved")
@@ -7025,16 +7488,17 @@ func insertInterrathoutrangroup(baseName string, data []model.Interrathoutrangro
 	tx.Commit()
 }
 
-func insertInterratpolicycfggroup(baseName string, data []model.Interratpolicycfggroup) {
+
+func insertInterratpolicycfggroup(eNodeBId string, baseName string, data []model.Interratpolicycfggroup) {
 	fmt.Println("Processing Interratpolicycfggroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `interratpolicycfggroup` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `interratpolicycfggroup` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.InterRatPolicyCfgGroupId,
 			data[j].ATTRIBUTES.UtranHoCfg,
 			data[j].ATTRIBUTES.GeranGsmHoCfg,
@@ -7043,7 +7507,8 @@ func insertInterratpolicycfggroup(baseName string, data []model.Interratpolicycf
 			data[j].ATTRIBUTES.CdmaHrpdHoCfg,
 			data[j].ATTRIBUTES.NoHoFlag,
 			data[j].ATTRIBUTES.NoFastAnrFlag,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Interratpolicycfggroup data has been saved")
@@ -7051,23 +7516,25 @@ func insertInterratpolicycfggroup(baseName string, data []model.Interratpolicycf
 	tx.Commit()
 }
 
-func insertIntrafreqhogroup(baseName string, data []model.Intrafreqhogroup) {
+
+func insertIntrafreqhogroup(eNodeBId string, baseName string, data []model.Intrafreqhogroup) {
 	fmt.Println("Processing Intrafreqhogroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `intrafreqhogroup` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `intrafreqhogroup` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.IntraFreqHoGroupId,
 			data[j].ATTRIBUTES.IntraFreqHoA3Hyst,
 			data[j].ATTRIBUTES.IntraFreqHoA3Offset,
 			data[j].ATTRIBUTES.IntraFreqHoA3TimeToTrig,
 			data[j].ATTRIBUTES.HighSpeedA3TimeToTrig,
-			data[j].ATTRIBUTES.IntraFreqHoA2ThldRsrpCE,
+			data[j].ATTRIBUTES.IntraFreqHoA2ThldRsrpCE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Intrafreqhogroup data has been saved")
@@ -7075,16 +7542,17 @@ func insertIntrafreqhogroup(baseName string, data []model.Intrafreqhogroup) {
 	tx.Commit()
 }
 
-func insertIntrarathocomm(baseName string, data []model.Intrarathocomm) {
+
+func insertIntrarathocomm(eNodeBId string, baseName string, data []model.Intrarathocomm) {
 	fmt.Println("Processing Intrarathocomm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `intrarathocomm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `intrarathocomm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IntraRatHoMaxRprtCell,
 			data[j].ATTRIBUTES.IntraRatHoRprtAmount,
 			data[j].ATTRIBUTES.IntraFreqHoA3TrigQuan,
@@ -7098,7 +7566,8 @@ func insertIntrarathocomm(baseName string, data []model.Intrarathocomm) {
 			data[j].ATTRIBUTES.CovBasedIfHoWaitingTimer,
 			data[j].ATTRIBUTES.A3InterFreqHoA1A2TrigQuan,
 			data[j].ATTRIBUTES.ObjId,
-			data[j].ATTRIBUTES.FreqPriHoCandidateUeSelPer,
+			data[j].ATTRIBUTES.FreqPriHoCandidateUeSelPer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Intrarathocomm data has been saved")
@@ -7106,20 +7575,22 @@ func insertIntrarathocomm(baseName string, data []model.Intrarathocomm) {
 	tx.Commit()
 }
 
-func insertIopscfg(baseName string, data []model.Iopscfg) {
+
+func insertIopscfg(eNodeBId string, baseName string, data []model.Iopscfg) {
 	fmt.Println("Processing Iopscfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `iopscfg` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `iopscfg` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IopsSwitch,
 			data[j].ATTRIBUTES.EnterIopsThd,
 			data[j].ATTRIBUTES.ExitIopsThd,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Iopscfg data has been saved")
@@ -7127,16 +7598,17 @@ func insertIopscfg(baseName string, data []model.Iopscfg) {
 	tx.Commit()
 }
 
-func insertIpclklnk(baseName string, data []model.Ipclklnk) {
+
+func insertIpclklnk(eNodeBId string, baseName string, data []model.Ipclklnk) {
 	fmt.Println("Processing Ipclklnk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ipclklnk` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ipclklnk` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LN,
 			data[j].ATTRIBUTES.ICPT,
 			data[j].ATTRIBUTES.CN,
@@ -7165,7 +7637,8 @@ func insertIpclklnk(baseName string, data []model.Ipclklnk) {
 			data[j].ATTRIBUTES.DEVTYPE,
 			data[j].ATTRIBUTES.DSTMLTMACTYPE,
 			data[j].ATTRIBUTES.DELAYFREQ,
-			data[j].ATTRIBUTES.IPSYNCMODE,
+			data[j].ATTRIBUTES.IPSYNCMODE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ipclklnk data has been saved")
@@ -7173,21 +7646,23 @@ func insertIpclklnk(baseName string, data []model.Ipclklnk) {
 	tx.Commit()
 }
 
-func insertIpguard(baseName string, data []model.Ipguard) {
+
+func insertIpguard(eNodeBId string, baseName string, data []model.Ipguard) {
 	fmt.Println("Processing Ipguard data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ipguard` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ipguard` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ARPSPOOFCHKSW,
 			data[j].ATTRIBUTES.ARPLRNSTRICTSW,
 			data[j].ATTRIBUTES.INVALIDPKTCHKSW,
 			data[j].ATTRIBUTES.IPSECREPLAYCHKSW,
-			data[j].ATTRIBUTES.REDIRECTDOSCHKSW,
+			data[j].ATTRIBUTES.REDIRECTDOSCHKSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ipguard data has been saved")
@@ -7195,16 +7670,17 @@ func insertIpguard(baseName string, data []model.Ipguard) {
 	tx.Commit()
 }
 
-func insertIppath(baseName string, data []model.Ippath) {
+
+func insertIppath(eNodeBId string, baseName string, data []model.Ippath) {
 	fmt.Println("Processing Ippath data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ippath` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ippath` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PATHID,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
@@ -7221,7 +7697,8 @@ func insertIppath(baseName string, data []model.Ippath) {
 			data[j].ATTRIBUTES.SBT,
 			data[j].ATTRIBUTES.VRFIDX,
 			data[j].ATTRIBUTES.JNRSCGRP,
-			data[j].ATTRIBUTES.STATICCHK,
+			data[j].ATTRIBUTES.STATICCHK,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ippath data has been saved")
@@ -7229,16 +7706,17 @@ func insertIppath(baseName string, data []model.Ippath) {
 	tx.Commit()
 }
 
-func insertIppmsession(baseName string, data []model.Ippmsession) {
+
+func insertIppmsession(eNodeBId string, baseName string, data []model.Ippmsession) {
 	fmt.Println("Processing Ippmsession data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ippmsession` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ippmsession` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IPPMSN,
 			data[j].ATTRIBUTES.LOCALIP,
 			data[j].ATTRIBUTES.PEERIP,
@@ -7247,7 +7725,8 @@ func insertIppmsession(baseName string, data []model.Ippmsession) {
 			data[j].ATTRIBUTES.IPPMTYPE,
 			data[j].ATTRIBUTES.BINDPATH,
 			data[j].ATTRIBUTES.ASSOCIATEUPPATHPLR,
-			data[j].ATTRIBUTES.PATHID,
+			data[j].ATTRIBUTES.PATHID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ippmsession data has been saved")
@@ -7255,16 +7734,17 @@ func insertIppmsession(baseName string, data []model.Ippmsession) {
 	tx.Commit()
 }
 
-func insertIprt(baseName string, data []model.Iprt) {
+
+func insertIprt(eNodeBId string, baseName string, data []model.Iprt) {
 	fmt.Println("Processing Iprt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `iprt` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `iprt` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RTIDX,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
@@ -7277,7 +7757,8 @@ func insertIprt(baseName string, data []model.Iprt) {
 			data[j].ATTRIBUTES.NEXTHOP,
 			data[j].ATTRIBUTES.MTUSWITCH,
 			data[j].ATTRIBUTES.PREF,
-			data[j].ATTRIBUTES.DESCRI,
+			data[j].ATTRIBUTES.DESCRI,	
+
 		)
 		checkErr(err)
 		fmt.Println("Iprt data has been saved")
@@ -7285,20 +7766,22 @@ func insertIprt(baseName string, data []model.Iprt) {
 	tx.Commit()
 }
 
-func insertIratncellclassmgt(baseName string, data []model.Iratncellclassmgt) {
+
+func insertIratncellclassmgt(eNodeBId string, baseName string, data []model.Iratncellclassmgt) {
 	fmt.Println("Processing Iratncellclassmgt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `iratncellclassmgt` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `iratncellclassmgt` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RatType,
 			data[j].ATTRIBUTES.StatPeriodForNcellClass,
 			data[j].ATTRIBUTES.NCellMeasNumThd,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Iratncellclassmgt data has been saved")
@@ -7306,21 +7789,23 @@ func insertIratncellclassmgt(baseName string, data []model.Iratncellclassmgt) {
 	tx.Commit()
 }
 
-func insertIub(baseName string, data []model.Iub) {
+
+func insertIub(eNodeBId string, baseName string, data []model.Iub) {
 	fmt.Println("Processing Iub data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `iub` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `iub` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IUBID,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.UPEPGROUPID,
 			data[j].ATTRIBUTES.USERLABEL,
-			data[j].ATTRIBUTES.STATICCHKSW,
+			data[j].ATTRIBUTES.STATICCHKSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Iub data has been saved")
@@ -7328,21 +7813,23 @@ func insertIub(baseName string, data []model.Iub) {
 	tx.Commit()
 }
 
-func insertIubcp(baseName string, data []model.Iubcp) {
+
+func insertIubcp(eNodeBId string, baseName string, data []model.Iubcp) {
 	fmt.Println("Processing Iubcp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `iubcp` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `iubcp` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CPPT,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.CPPN,
 			data[j].ATTRIBUTES.CPBEARID,
-			data[j].ATTRIBUTES.BELONG,
+			data[j].ATTRIBUTES.BELONG,	
+
 		)
 		checkErr(err)
 		fmt.Println("Iubcp data has been saved")
@@ -7350,21 +7837,23 @@ func insertIubcp(baseName string, data []model.Iubcp) {
 	tx.Commit()
 }
 
-func insertLansw(baseName string, data []model.Lansw) {
+
+func insertLansw(eNodeBId string, baseName string, data []model.Lansw) {
 	fmt.Println("Processing Lansw data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lansw` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lansw` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.BCPKTRATETHD,
 			data[j].ATTRIBUTES.MACAGINGTIME,
 			data[j].ATTRIBUTES.DYNAMICMACLRNSW,
 			data[j].ATTRIBUTES.SRCMACATTACKCHKSW,
-			data[j].ATTRIBUTES.SRCMACATTACKALMTHD,
+			data[j].ATTRIBUTES.SRCMACATTACKALMTHD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lansw data has been saved")
@@ -7372,19 +7861,21 @@ func insertLansw(baseName string, data []model.Lansw) {
 	tx.Commit()
 }
 
-func insertLanswitchport(baseName string, data []model.Lanswitchport) {
+
+func insertLanswitchport(eNodeBId string, baseName string, data []model.Lanswitchport) {
 	fmt.Println("Processing Lanswitchport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lanswitchport` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lanswitchport` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PORTIDX,
 			data[j].ATTRIBUTES.PORTTYPE,
-			data[j].ATTRIBUTES.USERLABLE,
+			data[j].ATTRIBUTES.USERLABLE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lanswitchport data has been saved")
@@ -7392,18 +7883,20 @@ func insertLanswitchport(baseName string, data []model.Lanswitchport) {
 	tx.Commit()
 }
 
-func insertLicensecontrolstrategy(baseName string, data []model.Licensecontrolstrategy) {
+
+func insertLicensecontrolstrategy(eNodeBId string, baseName string, data []model.Licensecontrolstrategy) {
 	fmt.Println("Processing Licensecontrolstrategy data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `licensecontrolstrategy` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `licensecontrolstrategy` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SmoothUpgradeTime,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Licensecontrolstrategy data has been saved")
@@ -7411,19 +7904,21 @@ func insertLicensecontrolstrategy(baseName string, data []model.Licensecontrolst
 	tx.Commit()
 }
 
-func insertLicratio(baseName string, data []model.Licratio) {
+
+func insertLicratio(eNodeBId string, baseName string, data []model.Licratio) {
 	fmt.Println("Processing Licratio data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `licratio` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `licratio` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.UpLicRatio,
 			data[j].ATTRIBUTES.TrafficSharingType,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Licratio data has been saved")
@@ -7431,23 +7926,25 @@ func insertLicratio(baseName string, data []model.Licratio) {
 	tx.Commit()
 }
 
-func insertLineclk(baseName string, data []model.Lineclk) {
+
+func insertLineclk(eNodeBId string, baseName string, data []model.Lineclk) {
 	fmt.Println("Processing Lineclk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lineclk` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lineclk` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LN,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.PT,
 			data[j].ATTRIBUTES.PN,
-			data[j].ATTRIBUTES.PRI,
+			data[j].ATTRIBUTES.PRI,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lineclk data has been saved")
@@ -7455,22 +7952,24 @@ func insertLineclk(baseName string, data []model.Lineclk) {
 	tx.Commit()
 }
 
-func insertLioptatomrule(baseName string, data []model.Lioptatomrule) {
+
+func insertLioptatomrule(eNodeBId string, baseName string, data []model.Lioptatomrule) {
 	fmt.Println("Processing Lioptatomrule data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptatomrule` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptatomrule` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.AtomRuleID,
 			data[j].ATTRIBUTES.MeasureObjType,
 			data[j].ATTRIBUTES.ConditionType,
 			data[j].ATTRIBUTES.ThresholdforNumPara,
 			data[j].ATTRIBUTES.MeasureObject,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lioptatomrule data has been saved")
@@ -7478,19 +7977,21 @@ func insertLioptatomrule(baseName string, data []model.Lioptatomrule) {
 	tx.Commit()
 }
 
-func insertLioptfeature(baseName string, data []model.Lioptfeature) {
+
+func insertLioptfeature(eNodeBId string, baseName string, data []model.Lioptfeature) {
 	fmt.Println("Processing Lioptfeature data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptfeature` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptfeature` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IOptFeatureID,
 			data[j].ATTRIBUTES.IOptFeatureName,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lioptfeature data has been saved")
@@ -7498,21 +7999,23 @@ func insertLioptfeature(baseName string, data []model.Lioptfeature) {
 	tx.Commit()
 }
 
-func insertLioptfunction(baseName string, data []model.Lioptfunction) {
+
+func insertLioptfunction(eNodeBId string, baseName string, data []model.Lioptfunction) {
 	fmt.Println("Processing Lioptfunction data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptfunction` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptfunction` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IOptFunctionID,
 			data[j].ATTRIBUTES.IOptFunctionName,
 			data[j].ATTRIBUTES.IOptFeatureID,
 			data[j].ATTRIBUTES.MeasureObjType,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lioptfunction data has been saved")
@@ -7520,16 +8023,17 @@ func insertLioptfunction(baseName string, data []model.Lioptfunction) {
 	tx.Commit()
 }
 
-func insertLioptrule(baseName string, data []model.Lioptrule) {
+
+func insertLioptrule(eNodeBId string, baseName string, data []model.Lioptrule) {
 	fmt.Println("Processing Lioptrule data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptrule` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptrule` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RuleID,
 			data[j].ATTRIBUTES.ActionType,
 			data[j].ATTRIBUTES.AtomRuleRelationType,
@@ -7539,7 +8043,8 @@ func insertLioptrule(baseName string, data []model.Lioptrule) {
 			data[j].ATTRIBUTES.PenaltyTime,
 			data[j].ATTRIBUTES.AdaptiveRAT,
 			data[j].ATTRIBUTES.ActiveStatus,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lioptrule data has been saved")
@@ -7547,20 +8052,22 @@ func insertLioptrule(baseName string, data []model.Lioptrule) {
 	tx.Commit()
 }
 
-func insertLioptrulemember(baseName string, data []model.Lioptrulemember) {
+
+func insertLioptrulemember(eNodeBId string, baseName string, data []model.Lioptrulemember) {
 	fmt.Println("Processing Lioptrulemember data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptrulemember` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lioptrulemember` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RuleID,
 			data[j].ATTRIBUTES.AtomRuleID,
 			data[j].ATTRIBUTES.ActiveStatus,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lioptrulemember data has been saved")
@@ -7568,22 +8075,24 @@ func insertLioptrulemember(baseName string, data []model.Lioptrulemember) {
 	tx.Commit()
 }
 
-func insertLldpglobal(baseName string, data []model.Lldpglobal) {
+
+func insertLldpglobal(eNodeBId string, baseName string, data []model.Lldpglobal) {
 	fmt.Println("Processing Lldpglobal data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lldpglobal` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lldpglobal` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TXINTVAL,
 			data[j].ATTRIBUTES.HOLDMULTI,
 			data[j].ATTRIBUTES.REINITDELAY,
 			data[j].ATTRIBUTES.DELAY,
 			data[j].ATTRIBUTES.NOTIFYSW,
-			data[j].ATTRIBUTES.NOTIFYINTERVAL,
+			data[j].ATTRIBUTES.NOTIFYINTERVAL,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lldpglobal data has been saved")
@@ -7591,19 +8100,21 @@ func insertLldpglobal(baseName string, data []model.Lldpglobal) {
 	tx.Commit()
 }
 
-func insertLocalethport(baseName string, data []model.Localethport) {
+
+func insertLocalethport(eNodeBId string, baseName string, data []model.Localethport) {
 	fmt.Println("Processing Localethport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `localethport` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `localethport` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SWITCH,
 			data[j].ATTRIBUTES.GRATUITOUSARPSW,
-			data[j].ATTRIBUTES.IP6SW,
+			data[j].ATTRIBUTES.IP6SW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Localethport data has been saved")
@@ -7611,18 +8122,20 @@ func insertLocalethport(baseName string, data []model.Localethport) {
 	tx.Commit()
 }
 
-func insertLocalip(baseName string, data []model.Localip) {
+
+func insertLocalip(eNodeBId string, baseName string, data []model.Localip) {
 	fmt.Println("Processing Localip data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `localip` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `localip` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IP,
-			data[j].ATTRIBUTES.MASK,
+			data[j].ATTRIBUTES.MASK,	
+
 		)
 		checkErr(err)
 		fmt.Println("Localip data has been saved")
@@ -7630,18 +8143,20 @@ func insertLocalip(baseName string, data []model.Localip) {
 	tx.Commit()
 }
 
-func insertLocalip6(baseName string, data []model.Localip6) {
+
+func insertLocalip6(eNodeBId string, baseName string, data []model.Localip6) {
 	fmt.Println("Processing Localip6 data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `localip6` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `localip6` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IP6,
-			data[j].ATTRIBUTES.PFXLEN,
+			data[j].ATTRIBUTES.PFXLEN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Localip6 data has been saved")
@@ -7649,22 +8164,24 @@ func insertLocalip6(baseName string, data []model.Localip6) {
 	tx.Commit()
 }
 
-func insertLocalwap(baseName string, data []model.Localwap) {
+
+func insertLocalwap(eNodeBId string, baseName string, data []model.Localwap) {
 	fmt.Println("Processing Localwap data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `localwap` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `localwap` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SWITCH,
 			data[j].ATTRIBUTES.SSID,
 			data[j].ATTRIBUTES.SHOWSSID,
 			data[j].ATTRIBUTES.AUTODISABLETIME,
 			data[j].ATTRIBUTES.REGIONCODE,
-			data[j].ATTRIBUTES.CHANNEL,
+			data[j].ATTRIBUTES.CHANNEL,	
+
 		)
 		checkErr(err)
 		fmt.Println("Localwap data has been saved")
@@ -7672,16 +8189,17 @@ func insertLocalwap(baseName string, data []model.Localwap) {
 	tx.Commit()
 }
 
-func insertLocation(baseName string, data []model.Location) {
+
+func insertLocation(eNodeBId string, baseName string, data []model.Location) {
 	fmt.Println("Processing Location data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `location` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `location` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ADDRESS,
 			data[j].ATTRIBUTES.ALTITUDE,
 			data[j].ATTRIBUTES.CITY,
@@ -7698,7 +8216,8 @@ func insertLocation(baseName string, data []model.Location) {
 			data[j].ATTRIBUTES.USERLABEL,
 			data[j].ATTRIBUTES.PRECISE,
 			data[j].ATTRIBUTES.MODE,
-			data[j].ATTRIBUTES.LOCATIONTYPE,
+			data[j].ATTRIBUTES.LOCATIONTYPE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Location data has been saved")
@@ -7706,16 +8225,17 @@ func insertLocation(baseName string, data []model.Location) {
 	tx.Commit()
 }
 
-func insertLwamgtcfg(baseName string, data []model.Lwamgtcfg) {
+
+func insertLwamgtcfg(eNodeBId string, baseName string, data []model.Lwamgtcfg) {
 	fmt.Println("Processing Lwamgtcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `lwamgtcfg` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `lwamgtcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.LteWlanAggrW1ThdRssi,
 			data[j].ATTRIBUTES.LteWlanAggrW2Thd1Rssi,
@@ -7724,7 +8244,8 @@ func insertLwamgtcfg(baseName string, data []model.Lwamgtcfg) {
 			data[j].ATTRIBUTES.LwaW2TimeToTrigger,
 			data[j].ATTRIBUTES.LwaW3TimeToTrigger,
 			data[j].ATTRIBUTES.WlanMeasHyst,
-			data[j].ATTRIBUTES.CellLwaAlgoSwitch,
+			data[j].ATTRIBUTES.CellLwaAlgoSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Lwamgtcfg data has been saved")
@@ -7732,21 +8253,23 @@ func insertLwamgtcfg(baseName string, data []model.Lwamgtcfg) {
 	tx.Commit()
 }
 
-func insertMainsalarmbind(baseName string, data []model.Mainsalarmbind) {
+
+func insertMainsalarmbind(eNodeBId string, baseName string, data []model.Mainsalarmbind) {
 	fmt.Println("Processing Mainsalarmbind data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `mainsalarmbind` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `mainsalarmbind` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ISDSWITCH,
 			data[j].ATTRIBUTES.NMSACN,
 			data[j].ATTRIBUTES.NMSASRN,
 			data[j].ATTRIBUTES.NMSASN,
-			data[j].ATTRIBUTES.NMSAPN,
+			data[j].ATTRIBUTES.NMSAPN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Mainsalarmbind data has been saved")
@@ -7754,17 +8277,19 @@ func insertMainsalarmbind(baseName string, data []model.Mainsalarmbind) {
 	tx.Commit()
 }
 
-func insertManresalmrpt(baseName string, data []model.Manresalmrpt) {
+
+func insertManresalmrpt(eNodeBId string, baseName string, data []model.Manresalmrpt) {
 	fmt.Println("Processing Manresalmrpt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `manresalmrpt` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `manresalmrpt` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.SWITCH,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.SWITCH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Manresalmrpt data has been saved")
@@ -7772,20 +8297,22 @@ func insertManresalmrpt(baseName string, data []model.Manresalmrpt) {
 	tx.Commit()
 }
 
-func insertMbmspara(baseName string, data []model.Mbmspara) {
+
+func insertMbmspara(eNodeBId string, baseName string, data []model.Mbmspara) {
 	fmt.Println("Processing Mbmspara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `mbmspara` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `mbmspara` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SyncPeriod,
 			data[j].ATTRIBUTES.MbmsCtrlSwitch,
 			data[j].ATTRIBUTES.M2DisconnProtectTime,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Mbmspara data has been saved")
@@ -7793,19 +8320,21 @@ func insertMbmspara(baseName string, data []model.Mbmspara) {
 	tx.Commit()
 }
 
-func insertMmefeaturecfg(baseName string, data []model.Mmefeaturecfg) {
+
+func insertMmefeaturecfg(eNodeBId string, baseName string, data []model.Mmefeaturecfg) {
 	fmt.Println("Processing Mmefeaturecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `mmefeaturecfg` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `mmefeaturecfg` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.S1InterfaceId,
 			data[j].ATTRIBUTES.MdtEnable,
-			data[j].ATTRIBUTES.CtrlMode,
+			data[j].ATTRIBUTES.CtrlMode,	
+
 		)
 		checkErr(err)
 		fmt.Println("Mmefeaturecfg data has been saved")
@@ -7813,23 +8342,25 @@ func insertMmefeaturecfg(baseName string, data []model.Mmefeaturecfg) {
 	tx.Commit()
 }
 
-func insertMpt(baseName string, data []model.Mpt) {
+
+func insertMpt(eNodeBId string, baseName string, data []model.Mpt) {
 	fmt.Println("Processing Mpt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `mpt` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `mpt` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.TYPE,
 			data[j].ATTRIBUTES.SWITCH,
 			data[j].ATTRIBUTES.BRDSPEC,
-			data[j].ATTRIBUTES.MPTWORKMODE,
+			data[j].ATTRIBUTES.MPTWORKMODE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Mpt data has been saved")
@@ -7837,19 +8368,21 @@ func insertMpt(baseName string, data []model.Mpt) {
 	tx.Commit()
 }
 
-func insertMptresassignment(baseName string, data []model.Mptresassignment) {
+
+func insertMptresassignment(eNodeBId string, baseName string, data []model.Mptresassignment) {
 	fmt.Println("Processing Mptresassignment data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `mptresassignment` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `mptresassignment` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.MasterMptAssignmentMode,
 			data[j].ATTRIBUTES.SlaveMptAssignmentMode,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Mptresassignment data has been saved")
@@ -7857,16 +8390,17 @@ func insertMptresassignment(baseName string, data []model.Mptresassignment) {
 	tx.Commit()
 }
 
-func insertMro(baseName string, data []model.Mro) {
+
+func insertMro(eNodeBId string, baseName string, data []model.Mro) {
 	fmt.Println("Processing Mro data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `mro` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `mro` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OptPeriod,
 			data[j].ATTRIBUTES.NcellOptThd,
 			data[j].ATTRIBUTES.StatNumThd,
@@ -7892,7 +8426,8 @@ func insertMro(baseName string, data []model.Mro) {
 			data[j].ATTRIBUTES.InterRatMeasTooLateHoThd,
 			data[j].ATTRIBUTES.UnnecInterRatHoRatioThd,
 			data[j].ATTRIBUTES.UnnecInterRatHoMeasTime,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Mro data has been saved")
@@ -7900,21 +8435,23 @@ func insertMro(baseName string, data []model.Mro) {
 	tx.Commit()
 }
 
-func insertNbcelldlschcealgo(baseName string, data []model.Nbcelldlschcealgo) {
+
+func insertNbcelldlschcealgo(eNodeBId string, baseName string, data []model.Nbcelldlschcealgo) {
 	fmt.Println("Processing Nbcelldlschcealgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nbcelldlschcealgo` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nbcelldlschcealgo` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CoverageLevel,
 			data[j].ATTRIBUTES.DlInitialTransRptCount,
 			data[j].ATTRIBUTES.DlInitialMcs,
-			data[j].ATTRIBUTES.UuMessageWaitingTimer,
+			data[j].ATTRIBUTES.UuMessageWaitingTimer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nbcelldlschcealgo data has been saved")
@@ -7922,23 +8459,25 @@ func insertNbcelldlschcealgo(baseName string, data []model.Nbcelldlschcealgo) {
 	tx.Commit()
 }
 
-func insertNbcellulschcealgo(baseName string, data []model.Nbcellulschcealgo) {
+
+func insertNbcellulschcealgo(eNodeBId string, baseName string, data []model.Nbcellulschcealgo) {
 	fmt.Println("Processing Nbcellulschcealgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nbcellulschcealgo` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nbcellulschcealgo` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.CoverageLevel,
 			data[j].ATTRIBUTES.UlInitialMcs,
 			data[j].ATTRIBUTES.UlInitialTransRptCount,
 			data[j].ATTRIBUTES.AckNackTransRptCount,
 			data[j].ATTRIBUTES.AckNackTransRptCountMsg4,
-			data[j].ATTRIBUTES.NbLogicChSrProhibitTimer,
+			data[j].ATTRIBUTES.NbLogicChSrProhibitTimer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nbcellulschcealgo data has been saved")
@@ -7946,22 +8485,24 @@ func insertNbcellulschcealgo(baseName string, data []model.Nbcellulschcealgo) {
 	tx.Commit()
 }
 
-func insertNcellclassmgt(baseName string, data []model.Ncellclassmgt) {
+
+func insertNcellclassmgt(eNodeBId string, baseName string, data []model.Ncellclassmgt) {
 	fmt.Println("Processing Ncellclassmgt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ncellclassmgt` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ncellclassmgt` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.StatPeriodForNcellClass,
 			data[j].ATTRIBUTES.HoAttemptThd,
 			data[j].ATTRIBUTES.CaSCellCfgThd,
 			data[j].ATTRIBUTES.HoSuccThd,
 			data[j].ATTRIBUTES.IntraRatNcellMgtMode,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ncellclassmgt data has been saved")
@@ -7969,19 +8510,21 @@ func insertNcellclassmgt(baseName string, data []model.Ncellclassmgt) {
 	tx.Commit()
 }
 
-func insertNcelldlrsrpmeaspara(baseName string, data []model.Ncelldlrsrpmeaspara) {
+
+func insertNcelldlrsrpmeaspara(eNodeBId string, baseName string, data []model.Ncelldlrsrpmeaspara) {
 	fmt.Println("Processing Ncelldlrsrpmeaspara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ncelldlrsrpmeaspara` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ncelldlrsrpmeaspara` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DlRsrpAutoNCellMeasSwitch,
-			data[j].ATTRIBUTES.NCellDlRsrpMeasA3Offset,
+			data[j].ATTRIBUTES.NCellDlRsrpMeasA3Offset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ncelldlrsrpmeaspara data has been saved")
@@ -7989,22 +8532,24 @@ func insertNcelldlrsrpmeaspara(baseName string, data []model.Ncelldlrsrpmeaspara
 	tx.Commit()
 }
 
-func insertNcellparacfg(baseName string, data []model.Ncellparacfg) {
+
+func insertNcellparacfg(eNodeBId string, baseName string, data []model.Ncellparacfg) {
 	fmt.Println("Processing Ncellparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ncellparacfg` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ncellparacfg` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.RatType,
 			data[j].ATTRIBUTES.NCellOdDisThd,
 			data[j].ATTRIBUTES.HoStatThd,
 			data[j].ATTRIBUTES.HoSuccThd,
-			data[j].ATTRIBUTES.NcellNumForAnr,
+			data[j].ATTRIBUTES.NcellNumForAnr,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ncellparacfg data has been saved")
@@ -8012,20 +8557,22 @@ func insertNcellparacfg(baseName string, data []model.Ncellparacfg) {
 	tx.Commit()
 }
 
-func insertNcellsrsmeaspara(baseName string, data []model.Ncellsrsmeaspara) {
+
+func insertNcellsrsmeaspara(eNodeBId string, baseName string, data []model.Ncellsrsmeaspara) {
 	fmt.Println("Processing Ncellsrsmeaspara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ncellsrsmeaspara` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ncellsrsmeaspara` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.SrsAutoNCellMeasSwitch,
 			data[j].ATTRIBUTES.NCellSrsMeasA3Offset,
-			data[j].ATTRIBUTES.NCellMeasSwitch,
+			data[j].ATTRIBUTES.NCellMeasSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ncellsrsmeaspara data has been saved")
@@ -8033,16 +8580,17 @@ func insertNcellsrsmeaspara(baseName string, data []model.Ncellsrsmeaspara) {
 	tx.Commit()
 }
 
-func insertNe(baseName string, data []model.Ne) {
+
+func insertNe(eNodeBId string, baseName string, data []model.Ne) {
 	fmt.Println("Processing Ne data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ne` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ne` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LOCATION,
 			data[j].ATTRIBUTES.SWVERSION,
 			data[j].ATTRIBUTES.USERLABEL,
@@ -8054,7 +8602,8 @@ func insertNe(baseName string, data []model.Ne) {
 			data[j].ATTRIBUTES.SITENAME,
 			data[j].ATTRIBUTES.NENAME,
 			data[j].ATTRIBUTES.HOTPATCHVERSION,
-			data[j].ATTRIBUTES.CLOUDBBID,
+			data[j].ATTRIBUTES.CLOUDBBID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ne data has been saved")
@@ -8062,20 +8611,22 @@ func insertNe(baseName string, data []model.Ne) {
 	tx.Commit()
 }
 
-func insertNemnt(baseName string, data []model.Nemnt) {
+
+func insertNemnt(eNodeBId string, baseName string, data []model.Nemnt) {
 	fmt.Println("Processing Nemnt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nemnt` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nemnt` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.MNTMODE,
 			data[j].ATTRIBUTES.ST,
 			data[j].ATTRIBUTES.ET,
-			data[j].ATTRIBUTES.MMSETREMARK,
+			data[j].ATTRIBUTES.MMSETREMARK,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nemnt data has been saved")
@@ -8083,16 +8634,17 @@ func insertNemnt(baseName string, data []model.Nemnt) {
 	tx.Commit()
 }
 
-func insertNode(baseName string, data []model.Node) {
+
+func insertNode(eNodeBId string, baseName string, data []model.Node) {
 	fmt.Println("Processing Node data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `node` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `node` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PRODUCTTYPE,
 			data[j].ATTRIBUTES.USERLABEL,
 			data[j].ATTRIBUTES.NERMVERSION,
@@ -8106,7 +8658,8 @@ func insertNode(baseName string, data []model.Node) {
 			data[j].ATTRIBUTES.LMTVERSION,
 			data[j].ATTRIBUTES.APPVERSION,
 			data[j].ATTRIBUTES.APPHOTPATCHVERSION,
-			data[j].ATTRIBUTES.LTEMODE,
+			data[j].ATTRIBUTES.LTEMODE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Node data has been saved")
@@ -8114,16 +8667,17 @@ func insertNode(baseName string, data []model.Node) {
 	tx.Commit()
 }
 
-func insertNodebalgpara(baseName string, data []model.Nodebalgpara) {
+
+func insertNodebalgpara(eNodeBId string, baseName string, data []model.Nodebalgpara) {
 	fmt.Println("Processing Nodebalgpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebalgpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebalgpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.CERSVFOR2MSUSER,
 			data[j].ATTRIBUTES.CCPICPHASESWCTRL,
@@ -8187,7 +8741,8 @@ func insertNodebalgpara(baseName string, data []model.Nodebalgpara) {
 			data[j].ATTRIBUTES.OPERATORINDEXSELECTION,
 			data[j].ATTRIBUTES.NBISRESELPERIOD,
 			data[j].ATTRIBUTES.RTWPIMBALANCEALMTHD,
-			data[j].ATTRIBUTES.NBISINIACTTHD,
+			data[j].ATTRIBUTES.NBISINIACTTHD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebalgpara data has been saved")
@@ -8195,16 +8750,17 @@ func insertNodebalgpara(baseName string, data []model.Nodebalgpara) {
 	tx.Commit()
 }
 
-func insertNodebbbres(baseName string, data []model.Nodebbbres) {
+
+func insertNodebbbres(eNodeBId string, baseName string, data []model.Nodebbbres) {
 	fmt.Println("Processing Nodebbbres data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebbbres` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebbbres` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.NODEBBBRESID,
 			data[j].ATTRIBUTES.CN,
@@ -8212,7 +8768,8 @@ func insertNodebbbres(baseName string, data []model.Nodebbbres) {
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.CAPACITY,
 			data[j].ATTRIBUTES.ADMSTATE,
-			data[j].ATTRIBUTES.HCE,
+			data[j].ATTRIBUTES.HCE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebbbres data has been saved")
@@ -8220,23 +8777,25 @@ func insertNodebbbres(baseName string, data []model.Nodebbbres) {
 	tx.Commit()
 }
 
-func insertNodebchrlevel(baseName string, data []model.Nodebchrlevel) {
+
+func insertNodebchrlevel(eNodeBId string, baseName string, data []model.Nodebchrlevel) {
 	fmt.Println("Processing Nodebchrlevel data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebchrlevel` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebchrlevel` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.COMMCHREVENTSW,
 			data[j].ATTRIBUTES.USERCHREVENTSW,
 			data[j].ATTRIBUTES.COMMCHRPRDEVENTSW,
 			data[j].ATTRIBUTES.USERCHRPRDEVENTSW,
 			data[j].ATTRIBUTES.HSDPAKQIDIAGTHPTHD,
-			data[j].ATTRIBUTES.HSUPAKQIDIAGTHPTHD,
+			data[j].ATTRIBUTES.HSUPAKQIDIAGTHPTHD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebchrlevel data has been saved")
@@ -8244,19 +8803,21 @@ func insertNodebchrlevel(baseName string, data []model.Nodebchrlevel) {
 	tx.Commit()
 }
 
-func insertNodebclspatimer(baseName string, data []model.Nodebclspatimer) {
+
+func insertNodebclspatimer(eNodeBId string, baseName string, data []model.Nodebclspatimer) {
 	fmt.Println("Processing Nodebclspatimer data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebclspatimer` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebclspatimer` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LOWERLIMIT,
 			data[j].ATTRIBUTES.UPPERLIMIT,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebclspatimer data has been saved")
@@ -8264,16 +8825,17 @@ func insertNodebclspatimer(baseName string, data []model.Nodebclspatimer) {
 	tx.Commit()
 }
 
-func insertNodebfunction(baseName string, data []model.Nodebfunction) {
+
+func insertNodebfunction(eNodeBId string, baseName string, data []model.Nodebfunction) {
 	fmt.Println("Processing Nodebfunction data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebfunction` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebfunction` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.NODEBFUNCTIONNAME,
 			data[j].ATTRIBUTES.APPLICATIONREF,
@@ -8282,7 +8844,8 @@ func insertNodebfunction(baseName string, data []model.Nodebfunction) {
 			data[j].ATTRIBUTES.NODEBID,
 			data[j].ATTRIBUTES.PRODUCTVERSION,
 			data[j].ATTRIBUTES.INTERFACEID,
-			data[j].ATTRIBUTES.LMTVERSION,
+			data[j].ATTRIBUTES.LMTVERSION,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebfunction data has been saved")
@@ -8290,21 +8853,23 @@ func insertNodebfunction(baseName string, data []model.Nodebfunction) {
 	tx.Commit()
 }
 
-func insertNodeblicensealmthd(baseName string, data []model.Nodeblicensealmthd) {
+
+func insertNodeblicensealmthd(eNodeBId string, baseName string, data []model.Nodeblicensealmthd) {
 	fmt.Println("Processing Nodeblicensealmthd data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodeblicensealmthd` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodeblicensealmthd` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.OTHD,
 			data[j].ATTRIBUTES.OPRD,
 			data[j].ATTRIBUTES.RTHD,
 			data[j].ATTRIBUTES.RPRD,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodeblicensealmthd data has been saved")
@@ -8312,20 +8877,22 @@ func insertNodeblicensealmthd(baseName string, data []model.Nodeblicensealmthd) 
 	tx.Commit()
 }
 
-func insertNodebmulticellgrp(baseName string, data []model.Nodebmulticellgrp) {
+
+func insertNodebmulticellgrp(eNodeBId string, baseName string, data []model.Nodebmulticellgrp) {
 	fmt.Println("Processing Nodebmulticellgrp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebmulticellgrp` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebmulticellgrp` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.MULTICELLGRPID,
 			data[j].ATTRIBUTES.MULTICELLGRPTYPE,
 			data[j].ATTRIBUTES.OBJID,
-			data[j].ATTRIBUTES.ULOCELLREF,
+			data[j].ATTRIBUTES.ULOCELLREF,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebmulticellgrp data has been saved")
@@ -8333,20 +8900,22 @@ func insertNodebmulticellgrp(baseName string, data []model.Nodebmulticellgrp) {
 	tx.Commit()
 }
 
-func insertNodeboptdynadjpara(baseName string, data []model.Nodeboptdynadjpara) {
+
+func insertNodeboptdynadjpara(eNodeBId string, baseName string, data []model.Nodeboptdynadjpara) {
 	fmt.Println("Processing Nodeboptdynadjpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodeboptdynadjpara` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodeboptdynadjpara` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.DYNADJSW,
 			data[j].ATTRIBUTES.DYNADJSTARTTIME,
 			data[j].ATTRIBUTES.DYNADJENDTIME,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodeboptdynadjpara data has been saved")
@@ -8354,21 +8923,23 @@ func insertNodeboptdynadjpara(baseName string, data []model.Nodeboptdynadjpara) 
 	tx.Commit()
 }
 
-func insertNodebpoweroutage(baseName string, data []model.Nodebpoweroutage) {
+
+func insertNodebpoweroutage(eNodeBId string, baseName string, data []model.Nodebpoweroutage) {
 	fmt.Println("Processing Nodebpoweroutage data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebpoweroutage` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebpoweroutage` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ISDSW,
 			data[j].ATTRIBUTES.BAKPWRSAVPOLICY,
 			data[j].ATTRIBUTES.PHASE1PERIOD,
 			data[j].ATTRIBUTES.PHASE2PERIOD,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebpoweroutage data has been saved")
@@ -8376,23 +8947,25 @@ func insertNodebpoweroutage(baseName string, data []model.Nodebpoweroutage) {
 	tx.Commit()
 }
 
-func insertNodebresallocrule(baseName string, data []model.Nodebresallocrule) {
+
+func insertNodebresallocrule(eNodeBId string, baseName string, data []model.Nodebresallocrule) {
 	fmt.Println("Processing Nodebresallocrule data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebresallocrule` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebresallocrule` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RULE,
 			data[j].ATTRIBUTES.SW,
 			data[j].ATTRIBUTES.CSUSERNUM,
 			data[j].ATTRIBUTES.PSUSERNUM,
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.RESREAVESW,
-			data[j].ATTRIBUTES.MULTICELLREBUILDSW,
+			data[j].ATTRIBUTES.MULTICELLREBUILDSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebresallocrule data has been saved")
@@ -8400,16 +8973,17 @@ func insertNodebresallocrule(baseName string, data []model.Nodebresallocrule) {
 	tx.Commit()
 }
 
-func insertNodebrsvdpara(baseName string, data []model.Nodebrsvdpara) {
+
+func insertNodebrsvdpara(eNodeBId string, baseName string, data []model.Nodebrsvdpara) {
 	fmt.Println("Processing Nodebrsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebrsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebrsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.NODEBRSVDPARA1,
 			data[j].ATTRIBUTES.NODEBRSVDPARA2,
 			data[j].ATTRIBUTES.NODEBRSVDPARA3,
@@ -8442,7 +9016,8 @@ func insertNodebrsvdpara(baseName string, data []model.Nodebrsvdpara) {
 			data[j].ATTRIBUTES.NODEBRSVDPARA29,
 			data[j].ATTRIBUTES.NODEBRSVDPARA30,
 			data[j].ATTRIBUTES.NODEBRSVDPARA31,
-			data[j].ATTRIBUTES.NODEBRSVDPARA32,
+			data[j].ATTRIBUTES.NODEBRSVDPARA32,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebrsvdpara data has been saved")
@@ -8450,16 +9025,17 @@ func insertNodebrsvdpara(baseName string, data []model.Nodebrsvdpara) {
 	tx.Commit()
 }
 
-func insertNodebruleactionpara(baseName string, data []model.Nodebruleactionpara) {
+
+func insertNodebruleactionpara(eNodeBId string, baseName string, data []model.Nodebruleactionpara) {
 	fmt.Println("Processing Nodebruleactionpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebruleactionpara` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebruleactionpara` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RULEID,
 			data[j].ATTRIBUTES.MOCNAME,
 			data[j].ATTRIBUTES.PARANAME,
@@ -8467,7 +9043,8 @@ func insertNodebruleactionpara(baseName string, data []model.Nodebruleactionpara
 			data[j].ATTRIBUTES.PARAINTERVALVALUE,
 			data[j].ATTRIBUTES.PARAENUMVALUE,
 			data[j].ATTRIBUTES.USERLABEL,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebruleactionpara data has been saved")
@@ -8475,20 +9052,22 @@ func insertNodebruleactionpara(baseName string, data []model.Nodebruleactionpara
 	tx.Commit()
 }
 
-func insertNodebsmthpwr(baseName string, data []model.Nodebsmthpwr) {
+
+func insertNodebsmthpwr(eNodeBId string, baseName string, data []model.Nodebsmthpwr) {
 	fmt.Println("Processing Nodebsmthpwr data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebsmthpwr` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebsmthpwr` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SMTHPWRSWITCH,
 			data[j].ATTRIBUTES.STEP,
 			data[j].ATTRIBUTES.PERIOD,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebsmthpwr data has been saved")
@@ -8496,21 +9075,23 @@ func insertNodebsmthpwr(baseName string, data []model.Nodebsmthpwr) {
 	tx.Commit()
 }
 
-func insertNodebtrfoverloadthd(baseName string, data []model.Nodebtrfoverloadthd) {
+
+func insertNodebtrfoverloadthd(eNodeBId string, baseName string, data []model.Nodebtrfoverloadthd) {
 	fmt.Println("Processing Nodebtrfoverloadthd data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebtrfoverloadthd` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebtrfoverloadthd` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TRAFFICOVERLOADOTHD,
 			data[j].ATTRIBUTES.TRAFFICOVERLOADOPRD,
 			data[j].ATTRIBUTES.TRAFFICOVERLOADRTHD,
 			data[j].ATTRIBUTES.TRAFFICOVERLOADRPRD,
-			data[j].ATTRIBUTES.OBJID,
+			data[j].ATTRIBUTES.OBJID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebtrfoverloadthd data has been saved")
@@ -8518,16 +9099,17 @@ func insertNodebtrfoverloadthd(baseName string, data []model.Nodebtrfoverloadthd
 	tx.Commit()
 }
 
-func insertNodebueqosenhance(baseName string, data []model.Nodebueqosenhance) {
+
+func insertNodebueqosenhance(eNodeBId string, baseName string, data []model.Nodebueqosenhance) {
 	fmt.Println("Processing Nodebueqosenhance data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebueqosenhance` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `nodebueqosenhance` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULGOLDUEBPS,
 			data[j].ATTRIBUTES.ULSILVERUEBPS,
 			data[j].ATTRIBUTES.ULCOPPERUEBPS,
@@ -8537,7 +9119,8 @@ func insertNodebueqosenhance(baseName string, data []model.Nodebueqosenhance) {
 			data[j].ATTRIBUTES.OBJID,
 			data[j].ATTRIBUTES.LOWTRAFFENHUSERNUMTHD,
 			data[j].ATTRIBUTES.TBSIZEFOR10MSLOWTRAFFENH,
-			data[j].ATTRIBUTES.TBSIZEFOR2MSLOWTRAFFENH,
+			data[j].ATTRIBUTES.TBSIZEFOR2MSLOWTRAFFENH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Nodebueqosenhance data has been saved")
@@ -8545,16 +9128,17 @@ func insertNodebueqosenhance(baseName string, data []model.Nodebueqosenhance) {
 	tx.Commit()
 }
 
-func insertNtpcp(baseName string, data []model.Ntpcp) {
+
+func insertNtpcp(eNodeBId string, baseName string, data []model.Ntpcp) {
 	fmt.Println("Processing Ntpcp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ntpcp` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ntpcp` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.IP,
 			data[j].ATTRIBUTES.SYNCCYCLE,
 			data[j].ATTRIBUTES.PORT,
@@ -8562,7 +9146,8 @@ func insertNtpcp(baseName string, data []model.Ntpcp) {
 			data[j].ATTRIBUTES.AUTHMODE,
 			data[j].ATTRIBUTES.KEY,
 			data[j].ATTRIBUTES.KEYID,
-			data[j].ATTRIBUTES.MASTERFLAG,
+			data[j].ATTRIBUTES.MASTERFLAG,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ntpcp data has been saved")
@@ -8570,16 +9155,17 @@ func insertNtpcp(baseName string, data []model.Ntpcp) {
 	tx.Commit()
 }
 
-func insertOmch(baseName string, data []model.Omch) {
+
+func insertOmch(eNodeBId string, baseName string, data []model.Omch) {
 	fmt.Println("Processing Omch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `omch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `omch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.FLAG,
 			data[j].ATTRIBUTES.IP,
 			data[j].ATTRIBUTES.MASK,
@@ -8590,7 +9176,8 @@ func insertOmch(baseName string, data []model.Omch) {
 			data[j].ATTRIBUTES.CHECKTYPE,
 			data[j].ATTRIBUTES.USERLABEL,
 			data[j].ATTRIBUTES.RTIDX,
-			data[j].ATTRIBUTES.BINDSECONDARYRT,
+			data[j].ATTRIBUTES.BINDSECONDARYRT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Omch data has been saved")
@@ -8598,18 +9185,20 @@ func insertOmch(baseName string, data []model.Omch) {
 	tx.Commit()
 }
 
-func insertOp(baseName string, data []model.Op) {
+
+func insertOp(eNodeBId string, baseName string, data []model.Op) {
 	fmt.Println("Processing Op data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `op` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `op` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SWOP,
-			data[j].ATTRIBUTES.LOCKST,
+			data[j].ATTRIBUTES.LOCKST,	
+
 		)
 		checkErr(err)
 		fmt.Println("Op data has been saved")
@@ -8617,22 +9206,24 @@ func insertOp(baseName string, data []model.Op) {
 	tx.Commit()
 }
 
-func insertOutport(baseName string, data []model.Outport) {
+
+func insertOutport(eNodeBId string, baseName string, data []model.Outport) {
 	fmt.Println("Processing Outport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `outport` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `outport` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.PN,
 			data[j].ATTRIBUTES.NAME,
-			data[j].ATTRIBUTES.SW,
+			data[j].ATTRIBUTES.SW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Outport data has been saved")
@@ -8640,21 +9231,23 @@ func insertOutport(baseName string, data []model.Outport) {
 	tx.Commit()
 }
 
-func insertParaautooptcfg(baseName string, data []model.Paraautooptcfg) {
+
+func insertParaautooptcfg(eNodeBId string, baseName string, data []model.Paraautooptcfg) {
 	fmt.Println("Processing Paraautooptcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `paraautooptcfg` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `paraautooptcfg` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PUSCHRsrpHighThd4AutoOpt,
 			data[j].ATTRIBUTES.PUCCHPcSINROffset4AutoOpt,
 			data[j].ATTRIBUTES.P0NominalPUCCH4AutoOpt,
 			data[j].ATTRIBUTES.HOTimesThd,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Paraautooptcfg data has been saved")
@@ -8662,21 +9255,23 @@ func insertParaautooptcfg(baseName string, data []model.Paraautooptcfg) {
 	tx.Commit()
 }
 
-func insertPccfreqcfg(baseName string, data []model.Pccfreqcfg) {
+
+func insertPccfreqcfg(eNodeBId string, baseName string, data []model.Pccfreqcfg) {
 	fmt.Println("Processing Pccfreqcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `pccfreqcfg` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `pccfreqcfg` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PccDlEarfcn,
 			data[j].ATTRIBUTES.PreferredPccPriority,
 			data[j].ATTRIBUTES.PccA4RsrpThd,
 			data[j].ATTRIBUTES.PccA4RsrqThd,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Pccfreqcfg data has been saved")
@@ -8684,16 +9279,17 @@ func insertPccfreqcfg(baseName string, data []model.Pccfreqcfg) {
 	tx.Commit()
 }
 
-func insertPcchcfg(baseName string, data []model.Pcchcfg) {
+
+func insertPcchcfg(eNodeBId string, baseName string, data []model.Pcchcfg) {
 	fmt.Println("Processing Pcchcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `pcchcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `pcchcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DefaultPagingCycle,
 			data[j].ATTRIBUTES.Nb,
@@ -8704,7 +9300,8 @@ func insertPcchcfg(baseName string, data []model.Pcchcfg) {
 			data[j].ATTRIBUTES.EnhPagingSwitch,
 			data[j].ATTRIBUTES.DefaultPagingCycleForNb,
 			data[j].ATTRIBUTES.NbForNbIoT,
-			data[j].ATTRIBUTES.MaxNumRepetitionForPaging,
+			data[j].ATTRIBUTES.MaxNumRepetitionForPaging,	
+
 		)
 		checkErr(err)
 		fmt.Println("Pcchcfg data has been saved")
@@ -8712,20 +9309,22 @@ func insertPcchcfg(baseName string, data []model.Pcchcfg) {
 	tx.Commit()
 }
 
-func insertPdcprohcpara(baseName string, data []model.Pdcprohcpara) {
+
+func insertPdcprohcpara(eNodeBId string, baseName string, data []model.Pdcprohcpara) {
 	fmt.Println("Processing Pdcprohcpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `pdcprohcpara` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `pdcprohcpara` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RohcSwitch,
 			data[j].ATTRIBUTES.HighestMode,
 			data[j].ATTRIBUTES.Profiles,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Pdcprohcpara data has been saved")
@@ -8733,16 +9332,17 @@ func insertPdcprohcpara(baseName string, data []model.Pdcprohcpara) {
 	tx.Commit()
 }
 
-func insertPdschcfg(baseName string, data []model.Pdschcfg) {
+
+func insertPdschcfg(eNodeBId string, baseName string, data []model.Pdschcfg) {
 	fmt.Println("Processing Pdschcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `pdschcfg` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `pdschcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ReferenceSignalPwr,
 			data[j].ATTRIBUTES.Pb,
@@ -8751,7 +9351,8 @@ func insertPdschcfg(baseName string, data []model.Pdschcfg) {
 			data[j].ATTRIBUTES.TxPowerOffsetAnt1,
 			data[j].ATTRIBUTES.TxPowerOffsetAnt2,
 			data[j].ATTRIBUTES.TxPowerOffsetAnt3,
-			data[j].ATTRIBUTES.TxChnPowerCfgSw,
+			data[j].ATTRIBUTES.TxChnPowerCfgSw,	
+
 		)
 		checkErr(err)
 		fmt.Println("Pdschcfg data has been saved")
@@ -8759,18 +9360,20 @@ func insertPdschcfg(baseName string, data []model.Pdschcfg) {
 	tx.Commit()
 }
 
-func insertPeerclk(baseName string, data []model.Peerclk) {
+
+func insertPeerclk(eNodeBId string, baseName string, data []model.Peerclk) {
 	fmt.Println("Processing Peerclk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `peerclk` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `peerclk` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PN,
-			data[j].ATTRIBUTES.PS,
+			data[j].ATTRIBUTES.PS,	
+
 		)
 		checkErr(err)
 		fmt.Println("Peerclk data has been saved")
@@ -8778,19 +9381,21 @@ func insertPeerclk(baseName string, data []model.Peerclk) {
 	tx.Commit()
 }
 
-func insertPeu(baseName string, data []model.Peu) {
+
+func insertPeu(eNodeBId string, baseName string, data []model.Peu) {
 	fmt.Println("Processing Peu data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `peu` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `peu` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
-			data[j].ATTRIBUTES.SN,
+			data[j].ATTRIBUTES.SN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Peu data has been saved")
@@ -8798,19 +9403,21 @@ func insertPeu(baseName string, data []model.Peu) {
 	tx.Commit()
 }
 
-func insertPhichcfg(baseName string, data []model.Phichcfg) {
+
+func insertPhichcfg(eNodeBId string, baseName string, data []model.Phichcfg) {
 	fmt.Println("Processing Phichcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `phichcfg` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `phichcfg` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.PhichDuration,
-			data[j].ATTRIBUTES.PhichResource,
+			data[j].ATTRIBUTES.PhichResource,	
+
 		)
 		checkErr(err)
 		fmt.Println("Phichcfg data has been saved")
@@ -8818,22 +9425,24 @@ func insertPhichcfg(baseName string, data []model.Phichcfg) {
 	tx.Commit()
 }
 
-func insertPhyport(baseName string, data []model.Phyport) {
+
+func insertPhyport(eNodeBId string, baseName string, data []model.Phyport) {
 	fmt.Println("Processing Phyport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `phyport` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `phyport` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.PT,
 			data[j].ATTRIBUTES.PN,
-			data[j].ATTRIBUTES.ADMINISTRATIVESTATE,
+			data[j].ATTRIBUTES.ADMINISTRATIVESTATE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Phyport data has been saved")
@@ -8841,18 +9450,20 @@ func insertPhyport(baseName string, data []model.Phyport) {
 	tx.Commit()
 }
 
-func insertPlrthreshold(baseName string, data []model.Plrthreshold) {
+
+func insertPlrthreshold(eNodeBId string, baseName string, data []model.Plrthreshold) {
 	fmt.Println("Processing Plrthreshold data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `plrthreshold` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `plrthreshold` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PLRAT,
-			data[j].ATTRIBUTES.PLRDT,
+			data[j].ATTRIBUTES.PLRDT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Plrthreshold data has been saved")
@@ -8860,21 +9471,23 @@ func insertPlrthreshold(baseName string, data []model.Plrthreshold) {
 	tx.Commit()
 }
 
-func insertPmtucfg(baseName string, data []model.Pmtucfg) {
+
+func insertPmtucfg(eNodeBId string, baseName string, data []model.Pmtucfg) {
 	fmt.Println("Processing Pmtucfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `pmtucfg` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `pmtucfg` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.MODE,
 			data[j].ATTRIBUTES.UDPPORT,
 			data[j].ATTRIBUTES.DETECTPERIOD,
 			data[j].ATTRIBUTES.AGINGPERIOD,
-			data[j].ATTRIBUTES.DSCP,
+			data[j].ATTRIBUTES.DSCP,	
+
 		)
 		checkErr(err)
 		fmt.Println("Pmtucfg data has been saved")
@@ -8882,17 +9495,19 @@ func insertPmtucfg(baseName string, data []model.Pmtucfg) {
 	tx.Commit()
 }
 
-func insertPortpolicy(baseName string, data []model.Portpolicy) {
+
+func insertPortpolicy(eNodeBId string, baseName string, data []model.Portpolicy) {
 	fmt.Println("Processing Portpolicy data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `portpolicy` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `portpolicy` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.USBACCESSSECPOLICY,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.USBACCESSSECPOLICY,	
+
 		)
 		checkErr(err)
 		fmt.Println("Portpolicy data has been saved")
@@ -8900,16 +9515,17 @@ func insertPortpolicy(baseName string, data []model.Portpolicy) {
 	tx.Commit()
 }
 
-func insertPri2que(baseName string, data []model.Pri2que) {
+
+func insertPri2que(eNodeBId string, baseName string, data []model.Pri2que) {
 	fmt.Println("Processing Pri2que data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `pri2que` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `pri2que` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.VRFIDX,
 			data[j].ATTRIBUTES.PRI0,
 			data[j].ATTRIBUTES.PRI1,
@@ -8917,7 +9533,8 @@ func insertPri2que(baseName string, data []model.Pri2que) {
 			data[j].ATTRIBUTES.PRI3,
 			data[j].ATTRIBUTES.PRI4,
 			data[j].ATTRIBUTES.PRI5,
-			data[j].ATTRIBUTES.PRI6,
+			data[j].ATTRIBUTES.PRI6,	
+
 		)
 		checkErr(err)
 		fmt.Println("Pri2que data has been saved")
@@ -8925,16 +9542,17 @@ func insertPri2que(baseName string, data []model.Pri2que) {
 	tx.Commit()
 }
 
-func insertPrivatecabandcomb(baseName string, data []model.Privatecabandcomb) {
+
+func insertPrivatecabandcomb(eNodeBId string, baseName string, data []model.Privatecabandcomb) {
 	fmt.Println("Processing Privatecabandcomb data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `privatecabandcomb` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `privatecabandcomb` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PrivateCaCombId,
 			data[j].ATTRIBUTES.MaxAggregatedBw,
 			data[j].ATTRIBUTES.BwCombSetId,
@@ -8948,7 +9566,8 @@ func insertPrivatecabandcomb(baseName string, data []model.Privatecabandcomb) {
 			data[j].ATTRIBUTES.CombBand4Bw,
 			data[j].ATTRIBUTES.CombBand5Id,
 			data[j].ATTRIBUTES.CombBand5Bw,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Privatecabandcomb data has been saved")
@@ -8956,17 +9575,19 @@ func insertPrivatecabandcomb(baseName string, data []model.Privatecabandcomb) {
 	tx.Commit()
 }
 
-func insertPsuis(baseName string, data []model.Psuis) {
+
+func insertPsuis(eNodeBId string, baseName string, data []model.Psuis) {
 	fmt.Println("Processing Psuis data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `psuis` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `psuis` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.PSUISS,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.PSUISS,	
+
 		)
 		checkErr(err)
 		fmt.Println("Psuis data has been saved")
@@ -8974,16 +9595,17 @@ func insertPsuis(baseName string, data []model.Psuis) {
 	tx.Commit()
 }
 
-func insertPucchcfg(baseName string, data []model.Pucchcfg) {
+
+func insertPucchcfg(eNodeBId string, baseName string, data []model.Pucchcfg) {
 	fmt.Println("Processing Pucchcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `pucchcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `pucchcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DeltaShift,
 			data[j].ATTRIBUTES.NaSriChNum,
@@ -8994,7 +9616,8 @@ func insertPucchcfg(baseName string, data []model.Pucchcfg) {
 			data[j].ATTRIBUTES.Format2ChAllocMode,
 			data[j].ATTRIBUTES.PucchAllocPolicy,
 			data[j].ATTRIBUTES.Format3RbNum,
-			data[j].ATTRIBUTES.Max2CCAckChNum,
+			data[j].ATTRIBUTES.Max2CCAckChNum,	
+
 		)
 		checkErr(err)
 		fmt.Println("Pucchcfg data has been saved")
@@ -9002,16 +9625,17 @@ func insertPucchcfg(baseName string, data []model.Pucchcfg) {
 	tx.Commit()
 }
 
-func insertPuschcfg(baseName string, data []model.Puschcfg) {
+
+func insertPuschcfg(eNodeBId string, baseName string, data []model.Puschcfg) {
 	fmt.Println("Processing Puschcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `puschcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `puschcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.Nsb,
 			data[j].ATTRIBUTES.HoppingMode,
@@ -9021,7 +9645,8 @@ func insertPuschcfg(baseName string, data []model.Puschcfg) {
 			data[j].ATTRIBUTES.SeqHoppingEnabled,
 			data[j].ATTRIBUTES.CyclicShift,
 			data[j].ATTRIBUTES.Qam64Enabled,
-			data[j].ATTRIBUTES.R12Qam64Enabled,
+			data[j].ATTRIBUTES.R12Qam64Enabled,	
+
 		)
 		checkErr(err)
 		fmt.Println("Puschcfg data has been saved")
@@ -9029,20 +9654,22 @@ func insertPuschcfg(baseName string, data []model.Puschcfg) {
 	tx.Commit()
 }
 
-func insertPuschparam(baseName string, data []model.Puschparam) {
+
+func insertPuschparam(eNodeBId string, baseName string, data []model.Puschparam) {
 	fmt.Println("Processing Puschparam data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `puschparam` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `puschparam` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.DeltaOffsetCqiIndex,
 			data[j].ATTRIBUTES.DeltaOffsetRiIndex,
 			data[j].ATTRIBUTES.DeltaOffsetAckIndex,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Puschparam data has been saved")
@@ -9050,16 +9677,17 @@ func insertPuschparam(baseName string, data []model.Puschparam) {
 	tx.Commit()
 }
 
-func insertPwdpolicy(baseName string, data []model.Pwdpolicy) {
+
+func insertPwdpolicy(eNodeBId string, baseName string, data []model.Pwdpolicy) {
 	fmt.Println("Processing Pwdpolicy data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `pwdpolicy` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `pwdpolicy` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PWDMINLEN,
 			data[j].ATTRIBUTES.COMPLICACY,
 			data[j].ATTRIBUTES.PASSREPLMT,
@@ -9072,7 +9700,8 @@ func insertPwdpolicy(baseName string, data []model.Pwdpolicy) {
 			data[j].ATTRIBUTES.FirstLoginMustModPWD,
 			data[j].ATTRIBUTES.MAXREPEATCHARTIMES,
 			data[j].ATTRIBUTES.DICTCHKPWD,
-			data[j].ATTRIBUTES.MAXCCUN,
+			data[j].ATTRIBUTES.MAXCCUN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Pwdpolicy data has been saved")
@@ -9080,16 +9709,17 @@ func insertPwdpolicy(baseName string, data []model.Pwdpolicy) {
 	tx.Commit()
 }
 
-func insertQcipara(baseName string, data []model.Qcipara) {
+
+func insertQcipara(eNodeBId string, baseName string, data []model.Qcipara) {
 	fmt.Println("Processing Qcipara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `qcipara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `qcipara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.PreAllocationWeight,
 			data[j].ATTRIBUTES.InterRatPolicyCfgGroupId,
@@ -9113,7 +9743,8 @@ func insertQcipara(baseName string, data []model.Qcipara) {
 			data[j].ATTRIBUTES.ServiceType,
 			data[j].ATTRIBUTES.FreeUserFlag,
 			data[j].ATTRIBUTES.LtePttDedicatedExtendedQci,
-			data[j].ATTRIBUTES.ExtQciCounterIndex,
+			data[j].ATTRIBUTES.ExtQciCounterIndex,	
+
 		)
 		checkErr(err)
 		fmt.Println("Qcipara data has been saved")
@@ -9121,19 +9752,21 @@ func insertQcipara(baseName string, data []model.Qcipara) {
 	tx.Commit()
 }
 
-func insertQoehocommoncfg(baseName string, data []model.Qoehocommoncfg) {
+
+func insertQoehocommoncfg(eNodeBId string, baseName string, data []model.Qoehocommoncfg) {
 	fmt.Println("Processing Qoehocommoncfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `qoehocommoncfg` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `qoehocommoncfg` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.QoEBasedHandoverStat,
 			data[j].ATTRIBUTES.QoEBasedHandoverLast,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Qoehocommoncfg data has been saved")
@@ -9141,16 +9774,17 @@ func insertQoehocommoncfg(baseName string, data []model.Qoehocommoncfg) {
 	tx.Commit()
 }
 
-func insertRachcfg(baseName string, data []model.Rachcfg) {
+
+func insertRachcfg(eNodeBId string, baseName string, data []model.Rachcfg) {
 	fmt.Println("Processing Rachcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rachcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rachcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.PwrRampingStep,
 			data[j].ATTRIBUTES.PreambInitRcvTargetPwr,
@@ -9167,7 +9801,8 @@ func insertRachcfg(baseName string, data []model.Rachcfg) {
 			data[j].ATTRIBUTES.NbCyclicPrefixLength,
 			data[j].ATTRIBUTES.NbRsrpFirstThreshold,
 			data[j].ATTRIBUTES.NbRsrpSecondThreshold,
-			data[j].ATTRIBUTES.UeRaInfoReportRatioThd,
+			data[j].ATTRIBUTES.UeRaInfoReportRatioThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rachcfg data has been saved")
@@ -9175,16 +9810,17 @@ func insertRachcfg(baseName string, data []model.Rachcfg) {
 	tx.Commit()
 }
 
-func insertRet(baseName string, data []model.Ret) {
+
+func insertRet(eNodeBId string, baseName string, data []model.Ret) {
 	fmt.Println("Processing Ret data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ret` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ret` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.DEVICENO,
 			data[j].ATTRIBUTES.DEVICENAME,
 			data[j].ATTRIBUTES.CTRLCN,
@@ -9195,7 +9831,8 @@ func insertRet(baseName string, data []model.Ret) {
 			data[j].ATTRIBUTES.RETTYPE,
 			data[j].ATTRIBUTES.POLARTYPE,
 			data[j].ATTRIBUTES.SCENARIO,
-			data[j].ATTRIBUTES.SUBUNITNUM,
+			data[j].ATTRIBUTES.SUBUNITNUM,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ret data has been saved")
@@ -9203,16 +9840,17 @@ func insertRet(baseName string, data []model.Ret) {
 	tx.Commit()
 }
 
-func insertRetdevicedata(baseName string, data []model.Retdevicedata) {
+
+func insertRetdevicedata(eNodeBId string, baseName string, data []model.Retdevicedata) {
 	fmt.Println("Processing Retdevicedata data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `retdevicedata` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `retdevicedata` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.DEVICENO,
 			data[j].ATTRIBUTES.SUBUNITNO,
 			data[j].ATTRIBUTES.BEARING,
@@ -9234,7 +9872,8 @@ func insertRetdevicedata(baseName string, data []model.Retdevicedata) {
 			data[j].ATTRIBUTES.BAND3,
 			data[j].ATTRIBUTES.BAND4,
 			data[j].ATTRIBUTES.SECTORID,
-			data[j].ATTRIBUTES.SERIALNO,
+			data[j].ATTRIBUTES.SERIALNO,	
+
 		)
 		checkErr(err)
 		fmt.Println("Retdevicedata data has been saved")
@@ -9242,16 +9881,17 @@ func insertRetdevicedata(baseName string, data []model.Retdevicedata) {
 	tx.Commit()
 }
 
-func insertRetport(baseName string, data []model.Retport) {
+
+func insertRetport(eNodeBId string, baseName string, data []model.Retport) {
 	fmt.Println("Processing Retport data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `retport` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `retport` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -9261,7 +9901,8 @@ func insertRetport(baseName string, data []model.Retport) {
 			data[j].ATTRIBUTES.UOTHD,
 			data[j].ATTRIBUTES.UCTHD,
 			data[j].ATTRIBUTES.OOTHD,
-			data[j].ATTRIBUTES.OCTHD,
+			data[j].ATTRIBUTES.OCTHD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Retport data has been saved")
@@ -9269,16 +9910,17 @@ func insertRetport(baseName string, data []model.Retport) {
 	tx.Commit()
 }
 
-func insertRetsubunit(baseName string, data []model.Retsubunit) {
+
+func insertRetsubunit(eNodeBId string, baseName string, data []model.Retsubunit) {
 	fmt.Println("Processing Retsubunit data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `retsubunit` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `retsubunit` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.DEVICENO,
 			data[j].ATTRIBUTES.SUBUNITNO,
 			data[j].ATTRIBUTES.CONNCN1,
@@ -9291,7 +9933,8 @@ func insertRetsubunit(baseName string, data []model.Retsubunit) {
 			data[j].ATTRIBUTES.CONNPN2,
 			data[j].ATTRIBUTES.TILT,
 			data[j].ATTRIBUTES.AER,
-			data[j].ATTRIBUTES.SUBNAME,
+			data[j].ATTRIBUTES.SUBNAME,	
+
 		)
 		checkErr(err)
 		fmt.Println("Retsubunit data has been saved")
@@ -9299,16 +9942,17 @@ func insertRetsubunit(baseName string, data []model.Retsubunit) {
 	tx.Commit()
 }
 
-func insertRfu(baseName string, data []model.Rfu) {
+
+func insertRfu(eNodeBId string, baseName string, data []model.Rfu) {
 	fmt.Println("Processing Rfu data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rfu` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rfu` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -9347,7 +9991,8 @@ func insertRfu(baseName string, data []model.Rfu) {
 			data[j].ATTRIBUTES.LEDSW,
 			data[j].ATTRIBUTES.CUSTOMEDRFSPECSW,
 			data[j].ATTRIBUTES.PSGID,
-			data[j].ATTRIBUTES.WIFISW,
+			data[j].ATTRIBUTES.WIFISW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rfu data has been saved")
@@ -9355,16 +10000,17 @@ func insertRfu(baseName string, data []model.Rfu) {
 	tx.Commit()
 }
 
-func insertRlcpdcpparagroup(baseName string, data []model.Rlcpdcpparagroup) {
+
+func insertRlcpdcpparagroup(eNodeBId string, baseName string, data []model.Rlcpdcpparagroup) {
 	fmt.Println("Processing Rlcpdcpparagroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rlcpdcpparagroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rlcpdcpparagroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RlcPdcpParaGroupId,
 			data[j].ATTRIBUTES.DiscardTimer,
 			data[j].ATTRIBUTES.RlcMode,
@@ -9404,7 +10050,8 @@ func insertRlcpdcpparagroup(baseName string, data []model.Rlcpdcpparagroup) {
 			data[j].ATTRIBUTES.NbPdcpDiscardTimer,
 			data[j].ATTRIBUTES.NbDlPdcpDiscardTimer,
 			data[j].ATTRIBUTES.NbEnodebPollRetxTimer,
-			data[j].ATTRIBUTES.NbUePollRetxTimer,
+			data[j].ATTRIBUTES.NbUePollRetxTimer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rlcpdcpparagroup data has been saved")
@@ -9412,16 +10059,17 @@ func insertRlcpdcpparagroup(baseName string, data []model.Rlcpdcpparagroup) {
 	tx.Commit()
 }
 
-func insertRrcconnstatetimer(baseName string, data []model.Rrcconnstatetimer) {
+
+func insertRrcconnstatetimer(eNodeBId string, baseName string, data []model.Rrcconnstatetimer) {
 	fmt.Println("Processing Rrcconnstatetimer data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rrcconnstatetimer` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rrcconnstatetimer` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.T302,
 			data[j].ATTRIBUTES.T320ForLoadBalance,
 			data[j].ATTRIBUTES.T304ForEutran,
@@ -9443,7 +10091,8 @@ func insertRrcconnstatetimer(baseName string, data []model.Rrcconnstatetimer) {
 			data[j].ATTRIBUTES.ExtendedWaitTime,
 			data[j].ATTRIBUTES.MTCUeInactiveTimer,
 			data[j].ATTRIBUTES.PowerPrefIndicationTimer,
-			data[j].ATTRIBUTES.OutOfSyncRelTimerOffset,
+			data[j].ATTRIBUTES.OutOfSyncRelTimerOffset,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rrcconnstatetimer data has been saved")
@@ -9451,16 +10100,17 @@ func insertRrcconnstatetimer(baseName string, data []model.Rrcconnstatetimer) {
 	tx.Commit()
 }
 
-func insertRru(baseName string, data []model.Rru) {
+
+func insertRru(eNodeBId string, baseName string, data []model.Rru) {
 	fmt.Println("Processing Rru data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rru` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rru` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -9506,7 +10156,8 @@ func insertRru(baseName string, data []model.Rru) {
 			data[j].ATTRIBUTES.PSGID,
 			data[j].ATTRIBUTES.WIFISW,
 			data[j].ATTRIBUTES.LOCATIONNAME,
-			data[j].ATTRIBUTES.CIRCUITBREAKERVALUE,
+			data[j].ATTRIBUTES.CIRCUITBREAKERVALUE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rru data has been saved")
@@ -9514,16 +10165,17 @@ func insertRru(baseName string, data []model.Rru) {
 	tx.Commit()
 }
 
-func insertRruchain(baseName string, data []model.Rruchain) {
+
+func insertRruchain(eNodeBId string, baseName string, data []model.Rruchain) {
 	fmt.Println("Processing Rruchain data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rruchain` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rruchain` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RCN,
 			data[j].ATTRIBUTES.TT,
 			data[j].ATTRIBUTES.BM,
@@ -9538,7 +10190,8 @@ func insertRruchain(baseName string, data []model.Rruchain) {
 			data[j].ATTRIBUTES.LSN,
 			data[j].ATTRIBUTES.PROTOCOL,
 			data[j].ATTRIBUTES.SBT,
-			data[j].ATTRIBUTES.CONNPORTNUM,
+			data[j].ATTRIBUTES.CONNPORTNUM,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rruchain data has been saved")
@@ -9546,22 +10199,24 @@ func insertRruchain(baseName string, data []model.Rruchain) {
 	tx.Commit()
 }
 
-func insertRrujointcalparacfg(baseName string, data []model.Rrujointcalparacfg) {
+
+func insertRrujointcalparacfg(eNodeBId string, baseName string, data []model.Rrujointcalparacfg) {
 	fmt.Println("Processing Rrujointcalparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rrujointcalparacfg` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rrujointcalparacfg` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.TxChnCalSwitch,
 			data[j].ATTRIBUTES.TxChnCalTime,
 			data[j].ATTRIBUTES.TxChnCalPeriod,
 			data[j].ATTRIBUTES.TxChnAntSpacing,
-			data[j].ATTRIBUTES.AauPassivePortCalibPeriod,
+			data[j].ATTRIBUTES.AauPassivePortCalibPeriod,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rrujointcalparacfg data has been saved")
@@ -9569,16 +10224,17 @@ func insertRrujointcalparacfg(baseName string, data []model.Rrujointcalparacfg) 
 	tx.Commit()
 }
 
-func insertRscgrp(baseName string, data []model.Rscgrp) {
+
+func insertRscgrp(eNodeBId string, baseName string, data []model.Rscgrp) {
 	fmt.Println("Processing Rscgrp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rscgrp` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rscgrp` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -9599,7 +10255,8 @@ func insertRscgrp(baseName string, data []model.Rscgrp) {
 			data[j].ATTRIBUTES.RXCIR,
 			data[j].ATTRIBUTES.TXPIR,
 			data[j].ATTRIBUTES.RXPIR,
-			data[j].ATTRIBUTES.TXPBS,
+			data[j].ATTRIBUTES.TXPBS,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rscgrp data has been saved")
@@ -9607,16 +10264,17 @@ func insertRscgrp(baseName string, data []model.Rscgrp) {
 	tx.Commit()
 }
 
-func insertRscgrpalg(baseName string, data []model.Rscgrpalg) {
+
+func insertRscgrpalg(eNodeBId string, baseName string, data []model.Rscgrpalg) {
 	fmt.Println("Processing Rscgrpalg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rscgrpalg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rscgrpalg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -9638,7 +10296,8 @@ func insertRscgrpalg(baseName string, data []model.Rscgrpalg) {
 			data[j].ATTRIBUTES.CCTTH,
 			data[j].ATTRIBUTES.TXRSVBW,
 			data[j].ATTRIBUTES.RXRSVBW,
-			data[j].ATTRIBUTES.DROPPKTNUM,
+			data[j].ATTRIBUTES.DROPPKTNUM,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rscgrpalg data has been saved")
@@ -9646,16 +10305,17 @@ func insertRscgrpalg(baseName string, data []model.Rscgrpalg) {
 	tx.Commit()
 }
 
-func insertRxbranch(baseName string, data []model.Rxbranch) {
+
+func insertRxbranch(eNodeBId string, baseName string, data []model.Rxbranch) {
 	fmt.Println("Processing Rxbranch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `rxbranch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `rxbranch` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -9669,7 +10329,8 @@ func insertRxbranch(baseName string, data []model.Rxbranch) {
 			data[j].ATTRIBUTES.RTWPINITADJ4,
 			data[j].ATTRIBUTES.RTWPINITADJ5,
 			data[j].ATTRIBUTES.RTWPINITADJ6,
-			data[j].ATTRIBUTES.RTWPINITADJ7,
+			data[j].ATTRIBUTES.RTWPINITADJ7,	
+
 		)
 		checkErr(err)
 		fmt.Println("Rxbranch data has been saved")
@@ -9677,16 +10338,17 @@ func insertRxbranch(baseName string, data []model.Rxbranch) {
 	tx.Commit()
 }
 
-func insertS1(baseName string, data []model.S1) {
+
+func insertS1(eNodeBId string, baseName string, data []model.S1) {
 	fmt.Println("Processing S1 data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `s1` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `s1` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.S1Id,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.UpEpGroupId,
@@ -9696,7 +10358,8 @@ func insertS1(baseName string, data []model.S1) {
 			data[j].ATTRIBUTES.Priority,
 			data[j].ATTRIBUTES.CnOpSharingGroupId,
 			data[j].ATTRIBUTES.MdtEnable,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("S1 data has been saved")
@@ -9704,16 +10367,17 @@ func insertS1(baseName string, data []model.S1) {
 	tx.Commit()
 }
 
-func insertS1interface(baseName string, data []model.S1interface) {
+
+func insertS1interface(eNodeBId string, baseName string, data []model.S1interface) {
 	fmt.Println("Processing S1interface data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `s1interface` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `s1interface` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.S1InterfaceId,
 			data[j].ATTRIBUTES.S1CpBearerId,
 			data[j].ATTRIBUTES.CnOperatorId,
@@ -9724,7 +10388,8 @@ func insertS1interface(baseName string, data []model.S1interface) {
 			data[j].ATTRIBUTES.Priority,
 			data[j].ATTRIBUTES.CnOpSharingGroupId,
 			data[j].ATTRIBUTES.ServedGummeis,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("S1interface data has been saved")
@@ -9732,19 +10397,21 @@ func insertS1interface(baseName string, data []model.S1interface) {
 	tx.Commit()
 }
 
-func insertS1reesttimer(baseName string, data []model.S1reesttimer) {
+
+func insertS1reesttimer(eNodeBId string, baseName string, data []model.S1reesttimer) {
 	fmt.Println("Processing S1reesttimer data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `s1reesttimer` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `s1reesttimer` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.S1ReestMinTimer,
 			data[j].ATTRIBUTES.S1ReestMaxTimer,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("S1reesttimer data has been saved")
@@ -9752,16 +10419,17 @@ func insertS1reesttimer(baseName string, data []model.S1reesttimer) {
 	tx.Commit()
 }
 
-func insertSaallnk(baseName string, data []model.Saallnk) {
+
+func insertSaallnk(eNodeBId string, baseName string, data []model.Saallnk) {
 	fmt.Println("Processing Saallnk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `saallnk` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `saallnk` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SAALNO,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
@@ -9782,7 +10450,8 @@ func insertSaallnk(baseName string, data []model.Saallnk) {
 			data[j].ATTRIBUTES.MAXPD,
 			data[j].ATTRIBUTES.MAXLE,
 			data[j].ATTRIBUTES.SBT,
-			data[j].ATTRIBUTES.RU,
+			data[j].ATTRIBUTES.RU,	
+
 		)
 		checkErr(err)
 		fmt.Println("Saallnk data has been saved")
@@ -9790,16 +10459,17 @@ func insertSaallnk(baseName string, data []model.Saallnk) {
 	tx.Commit()
 }
 
-func insertScappparacfg(baseName string, data []model.Scappparacfg) {
+
+func insertScappparacfg(eNodeBId string, baseName string, data []model.Scappparacfg) {
 	fmt.Println("Processing Scappparacfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `scappparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `scappparacfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.AppDnsId,
 			data[j].ATTRIBUTES.MatchRule,
 			data[j].ATTRIBUTES.AppName,
@@ -9809,7 +10479,8 @@ func insertScappparacfg(baseName string, data []model.Scappparacfg) {
 			data[j].ATTRIBUTES.MainAppDnsFlag,
 			data[j].ATTRIBUTES.AsParaGroupID,
 			data[j].ATTRIBUTES.MainAppDnsId,
-			data[j].ATTRIBUTES.ServiceEndTimeThd,
+			data[j].ATTRIBUTES.ServiceEndTimeThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Scappparacfg data has been saved")
@@ -9817,16 +10488,17 @@ func insertScappparacfg(baseName string, data []model.Scappparacfg) {
 	tx.Commit()
 }
 
-func insertSccfreqcfg(baseName string, data []model.Sccfreqcfg) {
+
+func insertSccfreqcfg(eNodeBId string, baseName string, data []model.Sccfreqcfg) {
 	fmt.Println("Processing Sccfreqcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `sccfreqcfg` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `sccfreqcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PccDlEarfcn,
 			data[j].ATTRIBUTES.SccDlEarfcn,
 			data[j].ATTRIBUTES.SccPriority,
@@ -9835,7 +10507,8 @@ func insertSccfreqcfg(baseName string, data []model.Sccfreqcfg) {
 			data[j].ATTRIBUTES.BlindScellAddThd,
 			data[j].ATTRIBUTES.BlindScellDelThd,
 			data[j].ATTRIBUTES.CtrlMode,
-			data[j].ATTRIBUTES.SpidGrpId,
+			data[j].ATTRIBUTES.SpidGrpId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Sccfreqcfg data has been saved")
@@ -9843,19 +10516,21 @@ func insertSccfreqcfg(baseName string, data []model.Sccfreqcfg) {
 	tx.Commit()
 }
 
-func insertScpolicy(baseName string, data []model.Scpolicy) {
+
+func insertScpolicy(eNodeBId string, baseName string, data []model.Scpolicy) {
 	fmt.Println("Processing Scpolicy data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `scpolicy` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `scpolicy` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ScAlgoSwitch,
 			data[j].ATTRIBUTES.VideoInitBufTime,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Scpolicy data has been saved")
@@ -9863,20 +10538,22 @@ func insertScpolicy(baseName string, data []model.Scpolicy) {
 	tx.Commit()
 }
 
-func insertScserviceqos(baseName string, data []model.Scserviceqos) {
+
+func insertScserviceqos(eNodeBId string, baseName string, data []model.Scserviceqos) {
 	fmt.Println("Processing Scserviceqos data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `scserviceqos` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `scserviceqos` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ScQosId,
 			data[j].ATTRIBUTES.AppDns,
 			data[j].ATTRIBUTES.DlSgbr,
-			data[j].ATTRIBUTES.AppIdentType,
+			data[j].ATTRIBUTES.AppIdentType,	
+
 		)
 		checkErr(err)
 		fmt.Println("Scserviceqos data has been saved")
@@ -9884,16 +10561,17 @@ func insertScserviceqos(baseName string, data []model.Scserviceqos) {
 	tx.Commit()
 }
 
-func insertSctphost(baseName string, data []model.Sctphost) {
+
+func insertSctphost(eNodeBId string, baseName string, data []model.Sctphost) {
 	fmt.Println("Processing Sctphost data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `sctphost` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `sctphost` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SCTPHOSTID,
 			data[j].ATTRIBUTES.VRFIDX,
 			data[j].ATTRIBUTES.IPVERSION,
@@ -9904,7 +10582,8 @@ func insertSctphost(baseName string, data []model.Sctphost) {
 			data[j].ATTRIBUTES.PN,
 			data[j].ATTRIBUTES.SCTPTEMPLATEID,
 			data[j].ATTRIBUTES.USERLABEL,
-			data[j].ATTRIBUTES.SIMPLEMODESWITCH,
+			data[j].ATTRIBUTES.SIMPLEMODESWITCH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Sctphost data has been saved")
@@ -9912,16 +10591,17 @@ func insertSctphost(baseName string, data []model.Sctphost) {
 	tx.Commit()
 }
 
-func insertSctplnk(baseName string, data []model.Sctplnk) {
+
+func insertSctplnk(eNodeBId string, baseName string, data []model.Sctplnk) {
 	fmt.Println("Processing Sctplnk data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `sctplnk` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `sctplnk` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SCTPNO,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
@@ -9949,7 +10629,8 @@ func insertSctplnk(baseName string, data []model.Sctplnk) {
 			data[j].ATTRIBUTES.TSACK,
 			data[j].ATTRIBUTES.DESCRI,
 			data[j].ATTRIBUTES.AUTOCFGFLAG,
-			data[j].ATTRIBUTES.VRFIDX,
+			data[j].ATTRIBUTES.VRFIDX,	
+
 		)
 		checkErr(err)
 		fmt.Println("Sctplnk data has been saved")
@@ -9957,16 +10638,17 @@ func insertSctplnk(baseName string, data []model.Sctplnk) {
 	tx.Commit()
 }
 
-func insertSctppeer(baseName string, data []model.Sctppeer) {
+
+func insertSctppeer(eNodeBId string, baseName string, data []model.Sctppeer) {
 	fmt.Println("Processing Sctppeer data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `sctppeer` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `sctppeer` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SCTPPEERID,
 			data[j].ATTRIBUTES.VRFIDX,
 			data[j].ATTRIBUTES.IPVERSION,
@@ -9980,7 +10662,8 @@ func insertSctppeer(baseName string, data []model.Sctppeer) {
 			data[j].ATTRIBUTES.AUTOCFGFLAG,
 			data[j].ATTRIBUTES.USERLABEL,
 			data[j].ATTRIBUTES.BLKFLAG,
-			data[j].ATTRIBUTES.SIMPLEMODESWITCH,
+			data[j].ATTRIBUTES.SIMPLEMODESWITCH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Sctppeer data has been saved")
@@ -9988,16 +10671,17 @@ func insertSctppeer(baseName string, data []model.Sctppeer) {
 	tx.Commit()
 }
 
-func insertSctptemplate(baseName string, data []model.Sctptemplate) {
+
+func insertSctptemplate(eNodeBId string, baseName string, data []model.Sctptemplate) {
 	fmt.Println("Processing Sctptemplate data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `sctptemplate` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `sctptemplate` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SCTPTEMPLATEID,
 			data[j].ATTRIBUTES.RTOMIN,
 			data[j].ATTRIBUTES.RTOMAX,
@@ -10011,7 +10695,8 @@ func insertSctptemplate(baseName string, data []model.Sctptemplate) {
 			data[j].ATTRIBUTES.SWITCHBACHHBNUM,
 			data[j].ATTRIBUTES.TSACK,
 			data[j].ATTRIBUTES.CHKSUMTYPE,
-			data[j].ATTRIBUTES.MAXSTREAM,
+			data[j].ATTRIBUTES.MAXSTREAM,	
+
 		)
 		checkErr(err)
 		fmt.Println("Sctptemplate data has been saved")
@@ -10019,16 +10704,17 @@ func insertSctptemplate(baseName string, data []model.Sctptemplate) {
 	tx.Commit()
 }
 
-func insertSector(baseName string, data []model.Sector) {
+
+func insertSector(eNodeBId string, baseName string, data []model.Sector) {
 	fmt.Println("Processing Sector data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `sector` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `sector` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SECTORID,
 			data[j].ATTRIBUTES.SECNAME,
 			data[j].ATTRIBUTES.LOCATIONNAME,
@@ -10050,7 +10736,8 @@ func insertSector(baseName string, data []model.Sector) {
 			data[j].ATTRIBUTES.UNCERTSEMIMAJOR,
 			data[j].ATTRIBUTES.UNCERTSEMIMINOR,
 			data[j].ATTRIBUTES.UNCERTALTITUDE,
-			data[j].ATTRIBUTES.SECTORANTENNA,
+			data[j].ATTRIBUTES.SECTORANTENNA,	
+
 		)
 		checkErr(err)
 		fmt.Println("Sector data has been saved")
@@ -10058,16 +10745,17 @@ func insertSector(baseName string, data []model.Sector) {
 	tx.Commit()
 }
 
-func insertSectoreqm(baseName string, data []model.Sectoreqm) {
+
+func insertSectoreqm(eNodeBId string, baseName string, data []model.Sectoreqm) {
 	fmt.Println("Processing Sectoreqm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `sectoreqm` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `sectoreqm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SECTOREQMID,
 			data[j].ATTRIBUTES.SECTORID,
 			data[j].ATTRIBUTES.SECTOREQMANTENNA,
@@ -10077,7 +10765,8 @@ func insertSectoreqm(baseName string, data []model.Sectoreqm) {
 			data[j].ATTRIBUTES.RRUSN,
 			data[j].ATTRIBUTES.BEAMSHAPE,
 			data[j].ATTRIBUTES.BEAMLAYERSPLIT,
-			data[j].ATTRIBUTES.BEAMAZIMUTHOFFSET,
+			data[j].ATTRIBUTES.BEAMAZIMUTHOFFSET,	
+
 		)
 		checkErr(err)
 		fmt.Println("Sectoreqm data has been saved")
@@ -10085,16 +10774,17 @@ func insertSectoreqm(baseName string, data []model.Sectoreqm) {
 	tx.Commit()
 }
 
-func insertServicediffsetting(baseName string, data []model.Servicediffsetting) {
+
+func insertServicediffsetting(eNodeBId string, baseName string, data []model.Servicediffsetting) {
 	fmt.Println("Processing Servicediffsetting data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `servicediffsetting` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `servicediffsetting` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.QueueWeight0,
 			data[j].ATTRIBUTES.QueueWeight1,
 			data[j].ATTRIBUTES.QueueWeight2,
@@ -10103,7 +10793,8 @@ func insertServicediffsetting(baseName string, data []model.Servicediffsetting) 
 			data[j].ATTRIBUTES.QueueWeight5,
 			data[j].ATTRIBUTES.QueueWeight6,
 			data[j].ATTRIBUTES.QueueWeight7,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Servicediffsetting data has been saved")
@@ -10111,22 +10802,24 @@ func insertServicediffsetting(baseName string, data []model.Servicediffsetting) 
 	tx.Commit()
 }
 
-func insertServiceidentifypara(baseName string, data []model.Serviceidentifypara) {
+
+func insertServiceidentifypara(eNodeBId string, baseName string, data []model.Serviceidentifypara) {
 	fmt.Println("Processing Serviceidentifypara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `serviceidentifypara` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `serviceidentifypara` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.HeartbeatPacketLengthThld,
 			data[j].ATTRIBUTES.HeartbeatPacketNumberThld,
 			data[j].ATTRIBUTES.MassFlowBigPacketRateThld,
 			data[j].ATTRIBUTES.MassFlowDuration,
 			data[j].ATTRIBUTES.MassFlowPacketNumberThld,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Serviceidentifypara data has been saved")
@@ -10134,21 +10827,23 @@ func insertServiceidentifypara(baseName string, data []model.Serviceidentifypara
 	tx.Commit()
 }
 
-func insertServiceifdlearfcngrp(baseName string, data []model.Serviceifdlearfcngrp) {
+
+func insertServiceifdlearfcngrp(eNodeBId string, baseName string, data []model.Serviceifdlearfcngrp) {
 	fmt.Println("Processing Serviceifdlearfcngrp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `serviceifdlearfcngrp` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `serviceifdlearfcngrp` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.ServiceIfHoCfgGroupId,
 			data[j].ATTRIBUTES.DlEarfcnIndex,
 			data[j].ATTRIBUTES.DlEarfcn,
-			data[j].ATTRIBUTES.ServiceHoFreqPriority,
+			data[j].ATTRIBUTES.ServiceHoFreqPriority,	
+
 		)
 		checkErr(err)
 		fmt.Println("Serviceifdlearfcngrp data has been saved")
@@ -10156,21 +10851,23 @@ func insertServiceifdlearfcngrp(baseName string, data []model.Serviceifdlearfcng
 	tx.Commit()
 }
 
-func insertServiceifhocfggroup(baseName string, data []model.Serviceifhocfggroup) {
+
+func insertServiceifhocfggroup(eNodeBId string, baseName string, data []model.Serviceifhocfggroup) {
 	fmt.Println("Processing Serviceifhocfggroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `serviceifhocfggroup` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `serviceifhocfggroup` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.ServiceIfHoCfgGroupId,
 			data[j].ATTRIBUTES.InterFreqHoState,
 			data[j].ATTRIBUTES.A4RptWaitingTimer,
-			data[j].ATTRIBUTES.A4TimeToTriger,
+			data[j].ATTRIBUTES.A4TimeToTriger,	
+
 		)
 		checkErr(err)
 		fmt.Println("Serviceifhocfggroup data has been saved")
@@ -10178,20 +10875,22 @@ func insertServiceifhocfggroup(baseName string, data []model.Serviceifhocfggroup
 	tx.Commit()
 }
 
-func insertServiceirhocfggroup(baseName string, data []model.Serviceirhocfggroup) {
+
+func insertServiceirhocfggroup(eNodeBId string, baseName string, data []model.Serviceirhocfggroup) {
 	fmt.Println("Processing Serviceirhocfggroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `serviceirhocfggroup` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `serviceirhocfggroup` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.ServiceIrHoCfgGroupId,
 			data[j].ATTRIBUTES.InterRatHoState,
-			data[j].ATTRIBUTES.ServiceIrMeasMode,
+			data[j].ATTRIBUTES.ServiceIrMeasMode,	
+
 		)
 		checkErr(err)
 		fmt.Println("Serviceirhocfggroup data has been saved")
@@ -10199,21 +10898,23 @@ func insertServiceirhocfggroup(baseName string, data []model.Serviceirhocfggroup
 	tx.Commit()
 }
 
-func insertSfp(baseName string, data []model.Sfp) {
+
+func insertSfp(eNodeBId string, baseName string, data []model.Sfp) {
 	fmt.Println("Processing Sfp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `sfp` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `sfp` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.MODULEID,
-			data[j].ATTRIBUTES.PT,
+			data[j].ATTRIBUTES.PT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Sfp data has been saved")
@@ -10221,23 +10922,25 @@ func insertSfp(baseName string, data []model.Sfp) {
 	tx.Commit()
 }
 
-func insertSimuload(baseName string, data []model.Simuload) {
+
+func insertSimuload(eNodeBId string, baseName string, data []model.Simuload) {
 	fmt.Println("Processing Simuload data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `simuload` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `simuload` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SimuLoadCfgIndex,
 			data[j].ATTRIBUTES.SimuLoadRbThd,
 			data[j].ATTRIBUTES.SimuLoadPwrThd,
 			data[j].ATTRIBUTES.SimuLoadReportPeriod,
 			data[j].ATTRIBUTES.SimuLoadStatPeriod,
 			data[j].ATTRIBUTES.FreqSelSwitch,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Simuload data has been saved")
@@ -10245,17 +10948,19 @@ func insertSimuload(baseName string, data []model.Simuload) {
 	tx.Commit()
 }
 
-func insertSingleipswitch(baseName string, data []model.Singleipswitch) {
+
+func insertSingleipswitch(eNodeBId string, baseName string, data []model.Singleipswitch) {
 	fmt.Println("Processing Singleipswitch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `singleipswitch` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `singleipswitch` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.SINGLEIPSW,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.SINGLEIPSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Singleipswitch data has been saved")
@@ -10263,16 +10968,17 @@ func insertSingleipswitch(baseName string, data []model.Singleipswitch) {
 	tx.Commit()
 }
 
-func insertSrbcfg(baseName string, data []model.Srbcfg) {
+
+func insertSrbcfg(eNodeBId string, baseName string, data []model.Srbcfg) {
 	fmt.Println("Processing Srbcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `srbcfg` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `srbcfg` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SrbRlcParaAdaptSwitch,
 			data[j].ATTRIBUTES.SrbPollTimerAdjustStep,
 			data[j].ATTRIBUTES.SrbPollTimerMaxAdjustValue,
@@ -10280,7 +10986,8 @@ func insertSrbcfg(baseName string, data []model.Srbcfg) {
 			data[j].ATTRIBUTES.RrcConnRelMaxRetxThd,
 			data[j].ATTRIBUTES.ObjId,
 			data[j].ATTRIBUTES.SrbPollTimerPreset,
-			data[j].ATTRIBUTES.HOCmdRRCRlsMsgRetxAdpSw,
+			data[j].ATTRIBUTES.HOCmdRRCRlsMsgRetxAdpSw,	
+
 		)
 		checkErr(err)
 		fmt.Println("Srbcfg data has been saved")
@@ -10288,16 +10995,17 @@ func insertSrbcfg(baseName string, data []model.Srbcfg) {
 	tx.Commit()
 }
 
-func insertSrbrlcpdcpcfg(baseName string, data []model.Srbrlcpdcpcfg) {
+
+func insertSrbrlcpdcpcfg(eNodeBId string, baseName string, data []model.Srbrlcpdcpcfg) {
 	fmt.Println("Processing Srbrlcpdcpcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `srbrlcpdcpcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `srbrlcpdcpcfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SrbId,
 			data[j].ATTRIBUTES.UeMaxRetxThreshold,
 			data[j].ATTRIBUTES.ENodeBMaxRetxThreshold,
@@ -10313,7 +11021,8 @@ func insertSrbrlcpdcpcfg(baseName string, data []model.Srbrlcpdcpcfg) {
 			data[j].ATTRIBUTES.ENodeBAmReorderingTimer,
 			data[j].ATTRIBUTES.ObjId,
 			data[j].ATTRIBUTES.NbENodeBPollRetransTimer,
-			data[j].ATTRIBUTES.NbUePollRetransTimer,
+			data[j].ATTRIBUTES.NbUePollRetransTimer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Srbrlcpdcpcfg data has been saved")
@@ -10321,16 +11030,17 @@ func insertSrbrlcpdcpcfg(baseName string, data []model.Srbrlcpdcpcfg) {
 	tx.Commit()
 }
 
-func insertSrciprt(baseName string, data []model.Srciprt) {
+
+func insertSrciprt(eNodeBId string, baseName string, data []model.Srciprt) {
 	fmt.Println("Processing Srciprt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `srciprt` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `srciprt` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SRCRTIDX,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
@@ -10340,7 +11050,8 @@ func insertSrciprt(baseName string, data []model.Srciprt) {
 			data[j].ATTRIBUTES.RTTYPE,
 			data[j].ATTRIBUTES.NEXTHOP,
 			data[j].ATTRIBUTES.PREF,
-			data[j].ATTRIBUTES.USERLABEL,
+			data[j].ATTRIBUTES.USERLABEL,	
+
 		)
 		checkErr(err)
 		fmt.Println("Srciprt data has been saved")
@@ -10348,18 +11059,20 @@ func insertSrciprt(baseName string, data []model.Srciprt) {
 	tx.Commit()
 }
 
-func insertSrsadaptivecfg(baseName string, data []model.Srsadaptivecfg) {
+
+func insertSrsadaptivecfg(eNodeBId string, baseName string, data []model.Srsadaptivecfg) {
 	fmt.Println("Processing Srsadaptivecfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `srsadaptivecfg` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `srsadaptivecfg` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SrsPeriodAdaptive,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Srsadaptivecfg data has been saved")
@@ -10367,16 +11080,17 @@ func insertSrsadaptivecfg(baseName string, data []model.Srsadaptivecfg) {
 	tx.Commit()
 }
 
-func insertSrscfg(baseName string, data []model.Srscfg) {
+
+func insertSrscfg(eNodeBId string, baseName string, data []model.Srscfg) {
 	fmt.Println("Processing Srscfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `srscfg` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `srscfg` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.SrsSubframeCfg,
 			data[j].ATTRIBUTES.AnSrsSimuTrans,
@@ -10385,7 +11099,8 @@ func insertSrscfg(baseName string, data []model.Srscfg) {
 			data[j].ATTRIBUTES.FddSrsCfgMode,
 			data[j].ATTRIBUTES.SrsAlgoOptSwitch,
 			data[j].ATTRIBUTES.SrsCfgPolicySwitch,
-			data[j].ATTRIBUTES.SrsResOptSwitch,
+			data[j].ATTRIBUTES.SrsResOptSwitch,	
+
 		)
 		checkErr(err)
 		fmt.Println("Srscfg data has been saved")
@@ -10393,22 +11108,24 @@ func insertSrscfg(baseName string, data []model.Srscfg) {
 	tx.Commit()
 }
 
-func insertSsl(baseName string, data []model.Ssl) {
+
+func insertSsl(eNodeBId string, baseName string, data []model.Ssl) {
 	fmt.Println("Processing Ssl data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ssl` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ssl` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CONNTYPE,
 			data[j].ATTRIBUTES.AUTHMODE,
 			data[j].ATTRIBUTES.RENEGO,
 			data[j].ATTRIBUTES.RENEGOINTERVAL,
 			data[j].ATTRIBUTES.LOWESTCSLEVEL,
-			data[j].ATTRIBUTES.VERSION,
+			data[j].ATTRIBUTES.VERSION,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ssl data has been saved")
@@ -10416,16 +11133,17 @@ func insertSsl(baseName string, data []model.Ssl) {
 	tx.Commit()
 }
 
-func insertStandardqci(baseName string, data []model.Standardqci) {
+
+func insertStandardqci(eNodeBId string, baseName string, data []model.Standardqci) {
 	fmt.Println("Processing Standardqci data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `standardqci` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `standardqci` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.PreAllocationWeight,
 			data[j].ATTRIBUTES.InterRatPolicyCfgGroupId,
@@ -10437,7 +11155,8 @@ func insertStandardqci(baseName string, data []model.Standardqci) {
 			data[j].ATTRIBUTES.UlschPriorityFactor,
 			data[j].ATTRIBUTES.DlschPriorityFactor,
 			data[j].ATTRIBUTES.UlMinGbr,
-			data[j].ATTRIBUTES.DlMinGbr,
+			data[j].ATTRIBUTES.DlMinGbr,	
+
 		)
 		checkErr(err)
 		fmt.Println("Standardqci data has been saved")
@@ -10445,20 +11164,22 @@ func insertStandardqci(baseName string, data []model.Standardqci) {
 	tx.Commit()
 }
 
-func insertSubrack(baseName string, data []model.Subrack) {
+
+func insertSubrack(eNodeBId string, baseName string, data []model.Subrack) {
 	fmt.Println("Processing Subrack data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `subrack` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `subrack` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.TYPE,
-			data[j].ATTRIBUTES.DESC,
+			data[j].ATTRIBUTES.DESC,	
+
 		)
 		checkErr(err)
 		fmt.Println("Subrack data has been saved")
@@ -10466,16 +11187,17 @@ func insertSubrack(baseName string, data []model.Subrack) {
 	tx.Commit()
 }
 
-func insertSynceth(baseName string, data []model.Synceth) {
+
+func insertSynceth(eNodeBId string, baseName string, data []model.Synceth) {
 	fmt.Println("Processing Synceth data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `synceth` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `synceth` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LN,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
@@ -10484,7 +11206,8 @@ func insertSynceth(baseName string, data []model.Synceth) {
 			data[j].ATTRIBUTES.QL,
 			data[j].ATTRIBUTES.SSM,
 			data[j].ATTRIBUTES.PRI,
-			data[j].ATTRIBUTES.TYPE,
+			data[j].ATTRIBUTES.TYPE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Synceth data has been saved")
@@ -10492,16 +11215,17 @@ func insertSynceth(baseName string, data []model.Synceth) {
 	tx.Commit()
 }
 
-func insertTacalg(baseName string, data []model.Tacalg) {
+
+func insertTacalg(eNodeBId string, baseName string, data []model.Tacalg) {
 	fmt.Println("Processing Tacalg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tacalg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tacalg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RSCGRPULCACSWITCH,
 			data[j].ATTRIBUTES.RSCGRPDLCACSWITCH,
 			data[j].ATTRIBUTES.TRMULHOCACTH,
@@ -10520,7 +11244,8 @@ func insertTacalg(baseName string, data []model.Tacalg) {
 			data[j].ATTRIBUTES.PORTDLOBSW,
 			data[j].ATTRIBUTES.PORTULCACSW,
 			data[j].ATTRIBUTES.PORTDLCACSW,
-			data[j].ATTRIBUTES.EMCTACPSW,
+			data[j].ATTRIBUTES.EMCTACPSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tacalg data has been saved")
@@ -10528,16 +11253,17 @@ func insertTacalg(baseName string, data []model.Tacalg) {
 	tx.Commit()
 }
 
-func insertTasm(baseName string, data []model.Tasm) {
+
+func insertTasm(eNodeBId string, baseName string, data []model.Tasm) {
 	fmt.Println("Processing Tasm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tasm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tasm` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.SRCNO,
 			data[j].ATTRIBUTES.CLKSRC,
 			data[j].ATTRIBUTES.MODE,
@@ -10571,7 +11297,8 @@ func insertTasm(baseName string, data []model.Tasm) {
 			data[j].ATTRIBUTES.LEAPSECONDSCHGTIME,
 			data[j].ATTRIBUTES.CRTGPSTOUTCLEAPSECONDS,
 			data[j].ATTRIBUTES.NEXTGPSTOUTCLEAPSECONDS,
-			data[j].ATTRIBUTES.LPFNSYNCSW,
+			data[j].ATTRIBUTES.LPFNSYNCSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tasm data has been saved")
@@ -10579,18 +11306,20 @@ func insertTasm(baseName string, data []model.Tasm) {
 	tx.Commit()
 }
 
-func insertTbdspinfo(baseName string, data []model.Tbdspinfo) {
+
+func insertTbdspinfo(eNodeBId string, baseName string, data []model.Tbdspinfo) {
 	fmt.Println("Processing Tbdspinfo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tbdspinfo` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tbdspinfo` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LANNO,
-			data[j].ATTRIBUTES.VERSION,
+			data[j].ATTRIBUTES.VERSION,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tbdspinfo data has been saved")
@@ -10598,17 +11327,19 @@ func insertTbdspinfo(baseName string, data []model.Tbdspinfo) {
 	tx.Commit()
 }
 
-func insertTblangno(baseName string, data []model.Tblangno) {
+
+func insertTblangno(eNodeBId string, baseName string, data []model.Tblangno) {
 	fmt.Println("Processing Tblangno data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tblangno` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tblangno` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.LANNO,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.LANNO,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tblangno data has been saved")
@@ -10616,20 +11347,22 @@ func insertTblangno(baseName string, data []model.Tblangno) {
 	tx.Commit()
 }
 
-func insertTcpackctrlalgo(baseName string, data []model.Tcpackctrlalgo) {
+
+func insertTcpackctrlalgo(eNodeBId string, baseName string, data []model.Tcpackctrlalgo) {
 	fmt.Println("Processing Tcpackctrlalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tcpackctrlalgo` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tcpackctrlalgo` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.AckCtrlSwitch,
 			data[j].ATTRIBUTES.DlMaxThroughput,
 			data[j].ATTRIBUTES.CtrlTimerLength,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tcpackctrlalgo data has been saved")
@@ -10637,17 +11370,19 @@ func insertTcpackctrlalgo(baseName string, data []model.Tcpackctrlalgo) {
 	tx.Commit()
 }
 
-func insertTcpacklimitalg(baseName string, data []model.Tcpacklimitalg) {
+
+func insertTcpacklimitalg(eNodeBId string, baseName string, data []model.Tcpacklimitalg) {
 	fmt.Println("Processing Tcpacklimitalg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tcpacklimitalg` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tcpacklimitalg` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.TCPACKLIMITSWITCH,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.TCPACKLIMITSWITCH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tcpacklimitalg data has been saved")
@@ -10655,19 +11390,21 @@ func insertTcpacklimitalg(baseName string, data []model.Tcpacklimitalg) {
 	tx.Commit()
 }
 
-func insertTcpmssctrl(baseName string, data []model.Tcpmssctrl) {
+
+func insertTcpmssctrl(eNodeBId string, baseName string, data []model.Tcpmssctrl) {
 	fmt.Println("Processing Tcpmssctrl data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tcpmssctrl` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tcpmssctrl` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TcpMssCtrlSwitch,
 			data[j].ATTRIBUTES.TcpMssThd,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tcpmssctrl data has been saved")
@@ -10675,16 +11412,17 @@ func insertTcpmssctrl(baseName string, data []model.Tcpmssctrl) {
 	tx.Commit()
 }
 
-func insertTcu(baseName string, data []model.Tcu) {
+
+func insertTcu(eNodeBId string, baseName string, data []model.Tcu) {
 	fmt.Println("Processing Tcu data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tcu` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tcu` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
@@ -10695,7 +11433,8 @@ func insertTcu(baseName string, data []model.Tcu) {
 			data[j].ATTRIBUTES.TLTHD,
 			data[j].ATTRIBUTES.TUTHD,
 			data[j].ATTRIBUTES.SBAF,
-			data[j].ATTRIBUTES.TCMODE,
+			data[j].ATTRIBUTES.TCMODE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tcu data has been saved")
@@ -10703,18 +11442,20 @@ func insertTcu(baseName string, data []model.Tcu) {
 	tx.Commit()
 }
 
-func insertTddframeoffset(baseName string, data []model.Tddframeoffset) {
+
+func insertTddframeoffset(eNodeBId string, baseName string, data []model.Tddframeoffset) {
 	fmt.Println("Processing Tddframeoffset data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tddframeoffset` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tddframeoffset` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TimeOffset,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tddframeoffset data has been saved")
@@ -10722,19 +11463,21 @@ func insertTddframeoffset(baseName string, data []model.Tddframeoffset) {
 	tx.Commit()
 }
 
-func insertTddresmodeswitch(baseName string, data []model.Tddresmodeswitch) {
+
+func insertTddresmodeswitch(eNodeBId string, baseName string, data []model.Tddresmodeswitch) {
 	fmt.Println("Processing Tddresmodeswitch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tddresmodeswitch` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tddresmodeswitch` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ClkResExcludeSwitch,
 			data[j].ATTRIBUTES.BbResExclusiveSwitch,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tddresmodeswitch data has been saved")
@@ -10742,16 +11485,17 @@ func insertTddresmodeswitch(baseName string, data []model.Tddresmodeswitch) {
 	tx.Commit()
 }
 
-func insertTimealignmenttimer(baseName string, data []model.Timealignmenttimer) {
+
+func insertTimealignmenttimer(eNodeBId string, baseName string, data []model.Timealignmenttimer) {
 	fmt.Println("Processing Timealignmenttimer data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `timealignmenttimer` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `timealignmenttimer` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.TimeAlignmentTimer,
 			data[j].ATTRIBUTES.TimingAdvCmdOptSwitch,
@@ -10760,7 +11504,8 @@ func insertTimealignmenttimer(baseName string, data []model.Timealignmenttimer) 
 			data[j].ATTRIBUTES.TimingResOptSwitch,
 			data[j].ATTRIBUTES.PucchTimeOffsetCompVal,
 			data[j].ATTRIBUTES.HighSpeedTaCmdSendPeriod,
-			data[j].ATTRIBUTES.TaEnhance,
+			data[j].ATTRIBUTES.TaEnhance,	
+
 		)
 		checkErr(err)
 		fmt.Println("Timealignmenttimer data has been saved")
@@ -10768,18 +11513,20 @@ func insertTimealignmenttimer(baseName string, data []model.Timealignmenttimer) 
 	tx.Commit()
 }
 
-func insertTimesrc(baseName string, data []model.Timesrc) {
+
+func insertTimesrc(eNodeBId string, baseName string, data []model.Timesrc) {
 	fmt.Println("Processing Timesrc data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `timesrc` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `timesrc` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TIMESRC,
-			data[j].ATTRIBUTES.AUTOSWITCH,
+			data[j].ATTRIBUTES.AUTOSWITCH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Timesrc data has been saved")
@@ -10787,18 +11534,20 @@ func insertTimesrc(baseName string, data []model.Timesrc) {
 	tx.Commit()
 }
 
-func insertTimethrd(baseName string, data []model.Timethrd) {
+
+func insertTimethrd(eNodeBId string, baseName string, data []model.Timethrd) {
 	fmt.Println("Processing Timethrd data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `timethrd` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `timethrd` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.THRD,
-			data[j].ATTRIBUTES.SWITCH,
+			data[j].ATTRIBUTES.SWITCH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Timethrd data has been saved")
@@ -10806,16 +11555,17 @@ func insertTimethrd(baseName string, data []model.Timethrd) {
 	tx.Commit()
 }
 
-func insertTldralg(baseName string, data []model.Tldralg) {
+
+func insertTldralg(eNodeBId string, baseName string, data []model.Tldralg) {
 	fmt.Println("Processing Tldralg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tldralg` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tldralg` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TRMULLDRTRGTH,
 			data[j].ATTRIBUTES.TRMDLLDRTRGTH,
 			data[j].ATTRIBUTES.TRMULLDRCLRTH,
@@ -10823,7 +11573,8 @@ func insertTldralg(baseName string, data []model.Tldralg) {
 			data[j].ATTRIBUTES.TRMULMLDTRGTH,
 			data[j].ATTRIBUTES.TRMDLMLDTRGTH,
 			data[j].ATTRIBUTES.TRMULMLDCLRTH,
-			data[j].ATTRIBUTES.TRMDLMLDCLRTH,
+			data[j].ATTRIBUTES.TRMDLMLDCLRTH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tldralg data has been saved")
@@ -10831,17 +11582,19 @@ func insertTldralg(baseName string, data []model.Tldralg) {
 	tx.Commit()
 }
 
-func insertTlfrswitch(baseName string, data []model.Tlfrswitch) {
+
+func insertTlfrswitch(eNodeBId string, baseName string, data []model.Tlfrswitch) {
 	fmt.Println("Processing Tlfrswitch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tlfrswitch` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tlfrswitch` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.TLFRSWITCH,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.TLFRSWITCH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tlfrswitch data has been saved")
@@ -10849,23 +11602,25 @@ func insertTlfrswitch(baseName string, data []model.Tlfrswitch) {
 	tx.Commit()
 }
 
-func insertTolcalg(baseName string, data []model.Tolcalg) {
+
+func insertTolcalg(eNodeBId string, baseName string, data []model.Tolcalg) {
 	fmt.Println("Processing Tolcalg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tolcalg` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tolcalg` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TRMULOLCSWITCH,
 			data[j].ATTRIBUTES.TRMDLOLCSWITCH,
 			data[j].ATTRIBUTES.TRMULOLCTRIGTH,
 			data[j].ATTRIBUTES.TRMULOLCRELTH,
 			data[j].ATTRIBUTES.TRMOLCRELBEARERNUM,
 			data[j].ATTRIBUTES.TRMDLOLCTRIGTH,
-			data[j].ATTRIBUTES.TRMDLOLCRELTH,
+			data[j].ATTRIBUTES.TRMDLOLCRELTH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tolcalg data has been saved")
@@ -10873,16 +11628,17 @@ func insertTolcalg(baseName string, data []model.Tolcalg) {
 	tx.Commit()
 }
 
-func insertTpealgo(baseName string, data []model.Tpealgo) {
+
+func insertTpealgo(eNodeBId string, baseName string, data []model.Tpealgo) {
 	fmt.Println("Processing Tpealgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tpealgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tpealgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.PortListNum,
 			data[j].ATTRIBUTES.Port1,
 			data[j].ATTRIBUTES.Port2,
@@ -10904,7 +11660,8 @@ func insertTpealgo(baseName string, data []model.Tpealgo) {
 			data[j].ATTRIBUTES.Port18,
 			data[j].ATTRIBUTES.Port19,
 			data[j].ATTRIBUTES.Port20,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tpealgo data has been saved")
@@ -10912,20 +11669,22 @@ func insertTpealgo(baseName string, data []model.Tpealgo) {
 	tx.Commit()
 }
 
-func insertTrp(baseName string, data []model.Trp) {
+
+func insertTrp(eNodeBId string, baseName string, data []model.Trp) {
 	fmt.Println("Processing Trp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `trp` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `trp` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
-			data[j].ATTRIBUTES.SUBTYPE,
+			data[j].ATTRIBUTES.SUBTYPE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Trp data has been saved")
@@ -10933,17 +11692,19 @@ func insertTrp(baseName string, data []model.Trp) {
 	tx.Commit()
 }
 
-func insertTrustcert(baseName string, data []model.Trustcert) {
+
+func insertTrustcert(eNodeBId string, baseName string, data []model.Trustcert) {
 	fmt.Println("Processing Trustcert data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `trustcert` VALUES(?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `trustcert` VALUES(?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
-			data[j].ATTRIBUTES.CERTNAME,
+		_, err = stmt.Exec(eNodeBId, baseName,
+			data[j].ATTRIBUTES.CERTNAME,	
+
 		)
 		checkErr(err)
 		fmt.Println("Trustcert data has been saved")
@@ -10951,16 +11712,17 @@ func insertTrustcert(baseName string, data []model.Trustcert) {
 	tx.Commit()
 }
 
-func insertTwampresponder(baseName string, data []model.Twampresponder) {
+
+func insertTwampresponder(eNodeBId string, baseName string, data []model.Twampresponder) {
 	fmt.Println("Processing Twampresponder data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `twampresponder` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `twampresponder` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.RESPONDERID,
 			data[j].ATTRIBUTES.LOCALIP,
 			data[j].ATTRIBUTES.VRFINDEX,
@@ -10968,7 +11730,8 @@ func insertTwampresponder(baseName string, data []model.Twampresponder) {
 			data[j].ATTRIBUTES.REFWAIT,
 			data[j].ATTRIBUTES.SERVWAIT,
 			data[j].ATTRIBUTES.LOCALPORT,
-			data[j].ATTRIBUTES.TWAMPARCH,
+			data[j].ATTRIBUTES.TWAMPARCH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Twampresponder data has been saved")
@@ -10976,21 +11739,23 @@ func insertTwampresponder(baseName string, data []model.Twampresponder) {
 	tx.Commit()
 }
 
-func insertTxbranch(baseName string, data []model.Txbranch) {
+
+func insertTxbranch(eNodeBId string, baseName string, data []model.Txbranch) {
 	fmt.Println("Processing Txbranch data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `txbranch` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `txbranch` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.TXNO,
-			data[j].ATTRIBUTES.TXSW,
+			data[j].ATTRIBUTES.TXSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Txbranch data has been saved")
@@ -10998,20 +11763,22 @@ func insertTxbranch(baseName string, data []model.Txbranch) {
 	tx.Commit()
 }
 
-func insertTypdrbbsr(baseName string, data []model.Typdrbbsr) {
+
+func insertTypdrbbsr(eNodeBId string, baseName string, data []model.Typdrbbsr) {
 	fmt.Println("Processing Typdrbbsr data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `typdrbbsr` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `typdrbbsr` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.TPerodicBSRTimer,
 			data[j].ATTRIBUTES.RetxBsrTimer,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Typdrbbsr data has been saved")
@@ -11019,18 +11786,20 @@ func insertTypdrbbsr(baseName string, data []model.Typdrbbsr) {
 	tx.Commit()
 }
 
-func insertTz(baseName string, data []model.Tz) {
+
+func insertTz(eNodeBId string, baseName string, data []model.Tz) {
 	fmt.Println("Processing Tz data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `tz` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `tz` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ZONET,
-			data[j].ATTRIBUTES.DST,
+			data[j].ATTRIBUTES.DST,	
+
 		)
 		checkErr(err)
 		fmt.Println("Tz data has been saved")
@@ -11038,19 +11807,21 @@ func insertTz(baseName string, data []model.Tz) {
 	tx.Commit()
 }
 
-func insertUdpping(baseName string, data []model.Udpping) {
+
+func insertUdpping(eNodeBId string, baseName string, data []model.Udpping) {
 	fmt.Println("Processing Udpping data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `udpping` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `udpping` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.TIMEOUTTHD,
 			data[j].ATTRIBUTES.TIMEOUTCNT,
-			data[j].ATTRIBUTES.DSCP,
+			data[j].ATTRIBUTES.DSCP,	
+
 		)
 		checkErr(err)
 		fmt.Println("Udpping data has been saved")
@@ -11058,18 +11829,20 @@ func insertUdpping(baseName string, data []model.Udpping) {
 	tx.Commit()
 }
 
-func insertUdt(baseName string, data []model.Udt) {
+
+func insertUdt(eNodeBId string, baseName string, data []model.Udt) {
 	fmt.Println("Processing Udt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `udt` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `udt` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.UDTNO,
-			data[j].ATTRIBUTES.UDTPARAGRPID,
+			data[j].ATTRIBUTES.UDTPARAGRPID,	
+
 		)
 		checkErr(err)
 		fmt.Println("Udt data has been saved")
@@ -11077,23 +11850,25 @@ func insertUdt(baseName string, data []model.Udt) {
 	tx.Commit()
 }
 
-func insertUdtparagrp(baseName string, data []model.Udtparagrp) {
+
+func insertUdtparagrp(eNodeBId string, baseName string, data []model.Udtparagrp) {
 	fmt.Println("Processing Udtparagrp data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `udtparagrp` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `udtparagrp` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.UDTPARAGRPID,
 			data[j].ATTRIBUTES.PRIRULE,
 			data[j].ATTRIBUTES.PRI,
 			data[j].ATTRIBUTES.ACTFACTOR,
 			data[j].ATTRIBUTES.PRIMTRANRSCTYPE,
 			data[j].ATTRIBUTES.PRIMPTLOADTH,
-			data[j].ATTRIBUTES.PRIM2SECPTLOADRATH,
+			data[j].ATTRIBUTES.PRIM2SECPTLOADRATH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Udtparagrp data has been saved")
@@ -11101,16 +11876,17 @@ func insertUdtparagrp(baseName string, data []model.Udtparagrp) {
 	tx.Commit()
 }
 
-func insertUecooperationpara(baseName string, data []model.Uecooperationpara) {
+
+func insertUecooperationpara(eNodeBId string, baseName string, data []model.Uecooperationpara) {
 	fmt.Println("Processing Uecooperationpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `uecooperationpara` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `uecooperationpara` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.MacCeMsgLCID,
 			data[j].ATTRIBUTES.A2Offset,
@@ -11119,7 +11895,8 @@ func insertUecooperationpara(baseName string, data []model.Uecooperationpara) {
 			data[j].ATTRIBUTES.UEForbiddenMsgThd,
 			data[j].ATTRIBUTES.SpecUserCooperationSwitch,
 			data[j].ATTRIBUTES.DsdsCooperationRptSwitch,
-			data[j].ATTRIBUTES.DsdsLcid,
+			data[j].ATTRIBUTES.DsdsLcid,	
+
 		)
 		checkErr(err)
 		fmt.Println("Uecooperationpara data has been saved")
@@ -11127,19 +11904,21 @@ func insertUecooperationpara(baseName string, data []model.Uecooperationpara) {
 	tx.Commit()
 }
 
-func insertUeiu(baseName string, data []model.Ueiu) {
+
+func insertUeiu(eNodeBId string, baseName string, data []model.Ueiu) {
 	fmt.Println("Processing Ueiu data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ueiu` VALUES(?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ueiu` VALUES(?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
-			data[j].ATTRIBUTES.SN,
+			data[j].ATTRIBUTES.SN,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ueiu data has been saved")
@@ -11147,16 +11926,17 @@ func insertUeiu(baseName string, data []model.Ueiu) {
 	tx.Commit()
 }
 
-func insertUespecdrxparagroup(baseName string, data []model.Uespecdrxparagroup) {
+
+func insertUespecdrxparagroup(eNodeBId string, baseName string, data []model.Uespecdrxparagroup) {
 	fmt.Println("Processing Uespecdrxparagroup data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `uespecdrxparagroup` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `uespecdrxparagroup` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DrxParaGroupIndex,
 			data[j].ATTRIBUTES.DrxParaGroupStat,
@@ -11166,7 +11946,8 @@ func insertUespecdrxparagroup(baseName string, data []model.Uespecdrxparagroup) 
 			data[j].ATTRIBUTES.LongDrxCycle,
 			data[j].ATTRIBUTES.SupportShortDrx,
 			data[j].ATTRIBUTES.ShortDrxCycle,
-			data[j].ATTRIBUTES.DrxShortCycleTimer,
+			data[j].ATTRIBUTES.DrxShortCycleTimer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Uespecdrxparagroup data has been saved")
@@ -11174,16 +11955,17 @@ func insertUespecdrxparagroup(baseName string, data []model.Uespecdrxparagroup) 
 	tx.Commit()
 }
 
-func insertUetimerconst(baseName string, data []model.Uetimerconst) {
+
+func insertUetimerconst(eNodeBId string, baseName string, data []model.Uetimerconst) {
 	fmt.Println("Processing Uetimerconst data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `uetimerconst` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `uetimerconst` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.T300,
 			data[j].ATTRIBUTES.T301,
@@ -11203,7 +11985,8 @@ func insertUetimerconst(baseName string, data []model.Uetimerconst) {
 			data[j].ATTRIBUTES.T300CE,
 			data[j].ATTRIBUTES.T301CE,
 			data[j].ATTRIBUTES.T310CE,
-			data[j].ATTRIBUTES.T311CE,
+			data[j].ATTRIBUTES.T311CE,	
+
 		)
 		checkErr(err)
 		fmt.Println("Uetimerconst data has been saved")
@@ -11211,16 +11994,17 @@ func insertUetimerconst(baseName string, data []model.Uetimerconst) {
 	tx.Commit()
 }
 
-func insertUlcsalgopara(baseName string, data []model.Ulcsalgopara) {
+
+func insertUlcsalgopara(eNodeBId string, baseName string, data []model.Ulcsalgopara) {
 	fmt.Println("Processing Ulcsalgopara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulcsalgopara` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulcsalgopara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.UlCoPcInThd,
 			data[j].ATTRIBUTES.UlCoPcRbkRsrpThd,
@@ -11230,7 +12014,8 @@ func insertUlcsalgopara(baseName string, data []model.Ulcsalgopara) {
 			data[j].ATTRIBUTES.UlCsA3Offset,
 			data[j].ATTRIBUTES.UlCsSw,
 			data[j].ATTRIBUTES.UlCraInThld,
-			data[j].ATTRIBUTES.UlCraUserNumThld,
+			data[j].ATTRIBUTES.UlCraUserNumThld,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulcsalgopara data has been saved")
@@ -11238,16 +12023,17 @@ func insertUlcsalgopara(baseName string, data []model.Ulcsalgopara) {
 	tx.Commit()
 }
 
-func insertUlinterfsuppresscfg(baseName string, data []model.Ulinterfsuppresscfg) {
+
+func insertUlinterfsuppresscfg(eNodeBId string, baseName string, data []model.Ulinterfsuppresscfg) {
 	fmt.Println("Processing Ulinterfsuppresscfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulinterfsuppresscfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulinterfsuppresscfg` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.UlInterfsuppressionThd,
 			data[j].ATTRIBUTES.P0UePuschOffset,
@@ -11263,7 +12049,8 @@ func insertUlinterfsuppresscfg(baseName string, data []model.Ulinterfsuppresscfg
 			data[j].ATTRIBUTES.RemoteInfULEnhanceSw,
 			data[j].ATTRIBUTES.PuschEnhDeltaSinrThd,
 			data[j].ATTRIBUTES.RASignalPcSwitch,
-			data[j].ATTRIBUTES.UlInterPwrDiffThd,
+			data[j].ATTRIBUTES.UlInterPwrDiffThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulinterfsuppresscfg data has been saved")
@@ -11271,16 +12058,17 @@ func insertUlinterfsuppresscfg(baseName string, data []model.Ulinterfsuppresscfg
 	tx.Commit()
 }
 
-func insertUlocell(baseName string, data []model.Ulocell) {
+
+func insertUlocell(eNodeBId string, baseName string, data []model.Ulocell) {
 	fmt.Println("Processing Ulocell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULOCELLID,
 			data[j].ATTRIBUTES.VIRTUALCPC,
 			data[j].ATTRIBUTES.RADIUS,
@@ -11340,7 +12128,8 @@ func insertUlocell(baseName string, data []model.Ulocell) {
 			data[j].ATTRIBUTES.DLASYMLEFTBANDWIDTH,
 			data[j].ATTRIBUTES.DLASYMRIGHTBANDWIDTH,
 			data[j].ATTRIBUTES.NBISADAPTIVEFORBIDSW,
-			data[j].ATTRIBUTES.PRECDWSRSW,
+			data[j].ATTRIBUTES.PRECDWSRSW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulocell data has been saved")
@@ -11348,16 +12137,17 @@ func insertUlocell(baseName string, data []model.Ulocell) {
 	tx.Commit()
 }
 
-func insertUlocellalgpara(baseName string, data []model.Ulocellalgpara) {
+
+func insertUlocellalgpara(eNodeBId string, baseName string, data []model.Ulocellalgpara) {
 	fmt.Println("Processing Ulocellalgpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellalgpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellalgpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULOCELLID,
 			data[j].ATTRIBUTES.RTWPSIRTGTADJSW,
 			data[j].ATTRIBUTES.SIB7RTWPOPTSW,
@@ -11393,7 +12183,8 @@ func insertUlocellalgpara(baseName string, data []model.Ulocellalgpara) {
 			data[j].ATTRIBUTES.COVERIMPBASEDONADVDEM,
 			data[j].ATTRIBUTES.SRBOVERHSDPAMMTOPTSW,
 			data[j].ATTRIBUTES.TURBOICENHANCEDSW,
-			data[j].ATTRIBUTES.AMRIMPBASEDONPLVASW,
+			data[j].ATTRIBUTES.AMRIMPBASEDONPLVASW,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulocellalgpara data has been saved")
@@ -11401,16 +12192,17 @@ func insertUlocellalgpara(baseName string, data []model.Ulocellalgpara) {
 	tx.Commit()
 }
 
-func insertUlocellmacepara(baseName string, data []model.Ulocellmacepara) {
+
+func insertUlocellmacepara(eNodeBId string, baseName string, data []model.Ulocellmacepara) {
 	fmt.Println("Processing Ulocellmacepara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellmacepara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellmacepara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULOCELLID,
 			data[j].ATTRIBUTES.SCHEDULEPARA,
 			data[j].ATTRIBUTES.HSUPAOLSCHSW,
@@ -11448,7 +12240,8 @@ func insertUlocellmacepara(baseName string, data []model.Ulocellmacepara) {
 			data[j].ATTRIBUTES.ULSECCELLACTOPTSW,
 			data[j].ATTRIBUTES.ULSECCELLDEACTCOVTHR,
 			data[j].ATTRIBUTES.HSUPATOTALTHRGUARANTEESW,
-			data[j].ATTRIBUTES.HSUPATOTALTHRTHD,
+			data[j].ATTRIBUTES.HSUPATOTALTHRTHD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulocellmacepara data has been saved")
@@ -11456,16 +12249,17 @@ func insertUlocellmacepara(baseName string, data []model.Ulocellmacepara) {
 	tx.Commit()
 }
 
-func insertUlocellmachspara(baseName string, data []model.Ulocellmachspara) {
+
+func insertUlocellmachspara(eNodeBId string, baseName string, data []model.Ulocellmachspara) {
 	fmt.Println("Processing Ulocellmachspara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellmachspara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellmachspara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULOCELLID,
 			data[j].ATTRIBUTES.RSCALLOCM,
 			data[j].ATTRIBUTES.SM,
@@ -11518,7 +12312,8 @@ func insertUlocellmachspara(baseName string, data []model.Ulocellmachspara) {
 			data[j].ATTRIBUTES.BUFFERSMSW,
 			data[j].ATTRIBUTES.DYNCODEOPTSW,
 			data[j].ATTRIBUTES.HARQRTSCHOPTSW,
-			data[j].ATTRIBUTES.MCDELTACQITHD,
+			data[j].ATTRIBUTES.MCDELTACQITHD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulocellmachspara data has been saved")
@@ -11526,20 +12321,22 @@ func insertUlocellmachspara(baseName string, data []model.Ulocellmachspara) {
 	tx.Commit()
 }
 
-func insertUlocellnoaccesspara(baseName string, data []model.Ulocellnoaccesspara) {
+
+func insertUlocellnoaccesspara(eNodeBId string, baseName string, data []model.Ulocellnoaccesspara) {
 	fmt.Println("Processing Ulocellnoaccesspara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellnoaccesspara` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellnoaccesspara` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULOCELLID,
 			data[j].ATTRIBUTES.NOUETIMER,
 			data[j].ATTRIBUTES.NOFSTRLTIMER,
-			data[j].ATTRIBUTES.AUTORCVRMTHD,
+			data[j].ATTRIBUTES.AUTORCVRMTHD,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulocellnoaccesspara data has been saved")
@@ -11547,21 +12344,23 @@ func insertUlocellnoaccesspara(baseName string, data []model.Ulocellnoaccesspara
 	tx.Commit()
 }
 
-func insertUlocellr99algpara(baseName string, data []model.Ulocellr99algpara) {
+
+func insertUlocellr99algpara(eNodeBId string, baseName string, data []model.Ulocellr99algpara) {
 	fmt.Println("Processing Ulocellr99algpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellr99algpara` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellr99algpara` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULOCELLID,
 			data[j].ATTRIBUTES.PWRCNGCACSW,
 			data[j].ATTRIBUTES.SHORTTH,
 			data[j].ATTRIBUTES.LONGTH,
-			data[j].ATTRIBUTES.SHORTTHFORRTRRC,
+			data[j].ATTRIBUTES.SHORTTHFORRTRRC,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulocellr99algpara data has been saved")
@@ -11569,16 +12368,17 @@ func insertUlocellr99algpara(baseName string, data []model.Ulocellr99algpara) {
 	tx.Commit()
 }
 
-func insertUlocellrsclmtpara(baseName string, data []model.Ulocellrsclmtpara) {
+
+func insertUlocellrsclmtpara(eNodeBId string, baseName string, data []model.Ulocellrsclmtpara) {
 	fmt.Println("Processing Ulocellrsclmtpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellrsclmtpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellrsclmtpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULOCELLID,
 			data[j].ATTRIBUTES.CME8KRSCLMT,
 			data[j].ATTRIBUTES.CME16KRSCLMT,
@@ -11591,7 +12391,8 @@ func insertUlocellrsclmtpara(baseName string, data []model.Ulocellrsclmtpara) {
 			data[j].ATTRIBUTES.CME768KRSCLMT,
 			data[j].ATTRIBUTES.CME1024KRSCLMT,
 			data[j].ATTRIBUTES.CME1536KRSCLMT,
-			data[j].ATTRIBUTES.CME1800KRSCLMT,
+			data[j].ATTRIBUTES.CME1800KRSCLMT,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulocellrsclmtpara data has been saved")
@@ -11599,16 +12400,17 @@ func insertUlocellrsclmtpara(baseName string, data []model.Ulocellrsclmtpara) {
 	tx.Commit()
 }
 
-func insertUlocellrsvdpara(baseName string, data []model.Ulocellrsvdpara) {
+
+func insertUlocellrsvdpara(eNodeBId string, baseName string, data []model.Ulocellrsvdpara) {
 	fmt.Println("Processing Ulocellrsvdpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellrsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellrsvdpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULOCELLID,
 			data[j].ATTRIBUTES.ULOCELLRSVDPARA1,
 			data[j].ATTRIBUTES.ULOCELLRSVDPARA2,
@@ -11641,7 +12443,8 @@ func insertUlocellrsvdpara(baseName string, data []model.Ulocellrsvdpara) {
 			data[j].ATTRIBUTES.ULOCELLRSVDPARA29,
 			data[j].ATTRIBUTES.ULOCELLRSVDPARA30,
 			data[j].ATTRIBUTES.ULOCELLRSVDPARA31,
-			data[j].ATTRIBUTES.ULOCELLRSVDPARA32,
+			data[j].ATTRIBUTES.ULOCELLRSVDPARA32,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulocellrsvdpara data has been saved")
@@ -11649,20 +12452,22 @@ func insertUlocellrsvdpara(baseName string, data []model.Ulocellrsvdpara) {
 	tx.Commit()
 }
 
-func insertUlocellsectoreqm(baseName string, data []model.Ulocellsectoreqm) {
+
+func insertUlocellsectoreqm(eNodeBId string, baseName string, data []model.Ulocellsectoreqm) {
 	fmt.Println("Processing Ulocellsectoreqm data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellsectoreqm` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulocellsectoreqm` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULOCELLID,
 			data[j].ATTRIBUTES.SECTOREQMID,
 			data[j].ATTRIBUTES.MAXPWR,
-			data[j].ATTRIBUTES.SECTOREQMPROPERTY,
+			data[j].ATTRIBUTES.SECTOREQMPROPERTY,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulocellsectoreqm data has been saved")
@@ -11670,16 +12475,17 @@ func insertUlocellsectoreqm(baseName string, data []model.Ulocellsectoreqm) {
 	tx.Commit()
 }
 
-func insertUlzerobufferzone(baseName string, data []model.Ulzerobufferzone) {
+
+func insertUlzerobufferzone(eNodeBId string, baseName string, data []model.Ulzerobufferzone) {
 	fmt.Println("Processing Ulzerobufferzone data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulzerobufferzone` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `ulzerobufferzone` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.ULSharedFreqStartRB,
 			data[j].ATTRIBUTES.ULSharedFreqEndRB,
@@ -11689,7 +12495,8 @@ func insertUlzerobufferzone(baseName string, data []model.Ulzerobufferzone) {
 			data[j].ATTRIBUTES.ULZeroBufZoneRsrpOffset,
 			data[j].ATTRIBUTES.ULZeroBufZoneB1RmvOffset,
 			data[j].ATTRIBUTES.ULZeroBufZoneUtranRscpThd,
-			data[j].ATTRIBUTES.ULZeroBufZoInterRatB1Timer,
+			data[j].ATTRIBUTES.ULZeroBufZoInterRatB1Timer,	
+
 		)
 		checkErr(err)
 		fmt.Println("Ulzerobufferzone data has been saved")
@@ -11697,20 +12504,22 @@ func insertUlzerobufferzone(baseName string, data []model.Ulzerobufferzone) {
 	tx.Commit()
 }
 
-func insertUpptsinterfcfg(baseName string, data []model.Upptsinterfcfg) {
+
+func insertUpptsinterfcfg(eNodeBId string, baseName string, data []model.Upptsinterfcfg) {
 	fmt.Println("Processing Upptsinterfcfg data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `upptsinterfcfg` VALUES(?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `upptsinterfcfg` VALUES(?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.TestPeriod,
 			data[j].ATTRIBUTES.TestThreshold,
-			data[j].ATTRIBUTES.TestHysteresis,
+			data[j].ATTRIBUTES.TestHysteresis,	
+
 		)
 		checkErr(err)
 		fmt.Println("Upptsinterfcfg data has been saved")
@@ -11718,21 +12527,23 @@ func insertUpptsinterfcfg(baseName string, data []model.Upptsinterfcfg) {
 	tx.Commit()
 }
 
-func insertUsb(baseName string, data []model.Usb) {
+
+func insertUsb(eNodeBId string, baseName string, data []model.Usb) {
 	fmt.Println("Processing Usb data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `usb` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `usb` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.CN,
 			data[j].ATTRIBUTES.SRN,
 			data[j].ATTRIBUTES.SN,
 			data[j].ATTRIBUTES.PN,
-			data[j].ATTRIBUTES.SWITCH,
+			data[j].ATTRIBUTES.SWITCH,	
+
 		)
 		checkErr(err)
 		fmt.Println("Usb data has been saved")
@@ -11740,22 +12551,24 @@ func insertUsb(baseName string, data []model.Usb) {
 	tx.Commit()
 }
 
-func insertUserplanehost(baseName string, data []model.Userplanehost) {
+
+func insertUserplanehost(eNodeBId string, baseName string, data []model.Userplanehost) {
 	fmt.Println("Processing Userplanehost data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `userplanehost` VALUES(?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `userplanehost` VALUES(?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.UPHOSTID,
 			data[j].ATTRIBUTES.VRFIDX,
 			data[j].ATTRIBUTES.IPVERSION,
 			data[j].ATTRIBUTES.LOCIPV4,
 			data[j].ATTRIBUTES.IPSECSWITCH,
-			data[j].ATTRIBUTES.USERLABEL,
+			data[j].ATTRIBUTES.USERLABEL,	
+
 		)
 		checkErr(err)
 		fmt.Println("Userplanehost data has been saved")
@@ -11763,16 +12576,17 @@ func insertUserplanehost(baseName string, data []model.Userplanehost) {
 	tx.Commit()
 }
 
-func insertUserplanepeer(baseName string, data []model.Userplanepeer) {
+
+func insertUserplanepeer(eNodeBId string, baseName string, data []model.Userplanepeer) {
 	fmt.Println("Processing Userplanepeer data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `userplanepeer` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `userplanepeer` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.UPPEERID,
 			data[j].ATTRIBUTES.VRFIDX,
 			data[j].ATTRIBUTES.IPVERSION,
@@ -11782,7 +12596,8 @@ func insertUserplanepeer(baseName string, data []model.Userplanepeer) {
 			data[j].ATTRIBUTES.CTRLMODE,
 			data[j].ATTRIBUTES.AUTOCFGFLAG,
 			data[j].ATTRIBUTES.USERLABEL,
-			data[j].ATTRIBUTES.STATICCHK,
+			data[j].ATTRIBUTES.STATICCHK,	
+
 		)
 		checkErr(err)
 		fmt.Println("Userplanepeer data has been saved")
@@ -11790,16 +12605,17 @@ func insertUserplanepeer(baseName string, data []model.Userplanepeer) {
 	tx.Commit()
 }
 
-func insertUserpriority(baseName string, data []model.Userpriority) {
+
+func insertUserpriority(eNodeBId string, baseName string, data []model.Userpriority) {
 	fmt.Println("Processing Userpriority data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `userpriority` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `userpriority` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ArpSchSwitch,
 			data[j].ATTRIBUTES.Arp1Priority,
 			data[j].ATTRIBUTES.Arp2Priority,
@@ -11816,7 +12632,8 @@ func insertUserpriority(baseName string, data []model.Userpriority) {
 			data[j].ATTRIBUTES.Arp13Priority,
 			data[j].ATTRIBUTES.Arp14Priority,
 			data[j].ATTRIBUTES.Arp15Priority,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Userpriority data has been saved")
@@ -11824,16 +12641,17 @@ func insertUserpriority(baseName string, data []model.Userpriority) {
 	tx.Commit()
 }
 
-func insertUserqcipriority(baseName string, data []model.Userqcipriority) {
+
+func insertUserqcipriority(eNodeBId string, baseName string, data []model.Userqcipriority) {
 	fmt.Println("Processing Userqcipriority data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `userqcipriority` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `userqcipriority` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.Qci,
 			data[j].ATTRIBUTES.GoldUlSchPriorityFactor,
 			data[j].ATTRIBUTES.GoldDlSchPriorityFactor,
@@ -11841,7 +12659,8 @@ func insertUserqcipriority(baseName string, data []model.Userqcipriority) {
 			data[j].ATTRIBUTES.SilverDlSchPriorityFactor,
 			data[j].ATTRIBUTES.BronzeUlSchPriorityFactor,
 			data[j].ATTRIBUTES.BronzeDlSchPriorityFactor,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Userqcipriority data has been saved")
@@ -11849,16 +12668,17 @@ func insertUserqcipriority(baseName string, data []model.Userqcipriority) {
 	tx.Commit()
 }
 
-func insertUservpfmpara(baseName string, data []model.Uservpfmpara) {
+
+func insertUservpfmpara(eNodeBId string, baseName string, data []model.Uservpfmpara) {
 	fmt.Println("Processing Uservpfmpara data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `uservpfmpara` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `uservpfmpara` VALUES(?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.DlUserThruputThd0,
 			data[j].ATTRIBUTES.DlUserThruputThd1,
@@ -11868,7 +12688,8 @@ func insertUservpfmpara(baseName string, data []model.Uservpfmpara) {
 			data[j].ATTRIBUTES.UlAccessDelayGoodThd,
 			data[j].ATTRIBUTES.UlAccessDelayBadThd,
 			data[j].ATTRIBUTES.DlAccessDelayGoodThd,
-			data[j].ATTRIBUTES.DlAccessDelayBadThd,
+			data[j].ATTRIBUTES.DlAccessDelayBadThd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Uservpfmpara data has been saved")
@@ -11876,16 +12697,17 @@ func insertUservpfmpara(baseName string, data []model.Uservpfmpara) {
 	tx.Commit()
 }
 
-func insertUtranexternalcell(baseName string, data []model.Utranexternalcell) {
+
+func insertUtranexternalcell(eNodeBId string, baseName string, data []model.Utranexternalcell) {
 	fmt.Println("Processing Utranexternalcell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `utranexternalcell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `utranexternalcell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.Mcc,
 			data[j].ATTRIBUTES.Mnc,
 			data[j].ATTRIBUTES.RncId,
@@ -11904,7 +12726,8 @@ func insertUtranexternalcell(baseName string, data []model.Utranexternalcell) {
 			data[j].ATTRIBUTES.AnrFlag,
 			data[j].ATTRIBUTES.CtrlMode,
 			data[j].ATTRIBUTES.ObjId,
-			data[j].ATTRIBUTES.UtranUlArfcn,
+			data[j].ATTRIBUTES.UtranUlArfcn,	
+
 		)
 		checkErr(err)
 		fmt.Println("Utranexternalcell data has been saved")
@@ -11912,16 +12735,17 @@ func insertUtranexternalcell(baseName string, data []model.Utranexternalcell) {
 	tx.Commit()
 }
 
-func insertUtranncell(baseName string, data []model.Utranncell) {
+
+func insertUtranncell(eNodeBId string, baseName string, data []model.Utranncell) {
 	fmt.Println("Processing Utranncell data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `utranncell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `utranncell` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.Mcc,
 			data[j].ATTRIBUTES.Mnc,
@@ -11936,7 +12760,8 @@ func insertUtranncell(baseName string, data []model.Utranncell) {
 			data[j].ATTRIBUTES.NCellMeasPriority,
 			data[j].ATTRIBUTES.LocalCellName,
 			data[j].ATTRIBUTES.NeighbourCellName,
-			data[j].ATTRIBUTES.CtrlMode,
+			data[j].ATTRIBUTES.CtrlMode,	
+
 		)
 		checkErr(err)
 		fmt.Println("Utranncell data has been saved")
@@ -11944,16 +12769,17 @@ func insertUtranncell(baseName string, data []model.Utranncell) {
 	tx.Commit()
 }
 
-func insertUtrannfreq(baseName string, data []model.Utrannfreq) {
+
+func insertUtrannfreq(eNodeBId string, baseName string, data []model.Utrannfreq) {
 	fmt.Println("Processing Utrannfreq data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `utrannfreq` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `utrannfreq` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.UtranDlArfcn,
 			data[j].ATTRIBUTES.UtranVersion,
@@ -11982,7 +12808,8 @@ func insertUtrannfreq(baseName string, data []model.Utrannfreq) {
 			data[j].ATTRIBUTES.ULSharedFreqInd,
 			data[j].ATTRIBUTES.FreqPriorityForAnr,
 			data[j].ATTRIBUTES.MlbTargetInd,
-			data[j].ATTRIBUTES.UtranFreqHighSpeedFlag,
+			data[j].ATTRIBUTES.UtranFreqHighSpeedFlag,	
+
 		)
 		checkErr(err)
 		fmt.Println("Utrannfreq data has been saved")
@@ -11990,21 +12817,23 @@ func insertUtrannfreq(baseName string, data []model.Utrannfreq) {
 	tx.Commit()
 }
 
-func insertUtranranshare(baseName string, data []model.Utranranshare) {
+
+func insertUtranranshare(eNodeBId string, baseName string, data []model.Utranranshare) {
 	fmt.Println("Processing Utranranshare data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `utranranshare` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `utranranshare` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.UtranDlArfcn,
 			data[j].ATTRIBUTES.Mcc,
 			data[j].ATTRIBUTES.Mnc,
-			data[j].ATTRIBUTES.CellReselPriorityCfgInd,
+			data[j].ATTRIBUTES.CellReselPriorityCfgInd,	
+
 		)
 		checkErr(err)
 		fmt.Println("Utranranshare data has been saved")
@@ -12012,21 +12841,23 @@ func insertUtranranshare(baseName string, data []model.Utranranshare) {
 	tx.Commit()
 }
 
-func insertVlanclass(baseName string, data []model.Vlanclass) {
+
+func insertVlanclass(eNodeBId string, baseName string, data []model.Vlanclass) {
 	fmt.Println("Processing Vlanclass data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `vlanclass` VALUES(?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `vlanclass` VALUES(?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.VLANGROUPNO,
 			data[j].ATTRIBUTES.TRAFFIC,
 			data[j].ATTRIBUTES.SRVPRIO,
 			data[j].ATTRIBUTES.VLANID,
-			data[j].ATTRIBUTES.VLANPRIO,
+			data[j].ATTRIBUTES.VLANPRIO,	
+
 		)
 		checkErr(err)
 		fmt.Println("Vlanclass data has been saved")
@@ -12034,16 +12865,17 @@ func insertVlanclass(baseName string, data []model.Vlanclass) {
 	tx.Commit()
 }
 
-func insertVlanmap(baseName string, data []model.Vlanmap) {
+
+func insertVlanmap(eNodeBId string, baseName string, data []model.Vlanmap) {
 	fmt.Println("Processing Vlanmap data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `vlanmap` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `vlanmap` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.VRFIDX,
 			data[j].ATTRIBUTES.NEXTHOPIP,
 			data[j].ATTRIBUTES.MASK,
@@ -12051,7 +12883,8 @@ func insertVlanmap(baseName string, data []model.Vlanmap) {
 			data[j].ATTRIBUTES.VLANID,
 			data[j].ATTRIBUTES.VLANPRIO,
 			data[j].ATTRIBUTES.SETPRIO,
-			data[j].ATTRIBUTES.VLANGROUPNO,
+			data[j].ATTRIBUTES.VLANGROUPNO,	
+
 		)
 		checkErr(err)
 		fmt.Println("Vlanmap data has been saved")
@@ -12059,16 +12892,17 @@ func insertVlanmap(baseName string, data []model.Vlanmap) {
 	tx.Commit()
 }
 
-func insertVqmalgo(baseName string, data []model.Vqmalgo) {
+
+func insertVqmalgo(eNodeBId string, baseName string, data []model.Vqmalgo) {
 	fmt.Println("Processing Vqmalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `vqmalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `vqmalgo` VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.ULDelayJitter,
 			data[j].ATTRIBUTES.VqiGoodThd,
 			data[j].ATTRIBUTES.VqiPoorThd,
@@ -12083,7 +12917,8 @@ func insertVqmalgo(baseName string, data []model.Vqmalgo) {
 			data[j].ATTRIBUTES.AmrNbRcvLowQualRelThd,
 			data[j].ATTRIBUTES.AmrWbSilentThd,
 			data[j].ATTRIBUTES.VQMAlgoPeriod,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("Vqmalgo data has been saved")
@@ -12091,18 +12926,20 @@ func insertVqmalgo(baseName string, data []model.Vqmalgo) {
 	tx.Commit()
 }
 
-func insertVrf(baseName string, data []model.Vrf) {
+
+func insertVrf(eNodeBId string, baseName string, data []model.Vrf) {
 	fmt.Println("Processing Vrf data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `vrf` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `vrf` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.VRFIDX,
-			data[j].ATTRIBUTES.USERLABEL,
+			data[j].ATTRIBUTES.USERLABEL,	
+
 		)
 		checkErr(err)
 		fmt.Println("Vrf data has been saved")
@@ -12110,18 +12947,20 @@ func insertVrf(baseName string, data []model.Vrf) {
 	tx.Commit()
 }
 
-func insertWeblmt(baseName string, data []model.Weblmt) {
+
+func insertWeblmt(eNodeBId string, baseName string, data []model.Weblmt) {
 	fmt.Println("Processing Weblmt data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `weblmt` VALUES(?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `weblmt` VALUES(?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.POLICY,
-			data[j].ATTRIBUTES.SSLVER,
+			data[j].ATTRIBUTES.SSLVER,	
+
 		)
 		checkErr(err)
 		fmt.Println("Weblmt data has been saved")
@@ -12129,23 +12968,25 @@ func insertWeblmt(baseName string, data []model.Weblmt) {
 	tx.Commit()
 }
 
-func insertWtcpproxyalgo(baseName string, data []model.Wtcpproxyalgo) {
+
+func insertWtcpproxyalgo(eNodeBId string, baseName string, data []model.Wtcpproxyalgo) {
 	fmt.Println("Processing Wtcpproxyalgo data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `wtcpproxyalgo` VALUES(?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `wtcpproxyalgo` VALUES(?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.LocalCellId,
 			data[j].ATTRIBUTES.TcpAccelerationSwitch,
 			data[j].ATTRIBUTES.TCPStatisticsSwitch,
 			data[j].ATTRIBUTES.MaxRttStatisticsThd,
 			data[j].ATTRIBUTES.MaxProxyPktNum,
 			data[j].ATTRIBUTES.AckSplitCount,
-			data[j].ATTRIBUTES.TcpAsSchWeightFactor,
+			data[j].ATTRIBUTES.TcpAsSchWeightFactor,	
+
 		)
 		checkErr(err)
 		fmt.Println("Wtcpproxyalgo data has been saved")
@@ -12153,16 +12994,17 @@ func insertWtcpproxyalgo(baseName string, data []model.Wtcpproxyalgo) {
 	tx.Commit()
 }
 
-func insertX2(baseName string, data []model.X2) {
+
+func insertX2(eNodeBId string, baseName string, data []model.X2) {
 	fmt.Println("Processing X2 data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `x2` VALUES(?,?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `x2` VALUES(?,?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.X2Id,
 			data[j].ATTRIBUTES.CnOperatorId,
 			data[j].ATTRIBUTES.CpEpGroupId,
@@ -12171,7 +13013,8 @@ func insertX2(baseName string, data []model.X2) {
 			data[j].ATTRIBUTES.UserLabel,
 			data[j].ATTRIBUTES.EpGroupCfgFlag,
 			data[j].ATTRIBUTES.CnOpSharingGroupId,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("X2 data has been saved")
@@ -12179,16 +13022,17 @@ func insertX2(baseName string, data []model.X2) {
 	tx.Commit()
 }
 
-func insertX2interface(baseName string, data []model.X2interface) {
+
+func insertX2interface(eNodeBId string, baseName string, data []model.X2interface) {
 	fmt.Println("Processing X2interface data")
 	tx, err := db.Begin()
 	checkErr(err)
-	stmt, err = tx.Prepare("INSERT IGNORE INTO `x2interface` VALUES(?,?,?,?,?,?,?,?,?)")
+	stmt, err = tx.Prepare("INSERT IGNORE INTO `x2interface` VALUES(?,?,?,?,?,?,?,?,?,?)")
 	checkErr(err)
 
 	for j = 0; j < len(data); j++ {
 
-		_, err = stmt.Exec(baseName,
+		_, err = stmt.Exec(eNodeBId, baseName,
 			data[j].ATTRIBUTES.X2InterfaceId,
 			data[j].ATTRIBUTES.X2CpBearerId,
 			data[j].ATTRIBUTES.CnOperatorId,
@@ -12196,10 +13040,13 @@ func insertX2interface(baseName string, data []model.X2interface) {
 			data[j].ATTRIBUTES.CtrlMode,
 			data[j].ATTRIBUTES.AutoCfgFlag,
 			data[j].ATTRIBUTES.CnOpSharingGroupId,
-			data[j].ATTRIBUTES.ObjId,
+			data[j].ATTRIBUTES.ObjId,	
+
 		)
 		checkErr(err)
 		fmt.Println("X2interface data has been saved")
 	}
 	tx.Commit()
 }
+
+
