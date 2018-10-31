@@ -12,7 +12,8 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Dumping structure for table cfgmml.almcurcfg
-CREATE TABLE IF NOT EXISTS `almcurcfg` (
+CREATE TABLE IF NOT EXISTS `almcurcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `AID` float DEFAULT NULL,
   `ALVL` varchar(255) DEFAULT NULL,
@@ -23,7 +24,8 @@ CREATE TABLE IF NOT EXISTS `almcurcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.almport
-CREATE TABLE IF NOT EXISTS `almport` (
+CREATE TABLE IF NOT EXISTS `almport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -45,7 +47,8 @@ CREATE TABLE IF NOT EXISTS `almport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.anr
-CREATE TABLE IF NOT EXISTS `anr` (
+CREATE TABLE IF NOT EXISTS `anr` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `DelCellThd` float DEFAULT NULL,
   `NcellHoStatNum` float DEFAULT NULL,
@@ -99,7 +102,8 @@ CREATE TABLE IF NOT EXISTS `anr` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.anrmeasureparam
-CREATE TABLE IF NOT EXISTS `anrmeasureparam` (
+CREATE TABLE IF NOT EXISTS `anrmeasureparam` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `A3TimeToTrigForANR` varchar(255) DEFAULT NULL,
   `A3HystForANR` float DEFAULT NULL,
@@ -112,7 +116,8 @@ CREATE TABLE IF NOT EXISTS `anrmeasureparam` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.antennaport
-CREATE TABLE IF NOT EXISTS `antennaport` (
+CREATE TABLE IF NOT EXISTS `antennaport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -132,7 +137,8 @@ CREATE TABLE IF NOT EXISTS `antennaport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.appcert
-CREATE TABLE IF NOT EXISTS `appcert` (
+CREATE TABLE IF NOT EXISTS `appcert` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `APPTYPE` varchar(255) DEFAULT NULL,
   `APPCERT` varchar(255) DEFAULT NULL
@@ -140,7 +146,8 @@ CREATE TABLE IF NOT EXISTS `appcert` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.application
-CREATE TABLE IF NOT EXISTS `application` (
+CREATE TABLE IF NOT EXISTS `application` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `AID` float DEFAULT NULL,
   `AT` varchar(255) DEFAULT NULL,
@@ -158,7 +165,8 @@ CREATE TABLE IF NOT EXISTS `application` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.asparagroup
-CREATE TABLE IF NOT EXISTS `asparagroup` (
+CREATE TABLE IF NOT EXISTS `asparagroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `AsParaGroupID` float DEFAULT NULL,
   `AsPreallocDuration` float DEFAULT NULL,
@@ -170,7 +178,8 @@ CREATE TABLE IF NOT EXISTS `asparagroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.basebandeqm
-CREATE TABLE IF NOT EXISTS `basebandeqm` (
+CREATE TABLE IF NOT EXISTS `basebandeqm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `BASEBANDEQMID` float DEFAULT NULL,
   `BASEBANDEQMTYPE` varchar(255) DEFAULT NULL,
@@ -180,7 +189,8 @@ CREATE TABLE IF NOT EXISTS `basebandeqm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.bbp
-CREATE TABLE IF NOT EXISTS `bbp` (
+CREATE TABLE IF NOT EXISTS `bbp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -202,7 +212,8 @@ CREATE TABLE IF NOT EXISTS `bbp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.bbufan
-CREATE TABLE IF NOT EXISTS `bbufan` (
+CREATE TABLE IF NOT EXISTS `bbufan` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -211,7 +222,8 @@ CREATE TABLE IF NOT EXISTS `bbufan` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.bcchcfg
-CREATE TABLE IF NOT EXISTS `bcchcfg` (
+CREATE TABLE IF NOT EXISTS `bcchcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `ModifyPeriodCoeff` varchar(255) DEFAULT NULL,
@@ -220,7 +232,8 @@ CREATE TABLE IF NOT EXISTS `bcchcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.blindncellopt
-CREATE TABLE IF NOT EXISTS `blindncellopt` (
+CREATE TABLE IF NOT EXISTS `blindncellopt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `StatisticPeriod` float DEFAULT NULL,
   `SampleNumThd` float DEFAULT NULL,
@@ -233,7 +246,8 @@ CREATE TABLE IF NOT EXISTS `blindncellopt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.brdresassignment
-CREATE TABLE IF NOT EXISTS `brdresassignment` (
+CREATE TABLE IF NOT EXISTS `brdresassignment` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -243,7 +257,8 @@ CREATE TABLE IF NOT EXISTS `brdresassignment` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cabinet
-CREATE TABLE IF NOT EXISTS `cabinet` (
+CREATE TABLE IF NOT EXISTS `cabinet` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `TYPE` varchar(255) DEFAULT NULL,
@@ -253,7 +268,8 @@ CREATE TABLE IF NOT EXISTS `cabinet` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cagroup
-CREATE TABLE IF NOT EXISTS `cagroup` (
+CREATE TABLE IF NOT EXISTS `cagroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CaGroupId` float DEFAULT NULL,
   `CaGroupTypeInd` varchar(255) DEFAULT NULL,
@@ -262,7 +278,8 @@ CREATE TABLE IF NOT EXISTS `cagroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cagroupcell
-CREATE TABLE IF NOT EXISTS `cagroupcell` (
+CREATE TABLE IF NOT EXISTS `cagroupcell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CaGroupId` float DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
@@ -274,10 +291,11 @@ CREATE TABLE IF NOT EXISTS `cagroupcell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cagroupscellcfg
-CREATE TABLE IF NOT EXISTS `cagroupscellcfg` (
+CREATE TABLE IF NOT EXISTS `cagroupscellcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
-  `SCelleNodeBId` float DEFAULT NULL,
+  `SCellENODEB_ID` float DEFAULT NULL,
   `SCellLocalCellId` float DEFAULT NULL,
   `SCellBlindCfgFlag` varchar(255) DEFAULT NULL,
   `SCellPriority` float DEFAULT NULL,
@@ -288,7 +306,8 @@ CREATE TABLE IF NOT EXISTS `cagroupscellcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.camgtcfg
-CREATE TABLE IF NOT EXISTS `camgtcfg` (
+CREATE TABLE IF NOT EXISTS `camgtcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CarrAggrA2ThdRsrp` float DEFAULT NULL,
@@ -344,7 +363,8 @@ CREATE TABLE IF NOT EXISTS `camgtcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cascadeport
-CREATE TABLE IF NOT EXISTS `cascadeport` (
+CREATE TABLE IF NOT EXISTS `cascadeport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -357,7 +377,8 @@ CREATE TABLE IF NOT EXISTS `cascadeport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cell
-CREATE TABLE IF NOT EXISTS `cell` (
+CREATE TABLE IF NOT EXISTS `cell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CellName` varchar(255) DEFAULT NULL,
@@ -414,7 +435,8 @@ CREATE TABLE IF NOT EXISTS `cell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellacbar
-CREATE TABLE IF NOT EXISTS `cellacbar` (
+CREATE TABLE IF NOT EXISTS `cellacbar` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `AcBarringInfoCfgInd` varchar(255) DEFAULT NULL,
@@ -443,7 +465,8 @@ CREATE TABLE IF NOT EXISTS `cellacbar` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellaccess
-CREATE TABLE IF NOT EXISTS `cellaccess` (
+CREATE TABLE IF NOT EXISTS `cellaccess` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CellBarred` varchar(255) DEFAULT NULL,
@@ -457,7 +480,8 @@ CREATE TABLE IF NOT EXISTS `cellaccess` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellalgoswitch
-CREATE TABLE IF NOT EXISTS `cellalgoswitch` (
+CREATE TABLE IF NOT EXISTS `cellalgoswitch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `VolteRedirectSwitch` longtext,
@@ -599,7 +623,8 @@ CREATE TABLE IF NOT EXISTS `cellalgoswitch` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellbackoff
-CREATE TABLE IF NOT EXISTS `cellbackoff` (
+CREATE TABLE IF NOT EXISTS `cellbackoff` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `InterFreqBackoffPrbThd` float DEFAULT NULL,
@@ -625,7 +650,8 @@ CREATE TABLE IF NOT EXISTS `cellbackoff` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellbf
-CREATE TABLE IF NOT EXISTS `cellbf` (
+CREATE TABLE IF NOT EXISTS `cellbf` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `MaxBfRankPara` varchar(255) DEFAULT NULL,
@@ -643,7 +669,8 @@ CREATE TABLE IF NOT EXISTS `cellbf` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellbfmimoparacfg
-CREATE TABLE IF NOT EXISTS `cellbfmimoparacfg` (
+CREATE TABLE IF NOT EXISTS `cellbfmimoparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `BfMimoAdaptiveSwitch` varchar(255) DEFAULT NULL,
@@ -678,7 +705,8 @@ CREATE TABLE IF NOT EXISTS `cellbfmimoparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellcecfg
-CREATE TABLE IF NOT EXISTS `cellcecfg` (
+CREATE TABLE IF NOT EXISTS `cellcecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CoverageLevel` varchar(255) DEFAULT NULL,
@@ -689,7 +717,8 @@ CREATE TABLE IF NOT EXISTS `cellcecfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellceschcfg
-CREATE TABLE IF NOT EXISTS `cellceschcfg` (
+CREATE TABLE IF NOT EXISTS `cellceschcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CoverageLevel` varchar(255) DEFAULT NULL,
@@ -707,7 +736,8 @@ CREATE TABLE IF NOT EXISTS `cellceschcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellchpwrcfg
-CREATE TABLE IF NOT EXISTS `cellchpwrcfg` (
+CREATE TABLE IF NOT EXISTS `cellchpwrcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `PcfichPwr` float DEFAULT NULL,
@@ -724,7 +754,8 @@ CREATE TABLE IF NOT EXISTS `cellchpwrcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellcounterparagroup
-CREATE TABLE IF NOT EXISTS `cellcounterparagroup` (
+CREATE TABLE IF NOT EXISTS `cellcounterparagroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CellUserNumPdfThd` float DEFAULT NULL,
@@ -762,7 +793,8 @@ CREATE TABLE IF NOT EXISTS `cellcounterparagroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellcqiadaptivecfg
-CREATE TABLE IF NOT EXISTS `cellcqiadaptivecfg` (
+CREATE TABLE IF NOT EXISTS `cellcqiadaptivecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CqiPeriodAdaptive` varchar(255) DEFAULT NULL,
@@ -774,7 +806,8 @@ CREATE TABLE IF NOT EXISTS `cellcqiadaptivecfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellcqiadjalgo
-CREATE TABLE IF NOT EXISTS `cellcqiadjalgo` (
+CREATE TABLE IF NOT EXISTS `cellcqiadjalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `InitDlIblerTarget` float DEFAULT NULL,
@@ -791,7 +824,8 @@ CREATE TABLE IF NOT EXISTS `cellcqiadjalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellcsirsparacfg
-CREATE TABLE IF NOT EXISTS `cellcsirsparacfg` (
+CREATE TABLE IF NOT EXISTS `cellcsirsparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CsiRsSwitch` varchar(255) DEFAULT NULL,
@@ -807,7 +841,8 @@ CREATE TABLE IF NOT EXISTS `cellcsirsparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellcspcpara
-CREATE TABLE IF NOT EXISTS `cellcspcpara` (
+CREATE TABLE IF NOT EXISTS `cellcspcpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `eCspcPCAdjUeNumTh` float DEFAULT NULL,
@@ -827,7 +862,8 @@ CREATE TABLE IF NOT EXISTS `cellcspcpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldacqcfg
-CREATE TABLE IF NOT EXISTS `celldacqcfg` (
+CREATE TABLE IF NOT EXISTS `celldacqcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DlAmbrLimitFirstRank` float DEFAULT NULL,
@@ -850,7 +886,8 @@ CREATE TABLE IF NOT EXISTS `celldacqcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldlcompalgo
-CREATE TABLE IF NOT EXISTS `celldlcompalgo` (
+CREATE TABLE IF NOT EXISTS `celldlcompalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DlCompA3Offset` float DEFAULT NULL,
@@ -866,7 +903,8 @@ CREATE TABLE IF NOT EXISTS `celldlcompalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldlicic
-CREATE TABLE IF NOT EXISTS `celldlicic` (
+CREATE TABLE IF NOT EXISTS `celldlicic` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `BandMode` varchar(255) DEFAULT NULL,
@@ -878,7 +916,8 @@ CREATE TABLE IF NOT EXISTS `celldlicic` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldlpcpdcch
-CREATE TABLE IF NOT EXISTS `celldlpcpdcch` (
+CREATE TABLE IF NOT EXISTS `celldlpcpdcch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DediDciPwrOffset` float DEFAULT NULL
@@ -886,7 +925,8 @@ CREATE TABLE IF NOT EXISTS `celldlpcpdcch` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldlpcpdsch
-CREATE TABLE IF NOT EXISTS `celldlpcpdsch` (
+CREATE TABLE IF NOT EXISTS `celldlpcpdsch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CcuPa` varchar(255) DEFAULT NULL,
@@ -901,7 +941,8 @@ CREATE TABLE IF NOT EXISTS `celldlpcpdsch` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldlpcpdschpa
-CREATE TABLE IF NOT EXISTS `celldlpcpdschpa` (
+CREATE TABLE IF NOT EXISTS `celldlpcpdschpa` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `PdschPaAdjSwitch` varchar(255) DEFAULT NULL,
@@ -911,7 +952,8 @@ CREATE TABLE IF NOT EXISTS `celldlpcpdschpa` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldlpcphich
-CREATE TABLE IF NOT EXISTS `celldlpcphich` (
+CREATE TABLE IF NOT EXISTS `celldlpcphich` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `PwrOffset` float DEFAULT NULL
@@ -919,7 +961,8 @@ CREATE TABLE IF NOT EXISTS `celldlpcphich` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldlschalgo
-CREATE TABLE IF NOT EXISTS `celldlschalgo` (
+CREATE TABLE IF NOT EXISTS `celldlschalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DlschStrategy` varchar(255) DEFAULT NULL,
@@ -1029,7 +1072,8 @@ CREATE TABLE IF NOT EXISTS `celldlschalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldrxpara
-CREATE TABLE IF NOT EXISTS `celldrxpara` (
+CREATE TABLE IF NOT EXISTS `celldrxpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `FddEnterDrxThd` float DEFAULT NULL,
@@ -1082,7 +1126,8 @@ CREATE TABLE IF NOT EXISTS `celldrxpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldrxspecialpara
-CREATE TABLE IF NOT EXISTS `celldrxspecialpara` (
+CREATE TABLE IF NOT EXISTS `celldrxspecialpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CellDrxSpecialParaValid` varchar(255) DEFAULT NULL,
@@ -1099,7 +1144,8 @@ CREATE TABLE IF NOT EXISTS `celldrxspecialpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldss
-CREATE TABLE IF NOT EXISTS `celldss` (
+CREATE TABLE IF NOT EXISTS `celldss` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `HighFreqShareRbNum` float DEFAULT NULL,
@@ -1120,7 +1166,8 @@ CREATE TABLE IF NOT EXISTS `celldss` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celldynacbaralgopara
-CREATE TABLE IF NOT EXISTS `celldynacbaralgopara` (
+CREATE TABLE IF NOT EXISTS `celldynacbaralgopara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DynAcBarStatPeriod` float DEFAULT NULL,
@@ -1140,7 +1187,8 @@ CREATE TABLE IF NOT EXISTS `celldynacbaralgopara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celleabalgopara
-CREATE TABLE IF NOT EXISTS `celleabalgopara` (
+CREATE TABLE IF NOT EXISTS `celleabalgopara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `EABTriggerThd` float DEFAULT NULL,
@@ -1154,7 +1202,8 @@ CREATE TABLE IF NOT EXISTS `celleabalgopara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celleicic
-CREATE TABLE IF NOT EXISTS `celleicic` (
+CREATE TABLE IF NOT EXISTS `celleicic` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `AbsPattern` varchar(255) DEFAULT NULL,
@@ -1179,7 +1228,8 @@ CREATE TABLE IF NOT EXISTS `celleicic` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellemtcalgo
-CREATE TABLE IF NOT EXISTS `cellemtcalgo` (
+CREATE TABLE IF NOT EXISTS `cellemtcalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `EmtcUlRbTargetRatio` float DEFAULT NULL,
@@ -1193,7 +1243,8 @@ CREATE TABLE IF NOT EXISTS `cellemtcalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellhoparacfg
-CREATE TABLE IF NOT EXISTS `cellhoparacfg` (
+CREATE TABLE IF NOT EXISTS `cellhoparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `BlindHoA1A2ThdRsrp` float DEFAULT NULL,
@@ -1231,7 +1282,8 @@ CREATE TABLE IF NOT EXISTS `cellhoparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellidprdupt
-CREATE TABLE IF NOT EXISTS `cellidprdupt` (
+CREATE TABLE IF NOT EXISTS `cellidprdupt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PrdUptSwitch` varchar(255) DEFAULT NULL,
   `ActionTime` varchar(255) DEFAULT NULL,
@@ -1241,7 +1293,8 @@ CREATE TABLE IF NOT EXISTS `cellidprdupt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celliicspara
-CREATE TABLE IF NOT EXISTS `celliicspara` (
+CREATE TABLE IF NOT EXISTS `celliicspara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `IicsUserAttrA3Offset` float DEFAULT NULL,
@@ -1250,7 +1303,8 @@ CREATE TABLE IF NOT EXISTS `celliicspara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celllowpower
-CREATE TABLE IF NOT EXISTS `celllowpower` (
+CREATE TABLE IF NOT EXISTS `celllowpower` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `LowPwrSwitch` varchar(255) DEFAULT NULL,
@@ -1265,7 +1319,8 @@ CREATE TABLE IF NOT EXISTS `celllowpower` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celllteflexbw
-CREATE TABLE IF NOT EXISTS `celllteflexbw` (
+CREATE TABLE IF NOT EXISTS `celllteflexbw` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `LteFlexBwSwitch` varchar(255) DEFAULT NULL,
@@ -1277,7 +1332,8 @@ CREATE TABLE IF NOT EXISTS `celllteflexbw` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celllteflexbwitfcfg
-CREATE TABLE IF NOT EXISTS `celllteflexbwitfcfg` (
+CREATE TABLE IF NOT EXISTS `celllteflexbwitfcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `HighItfGsmArfcn` float DEFAULT NULL,
@@ -1286,7 +1342,8 @@ CREATE TABLE IF NOT EXISTS `celllteflexbwitfcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmbfcs
-CREATE TABLE IF NOT EXISTS `cellmbfcs` (
+CREATE TABLE IF NOT EXISTS `cellmbfcs` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CellSyntheticalRateHoHyst` float DEFAULT NULL,
@@ -1301,7 +1358,8 @@ CREATE TABLE IF NOT EXISTS `cellmbfcs` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmbmscfg
-CREATE TABLE IF NOT EXISTS `cellmbmscfg` (
+CREATE TABLE IF NOT EXISTS `cellmbmscfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `MBSFNSyncAreaId` float DEFAULT NULL,
@@ -1313,7 +1371,8 @@ CREATE TABLE IF NOT EXISTS `cellmbmscfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmcpara
-CREATE TABLE IF NOT EXISTS `cellmcpara` (
+CREATE TABLE IF NOT EXISTS `cellmcpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `A3Offset` float DEFAULT NULL,
@@ -1339,7 +1398,8 @@ CREATE TABLE IF NOT EXISTS `cellmcpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmimoparacfg
-CREATE TABLE IF NOT EXISTS `cellmimoparacfg` (
+CREATE TABLE IF NOT EXISTS `cellmimoparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `MimoAdaptiveSwitch` varchar(255) DEFAULT NULL,
@@ -1349,7 +1409,8 @@ CREATE TABLE IF NOT EXISTS `cellmimoparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmlb
-CREATE TABLE IF NOT EXISTS `cellmlb` (
+CREATE TABLE IF NOT EXISTS `cellmlb` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `InterFreqMlbThd` float DEFAULT NULL,
@@ -1424,7 +1485,8 @@ CREATE TABLE IF NOT EXISTS `cellmlb` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmlbautogroup
-CREATE TABLE IF NOT EXISTS `cellmlbautogroup` (
+CREATE TABLE IF NOT EXISTS `cellmlbautogroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `OverlapIndAddThd` float DEFAULT NULL,
@@ -1440,7 +1502,8 @@ CREATE TABLE IF NOT EXISTS `cellmlbautogroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmlbho
-CREATE TABLE IF NOT EXISTS `cellmlbho` (
+CREATE TABLE IF NOT EXISTS `cellmlbho` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `IdleUeSelFreqStrategy` varchar(255) DEFAULT NULL,
@@ -1456,7 +1519,8 @@ CREATE TABLE IF NOT EXISTS `cellmlbho` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmlbuesel
-CREATE TABLE IF NOT EXISTS `cellmlbuesel` (
+CREATE TABLE IF NOT EXISTS `cellmlbuesel` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UeSelectPrbPrio` float DEFAULT NULL,
@@ -1469,7 +1533,8 @@ CREATE TABLE IF NOT EXISTS `cellmlbuesel` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmmalgo
-CREATE TABLE IF NOT EXISTS `cellmmalgo` (
+CREATE TABLE IF NOT EXISTS `cellmmalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `BeamGainLimitSwitch` varchar(255) DEFAULT NULL,
@@ -1478,7 +1543,8 @@ CREATE TABLE IF NOT EXISTS `cellmmalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellmro
-CREATE TABLE IF NOT EXISTS `cellmro` (
+CREATE TABLE IF NOT EXISTS `cellmro` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CioAdjLimitCfgInd` varchar(255) DEFAULT NULL,
@@ -1493,7 +1559,8 @@ CREATE TABLE IF NOT EXISTS `cellmro` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellnoaccessalmpara
-CREATE TABLE IF NOT EXISTS `cellnoaccessalmpara` (
+CREATE TABLE IF NOT EXISTS `cellnoaccessalmpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `NoAccessStartDetectTime` varchar(255) DEFAULT NULL,
@@ -1503,7 +1570,8 @@ CREATE TABLE IF NOT EXISTS `cellnoaccessalmpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellop
-CREATE TABLE IF NOT EXISTS `cellop` (
+CREATE TABLE IF NOT EXISTS `cellop` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `TrackingAreaId` float DEFAULT NULL,
@@ -1524,7 +1592,8 @@ CREATE TABLE IF NOT EXISTS `cellop` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellpcalgo
-CREATE TABLE IF NOT EXISTS `cellpcalgo` (
+CREATE TABLE IF NOT EXISTS `cellpcalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `SrsPcStrategy` varchar(255) DEFAULT NULL,
@@ -1553,7 +1622,8 @@ CREATE TABLE IF NOT EXISTS `cellpcalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellpdcchalgo
-CREATE TABLE IF NOT EXISTS `cellpdcchalgo` (
+CREATE TABLE IF NOT EXISTS `cellpdcchalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `ComSigCongregLv` varchar(255) DEFAULT NULL,
@@ -1607,7 +1677,8 @@ CREATE TABLE IF NOT EXISTS `cellpdcchalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellpdcchcecfg
-CREATE TABLE IF NOT EXISTS `cellpdcchcecfg` (
+CREATE TABLE IF NOT EXISTS `cellpdcchcecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CoverageLevel` varchar(255) DEFAULT NULL,
@@ -1618,7 +1689,8 @@ CREATE TABLE IF NOT EXISTS `cellpdcchcecfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellprbvalmlb
-CREATE TABLE IF NOT EXISTS `cellprbvalmlb` (
+CREATE TABLE IF NOT EXISTS `cellprbvalmlb` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `PrbValMlbTrigThd` float DEFAULT NULL,
@@ -1629,7 +1701,8 @@ CREATE TABLE IF NOT EXISTS `cellprbvalmlb` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellpucchalgo
-CREATE TABLE IF NOT EXISTS `cellpucchalgo` (
+CREATE TABLE IF NOT EXISTS `cellpucchalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `SriLowLoadThd` float DEFAULT NULL,
@@ -1639,7 +1712,8 @@ CREATE TABLE IF NOT EXISTS `cellpucchalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellqcipara
-CREATE TABLE IF NOT EXISTS `cellqcipara` (
+CREATE TABLE IF NOT EXISTS `cellqcipara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `Qci` float DEFAULT NULL,
@@ -1672,7 +1746,8 @@ CREATE TABLE IF NOT EXISTS `cellqcipara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellrachalgo
-CREATE TABLE IF NOT EXISTS `cellrachalgo` (
+CREATE TABLE IF NOT EXISTS `cellrachalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `PrachFalseAlarmDetRadThd` float DEFAULT NULL,
@@ -1684,7 +1759,8 @@ CREATE TABLE IF NOT EXISTS `cellrachalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellrachcecfg
-CREATE TABLE IF NOT EXISTS `cellrachcecfg` (
+CREATE TABLE IF NOT EXISTS `cellrachcecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CoverageLevel` varchar(255) DEFAULT NULL,
@@ -1699,7 +1775,8 @@ CREATE TABLE IF NOT EXISTS `cellrachcecfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellracthd
-CREATE TABLE IF NOT EXISTS `cellracthd` (
+CREATE TABLE IF NOT EXISTS `cellracthd` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `GoldServiceArpThd` float DEFAULT NULL,
@@ -1744,7 +1821,8 @@ CREATE TABLE IF NOT EXISTS `cellracthd` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellresel
-CREATE TABLE IF NOT EXISTS `cellresel` (
+CREATE TABLE IF NOT EXISTS `cellresel` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `Qhyst` varchar(255) DEFAULT NULL,
@@ -1776,7 +1854,8 @@ CREATE TABLE IF NOT EXISTS `cellresel` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellreselgeran
-CREATE TABLE IF NOT EXISTS `cellreselgeran` (
+CREATE TABLE IF NOT EXISTS `cellreselgeran` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `TReselGeran` float DEFAULT NULL,
@@ -1785,7 +1864,8 @@ CREATE TABLE IF NOT EXISTS `cellreselgeran` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellreselutran
-CREATE TABLE IF NOT EXISTS `cellreselutran` (
+CREATE TABLE IF NOT EXISTS `cellreselutran` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `TReselUtran` float DEFAULT NULL,
@@ -1796,7 +1876,8 @@ CREATE TABLE IF NOT EXISTS `cellreselutran` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellrfshutdown
-CREATE TABLE IF NOT EXISTS `cellrfshutdown` (
+CREATE TABLE IF NOT EXISTS `cellrfshutdown` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `RfShutdownSwitch` varchar(255) DEFAULT NULL,
@@ -1813,7 +1894,8 @@ CREATE TABLE IF NOT EXISTS `cellrfshutdown` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellricalgo
-CREATE TABLE IF NOT EXISTS `cellricalgo` (
+CREATE TABLE IF NOT EXISTS `cellricalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `RicAlgoSwitch` varchar(255) DEFAULT NULL,
@@ -1838,7 +1920,8 @@ CREATE TABLE IF NOT EXISTS `cellricalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellsel
-CREATE TABLE IF NOT EXISTS `cellsel` (
+CREATE TABLE IF NOT EXISTS `cellsel` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `QRxLevMin` float DEFAULT NULL,
@@ -1851,7 +1934,8 @@ CREATE TABLE IF NOT EXISTS `cellsel` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellservicediffcfg
-CREATE TABLE IF NOT EXISTS `cellservicediffcfg` (
+CREATE TABLE IF NOT EXISTS `cellservicediffcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `ServiceDiffSwitch` varchar(255) DEFAULT NULL,
@@ -1870,7 +1954,8 @@ CREATE TABLE IF NOT EXISTS `cellservicediffcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellshutdown
-CREATE TABLE IF NOT EXISTS `cellshutdown` (
+CREATE TABLE IF NOT EXISTS `cellshutdown` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CellShutdownSwitch` varchar(255) DEFAULT NULL,
@@ -1886,7 +1971,8 @@ CREATE TABLE IF NOT EXISTS `cellshutdown` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellsimap
-CREATE TABLE IF NOT EXISTS `cellsimap` (
+CREATE TABLE IF NOT EXISTS `cellsimap` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `SiMapSwitch` varchar(255) DEFAULT NULL,
@@ -1923,7 +2009,8 @@ CREATE TABLE IF NOT EXISTS `cellsimap` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellsrlte
-CREATE TABLE IF NOT EXISTS `cellsrlte` (
+CREATE TABLE IF NOT EXISTS `cellsrlte` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `SrlteSwitch` varchar(255) DEFAULT NULL,
@@ -1934,7 +2021,8 @@ CREATE TABLE IF NOT EXISTS `cellsrlte` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellsrsadaptivecfg
-CREATE TABLE IF NOT EXISTS `cellsrsadaptivecfg` (
+CREATE TABLE IF NOT EXISTS `cellsrsadaptivecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `SrsPeriodAdaptive` varchar(255) DEFAULT NULL
@@ -1942,7 +2030,8 @@ CREATE TABLE IF NOT EXISTS `cellsrsadaptivecfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellstandardqci
-CREATE TABLE IF NOT EXISTS `cellstandardqci` (
+CREATE TABLE IF NOT EXISTS `cellstandardqci` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `Qci` varchar(255) DEFAULT NULL,
@@ -1971,7 +2060,8 @@ CREATE TABLE IF NOT EXISTS `cellstandardqci` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellttibundlingalgo
-CREATE TABLE IF NOT EXISTS `cellttibundlingalgo` (
+CREATE TABLE IF NOT EXISTS `cellttibundlingalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `SinrThdToTrigTtib` float DEFAULT NULL,
@@ -1984,7 +2074,8 @@ CREATE TABLE IF NOT EXISTS `cellttibundlingalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellucionpuschpara
-CREATE TABLE IF NOT EXISTS `cellucionpuschpara` (
+CREATE TABLE IF NOT EXISTS `cellucionpuschpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CellUciOnPuschParaValid` varchar(255) DEFAULT NULL,
@@ -1996,7 +2087,8 @@ CREATE TABLE IF NOT EXISTS `cellucionpuschpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.celluemeascontrolcfg
-CREATE TABLE IF NOT EXISTS `celluemeascontrolcfg` (
+CREATE TABLE IF NOT EXISTS `celluemeascontrolcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `MaxNonIntraMeasObjNum` float DEFAULT NULL,
@@ -2010,7 +2102,8 @@ CREATE TABLE IF NOT EXISTS `celluemeascontrolcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellulcompalgo
-CREATE TABLE IF NOT EXISTS `cellulcompalgo` (
+CREATE TABLE IF NOT EXISTS `cellulcompalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UlCompA3Offset` float DEFAULT NULL,
@@ -2021,7 +2114,8 @@ CREATE TABLE IF NOT EXISTS `cellulcompalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellulicalgo
-CREATE TABLE IF NOT EXISTS `cellulicalgo` (
+CREATE TABLE IF NOT EXISTS `cellulicalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UlIcA3Offset` float DEFAULT NULL
@@ -2029,7 +2123,8 @@ CREATE TABLE IF NOT EXISTS `cellulicalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellulicic
-CREATE TABLE IF NOT EXISTS `cellulicic` (
+CREATE TABLE IF NOT EXISTS `cellulicic` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `BandMode` varchar(255) DEFAULT NULL
@@ -2037,7 +2132,8 @@ CREATE TABLE IF NOT EXISTS `cellulicic` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellulicicmcpara
-CREATE TABLE IF NOT EXISTS `cellulicicmcpara` (
+CREATE TABLE IF NOT EXISTS `cellulicicmcpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `A3Offset` float DEFAULT NULL
@@ -2045,7 +2141,8 @@ CREATE TABLE IF NOT EXISTS `cellulicicmcpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellulmimoparacfg
-CREATE TABLE IF NOT EXISTS `cellulmimoparacfg` (
+CREATE TABLE IF NOT EXISTS `cellulmimoparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UlSuMimoRankPara` varchar(255) DEFAULT NULL
@@ -2053,7 +2150,8 @@ CREATE TABLE IF NOT EXISTS `cellulmimoparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellulpccomm
-CREATE TABLE IF NOT EXISTS `cellulpccomm` (
+CREATE TABLE IF NOT EXISTS `cellulpccomm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `PassLossCoeff` varchar(255) DEFAULT NULL,
@@ -2072,7 +2170,8 @@ CREATE TABLE IF NOT EXISTS `cellulpccomm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellulpcdedic
-CREATE TABLE IF NOT EXISTS `cellulpcdedic` (
+CREATE TABLE IF NOT EXISTS `cellulpcdedic` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DeltaMcsEnabled` varchar(255) DEFAULT NULL,
@@ -2084,7 +2183,8 @@ CREATE TABLE IF NOT EXISTS `cellulpcdedic` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellulschalgo
-CREATE TABLE IF NOT EXISTS `cellulschalgo` (
+CREATE TABLE IF NOT EXISTS `cellulschalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UlschStrategy` varchar(255) DEFAULT NULL,
@@ -2172,7 +2272,8 @@ CREATE TABLE IF NOT EXISTS `cellulschalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellulunifiedolc
-CREATE TABLE IF NOT EXISTS `cellulunifiedolc` (
+CREATE TABLE IF NOT EXISTS `cellulunifiedolc` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `RrcRejectRateHighThd` float DEFAULT NULL,
@@ -2185,7 +2286,8 @@ CREATE TABLE IF NOT EXISTS `cellulunifiedolc` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellusparacfg
-CREATE TABLE IF NOT EXISTS `cellusparacfg` (
+CREATE TABLE IF NOT EXISTS `cellusparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UsAlgoSwitch` longtext,
@@ -2252,7 +2354,8 @@ CREATE TABLE IF NOT EXISTS `cellusparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellvms
-CREATE TABLE IF NOT EXISTS `cellvms` (
+CREATE TABLE IF NOT EXISTS `cellvms` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `VmsHoUeNumTh` float DEFAULT NULL,
@@ -2263,7 +2366,8 @@ CREATE TABLE IF NOT EXISTS `cellvms` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cellwttxparacfg
-CREATE TABLE IF NOT EXISTS `cellwttxparacfg` (
+CREATE TABLE IF NOT EXISTS `cellwttxparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `MbbUserDlPrbUpLimit` float DEFAULT NULL,
@@ -2276,7 +2380,8 @@ CREATE TABLE IF NOT EXISTS `cellwttxparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cepucchcfg
-CREATE TABLE IF NOT EXISTS `cepucchcfg` (
+CREATE TABLE IF NOT EXISTS `cepucchcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CoverageLevel` varchar(255) DEFAULT NULL,
@@ -2285,7 +2390,8 @@ CREATE TABLE IF NOT EXISTS `cepucchcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cerachcfg
-CREATE TABLE IF NOT EXISTS `cerachcfg` (
+CREATE TABLE IF NOT EXISTS `cerachcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CoverageLevel` varchar(255) DEFAULT NULL,
@@ -2298,14 +2404,16 @@ CREATE TABLE IF NOT EXISTS `cerachcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.certcfg
-CREATE TABLE IF NOT EXISTS `certcfg` (
+CREATE TABLE IF NOT EXISTS `certcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IKECHECKSW` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.certchktsk
-CREATE TABLE IF NOT EXISTS `certchktsk` (
+CREATE TABLE IF NOT EXISTS `certchktsk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ISENABLE` varchar(255) DEFAULT NULL,
   `PERIOD` float DEFAULT NULL,
@@ -2315,7 +2423,8 @@ CREATE TABLE IF NOT EXISTS `certchktsk` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.certdeploy
-CREATE TABLE IF NOT EXISTS `certdeploy` (
+CREATE TABLE IF NOT EXISTS `certdeploy` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `DEPLOYTYPE` varchar(255) DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -2325,7 +2434,8 @@ CREATE TABLE IF NOT EXISTS `certdeploy` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.certmk
-CREATE TABLE IF NOT EXISTS `certmk` (
+CREATE TABLE IF NOT EXISTS `certmk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `APPCERT` varchar(255) DEFAULT NULL,
   `CASW` varchar(255) DEFAULT NULL
@@ -2333,7 +2443,8 @@ CREATE TABLE IF NOT EXISTS `certmk` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.certreq
-CREATE TABLE IF NOT EXISTS `certreq` (
+CREATE TABLE IF NOT EXISTS `certreq` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `COMMNAME` varchar(255) DEFAULT NULL,
   `USERADDINFO` varchar(255) DEFAULT NULL,
@@ -2351,14 +2462,16 @@ CREATE TABLE IF NOT EXISTS `certreq` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.chk
-CREATE TABLE IF NOT EXISTS `chk` (
+CREATE TABLE IF NOT EXISTS `chk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ENABLEFLAG` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.clkdetect
-CREATE TABLE IF NOT EXISTS `clkdetect` (
+CREATE TABLE IF NOT EXISTS `clkdetect` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ClkAsyncDetectSwitch` varchar(255) DEFAULT NULL,
   `ClkAsyncInterfRptThld` float DEFAULT NULL,
@@ -2370,7 +2483,8 @@ CREATE TABLE IF NOT EXISTS `clkdetect` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.clzerobufferzone
-CREATE TABLE IF NOT EXISTS `clzerobufferzone` (
+CREATE TABLE IF NOT EXISTS `clzerobufferzone` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `ClZeroBufzoneDlSharedInd` varchar(255) DEFAULT NULL,
@@ -2387,7 +2501,8 @@ CREATE TABLE IF NOT EXISTS `clzerobufferzone` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cnoperator
-CREATE TABLE IF NOT EXISTS `cnoperator` (
+CREATE TABLE IF NOT EXISTS `cnoperator` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `CnOperatorName` varchar(255) DEFAULT NULL,
@@ -2401,7 +2516,8 @@ CREATE TABLE IF NOT EXISTS `cnoperator` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cnoperatorhocfg
-CREATE TABLE IF NOT EXISTS `cnoperatorhocfg` (
+CREATE TABLE IF NOT EXISTS `cnoperatorhocfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `FirstRatPri` varchar(255) DEFAULT NULL,
@@ -2418,7 +2534,8 @@ CREATE TABLE IF NOT EXISTS `cnoperatorhocfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cnoperatorqcipara
-CREATE TABLE IF NOT EXISTS `cnoperatorqcipara` (
+CREATE TABLE IF NOT EXISTS `cnoperatorqcipara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `Qci` float DEFAULT NULL,
@@ -2430,7 +2547,8 @@ CREATE TABLE IF NOT EXISTS `cnoperatorqcipara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cnoperatorstandardqci
-CREATE TABLE IF NOT EXISTS `cnoperatorstandardqci` (
+CREATE TABLE IF NOT EXISTS `cnoperatorstandardqci` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `Qci` varchar(255) DEFAULT NULL,
@@ -2442,7 +2560,8 @@ CREATE TABLE IF NOT EXISTS `cnoperatorstandardqci` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cnoperatorta
-CREATE TABLE IF NOT EXISTS `cnoperatorta` (
+CREATE TABLE IF NOT EXISTS `cnoperatorta` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TrackingAreaId` float DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
@@ -2453,7 +2572,8 @@ CREATE TABLE IF NOT EXISTS `cnoperatorta` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.countercheckpara
-CREATE TABLE IF NOT EXISTS `countercheckpara` (
+CREATE TABLE IF NOT EXISTS `countercheckpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CounterCheckTimer` float DEFAULT NULL,
   `CounterCheckCountNum` float DEFAULT NULL,
@@ -2463,7 +2583,8 @@ CREATE TABLE IF NOT EXISTS `countercheckpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cpbearer
-CREATE TABLE IF NOT EXISTS `cpbearer` (
+CREATE TABLE IF NOT EXISTS `cpbearer` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CPBEARID` float DEFAULT NULL,
   `FLAG` varchar(255) DEFAULT NULL,
@@ -2475,7 +2596,8 @@ CREATE TABLE IF NOT EXISTS `cpbearer` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cpriport
-CREATE TABLE IF NOT EXISTS `cpriport` (
+CREATE TABLE IF NOT EXISTS `cpriport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -2488,14 +2610,16 @@ CREATE TABLE IF NOT EXISTS `cpriport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cpswitch
-CREATE TABLE IF NOT EXISTS `cpswitch` (
+CREATE TABLE IF NOT EXISTS `cpswitch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ES` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cqiadaptivecfg
-CREATE TABLE IF NOT EXISTS `cqiadaptivecfg` (
+CREATE TABLE IF NOT EXISTS `cqiadaptivecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CqiPeriodAdaptive` varchar(255) DEFAULT NULL,
   `SimulAckNackAndCqiSwitch` varchar(255) DEFAULT NULL,
@@ -2507,14 +2631,16 @@ CREATE TABLE IF NOT EXISTS `cqiadaptivecfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.crlpolicy
-CREATE TABLE IF NOT EXISTS `crlpolicy` (
+CREATE TABLE IF NOT EXISTS `crlpolicy` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CRLPOLICY` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.csfallbackblindhocfg
-CREATE TABLE IF NOT EXISTS `csfallbackblindhocfg` (
+CREATE TABLE IF NOT EXISTS `csfallbackblindhocfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `InterRatHighestPri` varchar(255) DEFAULT NULL,
@@ -2531,7 +2657,8 @@ CREATE TABLE IF NOT EXISTS `csfallbackblindhocfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.csfallbackho
-CREATE TABLE IF NOT EXISTS `csfallbackho` (
+CREATE TABLE IF NOT EXISTS `csfallbackho` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CsfbHoUtranTimeToTrig` varchar(255) DEFAULT NULL,
@@ -2548,7 +2675,8 @@ CREATE TABLE IF NOT EXISTS `csfallbackho` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.csfallbackpolicycfg
-CREATE TABLE IF NOT EXISTS `csfallbackpolicycfg` (
+CREATE TABLE IF NOT EXISTS `csfallbackpolicycfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CsfbHoPolicyCfg` varchar(255) DEFAULT NULL,
   `IdleModeCsfbHoPolicyCfg` varchar(255) DEFAULT NULL,
@@ -2559,7 +2687,8 @@ CREATE TABLE IF NOT EXISTS `csfallbackpolicycfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.cspcalgopara
-CREATE TABLE IF NOT EXISTS `cspcalgopara` (
+CREATE TABLE IF NOT EXISTS `cspcalgopara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CspcAlgoSwitch` varchar(255) DEFAULT NULL,
   `CspcRsrpMeasMode` varchar(255) DEFAULT NULL,
@@ -2577,7 +2706,8 @@ CREATE TABLE IF NOT EXISTS `cspcalgopara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.devip
-CREATE TABLE IF NOT EXISTS `devip` (
+CREATE TABLE IF NOT EXISTS `devip` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -2594,14 +2724,16 @@ CREATE TABLE IF NOT EXISTS `devip` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.dhcprelayswitch
-CREATE TABLE IF NOT EXISTS `dhcprelayswitch` (
+CREATE TABLE IF NOT EXISTS `dhcprelayswitch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ES` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.dhcpsvrip
-CREATE TABLE IF NOT EXISTS `dhcpsvrip` (
+CREATE TABLE IF NOT EXISTS `dhcpsvrip` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `DHCPSVRIP` varchar(255) DEFAULT NULL,
   `DHCPRELAYIPSW` varchar(255) DEFAULT NULL
@@ -2609,7 +2741,8 @@ CREATE TABLE IF NOT EXISTS `dhcpsvrip` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.dhcpsw
-CREATE TABLE IF NOT EXISTS `dhcpsw` (
+CREATE TABLE IF NOT EXISTS `dhcpsw` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SWITCH` varchar(255) DEFAULT NULL,
   `VLANSCANSW` varchar(255) DEFAULT NULL,
@@ -2618,7 +2751,8 @@ CREATE TABLE IF NOT EXISTS `dhcpsw` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.difpri
-CREATE TABLE IF NOT EXISTS `difpri` (
+CREATE TABLE IF NOT EXISTS `difpri` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PRIRULE` varchar(255) DEFAULT NULL,
   `SIGPRI` float DEFAULT NULL,
@@ -2629,7 +2763,8 @@ CREATE TABLE IF NOT EXISTS `difpri` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.distbasedho
-CREATE TABLE IF NOT EXISTS `distbasedho` (
+CREATE TABLE IF NOT EXISTS `distbasedho` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DistBasedMeasObjType` varchar(255) DEFAULT NULL,
@@ -2638,7 +2773,8 @@ CREATE TABLE IF NOT EXISTS `distbasedho` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.dlflowctrlpara
-CREATE TABLE IF NOT EXISTS `dlflowctrlpara` (
+CREATE TABLE IF NOT EXISTS `dlflowctrlpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -2661,7 +2797,8 @@ CREATE TABLE IF NOT EXISTS `dlflowctrlpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.drx
-CREATE TABLE IF NOT EXISTS `drx` (
+CREATE TABLE IF NOT EXISTS `drx` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `DrxAlgSwitch` varchar(255) DEFAULT NULL,
   `ShortDrxSwitch` varchar(255) DEFAULT NULL,
@@ -2679,7 +2816,8 @@ CREATE TABLE IF NOT EXISTS `drx` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.drxparagroup
-CREATE TABLE IF NOT EXISTS `drxparagroup` (
+CREATE TABLE IF NOT EXISTS `drxparagroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DrxParaGroupId` float DEFAULT NULL,
@@ -2698,7 +2836,8 @@ CREATE TABLE IF NOT EXISTS `drxparagroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.dscpmap
-CREATE TABLE IF NOT EXISTS `dscpmap` (
+CREATE TABLE IF NOT EXISTS `dscpmap` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `VRFIDX` float DEFAULT NULL,
   `DSCP` float DEFAULT NULL,
@@ -2707,7 +2846,8 @@ CREATE TABLE IF NOT EXISTS `dscpmap` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.e1t1
-CREATE TABLE IF NOT EXISTS `e1t1` (
+CREATE TABLE IF NOT EXISTS `e1t1` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -2723,7 +2863,8 @@ CREATE TABLE IF NOT EXISTS `e1t1` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.e1t1bear
-CREATE TABLE IF NOT EXISTS `e1t1bear` (
+CREATE TABLE IF NOT EXISTS `e1t1bear` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -2733,14 +2874,16 @@ CREATE TABLE IF NOT EXISTS `e1t1bear` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.e1t1ber
-CREATE TABLE IF NOT EXISTS `e1t1ber` (
+CREATE TABLE IF NOT EXISTS `e1t1ber` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `BTL` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.emc
-CREATE TABLE IF NOT EXISTS `emc` (
+CREATE TABLE IF NOT EXISTS `emc` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `EmcEnable` varchar(255) DEFAULT NULL
@@ -2748,7 +2891,8 @@ CREATE TABLE IF NOT EXISTS `emc` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.emu
-CREATE TABLE IF NOT EXISTS `emu` (
+CREATE TABLE IF NOT EXISTS `emu` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -2767,7 +2911,8 @@ CREATE TABLE IF NOT EXISTS `emu` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enbcelloprsvdpara
-CREATE TABLE IF NOT EXISTS `enbcelloprsvdpara` (
+CREATE TABLE IF NOT EXISTS `enbcelloprsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `TrackingAreaId` float DEFAULT NULL,
@@ -2798,7 +2943,8 @@ CREATE TABLE IF NOT EXISTS `enbcelloprsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enbcellqcirsvdpara
-CREATE TABLE IF NOT EXISTS `enbcellqcirsvdpara` (
+CREATE TABLE IF NOT EXISTS `enbcellqcirsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `Qci` float DEFAULT NULL,
@@ -2829,7 +2975,8 @@ CREATE TABLE IF NOT EXISTS `enbcellqcirsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enbcellrsvdpara
-CREATE TABLE IF NOT EXISTS `enbcellrsvdpara` (
+CREATE TABLE IF NOT EXISTS `enbcellrsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `RsvdSwPara0` longtext,
@@ -2952,7 +3099,8 @@ CREATE TABLE IF NOT EXISTS `enbcellrsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enbcnopqcirsvdpara
-CREATE TABLE IF NOT EXISTS `enbcnopqcirsvdpara` (
+CREATE TABLE IF NOT EXISTS `enbcnopqcirsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `Qci` float DEFAULT NULL,
@@ -2983,7 +3131,8 @@ CREATE TABLE IF NOT EXISTS `enbcnopqcirsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enbcnoprsvdpara
-CREATE TABLE IF NOT EXISTS `enbcnoprsvdpara` (
+CREATE TABLE IF NOT EXISTS `enbcnoprsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `RsvdSwPara0` longtext,
@@ -3013,7 +3162,8 @@ CREATE TABLE IF NOT EXISTS `enbcnoprsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enblicensealmthd
-CREATE TABLE IF NOT EXISTS `enblicensealmthd` (
+CREATE TABLE IF NOT EXISTS `enblicensealmthd` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OPRD` float DEFAULT NULL,
   `OTHD` float DEFAULT NULL,
@@ -3024,7 +3174,8 @@ CREATE TABLE IF NOT EXISTS `enblicensealmthd` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enbqcirsvdpara
-CREATE TABLE IF NOT EXISTS `enbqcirsvdpara` (
+CREATE TABLE IF NOT EXISTS `enbqcirsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `Qci` float DEFAULT NULL,
   `RsvdSwPara0` longtext,
@@ -3055,7 +3206,8 @@ CREATE TABLE IF NOT EXISTS `enbqcirsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enbrsvdpara
-CREATE TABLE IF NOT EXISTS `enbrsvdpara` (
+CREATE TABLE IF NOT EXISTS `enbrsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RsvdSwPara0` longtext,
   `RsvdSwPara1` longtext,
@@ -3107,14 +3259,16 @@ CREATE TABLE IF NOT EXISTS `enbrsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.energycon
-CREATE TABLE IF NOT EXISTS `energycon` (
+CREATE TABLE IF NOT EXISTS `energycon` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `MP` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebalgoswitch
-CREATE TABLE IF NOT EXISTS `enodebalgoswitch` (
+CREATE TABLE IF NOT EXISTS `enodebalgoswitch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `HoAlgoSwitch` longtext,
   `HoModeSwitch` longtext,
@@ -3181,7 +3335,8 @@ CREATE TABLE IF NOT EXISTS `enodebalgoswitch` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebalmcfg
-CREATE TABLE IF NOT EXISTS `enodebalmcfg` (
+CREATE TABLE IF NOT EXISTS `enodebalmcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TrafficFaultyDetectPeriod` float DEFAULT NULL,
   `SrvIntfAlmCfgSw` varchar(255) DEFAULT NULL,
@@ -3190,7 +3345,8 @@ CREATE TABLE IF NOT EXISTS `enodebalmcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebautopoweroff
-CREATE TABLE IF NOT EXISTS `enodebautopoweroff` (
+CREATE TABLE IF NOT EXISTS `enodebautopoweroff` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `AutoPowerOffSwitch` varchar(255) DEFAULT NULL,
   `PowerOffTime` varchar(255) DEFAULT NULL,
@@ -3200,7 +3356,8 @@ CREATE TABLE IF NOT EXISTS `enodebautopoweroff` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebchroutputctrl
-CREATE TABLE IF NOT EXISTS `enodebchroutputctrl` (
+CREATE TABLE IF NOT EXISTS `enodebchroutputctrl` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OutPutMode` varchar(255) DEFAULT NULL,
   `CallSampleRate` float DEFAULT NULL,
@@ -3212,7 +3369,8 @@ CREATE TABLE IF NOT EXISTS `enodebchroutputctrl` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebciphercap
-CREATE TABLE IF NOT EXISTS `enodebciphercap` (
+CREATE TABLE IF NOT EXISTS `enodebciphercap` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PrimaryCipherAlgo` varchar(255) DEFAULT NULL,
   `SecondCipherAlgo` varchar(255) DEFAULT NULL,
@@ -3223,7 +3381,8 @@ CREATE TABLE IF NOT EXISTS `enodebciphercap` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebconnstatetimer
-CREATE TABLE IF NOT EXISTS `enodebconnstatetimer` (
+CREATE TABLE IF NOT EXISTS `enodebconnstatetimer` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `S1MessageWaitingTimer` float DEFAULT NULL,
   `X2MessageWaitingTimer` float DEFAULT NULL,
@@ -3250,7 +3409,8 @@ CREATE TABLE IF NOT EXISTS `enodebconnstatetimer` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebfddbbres
-CREATE TABLE IF NOT EXISTS `enodebfddbbres` (
+CREATE TABLE IF NOT EXISTS `enodebfddbbres` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `eNodeBFddBbResId` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -3263,7 +3423,8 @@ CREATE TABLE IF NOT EXISTS `enodebfddbbres` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebflowctrlpara
-CREATE TABLE IF NOT EXISTS `enodebflowctrlpara` (
+CREATE TABLE IF NOT EXISTS `enodebflowctrlpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `AdaptUnsyncTimerLen` float DEFAULT NULL,
   `AdaptUnsyncUserNumThd` float DEFAULT NULL,
@@ -3276,7 +3437,8 @@ CREATE TABLE IF NOT EXISTS `enodebflowctrlpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebframeoffset
-CREATE TABLE IF NOT EXISTS `enodebframeoffset` (
+CREATE TABLE IF NOT EXISTS `enodebframeoffset` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TddFrameOffset` float DEFAULT NULL,
   `FddFrameOffset` float DEFAULT NULL,
@@ -3285,7 +3447,8 @@ CREATE TABLE IF NOT EXISTS `enodebframeoffset` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebfunction
-CREATE TABLE IF NOT EXISTS `enodebfunction` (
+CREATE TABLE IF NOT EXISTS `enodebfunction` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `objId` float DEFAULT NULL,
   `eNodeBFunctionName` varchar(255) DEFAULT NULL,
@@ -3300,7 +3463,8 @@ CREATE TABLE IF NOT EXISTS `enodebfunction` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebintegritycap
-CREATE TABLE IF NOT EXISTS `enodebintegritycap` (
+CREATE TABLE IF NOT EXISTS `enodebintegritycap` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PrimaryIntegrityAlgo` varchar(255) DEFAULT NULL,
   `SecondIntegrityAlgo` varchar(255) DEFAULT NULL,
@@ -3311,7 +3475,8 @@ CREATE TABLE IF NOT EXISTS `enodebintegritycap` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebmlb
-CREATE TABLE IF NOT EXISTS `enodebmlb` (
+CREATE TABLE IF NOT EXISTS `enodebmlb` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `InterFreqIdleMlbMode` varchar(255) DEFAULT NULL,
   `InterFreqIdleMlbInterval` float DEFAULT NULL,
@@ -3323,7 +3488,8 @@ CREATE TABLE IF NOT EXISTS `enodebmlb` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebnbpara
-CREATE TABLE IF NOT EXISTS `enodebnbpara` (
+CREATE TABLE IF NOT EXISTS `enodebnbpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `NbRsvMinUserNumRatio` float DEFAULT NULL,
   `objId` float DEFAULT NULL
@@ -3331,7 +3497,8 @@ CREATE TABLE IF NOT EXISTS `enodebnbpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebresmodealgo
-CREATE TABLE IF NOT EXISTS `enodebresmodealgo` (
+CREATE TABLE IF NOT EXISTS `enodebresmodealgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `BbpResAutoConfigSw` varchar(255) DEFAULT NULL,
   `TddBbpResDeployAlgo` varchar(255) DEFAULT NULL,
@@ -3345,7 +3512,8 @@ CREATE TABLE IF NOT EXISTS `enodebresmodealgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebsharingmode
-CREATE TABLE IF NOT EXISTS `enodebsharingmode` (
+CREATE TABLE IF NOT EXISTS `enodebsharingmode` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ENodeBSharingMode` varchar(255) DEFAULT NULL,
   `objId` float DEFAULT NULL
@@ -3353,7 +3521,8 @@ CREATE TABLE IF NOT EXISTS `enodebsharingmode` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebsondbcfg
-CREATE TABLE IF NOT EXISTS `enodebsondbcfg` (
+CREATE TABLE IF NOT EXISTS `enodebsondbcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `StartTime` varchar(255) DEFAULT NULL,
   `objId` float DEFAULT NULL
@@ -3361,7 +3530,8 @@ CREATE TABLE IF NOT EXISTS `enodebsondbcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebtddbbres
-CREATE TABLE IF NOT EXISTS `enodebtddbbres` (
+CREATE TABLE IF NOT EXISTS `enodebtddbbres` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `eNodeBTddBbResId` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -3374,7 +3544,8 @@ CREATE TABLE IF NOT EXISTS `enodebtddbbres` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebtgalgcfg
-CREATE TABLE IF NOT EXISTS `enodebtgalgcfg` (
+CREATE TABLE IF NOT EXISTS `enodebtgalgcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `FilterCoeffTG` float DEFAULT NULL,
   `StatPeriodTG` float DEFAULT NULL,
@@ -3383,7 +3554,8 @@ CREATE TABLE IF NOT EXISTS `enodebtgalgcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.enodebusparacfg
-CREATE TABLE IF NOT EXISTS `enodebusparacfg` (
+CREATE TABLE IF NOT EXISTS `enodebusparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `UsStrategy` varchar(255) DEFAULT NULL,
   `UsSPIDConfig` float DEFAULT NULL,
@@ -3400,7 +3572,8 @@ CREATE TABLE IF NOT EXISTS `enodebusparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.epgroup
-CREATE TABLE IF NOT EXISTS `epgroup` (
+CREATE TABLE IF NOT EXISTS `epgroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `EPGROUPID` float DEFAULT NULL,
   `VRFIDX` float DEFAULT NULL,
@@ -3418,7 +3591,8 @@ CREATE TABLE IF NOT EXISTS `epgroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.equipment
-CREATE TABLE IF NOT EXISTS `equipment` (
+CREATE TABLE IF NOT EXISTS `equipment` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `BATIMS` varchar(255) DEFAULT NULL,
   `PAE` varchar(255) DEFAULT NULL,
@@ -3446,7 +3620,8 @@ CREATE TABLE IF NOT EXISTS `equipment` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ethport
-CREATE TABLE IF NOT EXISTS `ethport` (
+CREATE TABLE IF NOT EXISTS `ethport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -3470,7 +3645,8 @@ CREATE TABLE IF NOT EXISTS `ethport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eucellalmcfg
-CREATE TABLE IF NOT EXISTS `eucellalmcfg` (
+CREATE TABLE IF NOT EXISTS `eucellalmcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `RxNoisePwrThd` float DEFAULT NULL
@@ -3478,7 +3654,8 @@ CREATE TABLE IF NOT EXISTS `eucellalmcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eucellsectoreqm
-CREATE TABLE IF NOT EXISTS `eucellsectoreqm` (
+CREATE TABLE IF NOT EXISTS `eucellsectoreqm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `SectorEqmId` float DEFAULT NULL,
@@ -3497,7 +3674,8 @@ CREATE TABLE IF NOT EXISTS `eucellsectoreqm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eucommcellsectoreqm
-CREATE TABLE IF NOT EXISTS `eucommcellsectoreqm` (
+CREATE TABLE IF NOT EXISTS `eucommcellsectoreqm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `eNodeBId` float DEFAULT NULL,
@@ -3506,7 +3684,8 @@ CREATE TABLE IF NOT EXISTS `eucommcellsectoreqm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eucoschcfg
-CREATE TABLE IF NOT EXISTS `eucoschcfg` (
+CREATE TABLE IF NOT EXISTS `eucoschcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PrtNodeBaseBandEqmId` float DEFAULT NULL,
   `SchNodeBaseBandEqmId` float DEFAULT NULL,
@@ -3516,7 +3695,8 @@ CREATE TABLE IF NOT EXISTS `eucoschcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eucoschdlcompcfg
-CREATE TABLE IF NOT EXISTS `eucoschdlcompcfg` (
+CREATE TABLE IF NOT EXISTS `eucoschdlcompcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CordInfoEffDelay` float DEFAULT NULL,
   `InterEnbDlCompSwitch` varchar(255) DEFAULT NULL,
@@ -3527,7 +3707,8 @@ CREATE TABLE IF NOT EXISTS `eucoschdlcompcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eucoschulicscfg
-CREATE TABLE IF NOT EXISTS `eucoschulicscfg` (
+CREATE TABLE IF NOT EXISTS `eucoschulicscfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `UlIcsAlgoSwitch` varchar(255) DEFAULT NULL,
   `objId` float DEFAULT NULL
@@ -3535,7 +3716,8 @@ CREATE TABLE IF NOT EXISTS `eucoschulicscfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.euepcsec
-CREATE TABLE IF NOT EXISTS `euepcsec` (
+CREATE TABLE IF NOT EXISTS `euepcsec` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CiphAlgo` varchar(255) DEFAULT NULL,
   `IntAlgo` varchar(255) DEFAULT NULL,
@@ -3544,7 +3726,8 @@ CREATE TABLE IF NOT EXISTS `euepcsec` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eutranexternalcell
-CREATE TABLE IF NOT EXISTS `eutranexternalcell` (
+CREATE TABLE IF NOT EXISTS `eutranexternalcell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `Mcc` float DEFAULT NULL,
   `Mnc` float DEFAULT NULL,
@@ -3570,7 +3753,8 @@ CREATE TABLE IF NOT EXISTS `eutranexternalcell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eutraninterfreqncell
-CREATE TABLE IF NOT EXISTS `eutraninterfreqncell` (
+CREATE TABLE IF NOT EXISTS `eutraninterfreqncell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `Mcc` float DEFAULT NULL,
@@ -3596,7 +3780,8 @@ CREATE TABLE IF NOT EXISTS `eutraninterfreqncell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eutraninternfreq
-CREATE TABLE IF NOT EXISTS `eutraninternfreq` (
+CREATE TABLE IF NOT EXISTS `eutraninternfreq` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DlEarfcn` float DEFAULT NULL,
@@ -3661,7 +3846,8 @@ CREATE TABLE IF NOT EXISTS `eutraninternfreq` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.eutranintrafreqncell
-CREATE TABLE IF NOT EXISTS `eutranintrafreqncell` (
+CREATE TABLE IF NOT EXISTS `eutranintrafreqncell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `Mcc` float DEFAULT NULL,
@@ -3686,7 +3872,8 @@ CREATE TABLE IF NOT EXISTS `eutranintrafreqncell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.euulcoschcfg
-CREATE TABLE IF NOT EXISTS `euulcoschcfg` (
+CREATE TABLE IF NOT EXISTS `euulcoschcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `UlInterEnbCamcSw` varchar(255) DEFAULT NULL,
   `objId` float DEFAULT NULL
@@ -3694,7 +3881,8 @@ CREATE TABLE IF NOT EXISTS `euulcoschcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.extendedqci
-CREATE TABLE IF NOT EXISTS `extendedqci` (
+CREATE TABLE IF NOT EXISTS `extendedqci` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ExtendedQci` float DEFAULT NULL,
   `ServiceType` varchar(255) DEFAULT NULL,
@@ -3718,7 +3906,8 @@ CREATE TABLE IF NOT EXISTS `extendedqci` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.fddresmode
-CREATE TABLE IF NOT EXISTS `fddresmode` (
+CREATE TABLE IF NOT EXISTS `fddresmode` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `BbCapabilityMode` varchar(255) DEFAULT NULL,
   `SfnCapabilityMode` varchar(255) DEFAULT NULL,
@@ -3728,14 +3917,16 @@ CREATE TABLE IF NOT EXISTS `fddresmode` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.fltcorrenablecfg
-CREATE TABLE IF NOT EXISTS `fltcorrenablecfg` (
+CREATE TABLE IF NOT EXISTS `fltcorrenablecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ENABLERELA` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.fmu
-CREATE TABLE IF NOT EXISTS `fmu` (
+CREATE TABLE IF NOT EXISTS `fmu` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -3751,7 +3942,8 @@ CREATE TABLE IF NOT EXISTS `fmu` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ftpclt
-CREATE TABLE IF NOT EXISTS `ftpclt` (
+CREATE TABLE IF NOT EXISTS `ftpclt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ENCRYMODE` varchar(255) DEFAULT NULL,
   `SPTSTATEFWL` varchar(255) DEFAULT NULL,
@@ -3761,7 +3953,8 @@ CREATE TABLE IF NOT EXISTS `ftpclt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ftpcltport
-CREATE TABLE IF NOT EXISTS `ftpcltport` (
+CREATE TABLE IF NOT EXISTS `ftpcltport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SERVERIP` varchar(255) DEFAULT NULL,
   `PORT` float DEFAULT NULL,
@@ -3771,7 +3964,8 @@ CREATE TABLE IF NOT EXISTS `ftpcltport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gbtsabiscp
-CREATE TABLE IF NOT EXISTS `gbtsabiscp` (
+CREATE TABLE IF NOT EXISTS `gbtsabiscp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ABISCPID` float DEFAULT NULL,
   `CPBEARID` float DEFAULT NULL,
@@ -3780,7 +3974,8 @@ CREATE TABLE IF NOT EXISTS `gbtsabiscp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gbtsbbres
-CREATE TABLE IF NOT EXISTS `gbtsbbres` (
+CREATE TABLE IF NOT EXISTS `gbtsbbres` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GBTSBBRESID` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -3793,7 +3988,8 @@ CREATE TABLE IF NOT EXISTS `gbtsbbres` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gbtsenergymgtpara
-CREATE TABLE IF NOT EXISTS `gbtsenergymgtpara` (
+CREATE TABLE IF NOT EXISTS `gbtsenergymgtpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
   `BAKPWRSAVMETHOD` varchar(255) DEFAULT NULL,
@@ -3802,7 +3998,8 @@ CREATE TABLE IF NOT EXISTS `gbtsenergymgtpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gbtsfunction
-CREATE TABLE IF NOT EXISTS `gbtsfunction` (
+CREATE TABLE IF NOT EXISTS `gbtsfunction` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
   `GBTSFUNCTIONNAME` varchar(255) DEFAULT NULL,
@@ -3816,7 +4013,8 @@ CREATE TABLE IF NOT EXISTS `gbtsfunction` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gbtsglobalpara
-CREATE TABLE IF NOT EXISTS `gbtsglobalpara` (
+CREATE TABLE IF NOT EXISTS `gbtsglobalpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
   `MCSTANDARD` varchar(255) DEFAULT NULL
@@ -3824,7 +4022,8 @@ CREATE TABLE IF NOT EXISTS `gbtsglobalpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gbtspath
-CREATE TABLE IF NOT EXISTS `gbtspath` (
+CREATE TABLE IF NOT EXISTS `gbtspath` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PATHID` float DEFAULT NULL,
   `OBJID` float DEFAULT NULL
@@ -3832,7 +4031,8 @@ CREATE TABLE IF NOT EXISTS `gbtspath` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.geranexternalcell
-CREATE TABLE IF NOT EXISTS `geranexternalcell` (
+CREATE TABLE IF NOT EXISTS `geranexternalcell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `Mcc` float DEFAULT NULL,
   `Mnc` float DEFAULT NULL,
@@ -3856,7 +4056,8 @@ CREATE TABLE IF NOT EXISTS `geranexternalcell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.geraninterfcfg
-CREATE TABLE IF NOT EXISTS `geraninterfcfg` (
+CREATE TABLE IF NOT EXISTS `geraninterfcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DlGeranIntefRbNum` float DEFAULT NULL,
@@ -3865,7 +4066,8 @@ CREATE TABLE IF NOT EXISTS `geraninterfcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.geranncell
-CREATE TABLE IF NOT EXISTS `geranncell` (
+CREATE TABLE IF NOT EXISTS `geranncell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `Mcc` float DEFAULT NULL,
@@ -3885,7 +4087,8 @@ CREATE TABLE IF NOT EXISTS `geranncell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gerannfreqgroup
-CREATE TABLE IF NOT EXISTS `gerannfreqgroup` (
+CREATE TABLE IF NOT EXISTS `gerannfreqgroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `BcchGroupId` float DEFAULT NULL,
@@ -3910,7 +4113,8 @@ CREATE TABLE IF NOT EXISTS `gerannfreqgroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gerannfreqgrouparfcn
-CREATE TABLE IF NOT EXISTS `gerannfreqgrouparfcn` (
+CREATE TABLE IF NOT EXISTS `gerannfreqgrouparfcn` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `BcchGroupId` float DEFAULT NULL,
@@ -3919,7 +4123,8 @@ CREATE TABLE IF NOT EXISTS `gerannfreqgrouparfcn` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.globalprocswitch
-CREATE TABLE IF NOT EXISTS `globalprocswitch` (
+CREATE TABLE IF NOT EXISTS `globalprocswitch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `X2SonSetupSwitch` longtext,
   `X2SonLinkSetupType` longtext,
@@ -4012,7 +4217,8 @@ CREATE TABLE IF NOT EXISTS `globalprocswitch` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.glocell
-CREATE TABLE IF NOT EXISTS `glocell` (
+CREATE TABLE IF NOT EXISTS `glocell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GLOCELLID` float DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
@@ -4025,7 +4231,8 @@ CREATE TABLE IF NOT EXISTS `glocell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.glocellalgpara
-CREATE TABLE IF NOT EXISTS `glocellalgpara` (
+CREATE TABLE IF NOT EXISTS `glocellalgpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GLOCELLID` float DEFAULT NULL,
   `GUDEGRATEPWRCTRL` varchar(255) DEFAULT NULL,
@@ -4038,7 +4245,8 @@ CREATE TABLE IF NOT EXISTS `glocellalgpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.glocellenergymgtpara
-CREATE TABLE IF NOT EXISTS `glocellenergymgtpara` (
+CREATE TABLE IF NOT EXISTS `glocellenergymgtpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GLOCELLID` float DEFAULT NULL,
   `MAINBCCHPWRDTEN` varchar(255) DEFAULT NULL
@@ -4046,7 +4254,8 @@ CREATE TABLE IF NOT EXISTS `glocellenergymgtpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.glocellothpara
-CREATE TABLE IF NOT EXISTS `glocellothpara` (
+CREATE TABLE IF NOT EXISTS `glocellothpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GLOCELLID` float DEFAULT NULL,
   `MULTRXBRDSTABMONITUNNSW` varchar(255) DEFAULT NULL,
@@ -4064,7 +4273,8 @@ CREATE TABLE IF NOT EXISTS `glocellothpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.glocellrlalmpara
-CREATE TABLE IF NOT EXISTS `glocellrlalmpara` (
+CREATE TABLE IF NOT EXISTS `glocellrlalmpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GLOCELLID` float DEFAULT NULL,
   `ARELWTHD` float DEFAULT NULL,
@@ -4083,7 +4293,8 @@ CREATE TABLE IF NOT EXISTS `glocellrlalmpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.glocellrsvdpara
-CREATE TABLE IF NOT EXISTS `glocellrsvdpara` (
+CREATE TABLE IF NOT EXISTS `glocellrsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GLOCELLID` float DEFAULT NULL,
   `GLOCELLRSVDPARA1` float DEFAULT NULL,
@@ -4096,7 +4307,8 @@ CREATE TABLE IF NOT EXISTS `glocellrsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gps
-CREATE TABLE IF NOT EXISTS `gps` (
+CREATE TABLE IF NOT EXISTS `gps` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GN` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -4117,7 +4329,8 @@ CREATE TABLE IF NOT EXISTS `gps` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gtpu
-CREATE TABLE IF NOT EXISTS `gtpu` (
+CREATE TABLE IF NOT EXISTS `gtpu` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TIMEOUTTH` float DEFAULT NULL,
   `TIMEOUTCNT` float DEFAULT NULL,
@@ -4130,7 +4343,8 @@ CREATE TABLE IF NOT EXISTS `gtpu` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gtranspara
-CREATE TABLE IF NOT EXISTS `gtranspara` (
+CREATE TABLE IF NOT EXISTS `gtranspara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LPSCHSW` varchar(255) DEFAULT NULL,
   `RATECFGTYPE` varchar(255) DEFAULT NULL,
@@ -4159,7 +4373,8 @@ CREATE TABLE IF NOT EXISTS `gtranspara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gtransparagw
-CREATE TABLE IF NOT EXISTS `gtransparagw` (
+CREATE TABLE IF NOT EXISTS `gtransparagw` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PRIRULE` varchar(255) DEFAULT NULL,
   `LPSCHSW` varchar(255) DEFAULT NULL,
@@ -4181,7 +4396,8 @@ CREATE TABLE IF NOT EXISTS `gtransparagw` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gtrxgroup
-CREATE TABLE IF NOT EXISTS `gtrxgroup` (
+CREATE TABLE IF NOT EXISTS `gtrxgroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GTRXGROUPID` float DEFAULT NULL,
   `GLOCELLID` float DEFAULT NULL,
@@ -4194,7 +4410,8 @@ CREATE TABLE IF NOT EXISTS `gtrxgroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.gtrxgroupsectoreqm
-CREATE TABLE IF NOT EXISTS `gtrxgroupsectoreqm` (
+CREATE TABLE IF NOT EXISTS `gtrxgroupsectoreqm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GTRXGROUPID` float DEFAULT NULL,
   `SECTOREQMID` float DEFAULT NULL,
@@ -4203,7 +4420,8 @@ CREATE TABLE IF NOT EXISTS `gtrxgroupsectoreqm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.highspdadaptionpara
-CREATE TABLE IF NOT EXISTS `highspdadaptionpara` (
+CREATE TABLE IF NOT EXISTS `highspdadaptionpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UserLowSpeedJudgeNum` float DEFAULT NULL,
@@ -4220,7 +4438,8 @@ CREATE TABLE IF NOT EXISTS `highspdadaptionpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.homeascomm
-CREATE TABLE IF NOT EXISTS `homeascomm` (
+CREATE TABLE IF NOT EXISTS `homeascomm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `GapPatternType` varchar(255) DEFAULT NULL,
   `EutranFilterCoeffRsrp` varchar(255) DEFAULT NULL,
@@ -4240,7 +4459,8 @@ CREATE TABLE IF NOT EXISTS `homeascomm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.htcdpa
-CREATE TABLE IF NOT EXISTS `htcdpa` (
+CREATE TABLE IF NOT EXISTS `htcdpa` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -4256,7 +4476,8 @@ CREATE TABLE IF NOT EXISTS `htcdpa` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ikecfg
-CREATE TABLE IF NOT EXISTS `ikecfg` (
+CREATE TABLE IF NOT EXISTS `ikecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IKELNM` varchar(255) DEFAULT NULL,
   `IKEKLI` float DEFAULT NULL,
@@ -4272,7 +4493,8 @@ CREATE TABLE IF NOT EXISTS `ikecfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.imagrp
-CREATE TABLE IF NOT EXISTS `imagrp` (
+CREATE TABLE IF NOT EXISTS `imagrp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -4290,7 +4512,8 @@ CREATE TABLE IF NOT EXISTS `imagrp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.imalnk
-CREATE TABLE IF NOT EXISTS `imalnk` (
+CREATE TABLE IF NOT EXISTS `imalnk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -4303,7 +4526,8 @@ CREATE TABLE IF NOT EXISTS `imalnk` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ingchktsk
-CREATE TABLE IF NOT EXISTS `ingchktsk` (
+CREATE TABLE IF NOT EXISTS `ingchktsk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `FLINGCHKSW` varchar(255) DEFAULT NULL,
   `FLINGCHKTM` float DEFAULT NULL,
@@ -4312,7 +4536,8 @@ CREATE TABLE IF NOT EXISTS `ingchktsk` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.interfreqhogroup
-CREATE TABLE IF NOT EXISTS `interfreqhogroup` (
+CREATE TABLE IF NOT EXISTS `interfreqhogroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `InterFreqHoGroupId` float DEFAULT NULL,
@@ -4353,7 +4578,8 @@ CREATE TABLE IF NOT EXISTS `interfreqhogroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.interratcellshutdown
-CREATE TABLE IF NOT EXISTS `interratcellshutdown` (
+CREATE TABLE IF NOT EXISTS `interratcellshutdown` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `ForceShutdownSwitch` varchar(255) DEFAULT NULL,
@@ -4374,7 +4600,8 @@ CREATE TABLE IF NOT EXISTS `interratcellshutdown` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.interrathocdma1xrttgroup
-CREATE TABLE IF NOT EXISTS `interrathocdma1xrttgroup` (
+CREATE TABLE IF NOT EXISTS `interrathocdma1xrttgroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `InterRatHoCdma1xRttGroupId` float DEFAULT NULL,
@@ -4386,7 +4613,8 @@ CREATE TABLE IF NOT EXISTS `interrathocdma1xrttgroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.interrathocdmahrpdgroup
-CREATE TABLE IF NOT EXISTS `interrathocdmahrpdgroup` (
+CREATE TABLE IF NOT EXISTS `interrathocdmahrpdgroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `InterRatHoCdmaHrpdGroupId` float DEFAULT NULL,
@@ -4402,7 +4630,8 @@ CREATE TABLE IF NOT EXISTS `interrathocdmahrpdgroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.interrathocomm
-CREATE TABLE IF NOT EXISTS `interrathocomm` (
+CREATE TABLE IF NOT EXISTS `interrathocomm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `InterRatHoMaxRprtCell` float DEFAULT NULL,
   `InterRatHoRprtAmount` varchar(255) DEFAULT NULL,
@@ -4433,7 +4662,8 @@ CREATE TABLE IF NOT EXISTS `interrathocomm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.interrathocommgroup
-CREATE TABLE IF NOT EXISTS `interrathocommgroup` (
+CREATE TABLE IF NOT EXISTS `interrathocommgroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `InterRatHoCommGroupId` float DEFAULT NULL,
@@ -4453,7 +4683,8 @@ CREATE TABLE IF NOT EXISTS `interrathocommgroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.interrathogerangroup
-CREATE TABLE IF NOT EXISTS `interrathogerangroup` (
+CREATE TABLE IF NOT EXISTS `interrathogerangroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `InterRatHoGeranGroupId` float DEFAULT NULL,
@@ -4465,7 +4696,8 @@ CREATE TABLE IF NOT EXISTS `interrathogerangroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.interrathoutrangroup
-CREATE TABLE IF NOT EXISTS `interrathoutrangroup` (
+CREATE TABLE IF NOT EXISTS `interrathoutrangroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `InterRatHoUtranGroupId` float DEFAULT NULL,
@@ -4480,7 +4712,8 @@ CREATE TABLE IF NOT EXISTS `interrathoutrangroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.interratpolicycfggroup
-CREATE TABLE IF NOT EXISTS `interratpolicycfggroup` (
+CREATE TABLE IF NOT EXISTS `interratpolicycfggroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `InterRatPolicyCfgGroupId` float DEFAULT NULL,
   `UtranHoCfg` varchar(255) DEFAULT NULL,
@@ -4495,7 +4728,8 @@ CREATE TABLE IF NOT EXISTS `interratpolicycfggroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.intrafreqhogroup
-CREATE TABLE IF NOT EXISTS `intrafreqhogroup` (
+CREATE TABLE IF NOT EXISTS `intrafreqhogroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `IntraFreqHoGroupId` float DEFAULT NULL,
@@ -4508,7 +4742,8 @@ CREATE TABLE IF NOT EXISTS `intrafreqhogroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.intrarathocomm
-CREATE TABLE IF NOT EXISTS `intrarathocomm` (
+CREATE TABLE IF NOT EXISTS `intrarathocomm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IntraRatHoMaxRprtCell` float DEFAULT NULL,
   `IntraRatHoRprtAmount` varchar(255) DEFAULT NULL,
@@ -4528,7 +4763,8 @@ CREATE TABLE IF NOT EXISTS `intrarathocomm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.iopscfg
-CREATE TABLE IF NOT EXISTS `iopscfg` (
+CREATE TABLE IF NOT EXISTS `iopscfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IopsSwitch` varchar(255) DEFAULT NULL,
   `EnterIopsThd` float DEFAULT NULL,
@@ -4538,7 +4774,8 @@ CREATE TABLE IF NOT EXISTS `iopscfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ipclklnk
-CREATE TABLE IF NOT EXISTS `ipclklnk` (
+CREATE TABLE IF NOT EXISTS `ipclklnk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LN` float DEFAULT NULL,
   `ICPT` varchar(255) DEFAULT NULL,
@@ -4573,7 +4810,8 @@ CREATE TABLE IF NOT EXISTS `ipclklnk` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ipguard
-CREATE TABLE IF NOT EXISTS `ipguard` (
+CREATE TABLE IF NOT EXISTS `ipguard` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ARPSPOOFCHKSW` varchar(255) DEFAULT NULL,
   `ARPLRNSTRICTSW` varchar(255) DEFAULT NULL,
@@ -4584,7 +4822,8 @@ CREATE TABLE IF NOT EXISTS `ipguard` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ippath
-CREATE TABLE IF NOT EXISTS `ippath` (
+CREATE TABLE IF NOT EXISTS `ippath` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PATHID` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -4607,7 +4846,8 @@ CREATE TABLE IF NOT EXISTS `ippath` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ippmsession
-CREATE TABLE IF NOT EXISTS `ippmsession` (
+CREATE TABLE IF NOT EXISTS `ippmsession` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IPPMSN` float DEFAULT NULL,
   `LOCALIP` varchar(255) DEFAULT NULL,
@@ -4622,7 +4862,8 @@ CREATE TABLE IF NOT EXISTS `ippmsession` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.iprt
-CREATE TABLE IF NOT EXISTS `iprt` (
+CREATE TABLE IF NOT EXISTS `iprt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RTIDX` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -4641,7 +4882,8 @@ CREATE TABLE IF NOT EXISTS `iprt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.iratncellclassmgt
-CREATE TABLE IF NOT EXISTS `iratncellclassmgt` (
+CREATE TABLE IF NOT EXISTS `iratncellclassmgt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RatType` varchar(255) DEFAULT NULL,
   `StatPeriodForNcellClass` float DEFAULT NULL,
@@ -4651,7 +4893,8 @@ CREATE TABLE IF NOT EXISTS `iratncellclassmgt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.iub
-CREATE TABLE IF NOT EXISTS `iub` (
+CREATE TABLE IF NOT EXISTS `iub` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IUBID` float DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
@@ -4662,7 +4905,8 @@ CREATE TABLE IF NOT EXISTS `iub` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.iubcp
-CREATE TABLE IF NOT EXISTS `iubcp` (
+CREATE TABLE IF NOT EXISTS `iubcp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CPPT` varchar(255) DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
@@ -4673,7 +4917,8 @@ CREATE TABLE IF NOT EXISTS `iubcp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lansw
-CREATE TABLE IF NOT EXISTS `lansw` (
+CREATE TABLE IF NOT EXISTS `lansw` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `BCPKTRATETHD` float DEFAULT NULL,
   `MACAGINGTIME` float DEFAULT NULL,
@@ -4684,7 +4929,8 @@ CREATE TABLE IF NOT EXISTS `lansw` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lanswitchport
-CREATE TABLE IF NOT EXISTS `lanswitchport` (
+CREATE TABLE IF NOT EXISTS `lanswitchport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PORTIDX` float DEFAULT NULL,
   `PORTTYPE` varchar(255) DEFAULT NULL,
@@ -4693,7 +4939,8 @@ CREATE TABLE IF NOT EXISTS `lanswitchport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.licensecontrolstrategy
-CREATE TABLE IF NOT EXISTS `licensecontrolstrategy` (
+CREATE TABLE IF NOT EXISTS `licensecontrolstrategy` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SmoothUpgradeTime` float DEFAULT NULL,
   `objId` float DEFAULT NULL
@@ -4701,7 +4948,8 @@ CREATE TABLE IF NOT EXISTS `licensecontrolstrategy` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.licratio
-CREATE TABLE IF NOT EXISTS `licratio` (
+CREATE TABLE IF NOT EXISTS `licratio` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `UpLicRatio` float DEFAULT NULL,
   `TrafficSharingType` varchar(255) DEFAULT NULL,
@@ -4710,7 +4958,8 @@ CREATE TABLE IF NOT EXISTS `licratio` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lineclk
-CREATE TABLE IF NOT EXISTS `lineclk` (
+CREATE TABLE IF NOT EXISTS `lineclk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LN` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -4723,7 +4972,8 @@ CREATE TABLE IF NOT EXISTS `lineclk` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lioptatomrule
-CREATE TABLE IF NOT EXISTS `lioptatomrule` (
+CREATE TABLE IF NOT EXISTS `lioptatomrule` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `AtomRuleID` float DEFAULT NULL,
   `MeasureObjType` varchar(255) DEFAULT NULL,
@@ -4735,7 +4985,8 @@ CREATE TABLE IF NOT EXISTS `lioptatomrule` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lioptfeature
-CREATE TABLE IF NOT EXISTS `lioptfeature` (
+CREATE TABLE IF NOT EXISTS `lioptfeature` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IOptFeatureID` float DEFAULT NULL,
   `IOptFeatureName` varchar(255) DEFAULT NULL,
@@ -4744,7 +4995,8 @@ CREATE TABLE IF NOT EXISTS `lioptfeature` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lioptfunction
-CREATE TABLE IF NOT EXISTS `lioptfunction` (
+CREATE TABLE IF NOT EXISTS `lioptfunction` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IOptFunctionID` float DEFAULT NULL,
   `IOptFunctionName` varchar(255) DEFAULT NULL,
@@ -4755,7 +5007,8 @@ CREATE TABLE IF NOT EXISTS `lioptfunction` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lioptrule
-CREATE TABLE IF NOT EXISTS `lioptrule` (
+CREATE TABLE IF NOT EXISTS `lioptrule` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RuleID` float DEFAULT NULL,
   `ActionType` varchar(255) DEFAULT NULL,
@@ -4771,7 +5024,8 @@ CREATE TABLE IF NOT EXISTS `lioptrule` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lioptrulemember
-CREATE TABLE IF NOT EXISTS `lioptrulemember` (
+CREATE TABLE IF NOT EXISTS `lioptrulemember` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RuleID` float DEFAULT NULL,
   `AtomRuleID` float DEFAULT NULL,
@@ -4781,7 +5035,8 @@ CREATE TABLE IF NOT EXISTS `lioptrulemember` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lldpglobal
-CREATE TABLE IF NOT EXISTS `lldpglobal` (
+CREATE TABLE IF NOT EXISTS `lldpglobal` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TXINTVAL` float DEFAULT NULL,
   `HOLDMULTI` float DEFAULT NULL,
@@ -4793,7 +5048,8 @@ CREATE TABLE IF NOT EXISTS `lldpglobal` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.localethport
-CREATE TABLE IF NOT EXISTS `localethport` (
+CREATE TABLE IF NOT EXISTS `localethport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SWITCH` varchar(255) DEFAULT NULL,
   `GRATUITOUSARPSW` varchar(255) DEFAULT NULL,
@@ -4802,7 +5058,8 @@ CREATE TABLE IF NOT EXISTS `localethport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.localip
-CREATE TABLE IF NOT EXISTS `localip` (
+CREATE TABLE IF NOT EXISTS `localip` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IP` varchar(255) DEFAULT NULL,
   `MASK` varchar(255) DEFAULT NULL
@@ -4810,7 +5067,8 @@ CREATE TABLE IF NOT EXISTS `localip` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.localip6
-CREATE TABLE IF NOT EXISTS `localip6` (
+CREATE TABLE IF NOT EXISTS `localip6` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IP6` varchar(255) DEFAULT NULL,
   `PFXLEN` float DEFAULT NULL
@@ -4818,7 +5076,8 @@ CREATE TABLE IF NOT EXISTS `localip6` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.localwap
-CREATE TABLE IF NOT EXISTS `localwap` (
+CREATE TABLE IF NOT EXISTS `localwap` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SWITCH` varchar(255) DEFAULT NULL,
   `SSID` varchar(255) DEFAULT NULL,
@@ -4830,7 +5089,8 @@ CREATE TABLE IF NOT EXISTS `localwap` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.location
-CREATE TABLE IF NOT EXISTS `location` (
+CREATE TABLE IF NOT EXISTS `location` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ADDRESS` varchar(255) DEFAULT NULL,
   `ALTITUDE` float DEFAULT NULL,
@@ -4853,7 +5113,8 @@ CREATE TABLE IF NOT EXISTS `location` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.lwamgtcfg
-CREATE TABLE IF NOT EXISTS `lwamgtcfg` (
+CREATE TABLE IF NOT EXISTS `lwamgtcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `LteWlanAggrW1ThdRssi` float DEFAULT NULL,
@@ -4868,7 +5129,8 @@ CREATE TABLE IF NOT EXISTS `lwamgtcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.mainsalarmbind
-CREATE TABLE IF NOT EXISTS `mainsalarmbind` (
+CREATE TABLE IF NOT EXISTS `mainsalarmbind` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ISDSWITCH` varchar(255) DEFAULT NULL,
   `NMSACN` float DEFAULT NULL,
@@ -4879,14 +5141,16 @@ CREATE TABLE IF NOT EXISTS `mainsalarmbind` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.manresalmrpt
-CREATE TABLE IF NOT EXISTS `manresalmrpt` (
+CREATE TABLE IF NOT EXISTS `manresalmrpt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SWITCH` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.mbmspara
-CREATE TABLE IF NOT EXISTS `mbmspara` (
+CREATE TABLE IF NOT EXISTS `mbmspara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SyncPeriod` float DEFAULT NULL,
   `MbmsCtrlSwitch` varchar(255) DEFAULT NULL,
@@ -4896,7 +5160,8 @@ CREATE TABLE IF NOT EXISTS `mbmspara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.mmefeaturecfg
-CREATE TABLE IF NOT EXISTS `mmefeaturecfg` (
+CREATE TABLE IF NOT EXISTS `mmefeaturecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `S1InterfaceId` float DEFAULT NULL,
   `MdtEnable` varchar(255) DEFAULT NULL,
@@ -4905,7 +5170,8 @@ CREATE TABLE IF NOT EXISTS `mmefeaturecfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.mpt
-CREATE TABLE IF NOT EXISTS `mpt` (
+CREATE TABLE IF NOT EXISTS `mpt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -4918,7 +5184,8 @@ CREATE TABLE IF NOT EXISTS `mpt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.mptresassignment
-CREATE TABLE IF NOT EXISTS `mptresassignment` (
+CREATE TABLE IF NOT EXISTS `mptresassignment` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `MasterMptAssignmentMode` varchar(255) DEFAULT NULL,
   `SlaveMptAssignmentMode` varchar(255) DEFAULT NULL,
@@ -4927,7 +5194,8 @@ CREATE TABLE IF NOT EXISTS `mptresassignment` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.mro
-CREATE TABLE IF NOT EXISTS `mro` (
+CREATE TABLE IF NOT EXISTS `mro` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OptPeriod` float DEFAULT NULL,
   `NcellOptThd` float DEFAULT NULL,
@@ -4959,7 +5227,8 @@ CREATE TABLE IF NOT EXISTS `mro` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nbcelldlschcealgo
-CREATE TABLE IF NOT EXISTS `nbcelldlschcealgo` (
+CREATE TABLE IF NOT EXISTS `nbcelldlschcealgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CoverageLevel` varchar(255) DEFAULT NULL,
@@ -4970,7 +5239,8 @@ CREATE TABLE IF NOT EXISTS `nbcelldlschcealgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nbcellulschcealgo
-CREATE TABLE IF NOT EXISTS `nbcellulschcealgo` (
+CREATE TABLE IF NOT EXISTS `nbcellulschcealgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `CoverageLevel` varchar(255) DEFAULT NULL,
@@ -4983,7 +5253,8 @@ CREATE TABLE IF NOT EXISTS `nbcellulschcealgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ncellclassmgt
-CREATE TABLE IF NOT EXISTS `ncellclassmgt` (
+CREATE TABLE IF NOT EXISTS `ncellclassmgt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `StatPeriodForNcellClass` float DEFAULT NULL,
   `HoAttemptThd` float DEFAULT NULL,
@@ -4995,7 +5266,8 @@ CREATE TABLE IF NOT EXISTS `ncellclassmgt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ncelldlrsrpmeaspara
-CREATE TABLE IF NOT EXISTS `ncelldlrsrpmeaspara` (
+CREATE TABLE IF NOT EXISTS `ncelldlrsrpmeaspara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DlRsrpAutoNCellMeasSwitch` varchar(255) DEFAULT NULL,
@@ -5004,7 +5276,8 @@ CREATE TABLE IF NOT EXISTS `ncelldlrsrpmeaspara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ncellparacfg
-CREATE TABLE IF NOT EXISTS `ncellparacfg` (
+CREATE TABLE IF NOT EXISTS `ncellparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `RatType` varchar(255) DEFAULT NULL,
@@ -5016,7 +5289,8 @@ CREATE TABLE IF NOT EXISTS `ncellparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ncellsrsmeaspara
-CREATE TABLE IF NOT EXISTS `ncellsrsmeaspara` (
+CREATE TABLE IF NOT EXISTS `ncellsrsmeaspara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `SrsAutoNCellMeasSwitch` varchar(255) DEFAULT NULL,
@@ -5026,7 +5300,8 @@ CREATE TABLE IF NOT EXISTS `ncellsrsmeaspara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ne
-CREATE TABLE IF NOT EXISTS `ne` (
+CREATE TABLE IF NOT EXISTS `ne` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LOCATION` varchar(255) DEFAULT NULL,
   `SWVERSION` varchar(255) DEFAULT NULL,
@@ -5044,7 +5319,8 @@ CREATE TABLE IF NOT EXISTS `ne` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nemnt
-CREATE TABLE IF NOT EXISTS `nemnt` (
+CREATE TABLE IF NOT EXISTS `nemnt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `MNTMODE` varchar(255) DEFAULT NULL,
   `ST` varchar(255) DEFAULT NULL,
@@ -5054,7 +5330,8 @@ CREATE TABLE IF NOT EXISTS `nemnt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.node
-CREATE TABLE IF NOT EXISTS `node` (
+CREATE TABLE IF NOT EXISTS `node` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PRODUCTTYPE` varchar(255) DEFAULT NULL,
   `USERLABEL` varchar(255) DEFAULT NULL,
@@ -5074,7 +5351,8 @@ CREATE TABLE IF NOT EXISTS `node` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebalgpara
-CREATE TABLE IF NOT EXISTS `nodebalgpara` (
+CREATE TABLE IF NOT EXISTS `nodebalgpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
   `CERSVFOR2MSUSER` float DEFAULT NULL,
@@ -5144,7 +5422,8 @@ CREATE TABLE IF NOT EXISTS `nodebalgpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebbbres
-CREATE TABLE IF NOT EXISTS `nodebbbres` (
+CREATE TABLE IF NOT EXISTS `nodebbbres` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
   `NODEBBBRESID` float DEFAULT NULL,
@@ -5158,7 +5437,8 @@ CREATE TABLE IF NOT EXISTS `nodebbbres` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebchrlevel
-CREATE TABLE IF NOT EXISTS `nodebchrlevel` (
+CREATE TABLE IF NOT EXISTS `nodebchrlevel` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
   `COMMCHREVENTSW` varchar(255) DEFAULT NULL,
@@ -5171,7 +5451,8 @@ CREATE TABLE IF NOT EXISTS `nodebchrlevel` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebclspatimer
-CREATE TABLE IF NOT EXISTS `nodebclspatimer` (
+CREATE TABLE IF NOT EXISTS `nodebclspatimer` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LOWERLIMIT` float DEFAULT NULL,
   `UPPERLIMIT` float DEFAULT NULL,
@@ -5180,7 +5461,8 @@ CREATE TABLE IF NOT EXISTS `nodebclspatimer` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebfunction
-CREATE TABLE IF NOT EXISTS `nodebfunction` (
+CREATE TABLE IF NOT EXISTS `nodebfunction` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OBJID` float DEFAULT NULL,
   `NODEBFUNCTIONNAME` varchar(255) DEFAULT NULL,
@@ -5195,7 +5477,8 @@ CREATE TABLE IF NOT EXISTS `nodebfunction` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodeblicensealmthd
-CREATE TABLE IF NOT EXISTS `nodeblicensealmthd` (
+CREATE TABLE IF NOT EXISTS `nodeblicensealmthd` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `OTHD` float DEFAULT NULL,
   `OPRD` float DEFAULT NULL,
@@ -5206,7 +5489,8 @@ CREATE TABLE IF NOT EXISTS `nodeblicensealmthd` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebmulticellgrp
-CREATE TABLE IF NOT EXISTS `nodebmulticellgrp` (
+CREATE TABLE IF NOT EXISTS `nodebmulticellgrp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `MULTICELLGRPID` float DEFAULT NULL,
   `MULTICELLGRPTYPE` varchar(255) DEFAULT NULL,
@@ -5216,7 +5500,8 @@ CREATE TABLE IF NOT EXISTS `nodebmulticellgrp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodeboptdynadjpara
-CREATE TABLE IF NOT EXISTS `nodeboptdynadjpara` (
+CREATE TABLE IF NOT EXISTS `nodeboptdynadjpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `DYNADJSW` varchar(255) DEFAULT NULL,
   `DYNADJSTARTTIME` float DEFAULT NULL,
@@ -5226,7 +5511,8 @@ CREATE TABLE IF NOT EXISTS `nodeboptdynadjpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebpoweroutage
-CREATE TABLE IF NOT EXISTS `nodebpoweroutage` (
+CREATE TABLE IF NOT EXISTS `nodebpoweroutage` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ISDSW` varchar(255) DEFAULT NULL,
   `BAKPWRSAVPOLICY` varchar(255) DEFAULT NULL,
@@ -5237,7 +5523,8 @@ CREATE TABLE IF NOT EXISTS `nodebpoweroutage` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebresallocrule
-CREATE TABLE IF NOT EXISTS `nodebresallocrule` (
+CREATE TABLE IF NOT EXISTS `nodebresallocrule` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RULE` varchar(255) DEFAULT NULL,
   `SW` varchar(255) DEFAULT NULL,
@@ -5250,7 +5537,8 @@ CREATE TABLE IF NOT EXISTS `nodebresallocrule` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebrsvdpara
-CREATE TABLE IF NOT EXISTS `nodebrsvdpara` (
+CREATE TABLE IF NOT EXISTS `nodebrsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `NODEBRSVDPARA1` longtext,
   `NODEBRSVDPARA2` longtext,
@@ -5289,7 +5577,8 @@ CREATE TABLE IF NOT EXISTS `nodebrsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebruleactionpara
-CREATE TABLE IF NOT EXISTS `nodebruleactionpara` (
+CREATE TABLE IF NOT EXISTS `nodebruleactionpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RULEID` float DEFAULT NULL,
   `MOCNAME` varchar(255) DEFAULT NULL,
@@ -5303,7 +5592,8 @@ CREATE TABLE IF NOT EXISTS `nodebruleactionpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebsmthpwr
-CREATE TABLE IF NOT EXISTS `nodebsmthpwr` (
+CREATE TABLE IF NOT EXISTS `nodebsmthpwr` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SMTHPWRSWITCH` varchar(255) DEFAULT NULL,
   `STEP` float DEFAULT NULL,
@@ -5313,7 +5603,8 @@ CREATE TABLE IF NOT EXISTS `nodebsmthpwr` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebtrfoverloadthd
-CREATE TABLE IF NOT EXISTS `nodebtrfoverloadthd` (
+CREATE TABLE IF NOT EXISTS `nodebtrfoverloadthd` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TRAFFICOVERLOADOTHD` float DEFAULT NULL,
   `TRAFFICOVERLOADOPRD` float DEFAULT NULL,
@@ -5324,7 +5615,8 @@ CREATE TABLE IF NOT EXISTS `nodebtrfoverloadthd` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.nodebueqosenhance
-CREATE TABLE IF NOT EXISTS `nodebueqosenhance` (
+CREATE TABLE IF NOT EXISTS `nodebueqosenhance` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULGOLDUEBPS` float DEFAULT NULL,
   `ULSILVERUEBPS` float DEFAULT NULL,
@@ -5340,7 +5632,8 @@ CREATE TABLE IF NOT EXISTS `nodebueqosenhance` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ntpcp
-CREATE TABLE IF NOT EXISTS `ntpcp` (
+CREATE TABLE IF NOT EXISTS `ntpcp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `IP` varchar(255) DEFAULT NULL,
   `SYNCCYCLE` float DEFAULT NULL,
@@ -5354,7 +5647,8 @@ CREATE TABLE IF NOT EXISTS `ntpcp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.omch
-CREATE TABLE IF NOT EXISTS `omch` (
+CREATE TABLE IF NOT EXISTS `omch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `FLAG` varchar(255) DEFAULT NULL,
   `IP` varchar(255) DEFAULT NULL,
@@ -5371,7 +5665,8 @@ CREATE TABLE IF NOT EXISTS `omch` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.op
-CREATE TABLE IF NOT EXISTS `op` (
+CREATE TABLE IF NOT EXISTS `op` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SWOP` varchar(255) DEFAULT NULL,
   `LOCKST` varchar(255) DEFAULT NULL
@@ -5379,7 +5674,8 @@ CREATE TABLE IF NOT EXISTS `op` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.outport
-CREATE TABLE IF NOT EXISTS `outport` (
+CREATE TABLE IF NOT EXISTS `outport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -5391,7 +5687,8 @@ CREATE TABLE IF NOT EXISTS `outport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.paraautooptcfg
-CREATE TABLE IF NOT EXISTS `paraautooptcfg` (
+CREATE TABLE IF NOT EXISTS `paraautooptcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PUSCHRsrpHighThd4AutoOpt` float DEFAULT NULL,
   `PUCCHPcSINROffset4AutoOpt` float DEFAULT NULL,
@@ -5402,7 +5699,8 @@ CREATE TABLE IF NOT EXISTS `paraautooptcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.pccfreqcfg
-CREATE TABLE IF NOT EXISTS `pccfreqcfg` (
+CREATE TABLE IF NOT EXISTS `pccfreqcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PccDlEarfcn` float DEFAULT NULL,
   `PreferredPccPriority` float DEFAULT NULL,
@@ -5413,7 +5711,8 @@ CREATE TABLE IF NOT EXISTS `pccfreqcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.pcchcfg
-CREATE TABLE IF NOT EXISTS `pcchcfg` (
+CREATE TABLE IF NOT EXISTS `pcchcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DefaultPagingCycle` varchar(255) DEFAULT NULL,
@@ -5430,7 +5729,8 @@ CREATE TABLE IF NOT EXISTS `pcchcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.pdcprohcpara
-CREATE TABLE IF NOT EXISTS `pdcprohcpara` (
+CREATE TABLE IF NOT EXISTS `pdcprohcpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RohcSwitch` varchar(255) DEFAULT NULL,
   `HighestMode` varchar(255) DEFAULT NULL,
@@ -5440,7 +5740,8 @@ CREATE TABLE IF NOT EXISTS `pdcprohcpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.pdschcfg
-CREATE TABLE IF NOT EXISTS `pdschcfg` (
+CREATE TABLE IF NOT EXISTS `pdschcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `ReferenceSignalPwr` float DEFAULT NULL,
@@ -5455,7 +5756,8 @@ CREATE TABLE IF NOT EXISTS `pdschcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.peerclk
-CREATE TABLE IF NOT EXISTS `peerclk` (
+CREATE TABLE IF NOT EXISTS `peerclk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PN` float DEFAULT NULL,
   `PS` varchar(255) DEFAULT NULL
@@ -5463,7 +5765,8 @@ CREATE TABLE IF NOT EXISTS `peerclk` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.peu
-CREATE TABLE IF NOT EXISTS `peu` (
+CREATE TABLE IF NOT EXISTS `peu` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -5472,7 +5775,8 @@ CREATE TABLE IF NOT EXISTS `peu` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.phichcfg
-CREATE TABLE IF NOT EXISTS `phichcfg` (
+CREATE TABLE IF NOT EXISTS `phichcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `PhichDuration` varchar(255) DEFAULT NULL,
@@ -5481,7 +5785,8 @@ CREATE TABLE IF NOT EXISTS `phichcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.phyport
-CREATE TABLE IF NOT EXISTS `phyport` (
+CREATE TABLE IF NOT EXISTS `phyport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -5493,7 +5798,8 @@ CREATE TABLE IF NOT EXISTS `phyport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.plrthreshold
-CREATE TABLE IF NOT EXISTS `plrthreshold` (
+CREATE TABLE IF NOT EXISTS `plrthreshold` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PLRAT` float DEFAULT NULL,
   `PLRDT` float DEFAULT NULL
@@ -5501,7 +5807,8 @@ CREATE TABLE IF NOT EXISTS `plrthreshold` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.pmtucfg
-CREATE TABLE IF NOT EXISTS `pmtucfg` (
+CREATE TABLE IF NOT EXISTS `pmtucfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `MODE` varchar(255) DEFAULT NULL,
   `UDPPORT` float DEFAULT NULL,
@@ -5512,14 +5819,16 @@ CREATE TABLE IF NOT EXISTS `pmtucfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.portpolicy
-CREATE TABLE IF NOT EXISTS `portpolicy` (
+CREATE TABLE IF NOT EXISTS `portpolicy` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `USBACCESSSECPOLICY` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.pri2que
-CREATE TABLE IF NOT EXISTS `pri2que` (
+CREATE TABLE IF NOT EXISTS `pri2que` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `VRFIDX` float DEFAULT NULL,
   `PRI0` float DEFAULT NULL,
@@ -5533,7 +5842,8 @@ CREATE TABLE IF NOT EXISTS `pri2que` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.privatecabandcomb
-CREATE TABLE IF NOT EXISTS `privatecabandcomb` (
+CREATE TABLE IF NOT EXISTS `privatecabandcomb` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PrivateCaCombId` float DEFAULT NULL,
   `MaxAggregatedBw` float DEFAULT NULL,
@@ -5553,14 +5863,16 @@ CREATE TABLE IF NOT EXISTS `privatecabandcomb` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.psuis
-CREATE TABLE IF NOT EXISTS `psuis` (
+CREATE TABLE IF NOT EXISTS `psuis` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PSUISS` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.pucchcfg
-CREATE TABLE IF NOT EXISTS `pucchcfg` (
+CREATE TABLE IF NOT EXISTS `pucchcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DeltaShift` varchar(255) DEFAULT NULL,
@@ -5577,7 +5889,8 @@ CREATE TABLE IF NOT EXISTS `pucchcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.puschcfg
-CREATE TABLE IF NOT EXISTS `puschcfg` (
+CREATE TABLE IF NOT EXISTS `puschcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `Nsb` float DEFAULT NULL,
@@ -5593,7 +5906,8 @@ CREATE TABLE IF NOT EXISTS `puschcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.puschparam
-CREATE TABLE IF NOT EXISTS `puschparam` (
+CREATE TABLE IF NOT EXISTS `puschparam` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `DeltaOffsetCqiIndex` float DEFAULT NULL,
   `DeltaOffsetRiIndex` float DEFAULT NULL,
@@ -5603,7 +5917,8 @@ CREATE TABLE IF NOT EXISTS `puschparam` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.pwdpolicy
-CREATE TABLE IF NOT EXISTS `pwdpolicy` (
+CREATE TABLE IF NOT EXISTS `pwdpolicy` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PWDMINLEN` float DEFAULT NULL,
   `COMPLICACY` varchar(255) DEFAULT NULL,
@@ -5622,7 +5937,8 @@ CREATE TABLE IF NOT EXISTS `pwdpolicy` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.qcipara
-CREATE TABLE IF NOT EXISTS `qcipara` (
+CREATE TABLE IF NOT EXISTS `qcipara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `Qci` float DEFAULT NULL,
   `PreAllocationWeight` float DEFAULT NULL,
@@ -5652,7 +5968,8 @@ CREATE TABLE IF NOT EXISTS `qcipara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.qoehocommoncfg
-CREATE TABLE IF NOT EXISTS `qoehocommoncfg` (
+CREATE TABLE IF NOT EXISTS `qoehocommoncfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `QoEBasedHandoverStat` float DEFAULT NULL,
   `QoEBasedHandoverLast` float DEFAULT NULL,
@@ -5661,7 +5978,8 @@ CREATE TABLE IF NOT EXISTS `qoehocommoncfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rachcfg
-CREATE TABLE IF NOT EXISTS `rachcfg` (
+CREATE TABLE IF NOT EXISTS `rachcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `PwrRampingStep` varchar(255) DEFAULT NULL,
@@ -5684,7 +6002,8 @@ CREATE TABLE IF NOT EXISTS `rachcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ret
-CREATE TABLE IF NOT EXISTS `ret` (
+CREATE TABLE IF NOT EXISTS `ret` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `DEVICENO` float DEFAULT NULL,
   `DEVICENAME` varchar(255) DEFAULT NULL,
@@ -5701,7 +6020,8 @@ CREATE TABLE IF NOT EXISTS `ret` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.retdevicedata
-CREATE TABLE IF NOT EXISTS `retdevicedata` (
+CREATE TABLE IF NOT EXISTS `retdevicedata` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `DEVICENO` float DEFAULT NULL,
   `SUBUNITNO` float DEFAULT NULL,
@@ -5729,7 +6049,8 @@ CREATE TABLE IF NOT EXISTS `retdevicedata` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.retport
-CREATE TABLE IF NOT EXISTS `retport` (
+CREATE TABLE IF NOT EXISTS `retport` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -5745,7 +6066,8 @@ CREATE TABLE IF NOT EXISTS `retport` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.retsubunit
-CREATE TABLE IF NOT EXISTS `retsubunit` (
+CREATE TABLE IF NOT EXISTS `retsubunit` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `DEVICENO` float DEFAULT NULL,
   `SUBUNITNO` float DEFAULT NULL,
@@ -5764,7 +6086,8 @@ CREATE TABLE IF NOT EXISTS `retsubunit` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rfu
-CREATE TABLE IF NOT EXISTS `rfu` (
+CREATE TABLE IF NOT EXISTS `rfu` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -5809,7 +6132,8 @@ CREATE TABLE IF NOT EXISTS `rfu` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rlcpdcpparagroup
-CREATE TABLE IF NOT EXISTS `rlcpdcpparagroup` (
+CREATE TABLE IF NOT EXISTS `rlcpdcpparagroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RlcPdcpParaGroupId` float DEFAULT NULL,
   `DiscardTimer` varchar(255) DEFAULT NULL,
@@ -5855,7 +6179,8 @@ CREATE TABLE IF NOT EXISTS `rlcpdcpparagroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rrcconnstatetimer
-CREATE TABLE IF NOT EXISTS `rrcconnstatetimer` (
+CREATE TABLE IF NOT EXISTS `rrcconnstatetimer` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `T302` float DEFAULT NULL,
   `T320ForLoadBalance` varchar(255) DEFAULT NULL,
@@ -5883,7 +6208,8 @@ CREATE TABLE IF NOT EXISTS `rrcconnstatetimer` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rru
-CREATE TABLE IF NOT EXISTS `rru` (
+CREATE TABLE IF NOT EXISTS `rru` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -5935,7 +6261,8 @@ CREATE TABLE IF NOT EXISTS `rru` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rruchain
-CREATE TABLE IF NOT EXISTS `rruchain` (
+CREATE TABLE IF NOT EXISTS `rruchain` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RCN` float DEFAULT NULL,
   `TT` varchar(255) DEFAULT NULL,
@@ -5956,7 +6283,8 @@ CREATE TABLE IF NOT EXISTS `rruchain` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rrujointcalparacfg
-CREATE TABLE IF NOT EXISTS `rrujointcalparacfg` (
+CREATE TABLE IF NOT EXISTS `rrujointcalparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `TxChnCalSwitch` varchar(255) DEFAULT NULL,
@@ -5968,7 +6296,8 @@ CREATE TABLE IF NOT EXISTS `rrujointcalparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rscgrp
-CREATE TABLE IF NOT EXISTS `rscgrp` (
+CREATE TABLE IF NOT EXISTS `rscgrp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -5995,7 +6324,8 @@ CREATE TABLE IF NOT EXISTS `rscgrp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rscgrpalg
-CREATE TABLE IF NOT EXISTS `rscgrpalg` (
+CREATE TABLE IF NOT EXISTS `rscgrpalg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -6023,7 +6353,8 @@ CREATE TABLE IF NOT EXISTS `rscgrpalg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.rxbranch
-CREATE TABLE IF NOT EXISTS `rxbranch` (
+CREATE TABLE IF NOT EXISTS `rxbranch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -6043,7 +6374,8 @@ CREATE TABLE IF NOT EXISTS `rxbranch` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.s1
-CREATE TABLE IF NOT EXISTS `s1` (
+CREATE TABLE IF NOT EXISTS `s1` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `S1Id` float DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
@@ -6059,7 +6391,8 @@ CREATE TABLE IF NOT EXISTS `s1` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.s1interface
-CREATE TABLE IF NOT EXISTS `s1interface` (
+CREATE TABLE IF NOT EXISTS `s1interface` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `S1InterfaceId` float DEFAULT NULL,
   `S1CpBearerId` float DEFAULT NULL,
@@ -6076,7 +6409,8 @@ CREATE TABLE IF NOT EXISTS `s1interface` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.s1reesttimer
-CREATE TABLE IF NOT EXISTS `s1reesttimer` (
+CREATE TABLE IF NOT EXISTS `s1reesttimer` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `S1ReestMinTimer` float DEFAULT NULL,
   `S1ReestMaxTimer` float DEFAULT NULL,
@@ -6085,7 +6419,8 @@ CREATE TABLE IF NOT EXISTS `s1reesttimer` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.saallnk
-CREATE TABLE IF NOT EXISTS `saallnk` (
+CREATE TABLE IF NOT EXISTS `saallnk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SAALNO` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -6112,7 +6447,8 @@ CREATE TABLE IF NOT EXISTS `saallnk` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.scappparacfg
-CREATE TABLE IF NOT EXISTS `scappparacfg` (
+CREATE TABLE IF NOT EXISTS `scappparacfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `AppDnsId` float DEFAULT NULL,
   `MatchRule` varchar(255) DEFAULT NULL,
@@ -6128,7 +6464,8 @@ CREATE TABLE IF NOT EXISTS `scappparacfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.sccfreqcfg
-CREATE TABLE IF NOT EXISTS `sccfreqcfg` (
+CREATE TABLE IF NOT EXISTS `sccfreqcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PccDlEarfcn` float DEFAULT NULL,
   `SccDlEarfcn` float DEFAULT NULL,
@@ -6143,7 +6480,8 @@ CREATE TABLE IF NOT EXISTS `sccfreqcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.scpolicy
-CREATE TABLE IF NOT EXISTS `scpolicy` (
+CREATE TABLE IF NOT EXISTS `scpolicy` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ScAlgoSwitch` varchar(255) DEFAULT NULL,
   `VideoInitBufTime` varchar(255) DEFAULT NULL,
@@ -6152,7 +6490,8 @@ CREATE TABLE IF NOT EXISTS `scpolicy` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.scserviceqos
-CREATE TABLE IF NOT EXISTS `scserviceqos` (
+CREATE TABLE IF NOT EXISTS `scserviceqos` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ScQosId` float DEFAULT NULL,
   `AppDns` varchar(255) DEFAULT NULL,
@@ -6162,7 +6501,8 @@ CREATE TABLE IF NOT EXISTS `scserviceqos` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.sctphost
-CREATE TABLE IF NOT EXISTS `sctphost` (
+CREATE TABLE IF NOT EXISTS `sctphost` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SCTPHOSTID` float DEFAULT NULL,
   `VRFIDX` float DEFAULT NULL,
@@ -6179,7 +6519,8 @@ CREATE TABLE IF NOT EXISTS `sctphost` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.sctplnk
-CREATE TABLE IF NOT EXISTS `sctplnk` (
+CREATE TABLE IF NOT EXISTS `sctplnk` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SCTPNO` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -6213,7 +6554,8 @@ CREATE TABLE IF NOT EXISTS `sctplnk` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.sctppeer
-CREATE TABLE IF NOT EXISTS `sctppeer` (
+CREATE TABLE IF NOT EXISTS `sctppeer` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SCTPPEERID` float DEFAULT NULL,
   `VRFIDX` float DEFAULT NULL,
@@ -6233,7 +6575,8 @@ CREATE TABLE IF NOT EXISTS `sctppeer` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.sctptemplate
-CREATE TABLE IF NOT EXISTS `sctptemplate` (
+CREATE TABLE IF NOT EXISTS `sctptemplate` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SCTPTEMPLATEID` float DEFAULT NULL,
   `RTOMIN` float DEFAULT NULL,
@@ -6253,7 +6596,8 @@ CREATE TABLE IF NOT EXISTS `sctptemplate` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.sector
-CREATE TABLE IF NOT EXISTS `sector` (
+CREATE TABLE IF NOT EXISTS `sector` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SECTORID` float DEFAULT NULL,
   `SECNAME` varchar(255) DEFAULT NULL,
@@ -6281,7 +6625,8 @@ CREATE TABLE IF NOT EXISTS `sector` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.sectoreqm
-CREATE TABLE IF NOT EXISTS `sectoreqm` (
+CREATE TABLE IF NOT EXISTS `sectoreqm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SECTOREQMID` float DEFAULT NULL,
   `SECTORID` float DEFAULT NULL,
@@ -6297,7 +6642,8 @@ CREATE TABLE IF NOT EXISTS `sectoreqm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.servicediffsetting
-CREATE TABLE IF NOT EXISTS `servicediffsetting` (
+CREATE TABLE IF NOT EXISTS `servicediffsetting` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `QueueWeight0` float DEFAULT NULL,
   `QueueWeight1` float DEFAULT NULL,
@@ -6312,7 +6658,8 @@ CREATE TABLE IF NOT EXISTS `servicediffsetting` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.serviceidentifypara
-CREATE TABLE IF NOT EXISTS `serviceidentifypara` (
+CREATE TABLE IF NOT EXISTS `serviceidentifypara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `HeartbeatPacketLengthThld` float DEFAULT NULL,
   `HeartbeatPacketNumberThld` float DEFAULT NULL,
@@ -6324,7 +6671,8 @@ CREATE TABLE IF NOT EXISTS `serviceidentifypara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.serviceifdlearfcngrp
-CREATE TABLE IF NOT EXISTS `serviceifdlearfcngrp` (
+CREATE TABLE IF NOT EXISTS `serviceifdlearfcngrp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `ServiceIfHoCfgGroupId` float DEFAULT NULL,
@@ -6335,7 +6683,8 @@ CREATE TABLE IF NOT EXISTS `serviceifdlearfcngrp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.serviceifhocfggroup
-CREATE TABLE IF NOT EXISTS `serviceifhocfggroup` (
+CREATE TABLE IF NOT EXISTS `serviceifhocfggroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `ServiceIfHoCfgGroupId` float DEFAULT NULL,
@@ -6346,7 +6695,8 @@ CREATE TABLE IF NOT EXISTS `serviceifhocfggroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.serviceirhocfggroup
-CREATE TABLE IF NOT EXISTS `serviceirhocfggroup` (
+CREATE TABLE IF NOT EXISTS `serviceirhocfggroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
   `ServiceIrHoCfgGroupId` float DEFAULT NULL,
@@ -6356,7 +6706,8 @@ CREATE TABLE IF NOT EXISTS `serviceirhocfggroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.sfp
-CREATE TABLE IF NOT EXISTS `sfp` (
+CREATE TABLE IF NOT EXISTS `sfp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -6367,7 +6718,8 @@ CREATE TABLE IF NOT EXISTS `sfp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.simuload
-CREATE TABLE IF NOT EXISTS `simuload` (
+CREATE TABLE IF NOT EXISTS `simuload` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SimuLoadCfgIndex` float DEFAULT NULL,
   `SimuLoadRbThd` float DEFAULT NULL,
@@ -6380,14 +6732,16 @@ CREATE TABLE IF NOT EXISTS `simuload` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.singleipswitch
-CREATE TABLE IF NOT EXISTS `singleipswitch` (
+CREATE TABLE IF NOT EXISTS `singleipswitch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SINGLEIPSW` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.srbcfg
-CREATE TABLE IF NOT EXISTS `srbcfg` (
+CREATE TABLE IF NOT EXISTS `srbcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SrbRlcParaAdaptSwitch` varchar(255) DEFAULT NULL,
   `SrbPollTimerAdjustStep` float DEFAULT NULL,
@@ -6401,7 +6755,8 @@ CREATE TABLE IF NOT EXISTS `srbcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.srbrlcpdcpcfg
-CREATE TABLE IF NOT EXISTS `srbrlcpdcpcfg` (
+CREATE TABLE IF NOT EXISTS `srbrlcpdcpcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SrbId` varchar(255) DEFAULT NULL,
   `UeMaxRetxThreshold` varchar(255) DEFAULT NULL,
@@ -6423,7 +6778,8 @@ CREATE TABLE IF NOT EXISTS `srbrlcpdcpcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.srciprt
-CREATE TABLE IF NOT EXISTS `srciprt` (
+CREATE TABLE IF NOT EXISTS `srciprt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SRCRTIDX` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -6439,7 +6795,8 @@ CREATE TABLE IF NOT EXISTS `srciprt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.srsadaptivecfg
-CREATE TABLE IF NOT EXISTS `srsadaptivecfg` (
+CREATE TABLE IF NOT EXISTS `srsadaptivecfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SrsPeriodAdaptive` varchar(255) DEFAULT NULL,
   `objId` float DEFAULT NULL
@@ -6447,7 +6804,8 @@ CREATE TABLE IF NOT EXISTS `srsadaptivecfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.srscfg
-CREATE TABLE IF NOT EXISTS `srscfg` (
+CREATE TABLE IF NOT EXISTS `srscfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `SrsSubframeCfg` varchar(255) DEFAULT NULL,
@@ -6462,7 +6820,8 @@ CREATE TABLE IF NOT EXISTS `srscfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ssl
-CREATE TABLE IF NOT EXISTS `ssl` (
+CREATE TABLE IF NOT EXISTS `ssl` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CONNTYPE` varchar(255) DEFAULT NULL,
   `AUTHMODE` varchar(255) DEFAULT NULL,
@@ -6474,7 +6833,8 @@ CREATE TABLE IF NOT EXISTS `ssl` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.standardqci
-CREATE TABLE IF NOT EXISTS `standardqci` (
+CREATE TABLE IF NOT EXISTS `standardqci` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `Qci` varchar(255) DEFAULT NULL,
   `PreAllocationWeight` float DEFAULT NULL,
@@ -6492,7 +6852,8 @@ CREATE TABLE IF NOT EXISTS `standardqci` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.subrack
-CREATE TABLE IF NOT EXISTS `subrack` (
+CREATE TABLE IF NOT EXISTS `subrack` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -6502,7 +6863,8 @@ CREATE TABLE IF NOT EXISTS `subrack` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.synceth
-CREATE TABLE IF NOT EXISTS `synceth` (
+CREATE TABLE IF NOT EXISTS `synceth` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LN` float DEFAULT NULL,
   `CN` float DEFAULT NULL,
@@ -6517,7 +6879,8 @@ CREATE TABLE IF NOT EXISTS `synceth` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tacalg
-CREATE TABLE IF NOT EXISTS `tacalg` (
+CREATE TABLE IF NOT EXISTS `tacalg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RSCGRPULCACSWITCH` varchar(255) DEFAULT NULL,
   `RSCGRPDLCACSWITCH` varchar(255) DEFAULT NULL,
@@ -6542,7 +6905,8 @@ CREATE TABLE IF NOT EXISTS `tacalg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tasm
-CREATE TABLE IF NOT EXISTS `tasm` (
+CREATE TABLE IF NOT EXISTS `tasm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `SRCNO` varchar(255) DEFAULT NULL,
   `CLKSRC` varchar(255) DEFAULT NULL,
@@ -6582,7 +6946,8 @@ CREATE TABLE IF NOT EXISTS `tasm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tbdspinfo
-CREATE TABLE IF NOT EXISTS `tbdspinfo` (
+CREATE TABLE IF NOT EXISTS `tbdspinfo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LANNO` varchar(255) DEFAULT NULL,
   `VERSION` varchar(255) DEFAULT NULL
@@ -6590,14 +6955,16 @@ CREATE TABLE IF NOT EXISTS `tbdspinfo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tblangno
-CREATE TABLE IF NOT EXISTS `tblangno` (
+CREATE TABLE IF NOT EXISTS `tblangno` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LANNO` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tcpackctrlalgo
-CREATE TABLE IF NOT EXISTS `tcpackctrlalgo` (
+CREATE TABLE IF NOT EXISTS `tcpackctrlalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `AckCtrlSwitch` varchar(255) DEFAULT NULL,
   `DlMaxThroughput` float DEFAULT NULL,
@@ -6607,14 +6974,16 @@ CREATE TABLE IF NOT EXISTS `tcpackctrlalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tcpacklimitalg
-CREATE TABLE IF NOT EXISTS `tcpacklimitalg` (
+CREATE TABLE IF NOT EXISTS `tcpacklimitalg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TCPACKLIMITSWITCH` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tcpmssctrl
-CREATE TABLE IF NOT EXISTS `tcpmssctrl` (
+CREATE TABLE IF NOT EXISTS `tcpmssctrl` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TcpMssCtrlSwitch` varchar(255) DEFAULT NULL,
   `TcpMssThd` float DEFAULT NULL,
@@ -6623,7 +6992,8 @@ CREATE TABLE IF NOT EXISTS `tcpmssctrl` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tcu
-CREATE TABLE IF NOT EXISTS `tcu` (
+CREATE TABLE IF NOT EXISTS `tcu` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -6640,7 +7010,8 @@ CREATE TABLE IF NOT EXISTS `tcu` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tddframeoffset
-CREATE TABLE IF NOT EXISTS `tddframeoffset` (
+CREATE TABLE IF NOT EXISTS `tddframeoffset` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TimeOffset` float DEFAULT NULL,
   `objId` float DEFAULT NULL
@@ -6648,7 +7019,8 @@ CREATE TABLE IF NOT EXISTS `tddframeoffset` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tddresmodeswitch
-CREATE TABLE IF NOT EXISTS `tddresmodeswitch` (
+CREATE TABLE IF NOT EXISTS `tddresmodeswitch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ClkResExcludeSwitch` varchar(255) DEFAULT NULL,
   `BbResExclusiveSwitch` varchar(255) DEFAULT NULL,
@@ -6657,7 +7029,8 @@ CREATE TABLE IF NOT EXISTS `tddresmodeswitch` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.timealignmenttimer
-CREATE TABLE IF NOT EXISTS `timealignmenttimer` (
+CREATE TABLE IF NOT EXISTS `timealignmenttimer` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `TimeAlignmentTimer` varchar(255) DEFAULT NULL,
@@ -6672,7 +7045,8 @@ CREATE TABLE IF NOT EXISTS `timealignmenttimer` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.timesrc
-CREATE TABLE IF NOT EXISTS `timesrc` (
+CREATE TABLE IF NOT EXISTS `timesrc` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TIMESRC` varchar(255) DEFAULT NULL,
   `AUTOSWITCH` varchar(255) DEFAULT NULL
@@ -6680,7 +7054,8 @@ CREATE TABLE IF NOT EXISTS `timesrc` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.timethrd
-CREATE TABLE IF NOT EXISTS `timethrd` (
+CREATE TABLE IF NOT EXISTS `timethrd` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `THRD` float DEFAULT NULL,
   `SWITCH` varchar(255) DEFAULT NULL
@@ -6688,7 +7063,8 @@ CREATE TABLE IF NOT EXISTS `timethrd` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tldralg
-CREATE TABLE IF NOT EXISTS `tldralg` (
+CREATE TABLE IF NOT EXISTS `tldralg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TRMULLDRTRGTH` float DEFAULT NULL,
   `TRMDLLDRTRGTH` float DEFAULT NULL,
@@ -6702,14 +7078,16 @@ CREATE TABLE IF NOT EXISTS `tldralg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tlfrswitch
-CREATE TABLE IF NOT EXISTS `tlfrswitch` (
+CREATE TABLE IF NOT EXISTS `tlfrswitch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TLFRSWITCH` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tolcalg
-CREATE TABLE IF NOT EXISTS `tolcalg` (
+CREATE TABLE IF NOT EXISTS `tolcalg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TRMULOLCSWITCH` varchar(255) DEFAULT NULL,
   `TRMDLOLCSWITCH` varchar(255) DEFAULT NULL,
@@ -6722,7 +7100,8 @@ CREATE TABLE IF NOT EXISTS `tolcalg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tpealgo
-CREATE TABLE IF NOT EXISTS `tpealgo` (
+CREATE TABLE IF NOT EXISTS `tpealgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `PortListNum` float DEFAULT NULL,
   `Port1` float DEFAULT NULL,
@@ -6750,7 +7129,8 @@ CREATE TABLE IF NOT EXISTS `tpealgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.trp
-CREATE TABLE IF NOT EXISTS `trp` (
+CREATE TABLE IF NOT EXISTS `trp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -6760,14 +7140,16 @@ CREATE TABLE IF NOT EXISTS `trp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.trustcert
-CREATE TABLE IF NOT EXISTS `trustcert` (
+CREATE TABLE IF NOT EXISTS `trustcert` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CERTNAME` varchar(255) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.twampresponder
-CREATE TABLE IF NOT EXISTS `twampresponder` (
+CREATE TABLE IF NOT EXISTS `twampresponder` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `RESPONDERID` float DEFAULT NULL,
   `LOCALIP` varchar(255) DEFAULT NULL,
@@ -6781,7 +7163,8 @@ CREATE TABLE IF NOT EXISTS `twampresponder` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.txbranch
-CREATE TABLE IF NOT EXISTS `txbranch` (
+CREATE TABLE IF NOT EXISTS `txbranch` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -6792,7 +7175,8 @@ CREATE TABLE IF NOT EXISTS `txbranch` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.typdrbbsr
-CREATE TABLE IF NOT EXISTS `typdrbbsr` (
+CREATE TABLE IF NOT EXISTS `typdrbbsr` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `Qci` varchar(255) DEFAULT NULL,
   `TPerodicBSRTimer` varchar(255) DEFAULT NULL,
@@ -6802,7 +7186,8 @@ CREATE TABLE IF NOT EXISTS `typdrbbsr` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.tz
-CREATE TABLE IF NOT EXISTS `tz` (
+CREATE TABLE IF NOT EXISTS `tz` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ZONET` varchar(255) DEFAULT NULL,
   `DST` varchar(255) DEFAULT NULL
@@ -6810,7 +7195,8 @@ CREATE TABLE IF NOT EXISTS `tz` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.udpping
-CREATE TABLE IF NOT EXISTS `udpping` (
+CREATE TABLE IF NOT EXISTS `udpping` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `TIMEOUTTHD` float DEFAULT NULL,
   `TIMEOUTCNT` float DEFAULT NULL,
@@ -6819,7 +7205,8 @@ CREATE TABLE IF NOT EXISTS `udpping` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.udt
-CREATE TABLE IF NOT EXISTS `udt` (
+CREATE TABLE IF NOT EXISTS `udt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `UDTNO` float DEFAULT NULL,
   `UDTPARAGRPID` float DEFAULT NULL
@@ -6827,7 +7214,8 @@ CREATE TABLE IF NOT EXISTS `udt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.udtparagrp
-CREATE TABLE IF NOT EXISTS `udtparagrp` (
+CREATE TABLE IF NOT EXISTS `udtparagrp` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `UDTPARAGRPID` float DEFAULT NULL,
   `PRIRULE` varchar(255) DEFAULT NULL,
@@ -6840,7 +7228,8 @@ CREATE TABLE IF NOT EXISTS `udtparagrp` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.uecooperationpara
-CREATE TABLE IF NOT EXISTS `uecooperationpara` (
+CREATE TABLE IF NOT EXISTS `uecooperationpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `MacCeMsgLCID` float DEFAULT NULL,
@@ -6855,7 +7244,8 @@ CREATE TABLE IF NOT EXISTS `uecooperationpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ueiu
-CREATE TABLE IF NOT EXISTS `ueiu` (
+CREATE TABLE IF NOT EXISTS `ueiu` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -6864,7 +7254,8 @@ CREATE TABLE IF NOT EXISTS `ueiu` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.uespecdrxparagroup
-CREATE TABLE IF NOT EXISTS `uespecdrxparagroup` (
+CREATE TABLE IF NOT EXISTS `uespecdrxparagroup` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DrxParaGroupIndex` float DEFAULT NULL,
@@ -6880,7 +7271,8 @@ CREATE TABLE IF NOT EXISTS `uespecdrxparagroup` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.uetimerconst
-CREATE TABLE IF NOT EXISTS `uetimerconst` (
+CREATE TABLE IF NOT EXISTS `uetimerconst` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `T300` varchar(255) DEFAULT NULL,
@@ -6906,7 +7298,8 @@ CREATE TABLE IF NOT EXISTS `uetimerconst` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulcsalgopara
-CREATE TABLE IF NOT EXISTS `ulcsalgopara` (
+CREATE TABLE IF NOT EXISTS `ulcsalgopara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UlCoPcInThd` float DEFAULT NULL,
@@ -6922,7 +7315,8 @@ CREATE TABLE IF NOT EXISTS `ulcsalgopara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulinterfsuppresscfg
-CREATE TABLE IF NOT EXISTS `ulinterfsuppresscfg` (
+CREATE TABLE IF NOT EXISTS `ulinterfsuppresscfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UlInterfsuppressionThd` float DEFAULT NULL,
@@ -6944,7 +7338,8 @@ CREATE TABLE IF NOT EXISTS `ulinterfsuppresscfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulocell
-CREATE TABLE IF NOT EXISTS `ulocell` (
+CREATE TABLE IF NOT EXISTS `ulocell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULOCELLID` float DEFAULT NULL,
   `VIRTUALCPC` varchar(255) DEFAULT NULL,
@@ -7010,7 +7405,8 @@ CREATE TABLE IF NOT EXISTS `ulocell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulocellalgpara
-CREATE TABLE IF NOT EXISTS `ulocellalgpara` (
+CREATE TABLE IF NOT EXISTS `ulocellalgpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULOCELLID` float DEFAULT NULL,
   `RTWPSIRTGTADJSW` varchar(255) DEFAULT NULL,
@@ -7052,7 +7448,8 @@ CREATE TABLE IF NOT EXISTS `ulocellalgpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulocellmacepara
-CREATE TABLE IF NOT EXISTS `ulocellmacepara` (
+CREATE TABLE IF NOT EXISTS `ulocellmacepara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULOCELLID` float DEFAULT NULL,
   `SCHEDULEPARA` varchar(255) DEFAULT NULL,
@@ -7096,7 +7493,8 @@ CREATE TABLE IF NOT EXISTS `ulocellmacepara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulocellmachspara
-CREATE TABLE IF NOT EXISTS `ulocellmachspara` (
+CREATE TABLE IF NOT EXISTS `ulocellmachspara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULOCELLID` float DEFAULT NULL,
   `RSCALLOCM` varchar(255) DEFAULT NULL,
@@ -7155,7 +7553,8 @@ CREATE TABLE IF NOT EXISTS `ulocellmachspara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulocellnoaccesspara
-CREATE TABLE IF NOT EXISTS `ulocellnoaccesspara` (
+CREATE TABLE IF NOT EXISTS `ulocellnoaccesspara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULOCELLID` float DEFAULT NULL,
   `NOUETIMER` float DEFAULT NULL,
@@ -7165,7 +7564,8 @@ CREATE TABLE IF NOT EXISTS `ulocellnoaccesspara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulocellr99algpara
-CREATE TABLE IF NOT EXISTS `ulocellr99algpara` (
+CREATE TABLE IF NOT EXISTS `ulocellr99algpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULOCELLID` float DEFAULT NULL,
   `PWRCNGCACSW` varchar(255) DEFAULT NULL,
@@ -7176,7 +7576,8 @@ CREATE TABLE IF NOT EXISTS `ulocellr99algpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulocellrsclmtpara
-CREATE TABLE IF NOT EXISTS `ulocellrsclmtpara` (
+CREATE TABLE IF NOT EXISTS `ulocellrsclmtpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULOCELLID` float DEFAULT NULL,
   `CME8KRSCLMT` float DEFAULT NULL,
@@ -7195,7 +7596,8 @@ CREATE TABLE IF NOT EXISTS `ulocellrsclmtpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulocellrsvdpara
-CREATE TABLE IF NOT EXISTS `ulocellrsvdpara` (
+CREATE TABLE IF NOT EXISTS `ulocellrsvdpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULOCELLID` float DEFAULT NULL,
   `ULOCELLRSVDPARA1` longtext,
@@ -7234,7 +7636,8 @@ CREATE TABLE IF NOT EXISTS `ulocellrsvdpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulocellsectoreqm
-CREATE TABLE IF NOT EXISTS `ulocellsectoreqm` (
+CREATE TABLE IF NOT EXISTS `ulocellsectoreqm` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULOCELLID` float DEFAULT NULL,
   `SECTOREQMID` float DEFAULT NULL,
@@ -7244,7 +7647,8 @@ CREATE TABLE IF NOT EXISTS `ulocellsectoreqm` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.ulzerobufferzone
-CREATE TABLE IF NOT EXISTS `ulzerobufferzone` (
+CREATE TABLE IF NOT EXISTS `ulzerobufferzone` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `ULSharedFreqStartRB` float DEFAULT NULL,
@@ -7260,7 +7664,8 @@ CREATE TABLE IF NOT EXISTS `ulzerobufferzone` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.upptsinterfcfg
-CREATE TABLE IF NOT EXISTS `upptsinterfcfg` (
+CREATE TABLE IF NOT EXISTS `upptsinterfcfg` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `TestPeriod` float DEFAULT NULL,
@@ -7270,7 +7675,8 @@ CREATE TABLE IF NOT EXISTS `upptsinterfcfg` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.usb
-CREATE TABLE IF NOT EXISTS `usb` (
+CREATE TABLE IF NOT EXISTS `usb` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `CN` float DEFAULT NULL,
   `SRN` float DEFAULT NULL,
@@ -7281,7 +7687,8 @@ CREATE TABLE IF NOT EXISTS `usb` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.userplanehost
-CREATE TABLE IF NOT EXISTS `userplanehost` (
+CREATE TABLE IF NOT EXISTS `userplanehost` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `UPHOSTID` float DEFAULT NULL,
   `VRFIDX` float DEFAULT NULL,
@@ -7293,7 +7700,8 @@ CREATE TABLE IF NOT EXISTS `userplanehost` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.userplanepeer
-CREATE TABLE IF NOT EXISTS `userplanepeer` (
+CREATE TABLE IF NOT EXISTS `userplanepeer` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `UPPEERID` float DEFAULT NULL,
   `VRFIDX` float DEFAULT NULL,
@@ -7309,7 +7717,8 @@ CREATE TABLE IF NOT EXISTS `userplanepeer` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.userpriority
-CREATE TABLE IF NOT EXISTS `userpriority` (
+CREATE TABLE IF NOT EXISTS `userpriority` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ArpSchSwitch` varchar(255) DEFAULT NULL,
   `Arp1Priority` varchar(255) DEFAULT NULL,
@@ -7332,7 +7741,8 @@ CREATE TABLE IF NOT EXISTS `userpriority` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.userqcipriority
-CREATE TABLE IF NOT EXISTS `userqcipriority` (
+CREATE TABLE IF NOT EXISTS `userqcipriority` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `Qci` varchar(255) DEFAULT NULL,
   `GoldUlSchPriorityFactor` float DEFAULT NULL,
@@ -7346,7 +7756,8 @@ CREATE TABLE IF NOT EXISTS `userqcipriority` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.uservpfmpara
-CREATE TABLE IF NOT EXISTS `uservpfmpara` (
+CREATE TABLE IF NOT EXISTS `uservpfmpara` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `DlUserThruputThd0` float DEFAULT NULL,
@@ -7362,7 +7773,8 @@ CREATE TABLE IF NOT EXISTS `uservpfmpara` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.utranexternalcell
-CREATE TABLE IF NOT EXISTS `utranexternalcell` (
+CREATE TABLE IF NOT EXISTS `utranexternalcell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `Mcc` float DEFAULT NULL,
   `Mnc` float DEFAULT NULL,
@@ -7387,7 +7799,8 @@ CREATE TABLE IF NOT EXISTS `utranexternalcell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.utranncell
-CREATE TABLE IF NOT EXISTS `utranncell` (
+CREATE TABLE IF NOT EXISTS `utranncell` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `Mcc` float DEFAULT NULL,
@@ -7408,7 +7821,8 @@ CREATE TABLE IF NOT EXISTS `utranncell` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.utrannfreq
-CREATE TABLE IF NOT EXISTS `utrannfreq` (
+CREATE TABLE IF NOT EXISTS `utrannfreq` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UtranDlArfcn` float DEFAULT NULL,
@@ -7443,7 +7857,8 @@ CREATE TABLE IF NOT EXISTS `utrannfreq` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.utranranshare
-CREATE TABLE IF NOT EXISTS `utranranshare` (
+CREATE TABLE IF NOT EXISTS `utranranshare` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `UtranDlArfcn` float DEFAULT NULL,
@@ -7454,7 +7869,8 @@ CREATE TABLE IF NOT EXISTS `utranranshare` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.vlanclass
-CREATE TABLE IF NOT EXISTS `vlanclass` (
+CREATE TABLE IF NOT EXISTS `vlanclass` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `VLANGROUPNO` float DEFAULT NULL,
   `TRAFFIC` varchar(255) DEFAULT NULL,
@@ -7465,7 +7881,8 @@ CREATE TABLE IF NOT EXISTS `vlanclass` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.vlanmap
-CREATE TABLE IF NOT EXISTS `vlanmap` (
+CREATE TABLE IF NOT EXISTS `vlanmap` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `VRFIDX` float DEFAULT NULL,
   `NEXTHOPIP` varchar(255) DEFAULT NULL,
@@ -7479,7 +7896,8 @@ CREATE TABLE IF NOT EXISTS `vlanmap` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.vqmalgo
-CREATE TABLE IF NOT EXISTS `vqmalgo` (
+CREATE TABLE IF NOT EXISTS `vqmalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `ULDelayJitter` float DEFAULT NULL,
   `VqiGoodThd` float DEFAULT NULL,
@@ -7500,7 +7918,8 @@ CREATE TABLE IF NOT EXISTS `vqmalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.vrf
-CREATE TABLE IF NOT EXISTS `vrf` (
+CREATE TABLE IF NOT EXISTS `vrf` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `VRFIDX` float DEFAULT NULL,
   `USERLABEL` varchar(255) DEFAULT NULL
@@ -7508,7 +7927,8 @@ CREATE TABLE IF NOT EXISTS `vrf` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.weblmt
-CREATE TABLE IF NOT EXISTS `weblmt` (
+CREATE TABLE IF NOT EXISTS `weblmt` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `POLICY` varchar(255) DEFAULT NULL,
   `SSLVER` varchar(255) DEFAULT NULL
@@ -7516,7 +7936,8 @@ CREATE TABLE IF NOT EXISTS `weblmt` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.wtcpproxyalgo
-CREATE TABLE IF NOT EXISTS `wtcpproxyalgo` (
+CREATE TABLE IF NOT EXISTS `wtcpproxyalgo` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `LocalCellId` float DEFAULT NULL,
   `TcpAccelerationSwitch` varchar(255) DEFAULT NULL,
@@ -7529,7 +7950,8 @@ CREATE TABLE IF NOT EXISTS `wtcpproxyalgo` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.x2
-CREATE TABLE IF NOT EXISTS `x2` (
+CREATE TABLE IF NOT EXISTS `x2` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `X2Id` float DEFAULT NULL,
   `CnOperatorId` float DEFAULT NULL,
@@ -7544,7 +7966,8 @@ CREATE TABLE IF NOT EXISTS `x2` (
 
 -- Data exporting was unselected.
 -- Dumping structure for table cfgmml.x2interface
-CREATE TABLE IF NOT EXISTS `x2interface` (
+CREATE TABLE IF NOT EXISTS `x2interface` ( 
+  `ENODEB_ID` integer(8) DEFAULT NULL, 
   `NE NAME` varchar(100) DEFAULT NULL,
   `X2InterfaceId` float DEFAULT NULL,
   `X2CpBearerId` float DEFAULT NULL,
