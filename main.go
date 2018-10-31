@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"encoding/xml"
 	"flag"
-	//"fmt"
+	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -15,7 +15,7 @@ import (
 	//"strings"
 	"time"
 	//iconv "github.com/djimenez/iconv-go"
-	"github.com/fatih/color"
+	//"github.com/fatih/color"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/yogawa/4g-cfgmml/model"
 	"golang.org/x/net/html/charset"
@@ -40,23 +40,26 @@ func init() {
 
 	working_dir, err := os.Getwd()
 	checkErr(err)
-	binary_dir, err := filepath.Abs(filepath.Dir(os.Args[0]))
+	exe_path, _ := os.Executable()
+	binary_dir, err := filepath.Abs(filepath.Dir(exe_path))
 	checkErr(err)
 
 	if _, err := os.Stat(working_dir + "/config.json"); !os.IsNotExist(err) {
-		color.Cyan("[+] Found onfiguration file : " + working_dir + "/config.json")
+		fmt.Println("[+] Found onfiguration file : " + working_dir + "/config.json")
 		conf, _ = os.Open(working_dir + "/config.json")
 		defer conf.Close()
 	} else if _, err := os.Stat(binary_dir + "/config.json"); !os.IsNotExist(err) {
-		color.Cyan("[+] Found onfiguration file : ", binary_dir+"/config.json")
+		fmt.Println("[+] Found onfiguration file : " + binary_dir + "/config.json")
 		conf, _ = os.Open(binary_dir + "/config.json")
 		defer conf.Close()
 	} else {
-		color.Red("[+] Configuration file doesn't exists!")
+		fmt.Println("[+] Configuration file doesn't exists!")
+		//color.Red("[+] Working directory : " + working_dir)
+		//color.Red("[+] Binary directory : " + binary_dir)
 		os.Exit(3)
 	}
 
-	//time.Sleep(time.Duration(2) * time.Second)
+	time.Sleep(time.Duration(2) * time.Second)
 
 	jsondecoder := json.NewDecoder(conf)
 	configuration := model.Configuration{}
@@ -72,7 +75,7 @@ func init() {
 	db, err = sql.Open("mysql", connectionString)
 	checkErr(err)
 
-	color.Cyan("[+] Connected to the database")
+	fmt.Println("[+] Connected to the database")
 
 	err = db.Ping()
 	checkErr(err)
@@ -1818,7 +1821,7 @@ func main() {
 	}
 
 	elapsed = time.Since(start)
-	color.Cyan("\n[+] Processing time : %v second", elapsed.Seconds())
+	fmt.Printf("\n[+] Processing time : %v second", elapsed.Seconds())
 
 }
 
