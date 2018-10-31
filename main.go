@@ -113,7 +113,7 @@ func main() {
 			foundNeName = true
 		}
 
-		if len(cfgmml.SPECSYNCDATA.CLASSES[i].ENODEBFUNCTIONS) > 0 && foundENodeBId {
+		if len(cfgmml.SPECSYNCDATA.CLASSES[i].ENODEBFUNCTIONS) > 0 && !foundENodeBId {
 			eNodeBId = cfgmml.SPECSYNCDATA.CLASSES[i].ENODEBFUNCTIONS[0].ATTRIBUTES.ENodeBId
 			foundENodeBId = true
 		}
