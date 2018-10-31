@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	//"github.com/fatih/color"
 	"github.com/yogawa/4g-cfgmml/model"
 )
 
@@ -24,7 +23,7 @@ func insertAlmcurcfg(eNodeBId string, baseName string, data []model.Almcurcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Almcurcfg data has been saved")
+		//fmt.Println("[+] Almcurcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -59,7 +58,7 @@ func insertAlmport(eNodeBId string, baseName string, data []model.Almport) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Almport data has been saved")
+		//fmt.Println("[+] Almport data has been saved")
 	}
 	tx.Commit()
 }
@@ -126,7 +125,7 @@ func insertAnr(eNodeBId string, baseName string, data []model.Anr) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Anr data has been saved")
+		//fmt.Println("[+] Anr data has been saved")
 	}
 	tx.Commit()
 }
@@ -152,7 +151,7 @@ func insertAnrmeasureparam(eNodeBId string, baseName string, data []model.Anrmea
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Anrmeasureparam data has been saved")
+		//fmt.Println("[+] Anrmeasureparam data has been saved")
 	}
 	tx.Commit()
 }
@@ -185,7 +184,7 @@ func insertAntennaport(eNodeBId string, baseName string, data []model.Antennapor
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Antennaport data has been saved")
+		//fmt.Println("[+] Antennaport data has been saved")
 	}
 	tx.Commit()
 }
@@ -206,7 +205,7 @@ func insertAppcert(eNodeBId string, baseName string, data []model.Appcert) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Appcert data has been saved")
+		//fmt.Println("[+] Appcert data has been saved")
 	}
 	tx.Commit()
 }
@@ -237,7 +236,7 @@ func insertApplication(eNodeBId string, baseName string, data []model.Applicatio
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Application data has been saved")
+		//fmt.Println("[+] Application data has been saved")
 	}
 	tx.Commit()
 }
@@ -262,7 +261,7 @@ func insertAsparagroup(eNodeBId string, baseName string, data []model.Asparagrou
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Asparagroup data has been saved")
+		//fmt.Println("[+] Asparagroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -285,7 +284,7 @@ func insertBasebandeqm(eNodeBId string, baseName string, data []model.Basebandeq
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Basebandeqm data has been saved")
+		//fmt.Println("[+] Basebandeqm data has been saved")
 	}
 	tx.Commit()
 }
@@ -320,7 +319,7 @@ func insertBbp(eNodeBId string, baseName string, data []model.Bbp) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Bbp data has been saved")
+		//fmt.Println("[+] Bbp data has been saved")
 	}
 	tx.Commit()
 }
@@ -342,7 +341,7 @@ func insertBbufan(eNodeBId string, baseName string, data []model.Bbufan) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Bbufan data has been saved")
+		//fmt.Println("[+] Bbufan data has been saved")
 	}
 	tx.Commit()
 }
@@ -364,7 +363,7 @@ func insertBcchcfg(eNodeBId string, baseName string, data []model.Bcchcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Bcchcfg data has been saved")
+		//fmt.Println("[+] Bcchcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -390,7 +389,7 @@ func insertBlindncellopt(eNodeBId string, baseName string, data []model.Blindnce
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Blindncellopt data has been saved")
+		//fmt.Println("[+] Blindncellopt data has been saved")
 	}
 	tx.Commit()
 }
@@ -413,7 +412,7 @@ func insertBrdresassignment(eNodeBId string, baseName string, data []model.Brdre
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Brdresassignment data has been saved")
+		//fmt.Println("[+] Brdresassignment data has been saved")
 	}
 	tx.Commit()
 }
@@ -436,7 +435,7 @@ func insertCabinet(eNodeBId string, baseName string, data []model.Cabinet) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cabinet data has been saved")
+		//fmt.Println("[+] Cabinet data has been saved")
 	}
 	tx.Commit()
 }
@@ -458,7 +457,7 @@ func insertCagroup(eNodeBId string, baseName string, data []model.Cagroup) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cagroup data has been saved")
+		//fmt.Println("[+] Cagroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -483,7 +482,7 @@ func insertCagroupcell(eNodeBId string, baseName string, data []model.Cagroupcel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cagroupcell data has been saved")
+		//fmt.Println("[+] Cagroupcell data has been saved")
 	}
 	tx.Commit()
 }
@@ -510,7 +509,7 @@ func insertCagroupscellcfg(eNodeBId string, baseName string, data []model.Cagrou
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cagroupscellcfg data has been saved")
+		//fmt.Println("[+] Cagroupscellcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -579,7 +578,7 @@ func insertCamgtcfg(eNodeBId string, baseName string, data []model.Camgtcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Camgtcfg data has been saved")
+		//fmt.Println("[+] Camgtcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -605,7 +604,7 @@ func insertCascadeport(eNodeBId string, baseName string, data []model.Cascadepor
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cascadeport data has been saved")
+		//fmt.Println("[+] Cascadeport data has been saved")
 	}
 	tx.Commit()
 }
@@ -675,7 +674,7 @@ func insertCell(eNodeBId string, baseName string, data []model.Cell) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cell data has been saved")
+		//fmt.Println("[+] Cell data has been saved")
 	}
 	tx.Commit()
 }
@@ -717,7 +716,7 @@ func insertCellacbar(eNodeBId string, baseName string, data []model.Cellacbar) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellacbar data has been saved")
+		//fmt.Println("[+] Cellacbar data has been saved")
 	}
 	tx.Commit()
 }
@@ -744,7 +743,7 @@ func insertCellaccess(eNodeBId string, baseName string, data []model.Cellaccess)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellaccess data has been saved")
+		//fmt.Println("[+] Cellaccess data has been saved")
 	}
 	tx.Commit()
 }
@@ -899,7 +898,7 @@ func insertCellalgoswitch(eNodeBId string, baseName string, data []model.Cellalg
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellalgoswitch data has been saved")
+		//fmt.Println("[+] Cellalgoswitch data has been saved")
 	}
 	tx.Commit()
 }
@@ -938,7 +937,7 @@ func insertCellbackoff(eNodeBId string, baseName string, data []model.Cellbackof
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellbackoff data has been saved")
+		//fmt.Println("[+] Cellbackoff data has been saved")
 	}
 	tx.Commit()
 }
@@ -969,7 +968,7 @@ func insertCellbf(eNodeBId string, baseName string, data []model.Cellbf) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellbf data has been saved")
+		//fmt.Println("[+] Cellbf data has been saved")
 	}
 	tx.Commit()
 }
@@ -1017,7 +1016,7 @@ func insertCellbfmimoparacfg(eNodeBId string, baseName string, data []model.Cell
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellbfmimoparacfg data has been saved")
+		//fmt.Println("[+] Cellbfmimoparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -1041,7 +1040,7 @@ func insertCellcecfg(eNodeBId string, baseName string, data []model.Cellcecfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellcecfg data has been saved")
+		//fmt.Println("[+] Cellcecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -1072,7 +1071,7 @@ func insertCellceschcfg(eNodeBId string, baseName string, data []model.Cellcesch
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellceschcfg data has been saved")
+		//fmt.Println("[+] Cellceschcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -1102,7 +1101,7 @@ func insertCellchpwrcfg(eNodeBId string, baseName string, data []model.Cellchpwr
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellchpwrcfg data has been saved")
+		//fmt.Println("[+] Cellchpwrcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -1153,7 +1152,7 @@ func insertCellcounterparagroup(eNodeBId string, baseName string, data []model.C
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellcounterparagroup data has been saved")
+		//fmt.Println("[+] Cellcounterparagroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -1178,7 +1177,7 @@ func insertCellcqiadaptivecfg(eNodeBId string, baseName string, data []model.Cel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellcqiadaptivecfg data has been saved")
+		//fmt.Println("[+] Cellcqiadaptivecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -1208,7 +1207,7 @@ func insertCellcqiadjalgo(eNodeBId string, baseName string, data []model.Cellcqi
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellcqiadjalgo data has been saved")
+		//fmt.Println("[+] Cellcqiadjalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -1237,7 +1236,7 @@ func insertCellcsirsparacfg(eNodeBId string, baseName string, data []model.Cellc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellcsirsparacfg data has been saved")
+		//fmt.Println("[+] Cellcsirsparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -1270,7 +1269,7 @@ func insertCellcspcpara(eNodeBId string, baseName string, data []model.Cellcspcp
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellcspcpara data has been saved")
+		//fmt.Println("[+] Cellcspcpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -1306,7 +1305,7 @@ func insertCelldacqcfg(eNodeBId string, baseName string, data []model.Celldacqcf
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldacqcfg data has been saved")
+		//fmt.Println("[+] Celldacqcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -1335,7 +1334,7 @@ func insertCelldlcompalgo(eNodeBId string, baseName string, data []model.Celldlc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldlcompalgo data has been saved")
+		//fmt.Println("[+] Celldlcompalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -1360,7 +1359,7 @@ func insertCelldlicic(eNodeBId string, baseName string, data []model.Celldlicic)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldlicic data has been saved")
+		//fmt.Println("[+] Celldlicic data has been saved")
 	}
 	tx.Commit()
 }
@@ -1381,7 +1380,7 @@ func insertCelldlpcpdcch(eNodeBId string, baseName string, data []model.Celldlpc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldlpcpdcch data has been saved")
+		//fmt.Println("[+] Celldlpcpdcch data has been saved")
 	}
 	tx.Commit()
 }
@@ -1409,7 +1408,7 @@ func insertCelldlpcpdsch(eNodeBId string, baseName string, data []model.Celldlpc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldlpcpdsch data has been saved")
+		//fmt.Println("[+] Celldlpcpdsch data has been saved")
 	}
 	tx.Commit()
 }
@@ -1432,7 +1431,7 @@ func insertCelldlpcpdschpa(eNodeBId string, baseName string, data []model.Celldl
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldlpcpdschpa data has been saved")
+		//fmt.Println("[+] Celldlpcpdschpa data has been saved")
 	}
 	tx.Commit()
 }
@@ -1453,7 +1452,7 @@ func insertCelldlpcphich(eNodeBId string, baseName string, data []model.Celldlpc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldlpcphich data has been saved")
+		//fmt.Println("[+] Celldlpcphich data has been saved")
 	}
 	tx.Commit()
 }
@@ -1576,7 +1575,7 @@ func insertCelldlschalgo(eNodeBId string, baseName string, data []model.Celldlsc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldlschalgo data has been saved")
+		//fmt.Println("[+] Celldlschalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -1642,7 +1641,7 @@ func insertCelldrxpara(eNodeBId string, baseName string, data []model.Celldrxpar
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldrxpara data has been saved")
+		//fmt.Println("[+] Celldrxpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -1672,7 +1671,7 @@ func insertCelldrxspecialpara(eNodeBId string, baseName string, data []model.Cel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldrxspecialpara data has been saved")
+		//fmt.Println("[+] Celldrxspecialpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -1706,7 +1705,7 @@ func insertCelldss(eNodeBId string, baseName string, data []model.Celldss) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldss data has been saved")
+		//fmt.Println("[+] Celldss data has been saved")
 	}
 	tx.Commit()
 }
@@ -1739,7 +1738,7 @@ func insertCelldynacbaralgopara(eNodeBId string, baseName string, data []model.C
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celldynacbaralgopara data has been saved")
+		//fmt.Println("[+] Celldynacbaralgopara data has been saved")
 	}
 	tx.Commit()
 }
@@ -1766,7 +1765,7 @@ func insertCelleabalgopara(eNodeBId string, baseName string, data []model.Cellea
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celleabalgopara data has been saved")
+		//fmt.Println("[+] Celleabalgopara data has been saved")
 	}
 	tx.Commit()
 }
@@ -1804,7 +1803,7 @@ func insertCelleicic(eNodeBId string, baseName string, data []model.Celleicic) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celleicic data has been saved")
+		//fmt.Println("[+] Celleicic data has been saved")
 	}
 	tx.Commit()
 }
@@ -1831,7 +1830,7 @@ func insertCellemtcalgo(eNodeBId string, baseName string, data []model.Cellemtca
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellemtcalgo data has been saved")
+		//fmt.Println("[+] Cellemtcalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -1882,7 +1881,7 @@ func insertCellhoparacfg(eNodeBId string, baseName string, data []model.Cellhopa
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellhoparacfg data has been saved")
+		//fmt.Println("[+] Cellhoparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -1905,7 +1904,7 @@ func insertCellidprdupt(eNodeBId string, baseName string, data []model.Cellidprd
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellidprdupt data has been saved")
+		//fmt.Println("[+] Cellidprdupt data has been saved")
 	}
 	tx.Commit()
 }
@@ -1927,7 +1926,7 @@ func insertCelliicspara(eNodeBId string, baseName string, data []model.Celliicsp
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celliicspara data has been saved")
+		//fmt.Println("[+] Celliicspara data has been saved")
 	}
 	tx.Commit()
 }
@@ -1955,7 +1954,7 @@ func insertCelllowpower(eNodeBId string, baseName string, data []model.Celllowpo
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celllowpower data has been saved")
+		//fmt.Println("[+] Celllowpower data has been saved")
 	}
 	tx.Commit()
 }
@@ -1980,7 +1979,7 @@ func insertCelllteflexbw(eNodeBId string, baseName string, data []model.Cellltef
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celllteflexbw data has been saved")
+		//fmt.Println("[+] Celllteflexbw data has been saved")
 	}
 	tx.Commit()
 }
@@ -2002,7 +2001,7 @@ func insertCelllteflexbwitfcfg(eNodeBId string, baseName string, data []model.Ce
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celllteflexbwitfcfg data has been saved")
+		//fmt.Println("[+] Celllteflexbwitfcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -2030,7 +2029,7 @@ func insertCellmbfcs(eNodeBId string, baseName string, data []model.Cellmbfcs) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmbfcs data has been saved")
+		//fmt.Println("[+] Cellmbfcs data has been saved")
 	}
 	tx.Commit()
 }
@@ -2055,7 +2054,7 @@ func insertCellmbmscfg(eNodeBId string, baseName string, data []model.Cellmbmscf
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmbmscfg data has been saved")
+		//fmt.Println("[+] Cellmbmscfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -2094,7 +2093,7 @@ func insertCellmcpara(eNodeBId string, baseName string, data []model.Cellmcpara)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmcpara data has been saved")
+		//fmt.Println("[+] Cellmcpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -2117,7 +2116,7 @@ func insertCellmimoparacfg(eNodeBId string, baseName string, data []model.Cellmi
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmimoparacfg data has been saved")
+		//fmt.Println("[+] Cellmimoparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -2205,7 +2204,7 @@ func insertCellmlb(eNodeBId string, baseName string, data []model.Cellmlb) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmlb data has been saved")
+		//fmt.Println("[+] Cellmlb data has been saved")
 	}
 	tx.Commit()
 }
@@ -2234,7 +2233,7 @@ func insertCellmlbautogroup(eNodeBId string, baseName string, data []model.Cellm
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmlbautogroup data has been saved")
+		//fmt.Println("[+] Cellmlbautogroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -2263,7 +2262,7 @@ func insertCellmlbho(eNodeBId string, baseName string, data []model.Cellmlbho) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmlbho data has been saved")
+		//fmt.Println("[+] Cellmlbho data has been saved")
 	}
 	tx.Commit()
 }
@@ -2289,7 +2288,7 @@ func insertCellmlbuesel(eNodeBId string, baseName string, data []model.Cellmlbue
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmlbuesel data has been saved")
+		//fmt.Println("[+] Cellmlbuesel data has been saved")
 	}
 	tx.Commit()
 }
@@ -2311,7 +2310,7 @@ func insertCellmmalgo(eNodeBId string, baseName string, data []model.Cellmmalgo)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmmalgo data has been saved")
+		//fmt.Println("[+] Cellmmalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -2339,7 +2338,7 @@ func insertCellmro(eNodeBId string, baseName string, data []model.Cellmro) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellmro data has been saved")
+		//fmt.Println("[+] Cellmro data has been saved")
 	}
 	tx.Commit()
 }
@@ -2362,7 +2361,7 @@ func insertCellnoaccessalmpara(eNodeBId string, baseName string, data []model.Ce
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellnoaccessalmpara data has been saved")
+		//fmt.Println("[+] Cellnoaccessalmpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -2396,7 +2395,7 @@ func insertCellop(eNodeBId string, baseName string, data []model.Cellop) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellop data has been saved")
+		//fmt.Println("[+] Cellop data has been saved")
 	}
 	tx.Commit()
 }
@@ -2438,7 +2437,7 @@ func insertCellpcalgo(eNodeBId string, baseName string, data []model.Cellpcalgo)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellpcalgo data has been saved")
+		//fmt.Println("[+] Cellpcalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -2505,7 +2504,7 @@ func insertCellpdcchalgo(eNodeBId string, baseName string, data []model.Cellpdcc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellpdcchalgo data has been saved")
+		//fmt.Println("[+] Cellpdcchalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -2529,7 +2528,7 @@ func insertCellpdcchcecfg(eNodeBId string, baseName string, data []model.Cellpdc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellpdcchcecfg data has been saved")
+		//fmt.Println("[+] Cellpdcchcecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -2553,7 +2552,7 @@ func insertCellprbvalmlb(eNodeBId string, baseName string, data []model.Cellprbv
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellprbvalmlb data has been saved")
+		//fmt.Println("[+] Cellprbvalmlb data has been saved")
 	}
 	tx.Commit()
 }
@@ -2576,7 +2575,7 @@ func insertCellpucchalgo(eNodeBId string, baseName string, data []model.Cellpucc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellpucchalgo data has been saved")
+		//fmt.Println("[+] Cellpucchalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -2622,7 +2621,7 @@ func insertCellqcipara(eNodeBId string, baseName string, data []model.Cellqcipar
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellqcipara data has been saved")
+		//fmt.Println("[+] Cellqcipara data has been saved")
 	}
 	tx.Commit()
 }
@@ -2647,7 +2646,7 @@ func insertCellrachalgo(eNodeBId string, baseName string, data []model.Cellracha
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellrachalgo data has been saved")
+		//fmt.Println("[+] Cellrachalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -2675,7 +2674,7 @@ func insertCellrachcecfg(eNodeBId string, baseName string, data []model.Cellrach
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellrachcecfg data has been saved")
+		//fmt.Println("[+] Cellrachcecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -2733,7 +2732,7 @@ func insertCellracthd(eNodeBId string, baseName string, data []model.Cellracthd)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellracthd data has been saved")
+		//fmt.Println("[+] Cellracthd data has been saved")
 	}
 	tx.Commit()
 }
@@ -2778,7 +2777,7 @@ func insertCellresel(eNodeBId string, baseName string, data []model.Cellresel) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellresel data has been saved")
+		//fmt.Println("[+] Cellresel data has been saved")
 	}
 	tx.Commit()
 }
@@ -2800,7 +2799,7 @@ func insertCellreselgeran(eNodeBId string, baseName string, data []model.Cellres
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellreselgeran data has been saved")
+		//fmt.Println("[+] Cellreselgeran data has been saved")
 	}
 	tx.Commit()
 }
@@ -2824,7 +2823,7 @@ func insertCellreselutran(eNodeBId string, baseName string, data []model.Cellres
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellreselutran data has been saved")
+		//fmt.Println("[+] Cellreselutran data has been saved")
 	}
 	tx.Commit()
 }
@@ -2854,7 +2853,7 @@ func insertCellrfshutdown(eNodeBId string, baseName string, data []model.Cellrfs
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellrfshutdown data has been saved")
+		//fmt.Println("[+] Cellrfshutdown data has been saved")
 	}
 	tx.Commit()
 }
@@ -2892,7 +2891,7 @@ func insertCellricalgo(eNodeBId string, baseName string, data []model.Cellricalg
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellricalgo data has been saved")
+		//fmt.Println("[+] Cellricalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -2918,7 +2917,7 @@ func insertCellsel(eNodeBId string, baseName string, data []model.Cellsel) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellsel data has been saved")
+		//fmt.Println("[+] Cellsel data has been saved")
 	}
 	tx.Commit()
 }
@@ -2950,7 +2949,7 @@ func insertCellservicediffcfg(eNodeBId string, baseName string, data []model.Cel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellservicediffcfg data has been saved")
+		//fmt.Println("[+] Cellservicediffcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -2979,7 +2978,7 @@ func insertCellshutdown(eNodeBId string, baseName string, data []model.Cellshutd
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellshutdown data has been saved")
+		//fmt.Println("[+] Cellshutdown data has been saved")
 	}
 	tx.Commit()
 }
@@ -3029,7 +3028,7 @@ func insertCellsimap(eNodeBId string, baseName string, data []model.Cellsimap) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellsimap data has been saved")
+		//fmt.Println("[+] Cellsimap data has been saved")
 	}
 	tx.Commit()
 }
@@ -3053,7 +3052,7 @@ func insertCellsrlte(eNodeBId string, baseName string, data []model.Cellsrlte) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellsrlte data has been saved")
+		//fmt.Println("[+] Cellsrlte data has been saved")
 	}
 	tx.Commit()
 }
@@ -3074,7 +3073,7 @@ func insertCellsrsadaptivecfg(eNodeBId string, baseName string, data []model.Cel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellsrsadaptivecfg data has been saved")
+		//fmt.Println("[+] Cellsrsadaptivecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -3116,7 +3115,7 @@ func insertCellstandardqci(eNodeBId string, baseName string, data []model.Cellst
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellstandardqci data has been saved")
+		//fmt.Println("[+] Cellstandardqci data has been saved")
 	}
 	tx.Commit()
 }
@@ -3142,7 +3141,7 @@ func insertCellttibundlingalgo(eNodeBId string, baseName string, data []model.Ce
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellttibundlingalgo data has been saved")
+		//fmt.Println("[+] Cellttibundlingalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -3167,7 +3166,7 @@ func insertCellucionpuschpara(eNodeBId string, baseName string, data []model.Cel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellucionpuschpara data has been saved")
+		//fmt.Println("[+] Cellucionpuschpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -3194,7 +3193,7 @@ func insertCelluemeascontrolcfg(eNodeBId string, baseName string, data []model.C
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Celluemeascontrolcfg data has been saved")
+		//fmt.Println("[+] Celluemeascontrolcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -3218,7 +3217,7 @@ func insertCellulcompalgo(eNodeBId string, baseName string, data []model.Cellulc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellulcompalgo data has been saved")
+		//fmt.Println("[+] Cellulcompalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -3239,7 +3238,7 @@ func insertCellulicalgo(eNodeBId string, baseName string, data []model.Cellulica
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellulicalgo data has been saved")
+		//fmt.Println("[+] Cellulicalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -3260,7 +3259,7 @@ func insertCellulicic(eNodeBId string, baseName string, data []model.Cellulicic)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellulicic data has been saved")
+		//fmt.Println("[+] Cellulicic data has been saved")
 	}
 	tx.Commit()
 }
@@ -3281,7 +3280,7 @@ func insertCellulicicmcpara(eNodeBId string, baseName string, data []model.Cellu
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellulicicmcpara data has been saved")
+		//fmt.Println("[+] Cellulicicmcpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -3302,7 +3301,7 @@ func insertCellulmimoparacfg(eNodeBId string, baseName string, data []model.Cell
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellulmimoparacfg data has been saved")
+		//fmt.Println("[+] Cellulmimoparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -3334,7 +3333,7 @@ func insertCellulpccomm(eNodeBId string, baseName string, data []model.Cellulpcc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellulpccomm data has been saved")
+		//fmt.Println("[+] Cellulpccomm data has been saved")
 	}
 	tx.Commit()
 }
@@ -3359,7 +3358,7 @@ func insertCellulpcdedic(eNodeBId string, baseName string, data []model.Cellulpc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellulpcdedic data has been saved")
+		//fmt.Println("[+] Cellulpcdedic data has been saved")
 	}
 	tx.Commit()
 }
@@ -3460,7 +3459,7 @@ func insertCellulschalgo(eNodeBId string, baseName string, data []model.Cellulsc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellulschalgo data has been saved")
+		//fmt.Println("[+] Cellulschalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -3486,7 +3485,7 @@ func insertCellulunifiedolc(eNodeBId string, baseName string, data []model.Cellu
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellulunifiedolc data has been saved")
+		//fmt.Println("[+] Cellulunifiedolc data has been saved")
 	}
 	tx.Commit()
 }
@@ -3566,7 +3565,7 @@ func insertCellusparacfg(eNodeBId string, baseName string, data []model.Celluspa
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellusparacfg data has been saved")
+		//fmt.Println("[+] Cellusparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -3590,7 +3589,7 @@ func insertCellvms(eNodeBId string, baseName string, data []model.Cellvms) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellvms data has been saved")
+		//fmt.Println("[+] Cellvms data has been saved")
 	}
 	tx.Commit()
 }
@@ -3616,7 +3615,7 @@ func insertCellwttxparacfg(eNodeBId string, baseName string, data []model.Cellwt
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cellwttxparacfg data has been saved")
+		//fmt.Println("[+] Cellwttxparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -3638,7 +3637,7 @@ func insertCepucchcfg(eNodeBId string, baseName string, data []model.Cepucchcfg)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cepucchcfg data has been saved")
+		//fmt.Println("[+] Cepucchcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -3664,7 +3663,7 @@ func insertCerachcfg(eNodeBId string, baseName string, data []model.Cerachcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cerachcfg data has been saved")
+		//fmt.Println("[+] Cerachcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -3684,7 +3683,7 @@ func insertCertcfg(eNodeBId string, baseName string, data []model.Certcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Certcfg data has been saved")
+		//fmt.Println("[+] Certcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -3707,7 +3706,7 @@ func insertCertchktsk(eNodeBId string, baseName string, data []model.Certchktsk)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Certchktsk data has been saved")
+		//fmt.Println("[+] Certchktsk data has been saved")
 	}
 	tx.Commit()
 }
@@ -3730,7 +3729,7 @@ func insertCertdeploy(eNodeBId string, baseName string, data []model.Certdeploy)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Certdeploy data has been saved")
+		//fmt.Println("[+] Certdeploy data has been saved")
 	}
 	tx.Commit()
 }
@@ -3751,7 +3750,7 @@ func insertCertmk(eNodeBId string, baseName string, data []model.Certmk) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Certmk data has been saved")
+		//fmt.Println("[+] Certmk data has been saved")
 	}
 	tx.Commit()
 }
@@ -3782,7 +3781,7 @@ func insertCertreq(eNodeBId string, baseName string, data []model.Certreq) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Certreq data has been saved")
+		//fmt.Println("[+] Certreq data has been saved")
 	}
 	tx.Commit()
 }
@@ -3802,7 +3801,7 @@ func insertChk(eNodeBId string, baseName string, data []model.Chk) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Chk data has been saved")
+		//fmt.Println("[+] Chk data has been saved")
 	}
 	tx.Commit()
 }
@@ -3827,7 +3826,7 @@ func insertClkdetect(eNodeBId string, baseName string, data []model.Clkdetect) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Clkdetect data has been saved")
+		//fmt.Println("[+] Clkdetect data has been saved")
 	}
 	tx.Commit()
 }
@@ -3857,7 +3856,7 @@ func insertClzerobufferzone(eNodeBId string, baseName string, data []model.Clzer
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Clzerobufferzone data has been saved")
+		//fmt.Println("[+] Clzerobufferzone data has been saved")
 	}
 	tx.Commit()
 }
@@ -3884,7 +3883,7 @@ func insertCnoperator(eNodeBId string, baseName string, data []model.Cnoperator)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cnoperator data has been saved")
+		//fmt.Println("[+] Cnoperator data has been saved")
 	}
 	tx.Commit()
 }
@@ -3914,7 +3913,7 @@ func insertCnoperatorhocfg(eNodeBId string, baseName string, data []model.Cnoper
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cnoperatorhocfg data has been saved")
+		//fmt.Println("[+] Cnoperatorhocfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -3939,7 +3938,7 @@ func insertCnoperatorqcipara(eNodeBId string, baseName string, data []model.Cnop
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cnoperatorqcipara data has been saved")
+		//fmt.Println("[+] Cnoperatorqcipara data has been saved")
 	}
 	tx.Commit()
 }
@@ -3964,7 +3963,7 @@ func insertCnoperatorstandardqci(eNodeBId string, baseName string, data []model.
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cnoperatorstandardqci data has been saved")
+		//fmt.Println("[+] Cnoperatorstandardqci data has been saved")
 	}
 	tx.Commit()
 }
@@ -3988,7 +3987,7 @@ func insertCnoperatorta(eNodeBId string, baseName string, data []model.Cnoperato
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cnoperatorta data has been saved")
+		//fmt.Println("[+] Cnoperatorta data has been saved")
 	}
 	tx.Commit()
 }
@@ -4011,7 +4010,7 @@ func insertCountercheckpara(eNodeBId string, baseName string, data []model.Count
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Countercheckpara data has been saved")
+		//fmt.Println("[+] Countercheckpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -4036,7 +4035,7 @@ func insertCpbearer(eNodeBId string, baseName string, data []model.Cpbearer) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cpbearer data has been saved")
+		//fmt.Println("[+] Cpbearer data has been saved")
 	}
 	tx.Commit()
 }
@@ -4062,7 +4061,7 @@ func insertCpriport(eNodeBId string, baseName string, data []model.Cpriport) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cpriport data has been saved")
+		//fmt.Println("[+] Cpriport data has been saved")
 	}
 	tx.Commit()
 }
@@ -4082,7 +4081,7 @@ func insertCpswitch(eNodeBId string, baseName string, data []model.Cpswitch) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cpswitch data has been saved")
+		//fmt.Println("[+] Cpswitch data has been saved")
 	}
 	tx.Commit()
 }
@@ -4107,7 +4106,7 @@ func insertCqiadaptivecfg(eNodeBId string, baseName string, data []model.Cqiadap
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cqiadaptivecfg data has been saved")
+		//fmt.Println("[+] Cqiadaptivecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -4127,7 +4126,7 @@ func insertCrlpolicy(eNodeBId string, baseName string, data []model.Crlpolicy) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Crlpolicy data has been saved")
+		//fmt.Println("[+] Crlpolicy data has been saved")
 	}
 	tx.Commit()
 }
@@ -4157,7 +4156,7 @@ func insertCsfallbackblindhocfg(eNodeBId string, baseName string, data []model.C
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Csfallbackblindhocfg data has been saved")
+		//fmt.Println("[+] Csfallbackblindhocfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -4187,7 +4186,7 @@ func insertCsfallbackho(eNodeBId string, baseName string, data []model.Csfallbac
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Csfallbackho data has been saved")
+		//fmt.Println("[+] Csfallbackho data has been saved")
 	}
 	tx.Commit()
 }
@@ -4211,7 +4210,7 @@ func insertCsfallbackpolicycfg(eNodeBId string, baseName string, data []model.Cs
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Csfallbackpolicycfg data has been saved")
+		//fmt.Println("[+] Csfallbackpolicycfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -4242,7 +4241,7 @@ func insertCspcalgopara(eNodeBId string, baseName string, data []model.Cspcalgop
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Cspcalgopara data has been saved")
+		//fmt.Println("[+] Cspcalgopara data has been saved")
 	}
 	tx.Commit()
 }
@@ -4272,7 +4271,7 @@ func insertDevip(eNodeBId string, baseName string, data []model.Devip) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Devip data has been saved")
+		//fmt.Println("[+] Devip data has been saved")
 	}
 	tx.Commit()
 }
@@ -4292,7 +4291,7 @@ func insertDhcprelayswitch(eNodeBId string, baseName string, data []model.Dhcpre
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Dhcprelayswitch data has been saved")
+		//fmt.Println("[+] Dhcprelayswitch data has been saved")
 	}
 	tx.Commit()
 }
@@ -4313,7 +4312,7 @@ func insertDhcpsvrip(eNodeBId string, baseName string, data []model.Dhcpsvrip) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Dhcpsvrip data has been saved")
+		//fmt.Println("[+] Dhcpsvrip data has been saved")
 	}
 	tx.Commit()
 }
@@ -4335,7 +4334,7 @@ func insertDhcpsw(eNodeBId string, baseName string, data []model.Dhcpsw) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Dhcpsw data has been saved")
+		//fmt.Println("[+] Dhcpsw data has been saved")
 	}
 	tx.Commit()
 }
@@ -4359,7 +4358,7 @@ func insertDifpri(eNodeBId string, baseName string, data []model.Difpri) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Difpri data has been saved")
+		//fmt.Println("[+] Difpri data has been saved")
 	}
 	tx.Commit()
 }
@@ -4381,7 +4380,7 @@ func insertDistbasedho(eNodeBId string, baseName string, data []model.Distbasedh
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Distbasedho data has been saved")
+		//fmt.Println("[+] Distbasedho data has been saved")
 	}
 	tx.Commit()
 }
@@ -4417,7 +4416,7 @@ func insertDlflowctrlpara(eNodeBId string, baseName string, data []model.Dlflowc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Dlflowctrlpara data has been saved")
+		//fmt.Println("[+] Dlflowctrlpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -4448,7 +4447,7 @@ func insertDrx(eNodeBId string, baseName string, data []model.Drx) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Drx data has been saved")
+		//fmt.Println("[+] Drx data has been saved")
 	}
 	tx.Commit()
 }
@@ -4480,7 +4479,7 @@ func insertDrxparagroup(eNodeBId string, baseName string, data []model.Drxparagr
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Drxparagroup data has been saved")
+		//fmt.Println("[+] Drxparagroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -4502,7 +4501,7 @@ func insertDscpmap(eNodeBId string, baseName string, data []model.Dscpmap) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Dscpmap data has been saved")
+		//fmt.Println("[+] Dscpmap data has been saved")
 	}
 	tx.Commit()
 }
@@ -4531,7 +4530,7 @@ func insertE1t1(eNodeBId string, baseName string, data []model.E1t1) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] E1t1 data has been saved")
+		//fmt.Println("[+] E1t1 data has been saved")
 	}
 	tx.Commit()
 }
@@ -4554,7 +4553,7 @@ func insertE1t1bear(eNodeBId string, baseName string, data []model.E1t1bear) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] E1t1bear data has been saved")
+		//fmt.Println("[+] E1t1bear data has been saved")
 	}
 	tx.Commit()
 }
@@ -4574,7 +4573,7 @@ func insertE1t1ber(eNodeBId string, baseName string, data []model.E1t1ber) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] E1t1ber data has been saved")
+		//fmt.Println("[+] E1t1ber data has been saved")
 	}
 	tx.Commit()
 }
@@ -4595,7 +4594,7 @@ func insertEmc(eNodeBId string, baseName string, data []model.Emc) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Emc data has been saved")
+		//fmt.Println("[+] Emc data has been saved")
 	}
 	tx.Commit()
 }
@@ -4627,7 +4626,7 @@ func insertEmu(eNodeBId string, baseName string, data []model.Emu) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Emu data has been saved")
+		//fmt.Println("[+] Emu data has been saved")
 	}
 	tx.Commit()
 }
@@ -4671,7 +4670,7 @@ func insertEnbcelloprsvdpara(eNodeBId string, baseName string, data []model.Enbc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enbcelloprsvdpara data has been saved")
+		//fmt.Println("[+] Enbcelloprsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -4715,7 +4714,7 @@ func insertEnbcellqcirsvdpara(eNodeBId string, baseName string, data []model.Enb
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enbcellqcirsvdpara data has been saved")
+		//fmt.Println("[+] Enbcellqcirsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -4851,7 +4850,7 @@ func insertEnbcellrsvdpara(eNodeBId string, baseName string, data []model.Enbcel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enbcellrsvdpara data has been saved")
+		//fmt.Println("[+] Enbcellrsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -4895,7 +4894,7 @@ func insertEnbcnopqcirsvdpara(eNodeBId string, baseName string, data []model.Enb
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enbcnopqcirsvdpara data has been saved")
+		//fmt.Println("[+] Enbcnopqcirsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -4938,7 +4937,7 @@ func insertEnbcnoprsvdpara(eNodeBId string, baseName string, data []model.Enbcno
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enbcnoprsvdpara data has been saved")
+		//fmt.Println("[+] Enbcnoprsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -4962,7 +4961,7 @@ func insertEnblicensealmthd(eNodeBId string, baseName string, data []model.Enbli
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enblicensealmthd data has been saved")
+		//fmt.Println("[+] Enblicensealmthd data has been saved")
 	}
 	tx.Commit()
 }
@@ -5006,7 +5005,7 @@ func insertEnbqcirsvdpara(eNodeBId string, baseName string, data []model.Enbqcir
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enbqcirsvdpara data has been saved")
+		//fmt.Println("[+] Enbqcirsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -5071,7 +5070,7 @@ func insertEnbrsvdpara(eNodeBId string, baseName string, data []model.Enbrsvdpar
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enbrsvdpara data has been saved")
+		//fmt.Println("[+] Enbrsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -5091,7 +5090,7 @@ func insertEnergycon(eNodeBId string, baseName string, data []model.Energycon) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Energycon data has been saved")
+		//fmt.Println("[+] Energycon data has been saved")
 	}
 	tx.Commit()
 }
@@ -5171,7 +5170,7 @@ func insertEnodebalgoswitch(eNodeBId string, baseName string, data []model.Enode
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebalgoswitch data has been saved")
+		//fmt.Println("[+] Enodebalgoswitch data has been saved")
 	}
 	tx.Commit()
 }
@@ -5193,7 +5192,7 @@ func insertEnodebalmcfg(eNodeBId string, baseName string, data []model.Enodebalm
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebalmcfg data has been saved")
+		//fmt.Println("[+] Enodebalmcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -5216,7 +5215,7 @@ func insertEnodebautopoweroff(eNodeBId string, baseName string, data []model.Eno
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebautopoweroff data has been saved")
+		//fmt.Println("[+] Enodebautopoweroff data has been saved")
 	}
 	tx.Commit()
 }
@@ -5241,7 +5240,7 @@ func insertEnodebchroutputctrl(eNodeBId string, baseName string, data []model.En
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebchroutputctrl data has been saved")
+		//fmt.Println("[+] Enodebchroutputctrl data has been saved")
 	}
 	tx.Commit()
 }
@@ -5265,7 +5264,7 @@ func insertEnodebciphercap(eNodeBId string, baseName string, data []model.Enodeb
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebciphercap data has been saved")
+		//fmt.Println("[+] Enodebciphercap data has been saved")
 	}
 	tx.Commit()
 }
@@ -5305,7 +5304,7 @@ func insertEnodebconnstatetimer(eNodeBId string, baseName string, data []model.E
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebconnstatetimer data has been saved")
+		//fmt.Println("[+] Enodebconnstatetimer data has been saved")
 	}
 	tx.Commit()
 }
@@ -5331,7 +5330,7 @@ func insertEnodebfddbbres(eNodeBId string, baseName string, data []model.Enodebf
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebfddbbres data has been saved")
+		//fmt.Println("[+] Enodebfddbbres data has been saved")
 	}
 	tx.Commit()
 }
@@ -5357,7 +5356,7 @@ func insertEnodebflowctrlpara(eNodeBId string, baseName string, data []model.Eno
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebflowctrlpara data has been saved")
+		//fmt.Println("[+] Enodebflowctrlpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -5379,7 +5378,7 @@ func insertEnodebframeoffset(eNodeBId string, baseName string, data []model.Enod
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebframeoffset data has been saved")
+		//fmt.Println("[+] Enodebframeoffset data has been saved")
 	}
 	tx.Commit()
 }
@@ -5407,7 +5406,7 @@ func insertEnodebfunction(eNodeBId string, baseName string, data []model.Enodebf
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebfunction data has been saved")
+		//fmt.Println("[+] Enodebfunction data has been saved")
 	}
 	tx.Commit()
 }
@@ -5431,7 +5430,7 @@ func insertEnodebintegritycap(eNodeBId string, baseName string, data []model.Eno
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebintegritycap data has been saved")
+		//fmt.Println("[+] Enodebintegritycap data has been saved")
 	}
 	tx.Commit()
 }
@@ -5456,7 +5455,7 @@ func insertEnodebmlb(eNodeBId string, baseName string, data []model.Enodebmlb) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebmlb data has been saved")
+		//fmt.Println("[+] Enodebmlb data has been saved")
 	}
 	tx.Commit()
 }
@@ -5477,7 +5476,7 @@ func insertEnodebnbpara(eNodeBId string, baseName string, data []model.Enodebnbp
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebnbpara data has been saved")
+		//fmt.Println("[+] Enodebnbpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -5504,7 +5503,7 @@ func insertEnodebresmodealgo(eNodeBId string, baseName string, data []model.Enod
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebresmodealgo data has been saved")
+		//fmt.Println("[+] Enodebresmodealgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -5525,7 +5524,7 @@ func insertEnodebsharingmode(eNodeBId string, baseName string, data []model.Enod
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebsharingmode data has been saved")
+		//fmt.Println("[+] Enodebsharingmode data has been saved")
 	}
 	tx.Commit()
 }
@@ -5546,7 +5545,7 @@ func insertEnodebsondbcfg(eNodeBId string, baseName string, data []model.Enodebs
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebsondbcfg data has been saved")
+		//fmt.Println("[+] Enodebsondbcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -5572,7 +5571,7 @@ func insertEnodebtddbbres(eNodeBId string, baseName string, data []model.Enodebt
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebtddbbres data has been saved")
+		//fmt.Println("[+] Enodebtddbbres data has been saved")
 	}
 	tx.Commit()
 }
@@ -5594,7 +5593,7 @@ func insertEnodebtgalgcfg(eNodeBId string, baseName string, data []model.Enodebt
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebtgalgcfg data has been saved")
+		//fmt.Println("[+] Enodebtgalgcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -5624,7 +5623,7 @@ func insertEnodebusparacfg(eNodeBId string, baseName string, data []model.Enodeb
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Enodebusparacfg data has been saved")
+		//fmt.Println("[+] Enodebusparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -5655,7 +5654,7 @@ func insertEpgroup(eNodeBId string, baseName string, data []model.Epgroup) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Epgroup data has been saved")
+		//fmt.Println("[+] Epgroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -5696,7 +5695,7 @@ func insertEquipment(eNodeBId string, baseName string, data []model.Equipment) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Equipment data has been saved")
+		//fmt.Println("[+] Equipment data has been saved")
 	}
 	tx.Commit()
 }
@@ -5733,7 +5732,7 @@ func insertEthport(eNodeBId string, baseName string, data []model.Ethport) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ethport data has been saved")
+		//fmt.Println("[+] Ethport data has been saved")
 	}
 	tx.Commit()
 }
@@ -5754,7 +5753,7 @@ func insertEucellalmcfg(eNodeBId string, baseName string, data []model.Eucellalm
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eucellalmcfg data has been saved")
+		//fmt.Println("[+] Eucellalmcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -5786,7 +5785,7 @@ func insertEucellsectoreqm(eNodeBId string, baseName string, data []model.Eucell
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eucellsectoreqm data has been saved")
+		//fmt.Println("[+] Eucellsectoreqm data has been saved")
 	}
 	tx.Commit()
 }
@@ -5808,7 +5807,7 @@ func insertEucommcellsectoreqm(eNodeBId string, baseName string, data []model.Eu
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eucommcellsectoreqm data has been saved")
+		//fmt.Println("[+] Eucommcellsectoreqm data has been saved")
 	}
 	tx.Commit()
 }
@@ -5831,7 +5830,7 @@ func insertEucoschcfg(eNodeBId string, baseName string, data []model.Eucoschcfg)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eucoschcfg data has been saved")
+		//fmt.Println("[+] Eucoschcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -5855,7 +5854,7 @@ func insertEucoschdlcompcfg(eNodeBId string, baseName string, data []model.Eucos
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eucoschdlcompcfg data has been saved")
+		//fmt.Println("[+] Eucoschdlcompcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -5876,7 +5875,7 @@ func insertEucoschulicscfg(eNodeBId string, baseName string, data []model.Eucosc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eucoschulicscfg data has been saved")
+		//fmt.Println("[+] Eucoschulicscfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -5898,7 +5897,7 @@ func insertEuepcsec(eNodeBId string, baseName string, data []model.Euepcsec) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Euepcsec data has been saved")
+		//fmt.Println("[+] Euepcsec data has been saved")
 	}
 	tx.Commit()
 }
@@ -5937,7 +5936,7 @@ func insertEutranexternalcell(eNodeBId string, baseName string, data []model.Eut
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eutranexternalcell data has been saved")
+		//fmt.Println("[+] Eutranexternalcell data has been saved")
 	}
 	tx.Commit()
 }
@@ -5976,7 +5975,7 @@ func insertEutraninterfreqncell(eNodeBId string, baseName string, data []model.E
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eutraninterfreqncell data has been saved")
+		//fmt.Println("[+] Eutraninterfreqncell data has been saved")
 	}
 	tx.Commit()
 }
@@ -6054,7 +6053,7 @@ func insertEutraninternfreq(eNodeBId string, baseName string, data []model.Eutra
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eutraninternfreq data has been saved")
+		//fmt.Println("[+] Eutraninternfreq data has been saved")
 	}
 	tx.Commit()
 }
@@ -6092,7 +6091,7 @@ func insertEutranintrafreqncell(eNodeBId string, baseName string, data []model.E
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Eutranintrafreqncell data has been saved")
+		//fmt.Println("[+] Eutranintrafreqncell data has been saved")
 	}
 	tx.Commit()
 }
@@ -6113,7 +6112,7 @@ func insertEuulcoschcfg(eNodeBId string, baseName string, data []model.Euulcosch
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Euulcoschcfg data has been saved")
+		//fmt.Println("[+] Euulcoschcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -6150,7 +6149,7 @@ func insertExtendedqci(eNodeBId string, baseName string, data []model.Extendedqc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Extendedqci data has been saved")
+		//fmt.Println("[+] Extendedqci data has been saved")
 	}
 	tx.Commit()
 }
@@ -6173,7 +6172,7 @@ func insertFddresmode(eNodeBId string, baseName string, data []model.Fddresmode)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Fddresmode data has been saved")
+		//fmt.Println("[+] Fddresmode data has been saved")
 	}
 	tx.Commit()
 }
@@ -6193,7 +6192,7 @@ func insertFltcorrenablecfg(eNodeBId string, baseName string, data []model.Fltco
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Fltcorrenablecfg data has been saved")
+		//fmt.Println("[+] Fltcorrenablecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -6222,7 +6221,7 @@ func insertFmu(eNodeBId string, baseName string, data []model.Fmu) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Fmu data has been saved")
+		//fmt.Println("[+] Fmu data has been saved")
 	}
 	tx.Commit()
 }
@@ -6245,7 +6244,7 @@ func insertFtpclt(eNodeBId string, baseName string, data []model.Ftpclt) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ftpclt data has been saved")
+		//fmt.Println("[+] Ftpclt data has been saved")
 	}
 	tx.Commit()
 }
@@ -6268,7 +6267,7 @@ func insertFtpcltport(eNodeBId string, baseName string, data []model.Ftpcltport)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ftpcltport data has been saved")
+		//fmt.Println("[+] Ftpcltport data has been saved")
 	}
 	tx.Commit()
 }
@@ -6290,7 +6289,7 @@ func insertGbtsabiscp(eNodeBId string, baseName string, data []model.Gbtsabiscp)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gbtsabiscp data has been saved")
+		//fmt.Println("[+] Gbtsabiscp data has been saved")
 	}
 	tx.Commit()
 }
@@ -6316,7 +6315,7 @@ func insertGbtsbbres(eNodeBId string, baseName string, data []model.Gbtsbbres) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gbtsbbres data has been saved")
+		//fmt.Println("[+] Gbtsbbres data has been saved")
 	}
 	tx.Commit()
 }
@@ -6338,7 +6337,7 @@ func insertGbtsenergymgtpara(eNodeBId string, baseName string, data []model.Gbts
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gbtsenergymgtpara data has been saved")
+		//fmt.Println("[+] Gbtsenergymgtpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -6365,7 +6364,7 @@ func insertGbtsfunction(eNodeBId string, baseName string, data []model.Gbtsfunct
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gbtsfunction data has been saved")
+		//fmt.Println("[+] Gbtsfunction data has been saved")
 	}
 	tx.Commit()
 }
@@ -6386,7 +6385,7 @@ func insertGbtsglobalpara(eNodeBId string, baseName string, data []model.Gbtsglo
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gbtsglobalpara data has been saved")
+		//fmt.Println("[+] Gbtsglobalpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -6407,7 +6406,7 @@ func insertGbtspath(eNodeBId string, baseName string, data []model.Gbtspath) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gbtspath data has been saved")
+		//fmt.Println("[+] Gbtspath data has been saved")
 	}
 	tx.Commit()
 }
@@ -6444,7 +6443,7 @@ func insertGeranexternalcell(eNodeBId string, baseName string, data []model.Gera
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Geranexternalcell data has been saved")
+		//fmt.Println("[+] Geranexternalcell data has been saved")
 	}
 	tx.Commit()
 }
@@ -6466,7 +6465,7 @@ func insertGeraninterfcfg(eNodeBId string, baseName string, data []model.Geranin
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Geraninterfcfg data has been saved")
+		//fmt.Println("[+] Geraninterfcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -6499,7 +6498,7 @@ func insertGeranncell(eNodeBId string, baseName string, data []model.Geranncell)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Geranncell data has been saved")
+		//fmt.Println("[+] Geranncell data has been saved")
 	}
 	tx.Commit()
 }
@@ -6537,7 +6536,7 @@ func insertGerannfreqgroup(eNodeBId string, baseName string, data []model.Gerann
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gerannfreqgroup data has been saved")
+		//fmt.Println("[+] Gerannfreqgroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -6559,7 +6558,7 @@ func insertGerannfreqgrouparfcn(eNodeBId string, baseName string, data []model.G
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gerannfreqgrouparfcn data has been saved")
+		//fmt.Println("[+] Gerannfreqgrouparfcn data has been saved")
 	}
 	tx.Commit()
 }
@@ -6665,7 +6664,7 @@ func insertGlobalprocswitch(eNodeBId string, baseName string, data []model.Globa
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Globalprocswitch data has been saved")
+		//fmt.Println("[+] Globalprocswitch data has been saved")
 	}
 	tx.Commit()
 }
@@ -6691,7 +6690,7 @@ func insertGlocell(eNodeBId string, baseName string, data []model.Glocell) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Glocell data has been saved")
+		//fmt.Println("[+] Glocell data has been saved")
 	}
 	tx.Commit()
 }
@@ -6717,7 +6716,7 @@ func insertGlocellalgpara(eNodeBId string, baseName string, data []model.Glocell
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Glocellalgpara data has been saved")
+		//fmt.Println("[+] Glocellalgpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -6738,7 +6737,7 @@ func insertGlocellenergymgtpara(eNodeBId string, baseName string, data []model.G
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Glocellenergymgtpara data has been saved")
+		//fmt.Println("[+] Glocellenergymgtpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -6769,7 +6768,7 @@ func insertGlocellothpara(eNodeBId string, baseName string, data []model.Glocell
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Glocellothpara data has been saved")
+		//fmt.Println("[+] Glocellothpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -6801,7 +6800,7 @@ func insertGlocellrlalmpara(eNodeBId string, baseName string, data []model.Gloce
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Glocellrlalmpara data has been saved")
+		//fmt.Println("[+] Glocellrlalmpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -6827,7 +6826,7 @@ func insertGlocellrsvdpara(eNodeBId string, baseName string, data []model.Glocel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Glocellrsvdpara data has been saved")
+		//fmt.Println("[+] Glocellrsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -6861,7 +6860,7 @@ func insertGps(eNodeBId string, baseName string, data []model.Gps) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gps data has been saved")
+		//fmt.Println("[+] Gps data has been saved")
 	}
 	tx.Commit()
 }
@@ -6887,7 +6886,7 @@ func insertGtpu(eNodeBId string, baseName string, data []model.Gtpu) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gtpu data has been saved")
+		//fmt.Println("[+] Gtpu data has been saved")
 	}
 	tx.Commit()
 }
@@ -6929,7 +6928,7 @@ func insertGtranspara(eNodeBId string, baseName string, data []model.Gtranspara)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gtranspara data has been saved")
+		//fmt.Println("[+] Gtranspara data has been saved")
 	}
 	tx.Commit()
 }
@@ -6964,7 +6963,7 @@ func insertGtransparagw(eNodeBId string, baseName string, data []model.Gtranspar
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gtransparagw data has been saved")
+		//fmt.Println("[+] Gtransparagw data has been saved")
 	}
 	tx.Commit()
 }
@@ -6990,7 +6989,7 @@ func insertGtrxgroup(eNodeBId string, baseName string, data []model.Gtrxgroup) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gtrxgroup data has been saved")
+		//fmt.Println("[+] Gtrxgroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -7012,7 +7011,7 @@ func insertGtrxgroupsectoreqm(eNodeBId string, baseName string, data []model.Gtr
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Gtrxgroupsectoreqm data has been saved")
+		//fmt.Println("[+] Gtrxgroupsectoreqm data has been saved")
 	}
 	tx.Commit()
 }
@@ -7042,7 +7041,7 @@ func insertHighspdadaptionpara(eNodeBId string, baseName string, data []model.Hi
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Highspdadaptionpara data has been saved")
+		//fmt.Println("[+] Highspdadaptionpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -7075,7 +7074,7 @@ func insertHomeascomm(eNodeBId string, baseName string, data []model.Homeascomm)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Homeascomm data has been saved")
+		//fmt.Println("[+] Homeascomm data has been saved")
 	}
 	tx.Commit()
 }
@@ -7104,7 +7103,7 @@ func insertHtcdpa(eNodeBId string, baseName string, data []model.Htcdpa) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Htcdpa data has been saved")
+		//fmt.Println("[+] Htcdpa data has been saved")
 	}
 	tx.Commit()
 }
@@ -7133,7 +7132,7 @@ func insertIkecfg(eNodeBId string, baseName string, data []model.Ikecfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ikecfg data has been saved")
+		//fmt.Println("[+] Ikecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -7164,7 +7163,7 @@ func insertImagrp(eNodeBId string, baseName string, data []model.Imagrp) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Imagrp data has been saved")
+		//fmt.Println("[+] Imagrp data has been saved")
 	}
 	tx.Commit()
 }
@@ -7190,7 +7189,7 @@ func insertImalnk(eNodeBId string, baseName string, data []model.Imalnk) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Imalnk data has been saved")
+		//fmt.Println("[+] Imalnk data has been saved")
 	}
 	tx.Commit()
 }
@@ -7212,7 +7211,7 @@ func insertIngchktsk(eNodeBId string, baseName string, data []model.Ingchktsk) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ingchktsk data has been saved")
+		//fmt.Println("[+] Ingchktsk data has been saved")
 	}
 	tx.Commit()
 }
@@ -7266,7 +7265,7 @@ func insertInterfreqhogroup(eNodeBId string, baseName string, data []model.Inter
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Interfreqhogroup data has been saved")
+		//fmt.Println("[+] Interfreqhogroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -7300,7 +7299,7 @@ func insertInterratcellshutdown(eNodeBId string, baseName string, data []model.I
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Interratcellshutdown data has been saved")
+		//fmt.Println("[+] Interratcellshutdown data has been saved")
 	}
 	tx.Commit()
 }
@@ -7325,7 +7324,7 @@ func insertInterrathocdma1xrttgroup(eNodeBId string, baseName string, data []mod
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Interrathocdma1xrttgroup data has been saved")
+		//fmt.Println("[+] Interrathocdma1xrttgroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -7354,7 +7353,7 @@ func insertInterrathocdmahrpdgroup(eNodeBId string, baseName string, data []mode
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Interrathocdmahrpdgroup data has been saved")
+		//fmt.Println("[+] Interrathocdmahrpdgroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -7398,7 +7397,7 @@ func insertInterrathocomm(eNodeBId string, baseName string, data []model.Interra
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Interrathocomm data has been saved")
+		//fmt.Println("[+] Interrathocomm data has been saved")
 	}
 	tx.Commit()
 }
@@ -7431,7 +7430,7 @@ func insertInterrathocommgroup(eNodeBId string, baseName string, data []model.In
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Interrathocommgroup data has been saved")
+		//fmt.Println("[+] Interrathocommgroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -7456,7 +7455,7 @@ func insertInterrathogerangroup(eNodeBId string, baseName string, data []model.I
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Interrathogerangroup data has been saved")
+		//fmt.Println("[+] Interrathogerangroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -7484,7 +7483,7 @@ func insertInterrathoutrangroup(eNodeBId string, baseName string, data []model.I
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Interrathoutrangroup data has been saved")
+		//fmt.Println("[+] Interrathoutrangroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -7512,7 +7511,7 @@ func insertInterratpolicycfggroup(eNodeBId string, baseName string, data []model
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Interratpolicycfggroup data has been saved")
+		//fmt.Println("[+] Interratpolicycfggroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -7538,7 +7537,7 @@ func insertIntrafreqhogroup(eNodeBId string, baseName string, data []model.Intra
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Intrafreqhogroup data has been saved")
+		//fmt.Println("[+] Intrafreqhogroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -7571,7 +7570,7 @@ func insertIntrarathocomm(eNodeBId string, baseName string, data []model.Intrara
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Intrarathocomm data has been saved")
+		//fmt.Println("[+] Intrarathocomm data has been saved")
 	}
 	tx.Commit()
 }
@@ -7594,7 +7593,7 @@ func insertIopscfg(eNodeBId string, baseName string, data []model.Iopscfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Iopscfg data has been saved")
+		//fmt.Println("[+] Iopscfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -7642,7 +7641,7 @@ func insertIpclklnk(eNodeBId string, baseName string, data []model.Ipclklnk) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ipclklnk data has been saved")
+		//fmt.Println("[+] Ipclklnk data has been saved")
 	}
 	tx.Commit()
 }
@@ -7666,7 +7665,7 @@ func insertIpguard(eNodeBId string, baseName string, data []model.Ipguard) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ipguard data has been saved")
+		//fmt.Println("[+] Ipguard data has been saved")
 	}
 	tx.Commit()
 }
@@ -7702,7 +7701,7 @@ func insertIppath(eNodeBId string, baseName string, data []model.Ippath) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ippath data has been saved")
+		//fmt.Println("[+] Ippath data has been saved")
 	}
 	tx.Commit()
 }
@@ -7730,7 +7729,7 @@ func insertIppmsession(eNodeBId string, baseName string, data []model.Ippmsessio
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ippmsession data has been saved")
+		//fmt.Println("[+] Ippmsession data has been saved")
 	}
 	tx.Commit()
 }
@@ -7762,7 +7761,7 @@ func insertIprt(eNodeBId string, baseName string, data []model.Iprt) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Iprt data has been saved")
+		//fmt.Println("[+] Iprt data has been saved")
 	}
 	tx.Commit()
 }
@@ -7785,7 +7784,7 @@ func insertIratncellclassmgt(eNodeBId string, baseName string, data []model.Irat
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Iratncellclassmgt data has been saved")
+		//fmt.Println("[+] Iratncellclassmgt data has been saved")
 	}
 	tx.Commit()
 }
@@ -7809,7 +7808,7 @@ func insertIub(eNodeBId string, baseName string, data []model.Iub) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Iub data has been saved")
+		//fmt.Println("[+] Iub data has been saved")
 	}
 	tx.Commit()
 }
@@ -7833,7 +7832,7 @@ func insertIubcp(eNodeBId string, baseName string, data []model.Iubcp) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Iubcp data has been saved")
+		//fmt.Println("[+] Iubcp data has been saved")
 	}
 	tx.Commit()
 }
@@ -7857,7 +7856,7 @@ func insertLansw(eNodeBId string, baseName string, data []model.Lansw) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lansw data has been saved")
+		//fmt.Println("[+] Lansw data has been saved")
 	}
 	tx.Commit()
 }
@@ -7879,7 +7878,7 @@ func insertLanswitchport(eNodeBId string, baseName string, data []model.Lanswitc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lanswitchport data has been saved")
+		//fmt.Println("[+] Lanswitchport data has been saved")
 	}
 	tx.Commit()
 }
@@ -7900,7 +7899,7 @@ func insertLicensecontrolstrategy(eNodeBId string, baseName string, data []model
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Licensecontrolstrategy data has been saved")
+		//fmt.Println("[+] Licensecontrolstrategy data has been saved")
 	}
 	tx.Commit()
 }
@@ -7922,7 +7921,7 @@ func insertLicratio(eNodeBId string, baseName string, data []model.Licratio) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Licratio data has been saved")
+		//fmt.Println("[+] Licratio data has been saved")
 	}
 	tx.Commit()
 }
@@ -7948,7 +7947,7 @@ func insertLineclk(eNodeBId string, baseName string, data []model.Lineclk) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lineclk data has been saved")
+		//fmt.Println("[+] Lineclk data has been saved")
 	}
 	tx.Commit()
 }
@@ -7973,7 +7972,7 @@ func insertLioptatomrule(eNodeBId string, baseName string, data []model.Lioptato
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lioptatomrule data has been saved")
+		//fmt.Println("[+] Lioptatomrule data has been saved")
 	}
 	tx.Commit()
 }
@@ -7995,7 +7994,7 @@ func insertLioptfeature(eNodeBId string, baseName string, data []model.Lioptfeat
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lioptfeature data has been saved")
+		//fmt.Println("[+] Lioptfeature data has been saved")
 	}
 	tx.Commit()
 }
@@ -8019,7 +8018,7 @@ func insertLioptfunction(eNodeBId string, baseName string, data []model.Lioptfun
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lioptfunction data has been saved")
+		//fmt.Println("[+] Lioptfunction data has been saved")
 	}
 	tx.Commit()
 }
@@ -8048,7 +8047,7 @@ func insertLioptrule(eNodeBId string, baseName string, data []model.Lioptrule) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lioptrule data has been saved")
+		//fmt.Println("[+] Lioptrule data has been saved")
 	}
 	tx.Commit()
 }
@@ -8071,7 +8070,7 @@ func insertLioptrulemember(eNodeBId string, baseName string, data []model.Lioptr
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lioptrulemember data has been saved")
+		//fmt.Println("[+] Lioptrulemember data has been saved")
 	}
 	tx.Commit()
 }
@@ -8096,7 +8095,7 @@ func insertLldpglobal(eNodeBId string, baseName string, data []model.Lldpglobal)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lldpglobal data has been saved")
+		//fmt.Println("[+] Lldpglobal data has been saved")
 	}
 	tx.Commit()
 }
@@ -8118,7 +8117,7 @@ func insertLocalethport(eNodeBId string, baseName string, data []model.Localethp
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Localethport data has been saved")
+		//fmt.Println("[+] Localethport data has been saved")
 	}
 	tx.Commit()
 }
@@ -8139,7 +8138,7 @@ func insertLocalip(eNodeBId string, baseName string, data []model.Localip) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Localip data has been saved")
+		//fmt.Println("[+] Localip data has been saved")
 	}
 	tx.Commit()
 }
@@ -8160,7 +8159,7 @@ func insertLocalip6(eNodeBId string, baseName string, data []model.Localip6) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Localip6 data has been saved")
+		//fmt.Println("[+] Localip6 data has been saved")
 	}
 	tx.Commit()
 }
@@ -8185,7 +8184,7 @@ func insertLocalwap(eNodeBId string, baseName string, data []model.Localwap) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Localwap data has been saved")
+		//fmt.Println("[+] Localwap data has been saved")
 	}
 	tx.Commit()
 }
@@ -8221,7 +8220,7 @@ func insertLocation(eNodeBId string, baseName string, data []model.Location) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Location data has been saved")
+		//fmt.Println("[+] Location data has been saved")
 	}
 	tx.Commit()
 }
@@ -8249,7 +8248,7 @@ func insertLwamgtcfg(eNodeBId string, baseName string, data []model.Lwamgtcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Lwamgtcfg data has been saved")
+		//fmt.Println("[+] Lwamgtcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -8273,7 +8272,7 @@ func insertMainsalarmbind(eNodeBId string, baseName string, data []model.Mainsal
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Mainsalarmbind data has been saved")
+		//fmt.Println("[+] Mainsalarmbind data has been saved")
 	}
 	tx.Commit()
 }
@@ -8293,7 +8292,7 @@ func insertManresalmrpt(eNodeBId string, baseName string, data []model.Manresalm
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Manresalmrpt data has been saved")
+		//fmt.Println("[+] Manresalmrpt data has been saved")
 	}
 	tx.Commit()
 }
@@ -8316,7 +8315,7 @@ func insertMbmspara(eNodeBId string, baseName string, data []model.Mbmspara) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Mbmspara data has been saved")
+		//fmt.Println("[+] Mbmspara data has been saved")
 	}
 	tx.Commit()
 }
@@ -8338,7 +8337,7 @@ func insertMmefeaturecfg(eNodeBId string, baseName string, data []model.Mmefeatu
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Mmefeaturecfg data has been saved")
+		//fmt.Println("[+] Mmefeaturecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -8364,7 +8363,7 @@ func insertMpt(eNodeBId string, baseName string, data []model.Mpt) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Mpt data has been saved")
+		//fmt.Println("[+] Mpt data has been saved")
 	}
 	tx.Commit()
 }
@@ -8386,7 +8385,7 @@ func insertMptresassignment(eNodeBId string, baseName string, data []model.Mptre
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Mptresassignment data has been saved")
+		//fmt.Println("[+] Mptresassignment data has been saved")
 	}
 	tx.Commit()
 }
@@ -8431,7 +8430,7 @@ func insertMro(eNodeBId string, baseName string, data []model.Mro) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Mro data has been saved")
+		//fmt.Println("[+] Mro data has been saved")
 	}
 	tx.Commit()
 }
@@ -8455,7 +8454,7 @@ func insertNbcelldlschcealgo(eNodeBId string, baseName string, data []model.Nbce
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nbcelldlschcealgo data has been saved")
+		//fmt.Println("[+] Nbcelldlschcealgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -8481,7 +8480,7 @@ func insertNbcellulschcealgo(eNodeBId string, baseName string, data []model.Nbce
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nbcellulschcealgo data has been saved")
+		//fmt.Println("[+] Nbcellulschcealgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -8506,7 +8505,7 @@ func insertNcellclassmgt(eNodeBId string, baseName string, data []model.Ncellcla
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ncellclassmgt data has been saved")
+		//fmt.Println("[+] Ncellclassmgt data has been saved")
 	}
 	tx.Commit()
 }
@@ -8528,7 +8527,7 @@ func insertNcelldlrsrpmeaspara(eNodeBId string, baseName string, data []model.Nc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ncelldlrsrpmeaspara data has been saved")
+		//fmt.Println("[+] Ncelldlrsrpmeaspara data has been saved")
 	}
 	tx.Commit()
 }
@@ -8553,7 +8552,7 @@ func insertNcellparacfg(eNodeBId string, baseName string, data []model.Ncellpara
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ncellparacfg data has been saved")
+		//fmt.Println("[+] Ncellparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -8576,7 +8575,7 @@ func insertNcellsrsmeaspara(eNodeBId string, baseName string, data []model.Ncell
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ncellsrsmeaspara data has been saved")
+		//fmt.Println("[+] Ncellsrsmeaspara data has been saved")
 	}
 	tx.Commit()
 }
@@ -8607,7 +8606,7 @@ func insertNe(eNodeBId string, baseName string, data []model.Ne) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ne data has been saved")
+		//fmt.Println("[+] Ne data has been saved")
 	}
 	tx.Commit()
 }
@@ -8630,7 +8629,7 @@ func insertNemnt(eNodeBId string, baseName string, data []model.Nemnt) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nemnt data has been saved")
+		//fmt.Println("[+] Nemnt data has been saved")
 	}
 	tx.Commit()
 }
@@ -8663,7 +8662,7 @@ func insertNode(eNodeBId string, baseName string, data []model.Node) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Node data has been saved")
+		//fmt.Println("[+] Node data has been saved")
 	}
 	tx.Commit()
 }
@@ -8746,7 +8745,7 @@ func insertNodebalgpara(eNodeBId string, baseName string, data []model.Nodebalgp
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebalgpara data has been saved")
+		//fmt.Println("[+] Nodebalgpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -8773,7 +8772,7 @@ func insertNodebbbres(eNodeBId string, baseName string, data []model.Nodebbbres)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebbbres data has been saved")
+		//fmt.Println("[+] Nodebbbres data has been saved")
 	}
 	tx.Commit()
 }
@@ -8799,7 +8798,7 @@ func insertNodebchrlevel(eNodeBId string, baseName string, data []model.Nodebchr
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebchrlevel data has been saved")
+		//fmt.Println("[+] Nodebchrlevel data has been saved")
 	}
 	tx.Commit()
 }
@@ -8821,7 +8820,7 @@ func insertNodebclspatimer(eNodeBId string, baseName string, data []model.Nodebc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebclspatimer data has been saved")
+		//fmt.Println("[+] Nodebclspatimer data has been saved")
 	}
 	tx.Commit()
 }
@@ -8849,7 +8848,7 @@ func insertNodebfunction(eNodeBId string, baseName string, data []model.Nodebfun
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebfunction data has been saved")
+		//fmt.Println("[+] Nodebfunction data has been saved")
 	}
 	tx.Commit()
 }
@@ -8873,7 +8872,7 @@ func insertNodeblicensealmthd(eNodeBId string, baseName string, data []model.Nod
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodeblicensealmthd data has been saved")
+		//fmt.Println("[+] Nodeblicensealmthd data has been saved")
 	}
 	tx.Commit()
 }
@@ -8896,7 +8895,7 @@ func insertNodebmulticellgrp(eNodeBId string, baseName string, data []model.Node
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebmulticellgrp data has been saved")
+		//fmt.Println("[+] Nodebmulticellgrp data has been saved")
 	}
 	tx.Commit()
 }
@@ -8919,7 +8918,7 @@ func insertNodeboptdynadjpara(eNodeBId string, baseName string, data []model.Nod
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodeboptdynadjpara data has been saved")
+		//fmt.Println("[+] Nodeboptdynadjpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -8943,7 +8942,7 @@ func insertNodebpoweroutage(eNodeBId string, baseName string, data []model.Nodeb
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebpoweroutage data has been saved")
+		//fmt.Println("[+] Nodebpoweroutage data has been saved")
 	}
 	tx.Commit()
 }
@@ -8969,7 +8968,7 @@ func insertNodebresallocrule(eNodeBId string, baseName string, data []model.Node
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebresallocrule data has been saved")
+		//fmt.Println("[+] Nodebresallocrule data has been saved")
 	}
 	tx.Commit()
 }
@@ -9021,7 +9020,7 @@ func insertNodebrsvdpara(eNodeBId string, baseName string, data []model.Nodebrsv
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebrsvdpara data has been saved")
+		//fmt.Println("[+] Nodebrsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -9048,7 +9047,7 @@ func insertNodebruleactionpara(eNodeBId string, baseName string, data []model.No
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebruleactionpara data has been saved")
+		//fmt.Println("[+] Nodebruleactionpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -9071,7 +9070,7 @@ func insertNodebsmthpwr(eNodeBId string, baseName string, data []model.Nodebsmth
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebsmthpwr data has been saved")
+		//fmt.Println("[+] Nodebsmthpwr data has been saved")
 	}
 	tx.Commit()
 }
@@ -9095,7 +9094,7 @@ func insertNodebtrfoverloadthd(eNodeBId string, baseName string, data []model.No
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebtrfoverloadthd data has been saved")
+		//fmt.Println("[+] Nodebtrfoverloadthd data has been saved")
 	}
 	tx.Commit()
 }
@@ -9124,7 +9123,7 @@ func insertNodebueqosenhance(eNodeBId string, baseName string, data []model.Node
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Nodebueqosenhance data has been saved")
+		//fmt.Println("[+] Nodebueqosenhance data has been saved")
 	}
 	tx.Commit()
 }
@@ -9151,7 +9150,7 @@ func insertNtpcp(eNodeBId string, baseName string, data []model.Ntpcp) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ntpcp data has been saved")
+		//fmt.Println("[+] Ntpcp data has been saved")
 	}
 	tx.Commit()
 }
@@ -9181,7 +9180,7 @@ func insertOmch(eNodeBId string, baseName string, data []model.Omch) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Omch data has been saved")
+		//fmt.Println("[+] Omch data has been saved")
 	}
 	tx.Commit()
 }
@@ -9202,7 +9201,7 @@ func insertOp(eNodeBId string, baseName string, data []model.Op) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Op data has been saved")
+		//fmt.Println("[+] Op data has been saved")
 	}
 	tx.Commit()
 }
@@ -9227,7 +9226,7 @@ func insertOutport(eNodeBId string, baseName string, data []model.Outport) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Outport data has been saved")
+		//fmt.Println("[+] Outport data has been saved")
 	}
 	tx.Commit()
 }
@@ -9251,7 +9250,7 @@ func insertParaautooptcfg(eNodeBId string, baseName string, data []model.Paraaut
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Paraautooptcfg data has been saved")
+		//fmt.Println("[+] Paraautooptcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9275,7 +9274,7 @@ func insertPccfreqcfg(eNodeBId string, baseName string, data []model.Pccfreqcfg)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Pccfreqcfg data has been saved")
+		//fmt.Println("[+] Pccfreqcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9305,7 +9304,7 @@ func insertPcchcfg(eNodeBId string, baseName string, data []model.Pcchcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Pcchcfg data has been saved")
+		//fmt.Println("[+] Pcchcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9328,7 +9327,7 @@ func insertPdcprohcpara(eNodeBId string, baseName string, data []model.Pdcprohcp
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Pdcprohcpara data has been saved")
+		//fmt.Println("[+] Pdcprohcpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -9356,7 +9355,7 @@ func insertPdschcfg(eNodeBId string, baseName string, data []model.Pdschcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Pdschcfg data has been saved")
+		//fmt.Println("[+] Pdschcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9377,7 +9376,7 @@ func insertPeerclk(eNodeBId string, baseName string, data []model.Peerclk) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Peerclk data has been saved")
+		//fmt.Println("[+] Peerclk data has been saved")
 	}
 	tx.Commit()
 }
@@ -9399,7 +9398,7 @@ func insertPeu(eNodeBId string, baseName string, data []model.Peu) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Peu data has been saved")
+		//fmt.Println("[+] Peu data has been saved")
 	}
 	tx.Commit()
 }
@@ -9421,7 +9420,7 @@ func insertPhichcfg(eNodeBId string, baseName string, data []model.Phichcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Phichcfg data has been saved")
+		//fmt.Println("[+] Phichcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9446,7 +9445,7 @@ func insertPhyport(eNodeBId string, baseName string, data []model.Phyport) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Phyport data has been saved")
+		//fmt.Println("[+] Phyport data has been saved")
 	}
 	tx.Commit()
 }
@@ -9467,7 +9466,7 @@ func insertPlrthreshold(eNodeBId string, baseName string, data []model.Plrthresh
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Plrthreshold data has been saved")
+		//fmt.Println("[+] Plrthreshold data has been saved")
 	}
 	tx.Commit()
 }
@@ -9491,7 +9490,7 @@ func insertPmtucfg(eNodeBId string, baseName string, data []model.Pmtucfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Pmtucfg data has been saved")
+		//fmt.Println("[+] Pmtucfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9511,7 +9510,7 @@ func insertPortpolicy(eNodeBId string, baseName string, data []model.Portpolicy)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Portpolicy data has been saved")
+		//fmt.Println("[+] Portpolicy data has been saved")
 	}
 	tx.Commit()
 }
@@ -9538,7 +9537,7 @@ func insertPri2que(eNodeBId string, baseName string, data []model.Pri2que) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Pri2que data has been saved")
+		//fmt.Println("[+] Pri2que data has been saved")
 	}
 	tx.Commit()
 }
@@ -9571,7 +9570,7 @@ func insertPrivatecabandcomb(eNodeBId string, baseName string, data []model.Priv
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Privatecabandcomb data has been saved")
+		//fmt.Println("[+] Privatecabandcomb data has been saved")
 	}
 	tx.Commit()
 }
@@ -9591,7 +9590,7 @@ func insertPsuis(eNodeBId string, baseName string, data []model.Psuis) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Psuis data has been saved")
+		//fmt.Println("[+] Psuis data has been saved")
 	}
 	tx.Commit()
 }
@@ -9621,7 +9620,7 @@ func insertPucchcfg(eNodeBId string, baseName string, data []model.Pucchcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Pucchcfg data has been saved")
+		//fmt.Println("[+] Pucchcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9650,7 +9649,7 @@ func insertPuschcfg(eNodeBId string, baseName string, data []model.Puschcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Puschcfg data has been saved")
+		//fmt.Println("[+] Puschcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9673,7 +9672,7 @@ func insertPuschparam(eNodeBId string, baseName string, data []model.Puschparam)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Puschparam data has been saved")
+		//fmt.Println("[+] Puschparam data has been saved")
 	}
 	tx.Commit()
 }
@@ -9705,7 +9704,7 @@ func insertPwdpolicy(eNodeBId string, baseName string, data []model.Pwdpolicy) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Pwdpolicy data has been saved")
+		//fmt.Println("[+] Pwdpolicy data has been saved")
 	}
 	tx.Commit()
 }
@@ -9748,7 +9747,7 @@ func insertQcipara(eNodeBId string, baseName string, data []model.Qcipara) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Qcipara data has been saved")
+		//fmt.Println("[+] Qcipara data has been saved")
 	}
 	tx.Commit()
 }
@@ -9770,7 +9769,7 @@ func insertQoehocommoncfg(eNodeBId string, baseName string, data []model.Qoehoco
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Qoehocommoncfg data has been saved")
+		//fmt.Println("[+] Qoehocommoncfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9806,7 +9805,7 @@ func insertRachcfg(eNodeBId string, baseName string, data []model.Rachcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rachcfg data has been saved")
+		//fmt.Println("[+] Rachcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -9836,7 +9835,7 @@ func insertRet(eNodeBId string, baseName string, data []model.Ret) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ret data has been saved")
+		//fmt.Println("[+] Ret data has been saved")
 	}
 	tx.Commit()
 }
@@ -9877,7 +9876,7 @@ func insertRetdevicedata(eNodeBId string, baseName string, data []model.Retdevic
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Retdevicedata data has been saved")
+		//fmt.Println("[+] Retdevicedata data has been saved")
 	}
 	tx.Commit()
 }
@@ -9906,7 +9905,7 @@ func insertRetport(eNodeBId string, baseName string, data []model.Retport) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Retport data has been saved")
+		//fmt.Println("[+] Retport data has been saved")
 	}
 	tx.Commit()
 }
@@ -9938,7 +9937,7 @@ func insertRetsubunit(eNodeBId string, baseName string, data []model.Retsubunit)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Retsubunit data has been saved")
+		//fmt.Println("[+] Retsubunit data has been saved")
 	}
 	tx.Commit()
 }
@@ -9996,7 +9995,7 @@ func insertRfu(eNodeBId string, baseName string, data []model.Rfu) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rfu data has been saved")
+		//fmt.Println("[+] Rfu data has been saved")
 	}
 	tx.Commit()
 }
@@ -10055,7 +10054,7 @@ func insertRlcpdcpparagroup(eNodeBId string, baseName string, data []model.Rlcpd
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rlcpdcpparagroup data has been saved")
+		//fmt.Println("[+] Rlcpdcpparagroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -10096,7 +10095,7 @@ func insertRrcconnstatetimer(eNodeBId string, baseName string, data []model.Rrcc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rrcconnstatetimer data has been saved")
+		//fmt.Println("[+] Rrcconnstatetimer data has been saved")
 	}
 	tx.Commit()
 }
@@ -10161,7 +10160,7 @@ func insertRru(eNodeBId string, baseName string, data []model.Rru) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rru data has been saved")
+		//fmt.Println("[+] Rru data has been saved")
 	}
 	tx.Commit()
 }
@@ -10195,7 +10194,7 @@ func insertRruchain(eNodeBId string, baseName string, data []model.Rruchain) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rruchain data has been saved")
+		//fmt.Println("[+] Rruchain data has been saved")
 	}
 	tx.Commit()
 }
@@ -10220,7 +10219,7 @@ func insertRrujointcalparacfg(eNodeBId string, baseName string, data []model.Rru
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rrujointcalparacfg data has been saved")
+		//fmt.Println("[+] Rrujointcalparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -10260,7 +10259,7 @@ func insertRscgrp(eNodeBId string, baseName string, data []model.Rscgrp) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rscgrp data has been saved")
+		//fmt.Println("[+] Rscgrp data has been saved")
 	}
 	tx.Commit()
 }
@@ -10301,7 +10300,7 @@ func insertRscgrpalg(eNodeBId string, baseName string, data []model.Rscgrpalg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rscgrpalg data has been saved")
+		//fmt.Println("[+] Rscgrpalg data has been saved")
 	}
 	tx.Commit()
 }
@@ -10334,7 +10333,7 @@ func insertRxbranch(eNodeBId string, baseName string, data []model.Rxbranch) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Rxbranch data has been saved")
+		//fmt.Println("[+] Rxbranch data has been saved")
 	}
 	tx.Commit()
 }
@@ -10363,7 +10362,7 @@ func insertS1(eNodeBId string, baseName string, data []model.S1) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] S1 data has been saved")
+		//fmt.Println("[+] S1 data has been saved")
 	}
 	tx.Commit()
 }
@@ -10393,7 +10392,7 @@ func insertS1interface(eNodeBId string, baseName string, data []model.S1interfac
 
 		)
 		checkErr(err)
-		fmt.Println("[+] S1interface data has been saved")
+		//fmt.Println("[+] S1interface data has been saved")
 	}
 	tx.Commit()
 }
@@ -10415,7 +10414,7 @@ func insertS1reesttimer(eNodeBId string, baseName string, data []model.S1reestti
 
 		)
 		checkErr(err)
-		fmt.Println("[+] S1reesttimer data has been saved")
+		//fmt.Println("[+] S1reesttimer data has been saved")
 	}
 	tx.Commit()
 }
@@ -10455,7 +10454,7 @@ func insertSaallnk(eNodeBId string, baseName string, data []model.Saallnk) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Saallnk data has been saved")
+		//fmt.Println("[+] Saallnk data has been saved")
 	}
 	tx.Commit()
 }
@@ -10484,7 +10483,7 @@ func insertScappparacfg(eNodeBId string, baseName string, data []model.Scapppara
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Scappparacfg data has been saved")
+		//fmt.Println("[+] Scappparacfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -10512,7 +10511,7 @@ func insertSccfreqcfg(eNodeBId string, baseName string, data []model.Sccfreqcfg)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Sccfreqcfg data has been saved")
+		//fmt.Println("[+] Sccfreqcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -10534,7 +10533,7 @@ func insertScpolicy(eNodeBId string, baseName string, data []model.Scpolicy) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Scpolicy data has been saved")
+		//fmt.Println("[+] Scpolicy data has been saved")
 	}
 	tx.Commit()
 }
@@ -10557,7 +10556,7 @@ func insertScserviceqos(eNodeBId string, baseName string, data []model.Scservice
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Scserviceqos data has been saved")
+		//fmt.Println("[+] Scserviceqos data has been saved")
 	}
 	tx.Commit()
 }
@@ -10587,7 +10586,7 @@ func insertSctphost(eNodeBId string, baseName string, data []model.Sctphost) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Sctphost data has been saved")
+		//fmt.Println("[+] Sctphost data has been saved")
 	}
 	tx.Commit()
 }
@@ -10634,7 +10633,7 @@ func insertSctplnk(eNodeBId string, baseName string, data []model.Sctplnk) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Sctplnk data has been saved")
+		//fmt.Println("[+] Sctplnk data has been saved")
 	}
 	tx.Commit()
 }
@@ -10667,7 +10666,7 @@ func insertSctppeer(eNodeBId string, baseName string, data []model.Sctppeer) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Sctppeer data has been saved")
+		//fmt.Println("[+] Sctppeer data has been saved")
 	}
 	tx.Commit()
 }
@@ -10700,7 +10699,7 @@ func insertSctptemplate(eNodeBId string, baseName string, data []model.Sctptempl
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Sctptemplate data has been saved")
+		//fmt.Println("[+] Sctptemplate data has been saved")
 	}
 	tx.Commit()
 }
@@ -10741,7 +10740,7 @@ func insertSector(eNodeBId string, baseName string, data []model.Sector) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Sector data has been saved")
+		//fmt.Println("[+] Sector data has been saved")
 	}
 	tx.Commit()
 }
@@ -10770,7 +10769,7 @@ func insertSectoreqm(eNodeBId string, baseName string, data []model.Sectoreqm) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Sectoreqm data has been saved")
+		//fmt.Println("[+] Sectoreqm data has been saved")
 	}
 	tx.Commit()
 }
@@ -10798,7 +10797,7 @@ func insertServicediffsetting(eNodeBId string, baseName string, data []model.Ser
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Servicediffsetting data has been saved")
+		//fmt.Println("[+] Servicediffsetting data has been saved")
 	}
 	tx.Commit()
 }
@@ -10823,7 +10822,7 @@ func insertServiceidentifypara(eNodeBId string, baseName string, data []model.Se
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Serviceidentifypara data has been saved")
+		//fmt.Println("[+] Serviceidentifypara data has been saved")
 	}
 	tx.Commit()
 }
@@ -10847,7 +10846,7 @@ func insertServiceifdlearfcngrp(eNodeBId string, baseName string, data []model.S
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Serviceifdlearfcngrp data has been saved")
+		//fmt.Println("[+] Serviceifdlearfcngrp data has been saved")
 	}
 	tx.Commit()
 }
@@ -10871,7 +10870,7 @@ func insertServiceifhocfggroup(eNodeBId string, baseName string, data []model.Se
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Serviceifhocfggroup data has been saved")
+		//fmt.Println("[+] Serviceifhocfggroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -10894,7 +10893,7 @@ func insertServiceirhocfggroup(eNodeBId string, baseName string, data []model.Se
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Serviceirhocfggroup data has been saved")
+		//fmt.Println("[+] Serviceirhocfggroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -10918,7 +10917,7 @@ func insertSfp(eNodeBId string, baseName string, data []model.Sfp) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Sfp data has been saved")
+		//fmt.Println("[+] Sfp data has been saved")
 	}
 	tx.Commit()
 }
@@ -10944,7 +10943,7 @@ func insertSimuload(eNodeBId string, baseName string, data []model.Simuload) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Simuload data has been saved")
+		//fmt.Println("[+] Simuload data has been saved")
 	}
 	tx.Commit()
 }
@@ -10964,7 +10963,7 @@ func insertSingleipswitch(eNodeBId string, baseName string, data []model.Singlei
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Singleipswitch data has been saved")
+		//fmt.Println("[+] Singleipswitch data has been saved")
 	}
 	tx.Commit()
 }
@@ -10991,7 +10990,7 @@ func insertSrbcfg(eNodeBId string, baseName string, data []model.Srbcfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Srbcfg data has been saved")
+		//fmt.Println("[+] Srbcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -11026,7 +11025,7 @@ func insertSrbrlcpdcpcfg(eNodeBId string, baseName string, data []model.Srbrlcpd
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Srbrlcpdcpcfg data has been saved")
+		//fmt.Println("[+] Srbrlcpdcpcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -11055,7 +11054,7 @@ func insertSrciprt(eNodeBId string, baseName string, data []model.Srciprt) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Srciprt data has been saved")
+		//fmt.Println("[+] Srciprt data has been saved")
 	}
 	tx.Commit()
 }
@@ -11076,7 +11075,7 @@ func insertSrsadaptivecfg(eNodeBId string, baseName string, data []model.Srsadap
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Srsadaptivecfg data has been saved")
+		//fmt.Println("[+] Srsadaptivecfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -11104,7 +11103,7 @@ func insertSrscfg(eNodeBId string, baseName string, data []model.Srscfg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Srscfg data has been saved")
+		//fmt.Println("[+] Srscfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -11129,7 +11128,7 @@ func insertSsl(eNodeBId string, baseName string, data []model.Ssl) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ssl data has been saved")
+		//fmt.Println("[+] Ssl data has been saved")
 	}
 	tx.Commit()
 }
@@ -11160,7 +11159,7 @@ func insertStandardqci(eNodeBId string, baseName string, data []model.Standardqc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Standardqci data has been saved")
+		//fmt.Println("[+] Standardqci data has been saved")
 	}
 	tx.Commit()
 }
@@ -11183,7 +11182,7 @@ func insertSubrack(eNodeBId string, baseName string, data []model.Subrack) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Subrack data has been saved")
+		//fmt.Println("[+] Subrack data has been saved")
 	}
 	tx.Commit()
 }
@@ -11211,7 +11210,7 @@ func insertSynceth(eNodeBId string, baseName string, data []model.Synceth) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Synceth data has been saved")
+		//fmt.Println("[+] Synceth data has been saved")
 	}
 	tx.Commit()
 }
@@ -11249,7 +11248,7 @@ func insertTacalg(eNodeBId string, baseName string, data []model.Tacalg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tacalg data has been saved")
+		//fmt.Println("[+] Tacalg data has been saved")
 	}
 	tx.Commit()
 }
@@ -11302,7 +11301,7 @@ func insertTasm(eNodeBId string, baseName string, data []model.Tasm) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tasm data has been saved")
+		//fmt.Println("[+] Tasm data has been saved")
 	}
 	tx.Commit()
 }
@@ -11323,7 +11322,7 @@ func insertTbdspinfo(eNodeBId string, baseName string, data []model.Tbdspinfo) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tbdspinfo data has been saved")
+		//fmt.Println("[+] Tbdspinfo data has been saved")
 	}
 	tx.Commit()
 }
@@ -11343,7 +11342,7 @@ func insertTblangno(eNodeBId string, baseName string, data []model.Tblangno) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tblangno data has been saved")
+		//fmt.Println("[+] Tblangno data has been saved")
 	}
 	tx.Commit()
 }
@@ -11366,7 +11365,7 @@ func insertTcpackctrlalgo(eNodeBId string, baseName string, data []model.Tcpackc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tcpackctrlalgo data has been saved")
+		//fmt.Println("[+] Tcpackctrlalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -11386,7 +11385,7 @@ func insertTcpacklimitalg(eNodeBId string, baseName string, data []model.Tcpackl
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tcpacklimitalg data has been saved")
+		//fmt.Println("[+] Tcpacklimitalg data has been saved")
 	}
 	tx.Commit()
 }
@@ -11408,7 +11407,7 @@ func insertTcpmssctrl(eNodeBId string, baseName string, data []model.Tcpmssctrl)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tcpmssctrl data has been saved")
+		//fmt.Println("[+] Tcpmssctrl data has been saved")
 	}
 	tx.Commit()
 }
@@ -11438,7 +11437,7 @@ func insertTcu(eNodeBId string, baseName string, data []model.Tcu) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tcu data has been saved")
+		//fmt.Println("[+] Tcu data has been saved")
 	}
 	tx.Commit()
 }
@@ -11459,7 +11458,7 @@ func insertTddframeoffset(eNodeBId string, baseName string, data []model.Tddfram
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tddframeoffset data has been saved")
+		//fmt.Println("[+] Tddframeoffset data has been saved")
 	}
 	tx.Commit()
 }
@@ -11481,7 +11480,7 @@ func insertTddresmodeswitch(eNodeBId string, baseName string, data []model.Tddre
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tddresmodeswitch data has been saved")
+		//fmt.Println("[+] Tddresmodeswitch data has been saved")
 	}
 	tx.Commit()
 }
@@ -11509,7 +11508,7 @@ func insertTimealignmenttimer(eNodeBId string, baseName string, data []model.Tim
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Timealignmenttimer data has been saved")
+		//fmt.Println("[+] Timealignmenttimer data has been saved")
 	}
 	tx.Commit()
 }
@@ -11530,7 +11529,7 @@ func insertTimesrc(eNodeBId string, baseName string, data []model.Timesrc) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Timesrc data has been saved")
+		//fmt.Println("[+] Timesrc data has been saved")
 	}
 	tx.Commit()
 }
@@ -11551,7 +11550,7 @@ func insertTimethrd(eNodeBId string, baseName string, data []model.Timethrd) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Timethrd data has been saved")
+		//fmt.Println("[+] Timethrd data has been saved")
 	}
 	tx.Commit()
 }
@@ -11578,7 +11577,7 @@ func insertTldralg(eNodeBId string, baseName string, data []model.Tldralg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tldralg data has been saved")
+		//fmt.Println("[+] Tldralg data has been saved")
 	}
 	tx.Commit()
 }
@@ -11598,7 +11597,7 @@ func insertTlfrswitch(eNodeBId string, baseName string, data []model.Tlfrswitch)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tlfrswitch data has been saved")
+		//fmt.Println("[+] Tlfrswitch data has been saved")
 	}
 	tx.Commit()
 }
@@ -11624,7 +11623,7 @@ func insertTolcalg(eNodeBId string, baseName string, data []model.Tolcalg) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tolcalg data has been saved")
+		//fmt.Println("[+] Tolcalg data has been saved")
 	}
 	tx.Commit()
 }
@@ -11665,7 +11664,7 @@ func insertTpealgo(eNodeBId string, baseName string, data []model.Tpealgo) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tpealgo data has been saved")
+		//fmt.Println("[+] Tpealgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -11688,7 +11687,7 @@ func insertTrp(eNodeBId string, baseName string, data []model.Trp) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Trp data has been saved")
+		//fmt.Println("[+] Trp data has been saved")
 	}
 	tx.Commit()
 }
@@ -11708,7 +11707,7 @@ func insertTrustcert(eNodeBId string, baseName string, data []model.Trustcert) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Trustcert data has been saved")
+		//fmt.Println("[+] Trustcert data has been saved")
 	}
 	tx.Commit()
 }
@@ -11735,7 +11734,7 @@ func insertTwampresponder(eNodeBId string, baseName string, data []model.Twampre
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Twampresponder data has been saved")
+		//fmt.Println("[+] Twampresponder data has been saved")
 	}
 	tx.Commit()
 }
@@ -11759,7 +11758,7 @@ func insertTxbranch(eNodeBId string, baseName string, data []model.Txbranch) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Txbranch data has been saved")
+		//fmt.Println("[+] Txbranch data has been saved")
 	}
 	tx.Commit()
 }
@@ -11782,7 +11781,7 @@ func insertTypdrbbsr(eNodeBId string, baseName string, data []model.Typdrbbsr) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Typdrbbsr data has been saved")
+		//fmt.Println("[+] Typdrbbsr data has been saved")
 	}
 	tx.Commit()
 }
@@ -11803,7 +11802,7 @@ func insertTz(eNodeBId string, baseName string, data []model.Tz) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Tz data has been saved")
+		//fmt.Println("[+] Tz data has been saved")
 	}
 	tx.Commit()
 }
@@ -11825,7 +11824,7 @@ func insertUdpping(eNodeBId string, baseName string, data []model.Udpping) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Udpping data has been saved")
+		//fmt.Println("[+] Udpping data has been saved")
 	}
 	tx.Commit()
 }
@@ -11846,7 +11845,7 @@ func insertUdt(eNodeBId string, baseName string, data []model.Udt) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Udt data has been saved")
+		//fmt.Println("[+] Udt data has been saved")
 	}
 	tx.Commit()
 }
@@ -11872,7 +11871,7 @@ func insertUdtparagrp(eNodeBId string, baseName string, data []model.Udtparagrp)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Udtparagrp data has been saved")
+		//fmt.Println("[+] Udtparagrp data has been saved")
 	}
 	tx.Commit()
 }
@@ -11900,7 +11899,7 @@ func insertUecooperationpara(eNodeBId string, baseName string, data []model.Ueco
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Uecooperationpara data has been saved")
+		//fmt.Println("[+] Uecooperationpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -11922,7 +11921,7 @@ func insertUeiu(eNodeBId string, baseName string, data []model.Ueiu) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ueiu data has been saved")
+		//fmt.Println("[+] Ueiu data has been saved")
 	}
 	tx.Commit()
 }
@@ -11951,7 +11950,7 @@ func insertUespecdrxparagroup(eNodeBId string, baseName string, data []model.Ues
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Uespecdrxparagroup data has been saved")
+		//fmt.Println("[+] Uespecdrxparagroup data has been saved")
 	}
 	tx.Commit()
 }
@@ -11990,7 +11989,7 @@ func insertUetimerconst(eNodeBId string, baseName string, data []model.Uetimerco
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Uetimerconst data has been saved")
+		//fmt.Println("[+] Uetimerconst data has been saved")
 	}
 	tx.Commit()
 }
@@ -12019,7 +12018,7 @@ func insertUlcsalgopara(eNodeBId string, baseName string, data []model.Ulcsalgop
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulcsalgopara data has been saved")
+		//fmt.Println("[+] Ulcsalgopara data has been saved")
 	}
 	tx.Commit()
 }
@@ -12054,7 +12053,7 @@ func insertUlinterfsuppresscfg(eNodeBId string, baseName string, data []model.Ul
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulinterfsuppresscfg data has been saved")
+		//fmt.Println("[+] Ulinterfsuppresscfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -12133,7 +12132,7 @@ func insertUlocell(eNodeBId string, baseName string, data []model.Ulocell) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulocell data has been saved")
+		//fmt.Println("[+] Ulocell data has been saved")
 	}
 	tx.Commit()
 }
@@ -12188,7 +12187,7 @@ func insertUlocellalgpara(eNodeBId string, baseName string, data []model.Ulocell
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulocellalgpara data has been saved")
+		//fmt.Println("[+] Ulocellalgpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -12245,7 +12244,7 @@ func insertUlocellmacepara(eNodeBId string, baseName string, data []model.Ulocel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulocellmacepara data has been saved")
+		//fmt.Println("[+] Ulocellmacepara data has been saved")
 	}
 	tx.Commit()
 }
@@ -12317,7 +12316,7 @@ func insertUlocellmachspara(eNodeBId string, baseName string, data []model.Uloce
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulocellmachspara data has been saved")
+		//fmt.Println("[+] Ulocellmachspara data has been saved")
 	}
 	tx.Commit()
 }
@@ -12340,7 +12339,7 @@ func insertUlocellnoaccesspara(eNodeBId string, baseName string, data []model.Ul
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulocellnoaccesspara data has been saved")
+		//fmt.Println("[+] Ulocellnoaccesspara data has been saved")
 	}
 	tx.Commit()
 }
@@ -12364,7 +12363,7 @@ func insertUlocellr99algpara(eNodeBId string, baseName string, data []model.Uloc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulocellr99algpara data has been saved")
+		//fmt.Println("[+] Ulocellr99algpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -12396,7 +12395,7 @@ func insertUlocellrsclmtpara(eNodeBId string, baseName string, data []model.Uloc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulocellrsclmtpara data has been saved")
+		//fmt.Println("[+] Ulocellrsclmtpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -12448,7 +12447,7 @@ func insertUlocellrsvdpara(eNodeBId string, baseName string, data []model.Ulocel
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulocellrsvdpara data has been saved")
+		//fmt.Println("[+] Ulocellrsvdpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -12471,7 +12470,7 @@ func insertUlocellsectoreqm(eNodeBId string, baseName string, data []model.Uloce
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulocellsectoreqm data has been saved")
+		//fmt.Println("[+] Ulocellsectoreqm data has been saved")
 	}
 	tx.Commit()
 }
@@ -12500,7 +12499,7 @@ func insertUlzerobufferzone(eNodeBId string, baseName string, data []model.Ulzer
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Ulzerobufferzone data has been saved")
+		//fmt.Println("[+] Ulzerobufferzone data has been saved")
 	}
 	tx.Commit()
 }
@@ -12523,7 +12522,7 @@ func insertUpptsinterfcfg(eNodeBId string, baseName string, data []model.Upptsin
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Upptsinterfcfg data has been saved")
+		//fmt.Println("[+] Upptsinterfcfg data has been saved")
 	}
 	tx.Commit()
 }
@@ -12547,7 +12546,7 @@ func insertUsb(eNodeBId string, baseName string, data []model.Usb) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Usb data has been saved")
+		//fmt.Println("[+] Usb data has been saved")
 	}
 	tx.Commit()
 }
@@ -12572,7 +12571,7 @@ func insertUserplanehost(eNodeBId string, baseName string, data []model.Userplan
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Userplanehost data has been saved")
+		//fmt.Println("[+] Userplanehost data has been saved")
 	}
 	tx.Commit()
 }
@@ -12601,7 +12600,7 @@ func insertUserplanepeer(eNodeBId string, baseName string, data []model.Userplan
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Userplanepeer data has been saved")
+		//fmt.Println("[+] Userplanepeer data has been saved")
 	}
 	tx.Commit()
 }
@@ -12637,7 +12636,7 @@ func insertUserpriority(eNodeBId string, baseName string, data []model.Userprior
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Userpriority data has been saved")
+		//fmt.Println("[+] Userpriority data has been saved")
 	}
 	tx.Commit()
 }
@@ -12664,7 +12663,7 @@ func insertUserqcipriority(eNodeBId string, baseName string, data []model.Userqc
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Userqcipriority data has been saved")
+		//fmt.Println("[+] Userqcipriority data has been saved")
 	}
 	tx.Commit()
 }
@@ -12693,7 +12692,7 @@ func insertUservpfmpara(eNodeBId string, baseName string, data []model.Uservpfmp
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Uservpfmpara data has been saved")
+		//fmt.Println("[+] Uservpfmpara data has been saved")
 	}
 	tx.Commit()
 }
@@ -12731,7 +12730,7 @@ func insertUtranexternalcell(eNodeBId string, baseName string, data []model.Utra
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Utranexternalcell data has been saved")
+		//fmt.Println("[+] Utranexternalcell data has been saved")
 	}
 	tx.Commit()
 }
@@ -12765,7 +12764,7 @@ func insertUtranncell(eNodeBId string, baseName string, data []model.Utranncell)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Utranncell data has been saved")
+		//fmt.Println("[+] Utranncell data has been saved")
 	}
 	tx.Commit()
 }
@@ -12813,7 +12812,7 @@ func insertUtrannfreq(eNodeBId string, baseName string, data []model.Utrannfreq)
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Utrannfreq data has been saved")
+		//fmt.Println("[+] Utrannfreq data has been saved")
 	}
 	tx.Commit()
 }
@@ -12837,7 +12836,7 @@ func insertUtranranshare(eNodeBId string, baseName string, data []model.Utranran
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Utranranshare data has been saved")
+		//fmt.Println("[+] Utranranshare data has been saved")
 	}
 	tx.Commit()
 }
@@ -12861,7 +12860,7 @@ func insertVlanclass(eNodeBId string, baseName string, data []model.Vlanclass) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Vlanclass data has been saved")
+		//fmt.Println("[+] Vlanclass data has been saved")
 	}
 	tx.Commit()
 }
@@ -12888,7 +12887,7 @@ func insertVlanmap(eNodeBId string, baseName string, data []model.Vlanmap) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Vlanmap data has been saved")
+		//fmt.Println("[+] Vlanmap data has been saved")
 	}
 	tx.Commit()
 }
@@ -12922,7 +12921,7 @@ func insertVqmalgo(eNodeBId string, baseName string, data []model.Vqmalgo) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Vqmalgo data has been saved")
+		//fmt.Println("[+] Vqmalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -12943,7 +12942,7 @@ func insertVrf(eNodeBId string, baseName string, data []model.Vrf) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Vrf data has been saved")
+		//fmt.Println("[+] Vrf data has been saved")
 	}
 	tx.Commit()
 }
@@ -12964,7 +12963,7 @@ func insertWeblmt(eNodeBId string, baseName string, data []model.Weblmt) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Weblmt data has been saved")
+		//fmt.Println("[+] Weblmt data has been saved")
 	}
 	tx.Commit()
 }
@@ -12990,7 +12989,7 @@ func insertWtcpproxyalgo(eNodeBId string, baseName string, data []model.Wtcpprox
 
 		)
 		checkErr(err)
-		fmt.Println("[+] Wtcpproxyalgo data has been saved")
+		//fmt.Println("[+] Wtcpproxyalgo data has been saved")
 	}
 	tx.Commit()
 }
@@ -13018,7 +13017,7 @@ func insertX2(eNodeBId string, baseName string, data []model.X2) {
 
 		)
 		checkErr(err)
-		fmt.Println("[+] X2 data has been saved")
+		//fmt.Println("[+] X2 data has been saved")
 	}
 	tx.Commit()
 }
@@ -13045,7 +13044,7 @@ func insertX2interface(eNodeBId string, baseName string, data []model.X2interfac
 
 		)
 		checkErr(err)
-		fmt.Println("[+] X2interface data has been saved")
+		//fmt.Println("[+] X2interface data has been saved")
 	}
 	tx.Commit()
 }
