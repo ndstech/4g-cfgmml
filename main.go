@@ -59,7 +59,7 @@ func init() {
 		os.Exit(3)
 	}
 
-	time.Sleep(time.Duration(2) * time.Second)
+	//time.Sleep(time.Duration(2) * time.Second)
 
 	jsondecoder := json.NewDecoder(conf)
 	configuration := model.Configuration{}
