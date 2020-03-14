@@ -3,7 +3,7 @@
 
 #### How to install
 ```
-$ go get github.com/ndstech/4g-cfgmml
+go get github.com/ndstech/4g-cfgmml
 ```
 
 
